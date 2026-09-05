@@ -69,6 +69,15 @@
   .rev a:hover { color: #58a6ff; }
   .rev .p { color: #7ee787; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
   .rev-note { color: #8b949e; font-size: 0.8rem; margin: 0.8rem 0 0; }
+  details.wyg { border: 1px solid #21262d; border-radius: 6px; background: #10151c; padding: 0.45rem 0.75rem; font-size: 0.8rem; color: #8b949e; margin-top: 0.6rem; }
+  details.wyg summary { cursor: pointer; color: #7ee787; font-size: 0.78rem; }
+  details.wyg ul { margin: 0.45rem 0 0.1rem; padding-left: 1.15rem; }
+  details.wyg li { margin-bottom: 0.3rem; }
+  .rev:has(+ details.wyg) { border-radius: 8px 8px 0 0; margin-bottom: 0; }
+  .rev + details.wyg { margin-top: 0; border-top: 0; border-radius: 0 0 8px 8px; background: #161b22; }
+  .faq details { border: 1px solid #21262d; border-radius: 8px; background: #161b22; padding: 0.55rem 1rem; margin-bottom: 0.4rem; }
+  .faq summary { cursor: pointer; color: #e6edf3; font-size: 0.9rem; }
+  .faq p { color: #8b949e; font-size: 0.85rem; margin-top: 0.5rem; }
 </style>
 </head>
 <body>
@@ -86,6 +95,11 @@
       <div class="name">Superteam Earn Dataset — 28 Live Listings</div>
       <div class="desc">28 full-text Superteam Earn listings harvested 2026-09-04, with 186 reverse-engineered API routes.</div>
       <div class="row"><span class="price">$49</span><span class="links"><a href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Buy on Getly →</a></span></div>
+      <details class="wyg"><summary>What you get</summary><ul>
+        <li>28 open listings with full description HTML, deadlines, and sponsor slugs (<code>earn-listings-full-descriptions.json</code>), plus a raw cards-API dump with 17 unique live listings across 3 paginated pages (<code>earn-listings-cards.json</code>)</li>
+        <li>186 reverse-engineered API routes (<code>earn-api-endpoints.txt</code>): listings, comments, submissions, sponsor dashboard ops</li>
+        <li>Bonus: the undocumented <code>/api/search/{title}</code> endpoint pattern that returns full description text, with Privy auth flow notes (passwordless init/authenticate, token refresh)</li>
+      </ul></details>
     </div>
   </div>
 
@@ -95,6 +109,11 @@
       <div class="name">Solana Pitch Deck System</div>
       <div class="desc">10-slide pitch deck in HTML with a script that renders the deck to PDF.</div>
       <div class="row"><span class="price">$29</span><span class="links"><a href="https://www.getly.store/product/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline-mtmy42b8">Buy on Getly →</a></span></div>
+      <details class="wyg"><summary>What you get</summary><ul>
+        <li><code>deck-template.html</code>: 1280×720 deck, dark theme with Solana accents (#14f195 / #994599), 10 slides with real content structure (cover, problem, signals, solution, architecture, users, pricing, competition, team, CTA)</li>
+        <li>Playwright render scripts for PDF export and screenshot-based overflow QA, so every slide ships zero-overflow</li>
+        <li>The workflow behind a real deck that passed entry readiness at a September 2026 hackathon ideathon</li>
+      </ul></details>
     </div>
   </div>
 
@@ -104,6 +123,11 @@
       <div class="name">Solana Social Banner Pack</div>
       <div class="desc">40 Web3-themed header images sized for social profiles and banners.</div>
       <div class="row"><span class="price">$19</span><span class="links"><a href="https://www.getly.store/product/solana-social-banner-pack-40-web3-ready-header-images-mtn4vffw">Buy on Getly →</a></span></div>
+      <details class="wyg"><summary>What you get</summary><ul>
+        <li>40 PNG templates: 30 squares at 1080×1080 (announcements, quote cards, stat cards, poll frames) + 10 wide link cards at 1200×675 for X and LinkedIn</li>
+        <li>Deterministic-render text (no AI image generation), dark theme with green, purple, and orange accents, bracket placeholders marking every fill-in spot</li>
+        <li>README with edit steps for Canva, Figma, and Paint, plus a suggested posting rhythm and license terms</li>
+      </ul></details>
     </div>
   </div>
 
@@ -131,6 +155,11 @@
       <div class="name">Solana Agent Starter — Token-2022 Invoice Rails</div>
       <div class="desc">2 Anchor Rust programs + 3 TypeScript snippets for Token-2022 invoicing, with ARCHITECTURE.md and .env.example.</div>
       <div class="row"><span class="price">$39</span><span class="links"><a href="https://www.getly.store/product/solana-agent-starter-token-2022-invoice-rails-starter-kit-mtn9o6ga">Buy on Getly →</a></span></div>
+      <details class="wyg"><summary>What you get</summary><ul>
+        <li>Transfer-hook Anchor program (Rust): a ~600 LOC hook + invoice registry PDA that rejects any USDC transfer without a registered invoice hash</li>
+        <li>Auto-match engine: websocket indexer (TypeScript) plus a deterministic matcher that reconciles payments against ledger CSV exports (QuickBooks/Xero), and an escrow PDA state machine covering partial → complete → disputed → refunded</li>
+        <li>Cleaned, generic snippets (Rust + TypeScript) with <code>ARCHITECTURE.md</code> mermaid diagram, type-checked with <code>tsc --noEmit</code>; no keys or endpoints included</li>
+      </ul></details>
     </div>
   </div>
 
@@ -139,10 +168,25 @@
 <h2>Getly products <span>·</span> in review</h2>
 <div>
   <div class="rev"><span class="nm">Base &amp; L2 Ecosystem Directory 2026 — 136 Projects, Funding &amp; Tools (Multi-Chain)</span><span class="p" style="margin-left:auto">$19</span><a href="https://www.getly.store">getly.store ↗</a></div>
+  <details class="wyg"><summary>What you get</summary><ul>
+    <li><code>directory.csv</code>: 136 rows with name, chain, category (DeFi / Infra / NFT / Wallet / Dev Tool / Consumer), funding status, URL, notes</li>
+    <li><code>directory.md</code>: the same data grouped per chain, one table each</li>
+    <li>Every URL HTTP-checked live on 2026-09-05 (200 or redirect), covering Base, Arbitrum, Optimism, zkSync Era, Linea, Scroll, Polygon zkEVM, and Starknet</li>
+  </ul></details>
   <div class="rev"><span class="nm">Web3 Grants Ecosystem Funds Database 2026 — 38 verified funding sources</span><span class="p" style="margin-left:auto">$15</span><a href="https://www.getly.store">getly.store ↗</a></div>
+  <details class="wyg"><summary>What you get</summary><ul>
+    <li><code>grants.csv</code>: 38 programs with ecosystem, category, funding range, deadline, requirements, apply URL, status, notes — opens in Excel or Google Sheets</li>
+    <li><code>grants.md</code>: same data grouped by ecosystem for quick reading</li>
+    <li>32 of 38 sources accepting applications on the 2026-09-05 data date; the other 6 flagged with exact status notes. Every funding range comes from an official program page, no invented numbers</li>
+  </ul></details>
   <div class="rev"><span class="nm">500 AI Prompts for Etsy &amp; E-commerce Sellers</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store">getly.store ↗</a></div>
   <div class="rev"><span class="nm">500 AI Prompts Pack — crypto, web3 and trading prompts</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store">getly.store ↗</a></div>
   <div class="rev"><span class="nm">Web3 Builder OS — multi-chain Notion dashboard</span><span class="p" style="margin-left:auto">$15</span><a href="https://www.getly.store">getly.store ↗</a></div>
+  <details class="wyg"><summary>What you get</summary><ul>
+    <li>5 import-ready CSV databases: projects, bounties &amp; grants, content pipeline, learning log, contacts &amp; communities</li>
+    <li>Markdown pages: dashboard with linked views, workflow guide, and a multi-chain resources list (explorers, faucets, docs, funding platforms for Base, Ethereum, Solana, Bitcoin, Starknet, OP-stack L2s)</li>
+    <li><code>SETUP-GUIDE.md</code> with a click-by-click import under 10 minutes; works on the free Notion plan, no API integration</li>
+  </ul></details>
   <div class="rev"><span class="nm">Pitch Deck Slide Pack — 20 editable web3/startup slide templates</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store">getly.store ↗</a></div>
   <div class="rev"><span class="nm">AI Terminal Wallpaper Pack Vol.2 — 20 new 4K dark wallpapers</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store">getly.store ↗</a></div>
   <div class="rev"><span class="nm">Web3 KPI Spreadsheet Pack — 5 Google Sheets/Excel templates</span><span class="p" style="margin-left:auto">$10</span><a href="https://www.getly.store">getly.store ↗</a></div>
@@ -209,6 +253,34 @@
     </div>
   </div>
 
+</div>
+
+<h2>FAQ</h2>
+<div class="faq">
+  <details>
+    <summary>What format do the products come in?</summary>
+    <p>Instant digital download. Depending on the product: CSV, Markdown, JSON, HTML, PNG images, or a zip bundle with a README. No shipping, nothing physical. Each product page lists its exact files.</p>
+  </details>
+  <details>
+    <summary>What can I do with the files? What's the license?</summary>
+    <p>Personal and commercial use is allowed, including client work. You cannot resell or redistribute the files as-is or with minor changes. Data products can be used inside your own research, tooling, or reports.</p>
+  </details>
+  <details>
+    <summary>Do you offer refunds or updates?</summary>
+    <p>These are digital goods, so there are no refunds once the files are downloaded. Updates are free: if a product gets revised, you can re-download the latest version from your order page at no extra cost.</p>
+  </details>
+  <details>
+    <summary>How do I pay?</summary>
+    <p>On Getly, checkout runs on crypto. On Gumroad, you can pay by card or PayPal.</p>
+  </details>
+  <details>
+    <summary>How do I get support?</summary>
+    <p>Email orbitalstack88@uberip.com with your order ID and product name. Questions about files, imports, or broken links get answered within 24-48 hours.</p>
+  </details>
+  <details>
+    <summary>Where does the data come from?</summary>
+    <p>Public sources only: live APIs, official program pages, company career pages, and job boards. Everything is collected and HTTP-checked on a stated data date printed on each product page (for example, 2026-09-05). Data ages, so each product tells you its collection date. Nothing in the store is financial advice.</p>
+  </details>
 </div>
 
 <footer>© Matchbook Labs · static catalog · <a href="https://jayjex.github.io/portfolio/">Portfolio →</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
