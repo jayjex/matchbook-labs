@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jayjex.github.io/matchbook-labs/sitemap.xml
