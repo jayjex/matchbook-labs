@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantasy Football Draft Board Printable — Free 12-Team × 15-Round Template — Matchbook Labs</title>
+<meta name="description" content="Free fantasy football draft board printable straight from your browser: 12 teams × 15 rounds on one landscape page, with a pick tracker legend, keeper rules box, and an 8-item draft-day prep checklist. The full kit is $7.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/fantasy-football-draft-board.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fantasy Football Draft Board Printable — Free 12-Team × 15-Round Template">
+<meta property="og:description" content="Blank 12-team × 15-round draft board, prints on one landscape page. Pick tracker legend, keeper rules box, and a draft-day prep checklist included.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/fantasy-football-draft-board.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fantasy Football Draft Board Printable — Free 12-Team × 15-Round Template">
+<meta name="twitter:description" content="Blank 12×15 draft board, one landscape page. Legend, keeper box, and prep checklist included.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Fantasy Football Draft Board Printable — Free 12-Team × 15-Round Template",
+  "description": "Blank fantasy football draft board template for 12 teams and 15 rounds, printable on one landscape page, with a pick tracker legend, a keeper rules write-in box, and a draft-day prep checklist.",
+  "url": "https://jayjex.github.io/matchbook-labs/fantasy-football-draft-board.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 900px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8b949e; margin: 1.5rem 0 0.6rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .howto p { margin: 0; font-size: 0.95rem; }
+  .boardwrap { overflow-x: auto; margin-bottom: 0.5rem; }
+  .board { width: 100%; border-collapse: collapse; min-width: 720px; }
+  .board th, .board td { border: 1px solid #30363d; text-align: center; }
+  .board th { background: #161b22; color: #8b949e; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.45rem 0.2rem; }
+  .board th.rnd, .board td.rnd { background: #161b22; color: #8b949e; font-size: 0.75rem; font-weight: 600; width: 2.2rem; }
+  .board td { height: 2rem; font-size: 0.7rem; color: #8b949e; }
+  .board-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .print-legend { display: none; }
+  .legend { width: 100%; border-collapse: collapse; margin: 0 0 1.5rem; }
+  .legend th, .legend td { border: 1px solid #30363d; padding: 0.55rem 0.8rem; text-align: left; font-size: 0.92rem; }
+  .legend th { background: #161b22; color: #8b949e; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; width: 11rem; }
+  .keeper { border: 1px solid #30363d; border-radius: 8px; padding: 1.1rem 1.25rem; margin: 0 0 0.5rem; background: #161b22; }
+  .keeper h3 { margin-top: 0.2rem; }
+  .kline { display: flex; align-items: baseline; gap: 0.5rem; margin: 0 0 0.9rem; color: #c9d1d9; font-size: 0.95rem; }
+  .kline:last-of-type { margin-bottom: 0.3rem; }
+  .kfill { flex: 1; border-bottom: 1px solid #6e7681; min-height: 1.2rem; }
+  .kyn { display: inline-block; width: 3.5rem; border-bottom: 1px solid #6e7681; min-height: 1.2rem; }
+  .check { list-style: none; margin: 0 0 1.5rem 0; }
+  .check li { display: flex; gap: 0.65rem; align-items: baseline; margin-bottom: 0.7rem; color: #c9d1d9; }
+  .cb { flex: none; display: inline-block; width: 0.85rem; height: 0.85rem; border: 1.5px solid #6e7681; border-radius: 3px; position: relative; top: 0.08rem; }
+  .tips h3 { color: #e6edf3; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media print {
+    :root { color-scheme: light; }
+    @page { size: A4 landscape; margin: 8mm; }
+    body { background: #fff; color: #000; max-width: none; padding: 0; font-size: 11pt; }
+    a { color: #000; }
+    .crumbs, .lede, .howto, .cta, .note, footer, .noprint { display: none; }
+    h1 { font-size: 14pt; margin-bottom: 3mm; }
+    h2 { border-color: #000; font-size: 12pt; margin: 0 0 3mm; padding-bottom: 2mm; page-break-before: always; }
+    h2:first-of-type { page-break-before: avoid; }
+    .howto { background: #fff; border-color: #999; }
+    .boardwrap { overflow: visible; }
+    .board { min-width: 0; }
+    .board th, .board td { border-color: #444; }
+    .board th { background: #fff; color: #000; }
+    .board th.rnd, .board td.rnd { background: #fff; color: #000; }
+    .board td { color: #fff; height: 9mm; }
+    .board-note { color: #444; font-size: 8.5pt; margin: 2mm 0 0; }
+    .print-legend { display: block; color: #000; font-size: 8.5pt; margin: 1.5mm 0 0; }
+    .legend th, .legend td { border-color: #444; }
+    .legend th { background: #fff; color: #000; }
+    .keeper { background: #fff; border-color: #444; padding: 3mm 4mm; margin-bottom: 3mm; }
+    .kfill, .kyn { border-color: #666; }
+    .cb { border-color: #666; }
+    .check li { margin-bottom: 2.5mm; }
+    .tips p { margin-bottom: 2.5mm; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Fantasy Football Draft Board</nav>
+
+<h1>Fantasy Football Draft Board Printable (Free 12-Team Template)</h1>
+<p class="lede">A blank draft board template for 12 teams and 15 rounds, set up to print on one landscape page. Write the manager names across the top, fill the cells as picks land, and hang it where the whole room can see. Below the board you get a pick tracker legend, a keeper rules write-in box, an 8-item prep checklist, and four draft-day tips. Printing costs one sheet of paper; Ctrl+P (Cmd+P on Mac), pick landscape. No download, no sign-up.</p>
+
+<div class="howto noprint">
+<p><strong>How to use this page:</strong> print landscape, one board for the room and one next to your laptop. The board and its legend fit a single landscape page; the keeper box, checklist, and tips print after it. For the night before, the <a href="football-cheat-sheet-template.html">free draft cheat sheet template</a> covers tiering your rankings. A full 12-team × 15-round kit with position cheat sheets, an auction tracker, and season-long sheets is linked at the end.</p>
+</div>
+
+<h2>Draft Board Template — 12 Teams × 15 Rounds</h2>
+<p>Each column is a team, each row is a round: 180 pick cells on one page. In a snake draft, even rounds run reversed (team 12 picks first in round 2), which the round numbers mark. First name or last name only fits the cells best.</p>
+
+<div class="boardwrap">
+<table class="board">
+  <tr>
+    <th class="rnd">Rnd</th><th>Team 1</th><th>Team 2</th><th>Team 3</th><th>Team 4</th><th>Team 5</th><th>Team 6</th><th>Team 7</th><th>Team 8</th><th>Team 9</th><th>Team 10</th><th>Team 11</th><th>Team 12</th>
+  </tr>
+  <tr><td class="rnd">1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td class="rnd">15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+</div>
+<p class="board-note">180 cells on one landscape page. Print a second copy for auction leagues and write winning bids next to each name.</p>
+<p class="print-legend">Legend: strike = picked · ★ = target · F = fade · K + round = keeper · $ = auction bid</p>
+
+<h2>Pick Tracker Legend</h2>
+<p>Agree on the marks before round 1 so the board reads the same to everyone in the room.</p>
+<table class="legend">
+  <tr><th>Name struck through</th><td>Pick confirmed. Write the name when the pick is announced, cross it out when the next pick starts. The gap between those two moments is where skipped picks get caught.</td></tr>
+  <tr><th>K + round</th><td>Keeper. Write the K, then the round cost: <strong>K7</strong> means kept at the price of a 7th-round pick.</td></tr>
+  <tr><th>★</th><td>On your target list. Circle these on your own board the night before, not during the draft.</td></tr>
+  <tr><th>F</th><td>Fade. A player you keep passing on at his price. Mark him so you stop re-litigating the same name in round 9.</td></tr>
+  <tr><th>$22</th><td>Auction leagues: write the winning bid next to the name so the room can read the market as it moves.</td></tr>
+</table>
+
+<h2>Keeper Rules Write-In Box</h2>
+<p>League rules live in a settings page nobody opens mid-draft. Copy them onto the board once and the arguments end before they start.</p>
+<div class="keeper">
+  <h3>Keeper Rules — write yours in</h3>
+  <div class="kline"><span>Keepers allowed per team:</span><span class="kfill"></span></div>
+  <div class="kline"><span>Round cost:</span><span class="kfill"></span><span style="white-space:nowrap;">(common default: the round the player was picked in last year)</span></div>
+  <div class="kline"><span>Deadline to declare keepers:</span><span class="kfill"></span></div>
+  <div class="kline"><span>Same player can be kept</span><span class="kfill"></span><span>years in a row</span></div>
+  <div class="kline"><span>Keepers can be traded:</span><span>Y / N</span><span style="width:2rem;"></span><span>Trade-back allowed:</span><span>Y / N</span></div>
+</div>
+<p>Copy the exact wording from your league's settings page. Paraphrasing a rule is how two managers end up both certain they are right.</p>
+
+<h2>Draft-Day Prep Checklist — 8 Items</h2>
+<p>Sort these before the first pick and draft day runs itself. Print the list, tape it next to the board.</p>
+<ul class="check">
+  <li><span class="cb"></span><span>Confirm the pick order with the commissioner, including any keeper declarations that shift it</span></li>
+  <li><span class="cb"></span><span>Print two boards: one pick tracker for the room, one for your own roster plan</span></li>
+  <li><span class="cb"></span><span>Charge the laptop and phone the night before, pack a charger; long drafts drain both</span></li>
+  <li><span class="cb"></span><span>Snacks and drinks on the table before round 1, so nobody vanishes mid-pick</span></li>
+  <li><span class="cb"></span><span>Mark your cheat sheet: circle the reaches, strike the fades, note bye-week collisions</span></li>
+  <li><span class="cb"></span><span>Check roster requirements: starters per position, bench spots, injured-reserve slots</span></li>
+  <li><span class="cb"></span><span>Test the room's WiFi and set up a phone hotspot as backup</span></li>
+  <li><span class="cb"></span><span>Agree on a time limit per pick and who calls the clock</span></li>
+</ul>
+
+<div class="tips">
+<h2>4 Draft-Day Tips (Opinions)</h2>
+<p>Opinions, not rules. Learned running boards in rooms that argue about everything.</p>
+<h3>Read the pick order out loud twice</h3>
+<p>Snake order is where draft-day confusion comes from, and one read-through hides the team that picks last in round 1 and first in round 2. Read it twice, slowly. Ten seconds each saves ten minutes of "wait, whose pick is it?"</p>
+<h3>Write the name, then cross it</h3>
+<p>Crossing names from memory at pick 40 is how a taken player stays available on your board. Write when the pick is announced, cross when the next one starts. A board that lies about who is available is worse than no board.</p>
+<h3>Announce your pick so the room hears it</h3>
+<p>Half of draft-day dead time is two managers waiting for each other to notice a pick happened. Say the name out loud, then write it down. The tracker stays honest and the clock keeps moving.</p>
+<h3>Stand up after round 8</h3>
+<p>Rounds 9 through 12 are where tired managers draft for needs they invented an hour ago. A two-minute break, some water, back to the chair. That reset saves more value than any ranking tweak you could make in the same two minutes.</p>
+</div>
+
+<!-- CTA swap: saat football-draft-kit active (publish 09-08) dan getly product URL curl 200, ganti href ke product/<slug> — lihat state/cta-swap-tracker.md -->
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Full draft kit: 12×15 board + cheat sheets + auction tracker — $7 →</a>
+<p class="note">$7 one-time · 9 printable pages · A4 + US Letter · instant download · works with any league size and scoring</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
