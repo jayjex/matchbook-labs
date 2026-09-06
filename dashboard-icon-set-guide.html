@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Icon Set Guide — Free UI Icon Size &amp; Consistency Tips — Matchbook Labs</title>
+<meta name="description" content="A free guide to building a dashboard icon set: size conventions for 16 to 32 pixel UI icons, stroke versus filled, consistency opinions, and file naming rules.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/dashboard-icon-set-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dashboard Icon Set Guide — Free UI Icon Size &amp; Consistency Tips">
+<meta property="og:description" content="Size conventions for 16 to 32 pixel UI icons, stroke versus filled, four consistency opinions, and file naming rules. Free guide, no signup.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/dashboard-icon-set-guide.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dashboard Icon Set Guide — Free UI Icon Size &amp; Consistency Tips">
+<meta name="twitter:description" content="Size conventions for 16 to 32 pixel UI icons, stroke versus filled, four consistency opinions, and file naming rules.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Dashboard Icon Set Guide — Free UI Icon Size & Consistency Tips",
+  "description": "A free guide to building a dashboard icon set: size conventions for 16 to 32 pixel UI icons, stroke versus filled, consistency opinions, and file naming rules.",
+  "url": "https://jayjex.github.io/matchbook-labs/dashboard-icon-set-guide.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .hero { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid #21262d; padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
+  .price { color: #7ee787; font-weight: 700; font-size: 1.5rem; white-space: nowrap; }
+  .tag { display: inline-block; font-size: 0.72rem; color: #8b949e; border: 1px solid #30363d; border-radius: 10px; padding: 0.1rem 0.55rem; margin-bottom: 0.8rem; }
+  h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8b949e; margin: 2rem 0 0.9rem; }
+  h3 { font-size: 1rem; margin: 1.2rem 0 0.4rem; color: #e6edf3; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul, ol { margin: 0 0 1.25rem 1.2rem; color: #c9d1d9; }
+  li { margin-bottom: 0.45rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1rem 0.35rem; }
+  blockquote { border-left: 3px solid #30363d; margin: 0 0 1rem; padding: 0.5rem 0 0.5rem 1rem; color: #8b949e; font-size: 0.9rem; }
+  .sheet { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1.25rem; margin: 0 0 1.5rem; overflow-x: auto; }
+  .sheet h3 { margin-top: 0; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.88rem; }
+  .tbl th { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid #30363d; color: #8b949e; font-weight: 600; white-space: nowrap; }
+  .tbl td { padding: 0.55rem 0.6rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .hint { color: #8b949e; font-size: 0.82rem; margin-top: 0.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0 0.5rem; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Dashboard Icon Set Guide</nav>
+
+<div class="hero">
+  <div>
+    <span class="tag">Free guide</span>
+    <h1>Dashboard Icon Set Guide — Free UI Icon Size &amp; Consistency Tips</h1>
+  </div>
+  <div class="price">Free</div>
+</div>
+
+<p>A dashboard icon set fails quietly. One icon is 20 pixels and its neighbor is 24, one file is named with spaces, one corner is rounder than the rest, and the toolbar starts looking like five people shipped it. This guide collects the conventions that keep UI icons for dashboards consistent: four sizes that cover most surfaces, stroke versus filled, four consistency opinions, and a naming scheme that survives a folder of 200 files. It is generic UI knowledge, so it applies whether your icons come from us or from anywhere else.</p>
+
+<h2>Where the example set comes from</h2>
+<div class="sheet">
+  <p>Our companion product is a <a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Web3 icon mega-pack</a>, and its README documents the set better than a paraphrase would. Quoted verbatim:</p>
+  <blockquote>"50 flat minimal line icons in single colors, organized in 5 groups of 10: icons 01–10: blockchain networks (L1/L2 marks, chain links, nodes) · icons 11–20: DeFi (swap, liquidity, staking, vault, bridge, farming, lending, governance, pools, rewards) · icons 21–30: wallets (hot, cold, hardware, mobile, extension, multisig, connect, seed, watch-only, import) · icons 31–40: NFT (mint, gallery, royalties, drops, collections, auctions, fractionalization, verification, listing, burn) · icons 41–50: dev tools (contract, RPC, indexer, faucet, testnet, node, gas, explorer, SDK, deploy)"</blockquote>
+  <blockquote>"All icons share the same stroke weight and corner rounding, so they sit well next to each other in a UI. One accent color per group: indigo (networks), teal (DeFi), violet (wallets), magenta (NFT), emerald (dev)." … "50 PNG files, 1024x1024, named icon-01.png through icon-50.png"</blockquote>
+  <p>That pack is the worked example behind the tips below. No design-tool brands appear on this page on purpose: every method here works in whatever editor you already use.</p>
+</div>
+
+<h2>Icon size conventions: 16, 20, 24, 32</h2>
+<p>Four pixel sizes cover most dashboard surfaces. They are conventions, not a standard; frameworks deviate, and that is fine. What matters is picking one size per context and never letting the same slot use two.</p>
+<div class="sheet">
+  <table class="tbl">
+    <tr><th>Size</th><th>Where it usually shows up</th><th>Notes</th></tr>
+    <tr><td><strong>16px</strong></td><td>Favicons, icons inline with body text, dense table rows, tree views</td><td>The smallest common size. A shape has to survive as a silhouette here.</td></tr>
+    <tr><td><strong>20px</strong></td><td>Input fields, buttons, breadcrumbs, compact navigation</td><td>Common default for form-adjacent icons in UI kits.</td></tr>
+    <tr><td><strong>24px</strong></td><td>Toolbars, tab bars, card headers, standard navigation</td><td>The working size for most dashboards. If a set ships one size, it is usually this one.</td></tr>
+    <tr><td><strong>32px</strong></td><td>Section headers, empty states, feature grids, onboarding screens</td><td>Large enough for detail to read. Still UI, not illustration.</td></tr>
+  </table>
+  <p class="hint">Check the grid of whatever framework your dashboard uses before locking sizes. The table above is the common ground, not a spec.</p>
+</div>
+
+<h2>Stroke or filled? Three comparisons</h2>
+<p>Both styles work in a dashboard. The differences show up at specific sizes and in specific jobs. Rows two and three are opinions, marked as such.</p>
+<div class="sheet">
+  <table class="tbl">
+    <tr><th>Aspect</th><th>Stroke icons</th><th>Filled icons</th></tr>
+    <tr><td><strong>At 16px</strong></td><td colspan="2">Filled shapes hold their silhouette better on dense screens; thin strokes can blur at this size. Test on the screens you actually ship to, because rendering differs. <em>(observation you can verify in five minutes)</em></td></tr>
+    <tr><td><strong>At 24–32px</strong></td><td>Reads lighter and more technical, which suits data-heavy dashboards. <em>(opinion)</em></td><td>Reads heavier and friendlier, which suits consumer products. <em>(opinion)</em></td></tr>
+    <tr><td><strong>Mixing both</strong></td><td colspan="2">One set, one style. A dashboard that mixes stroke and filled icons at the same size looks unfinished faster than it looks varied. <em>(opinion)</em></td></tr>
+  </table>
+</div>
+
+<h2>Four consistency tips</h2>
+<p>These are opinions, not rules. They match how the example pack was built, and they have survived contact with real toolbars.</p>
+<ol>
+  <li><strong>One stroke weight for the whole set.</strong> A 1.5px icon next to a 2.5px icon reads as two sources, even when everything else matches. Fifty icons at one weight sit next to each other without effort, which is what the README quote above promises in writing.</li>
+  <li><strong>One corner rounding.</strong> Corner radius is the detail your eye catches before you can name it. Pick a radius once, apply it to every shape that has corners, and stop deciding per icon.</li>
+  <li><strong>One accent color per group, not per icon.</strong> Color per icon turns a set into confetti. Grouping by color (indigo networks, teal DeFi, and so on) keeps variety without losing the row.</li>
+  <li><strong>Preview icons in the row where they will live.</strong> An icon that looks fine alone can wreck a toolbar. Line up the final row at final size before you ship; the row is the honest test.</li>
+</ol>
+
+<h2>Naming conventions for icon files</h2>
+<div class="sheet">
+  <p>Three rules that keep a growing icon folder sortable:</p>
+  <ul>
+    <li><strong>Kebab-case.</strong> <code>swap-arrows.png</code>, never <code>Swap Arrows.png</code>. No spaces, no case-sensitivity surprises when files move between systems.</li>
+    <li><strong>Size suffix.</strong> <code>wallet-connect-24.png</code>. The number is the pixel size the icon was drawn for, so future-you knows without opening it.</li>
+    <li><strong>Category prefix.</strong> <code>defi-liquidity.png</code>, <code>dev-rpc.png</code>, <code>wallet-hot.png</code>. The group name first means an alphabetical sort is also a grouped sort.</li>
+  </ul>
+</div>
+
+<h2>Page facts</h2>
+<div class="sheet">
+  <table class="tbl">
+    <tr><th>Item</th><th>Value</th></tr>
+    <tr><td>Sizes covered</td><td>16 / 20 / 24 / 32 px, with contexts for each</td></tr>
+    <tr><td>Stroke vs filled</td><td>3 comparison rows, opinions marked</td></tr>
+    <tr><td>Consistency tips</td><td>4, labeled as opinions</td></tr>
+    <tr><td>Naming rules</td><td>3: kebab-case, size suffix, category prefix</td></tr>
+    <tr><td>Source</td><td>README of the Web3 icon mega-pack, quoted verbatim</td></tr>
+    <tr><td>Brand claims</td><td>None. No design-tool names on this page</td></tr>
+    <tr><td>Companion product</td><td><a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Web3 Icon Mega-Pack</a>, 50 icons, $9</td></tr>
+    <tr><td>Last updated</td><td>September 8, 2026</td></tr>
+  </table>
+</div>
+
+<a class="cta" href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Get the Web3 Icon Mega-Pack — 50 crypto, DeFi &amp; dev tool icons, $9 →</a>
+<p class="note">$9 one-time · 50 PNGs, 1024×1024 · commercial license, no attribution · checkout on Getly</p>
+
+<p>More on this site: the <a href="product-web3-events-calendar.html">2026 Web3 Events &amp; Hackathons Calendar</a>, the <a href="product-web3-remote-jobs-db.html">Web3 Remote Jobs &amp; Hiring Database</a>, and the full <a href="catalog.html">catalog</a>.</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
