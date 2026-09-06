@@ -13,6 +13,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://jayjex.github.io/matchbook-labs/halloween-free-games.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jayjex.github.io/matchbook-labs/superteam-earn-api.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://jayjex.github.io/matchbook-labs/products/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,6 +44,12 @@
   </url>
   <url>
     <loc>https://jayjex.github.io/matchbook-labs/products/solana-social-banner-pack-40-web3-ready-header-images.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jayjex.github.io/matchbook-labs/products/web3-remote-jobs-hiring-database-2026-147-verified-companies-multi-chain.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -131,17 +149,5 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jayjex.github.io/matchbook-labs/halloween-free-games.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jayjex.github.io/matchbook-labs/superteam-earn-api.html</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>
