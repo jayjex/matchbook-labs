@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG vs PNG Icons &mdash; Icon File Format for Websites, a Free Guide &mdash; Matchbook Labs</title>
+<meta name="description" content="A free guide to picking an icon file format for websites: SVG and PNG compared on scaling, file size, editability, compatibility and animation, plus when each format is the better pick.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/svg-vs-png-icons-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SVG vs PNG Icons &mdash; Icon File Format for Websites, a Free Guide">
+<meta property="og:description" content="SVG and PNG compared on scaling, file size, editability, compatibility and animation, plus three when-to-use calls and a fallback note. Free guide, no signup.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/svg-vs-png-icons-guide.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SVG vs PNG Icons &mdash; Icon File Format for Websites, a Free Guide">
+<meta name="twitter:description" content="SVG and PNG compared on scaling, file size, editability, compatibility and animation, plus three when-to-use calls and a fallback note.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "SVG vs PNG Icons — Icon File Format for Websites, a Free Guide",
+  "description": "A free guide to picking an icon file format for websites: SVG and PNG compared on scaling, file size, editability, compatibility and animation, plus when each format is the better pick.",
+  "url": "https://jayjex.github.io/matchbook-labs/svg-vs-png-icons-guide.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .hero { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid #21262d; padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
+  .price { color: #7ee787; font-weight: 700; font-size: 1.5rem; white-space: nowrap; }
+  .tag { display: inline-block; font-size: 0.72rem; color: #8b949e; border: 1px solid #30363d; border-radius: 10px; padding: 0.1rem 0.55rem; margin-bottom: 0.8rem; }
+  h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8b949e; margin: 2rem 0 0.9rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol { margin: 0 0 1.25rem 1.2rem; color: #c9d1d9; }
+  li { margin-bottom: 0.45rem; }
+  blockquote { border-left: 3px solid #30363d; margin: 0 0 1rem; padding: 0.5rem 0 0.5rem 1rem; color: #8b949e; font-size: 0.9rem; }
+  .sheet { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1.25rem; margin: 0 0 1.5rem; overflow-x: auto; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.88rem; }
+  .tbl th { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid #30363d; color: #8b949e; font-weight: 600; white-space: nowrap; }
+  .tbl td { padding: 0.55rem 0.6rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .hint { color: #8b949e; font-size: 0.82rem; margin-top: 0.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0 0.5rem; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / SVG vs PNG Icons Guide</nav>
+
+<div class="hero">
+  <div>
+    <span class="tag">Free guide</span>
+    <h1>SVG vs PNG Icons &mdash; Icon File Format for Websites, a Free Guide</h1>
+  </div>
+  <div class="price">Free</div>
+</div>
+
+<p>Every icon project hits the same fork: export as SVG or export as PNG. The two formats solve different problems, and most of the advice online argues taste instead of mechanics. This guide compares them on five measurable points, adds three when-to-use calls we would defend out loud, and ends with the honest disclosure that our own icon pack ships PNG, not SVG, for a stated reason. All of it is generic file-format knowledge, so it applies whether your icons come from us or from anywhere else.</p>
+
+<h2>SVG and PNG, five measurable differences</h2>
+<p>These rows are facts about the formats, not preferences. Any icon set on any site behaves this way.</p>
+<div class="sheet">
+  <table class="tbl">
+    <tr><th>Aspect</th><th>SVG</th><th>PNG</th></tr>
+    <tr><td><strong>Scaling</strong></td><td>Vector: the file stores shapes, so it stays sharp at any size and on any screen density.</td><td>Fixed pixel grid: sharp at its native size and below; enlarging past it softens edges.</td></tr>
+    <tr><td><strong>File size</strong></td><td>Stores coordinates and styles, so simple shapes stay small no matter how large you display them.</td><td>Stores every pixel, so size grows with dimensions; flat single-color shapes compress well.</td></tr>
+    <tr><td><strong>Editability</strong></td><td>Opens as editable paths and readable markup; a color or stroke change is a small edit.</td><td>A flattened raster: layers are gone, and recoloring means working over pixels.</td></tr>
+    <tr><td><strong>Compatibility</strong></td><td>Rendered by all current browsers, but some contexts (email clients, image pickers, thumbnailers) still reject or mishandle it.</td><td>Universally accepted: every browser, email client and image pipeline since the 1990s renders it.</td></tr>
+    <tr><td><strong>Animation</strong></td><td>Can carry motion and interactivity inside the file itself.</td><td>A single still frame; motion has to come from something outside the file.</td></tr>
+  </table>
+  <p class="hint">One nuance the table flattens: an SVG with heavy filters or long path data can end up larger than the same icon exported as a small PNG. Simple shapes keep the SVG small; complexity erodes the advantage.</p>
+</div>
+
+<h2>When each format wins</h2>
+<p>Three calls for the situations that come up most. These are opinions, marked as such, and they follow directly from the table above.</p>
+<div class="sheet">
+  <table class="tbl">
+    <tr><th>Situation</th><th>Our pick</th><th>Why</th></tr>
+    <tr><td>UI icons inside a website or web app</td><td>SVG <em>(opinion)</em></td><td>One file covers every size and screen density, and the icon can inherit color from the page.</td></tr>
+    <tr><td>Icons inside emails and newsletters</td><td>PNG <em>(opinion)</em></td><td>Email clients are the least predictable rendering environment on the internet; PNG is the format they all handle without surprises.</td></tr>
+    <tr><td>Uploads to platforms that demand fixed pixel sizes (app stores, social profiles)</td><td>PNG <em>(opinion)</em></td><td>The destination wants exact dimensions, so a fixed-size raster is the path of least resistance.</td></tr>
+  </table>
+</div>
+
+<h2>The fallback note for older browsers</h2>
+<p>A browser old enough to ignore SVG predates wide SVG support by more than a decade, so this matters less every year, but the belt-and-suspenders pattern still works: serve the SVG first and a PNG twin alongside it, so the page shows the raster when the vector is not understood. The cost is shipping two files per icon, which is why most teams only keep the fallback for icons that must never appear blank, like a logo mark, and let ordinary UI icons ride on SVG support alone.</p>
+
+<h2>Four opinions worth stealing</h2>
+<ol>
+  <li><strong>PNG for anything that ships inside an email.</strong> Email clients mangle or refuse SVG, and a broken icon in an inbox is invisible work you will never debug. Export email icons as PNG at double the display size and move on. <em>(opinion)</em></li>
+  <li><strong>Pick one format per surface, not per project.</strong> An SVG button icon next to a PNG toolbar icon looks subtly mismatched, the same way mixed stroke weights do. SVG for the interface, PNG for exports and email, consistently. <em>(opinion)</em></li>
+  <li><strong>Check small SVGs at 16 pixels before trusting them.</strong> Downscaled vector strokes can blur or thicken depending on how the browser renders them, while a hand-sized PNG is exactly the pixels it claims to be. Five minutes of testing beats an ugly surprise in a dense table row. <em>(opinion)</em></li>
+  <li><strong>Start from single-color art either way.</strong> One-color icons recolor in one small edit as SVG, or after a background removal as PNG, and they stay consistent across the set. Multi-color icons lock you out of both cheap paths. <em>(opinion)</em></li>
+</ol>
+
+<h2>Where the example pack comes from</h2>
+<div class="sheet">
+  <p>Our companion product is a <a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Web3 icon mega-pack</a>, and its README documents the set better than a paraphrase would. Quoted verbatim:</p>
+  <blockquote>"50 flat minimal line icons in single colors, organized in 5 groups of 10: icons 01&ndash;10: blockchain networks (L1/L2 marks, chain links, nodes) &middot; icons 11&ndash;20: DeFi (swap, liquidity, staking, vault, bridge, farming, lending, governance, pools, rewards) &middot; icons 21&ndash;30: wallets (hot, cold, hardware, mobile, extension, multisig, connect, seed, watch-only, import) &middot; icons 31&ndash;40: NFT (mint, gallery, royalties, drops, collections, auctions, fractionalization, verification, listing, burn) &middot; icons 41&ndash;50: dev tools (contract, RPC, indexer, faucet, testnet, node, gas, explorer, SDK, deploy)"</blockquote>
+  <blockquote>"All icons share the same stroke weight and corner rounding, so they sit well next to each other in a UI. One accent color per group: indigo (networks), teal (DeFi), violet (wallets), magenta (NFT), emerald (dev)." &hellip; "50 PNG files, 1024x1024, named icon-01.png through icon-50.png"</blockquote>
+  <p>The honest disclosure, since this page is literally about format choice: the pack is the PNG half of this guide. Fifty flat single-color shapes at 1024x1024 export cleanly, survive every email client and upload pipeline, and the simple geometry holds up at UI sizes; if your project later needs vectors, the same single-color art is easy to trace. If you came here to decide SVG vs PNG and want the raster side done for you, that is the pack. If you want the UI-side conventions instead, read the <a href="dashboard-icon-set-guide.html">dashboard icon set guide</a>.</p>
+  <p>No design-tool brands appear on this page on purpose: every method here works in whatever editor you already use.</p>
+</div>
+
+<h2>Page facts</h2>
+<div class="sheet">
+  <table class="tbl">
+    <tr><th>Item</th><th>Value</th></tr>
+    <tr><td>Formats compared</td><td>SVG vs PNG, 5 factual rows (scaling, file size, editability, compatibility, animation)</td></tr>
+    <tr><td>When-to-use calls</td><td>3 situations, all labeled as opinions</td></tr>
+    <tr><td>Older browsers</td><td>1 fallback paragraph, generic</td></tr>
+    <tr><td>Opinion tips</td><td>4, each labeled <em>(opinion)</em></td></tr>
+    <tr><td>Source</td><td>README of the Web3 icon mega-pack, quoted verbatim</td></tr>
+    <tr><td>Honest disclosure</td><td>The companion pack ships PNG only, no SVGs included</td></tr>
+    <tr><td>Brand claims</td><td>None. No design-tool names on this page</td></tr>
+    <tr><td>Companion product</td><td><a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Web3 Icon Mega-Pack</a>, 50 icons, $9</td></tr>
+    <tr><td>Last updated</td><td>September 8, 2026</td></tr>
+  </table>
+</div>
+
+<a class="cta" href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Get the Web3 Icon Mega-Pack &mdash; 50 crypto, DeFi &amp; dev tool icons, $9 &rarr;</a>
+<p class="note">$9 one-time &middot; 50 PNGs, 1024&times;1024 &middot; commercial license, no attribution &middot; checkout on Getly</p>
+
+<p>More on this site: the <a href="dashboard-icon-set-guide.html">Dashboard Icon Set Guide</a> for UI size and consistency conventions, and the full <a href="catalog.html">catalog</a>.</p>
+
+<footer>Matchbook Labs &mdash; digital products for builders &middot; <a href="catalog.html">Full catalog</a> &middot; <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
