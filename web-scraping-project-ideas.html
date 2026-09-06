@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8 Web Scraping Project Ideas for Beginners (Ethical, Practical) — Matchbook Labs</title>
+<meta name="description" content="8 web scraping project ideas for beginners that respect robots.txt and ToS: own-listing price monitors, personal archives, open-data CSVs. Ethics checklist inside.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/web-scraping-project-ideas.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="8 Web Scraping Project Ideas for Beginners (Ethical, Practical)">
+<meta property="og:description" content="Beginner scraping projects that respect robots.txt and ToS: own-listing price monitors, personal archives, open-data CSVs, change detection. Ethics checklist included.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/web-scraping-project-ideas.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8 Web Scraping Project Ideas for Beginners (Ethical, Practical)">
+<meta name="twitter:description" content="Beginner scraping projects that respect robots.txt and ToS, plus the ethics checklist and a 10-script Playwright starter pack.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "8 Web Scraping Project Ideas for Beginners (Ethical, Practical)",
+  "description": "8 beginner web scraping project ideas that respect robots.txt and Terms of Service, with an ethics checklist and a 10-script Playwright starter pack.",
+  "url": "https://jayjex.github.io/matchbook-labs/web-scraping-project-ideas.html",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8b949e; margin: 2.25rem 0 0.9rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul, ol { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.45rem; }
+  ol.ideas { margin-left: 0; list-style: none; counter-reset: idea; }
+  ol.ideas > li {
+    counter-increment: idea;
+    background: #161b22; border: 1px solid #21262d; border-radius: 8px;
+    padding: 0.9rem 1.1rem 0.9rem 3rem; margin-bottom: 0.8rem; position: relative;
+  }
+  ol.ideas > li::before {
+    content: counter(idea, decimal-leading-zero);
+    position: absolute; left: 0.9rem; top: 0.95rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85rem; color: #58a6ff;
+  }
+  ol.ideas h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+  ol.ideas .why { color: #8b949e; font-size: 0.92rem; margin: 0; }
+  .box { background: #161b22; border: 1px solid #30363d; border-left: 4px solid #d29922; border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 1.5rem; }
+  .box h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .box ul { margin-bottom: 0; }
+  pre { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; overflow-x: auto; font-size: 0.85rem; color: #c9d1d9; margin: 0 0 1.25rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 5px; padding: 0.08em 0.35em; }
+  pre code { background: none; border: none; padding: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.88rem; }
+  th { text-align: left; color: #8b949e; font-weight: 600; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+  td { border-bottom: 1px solid #21262d; padding: 0.45rem 0.6rem; vertical-align: top; }
+  td:first-child { white-space: nowrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Web scraping project ideas</nav>
+
+<h1>8 Web Scraping Project Ideas for Beginners</h1>
+<p class="lede">Every idea below runs on data you own, data that's published as open data, or data you have written permission to access. That constraint is the point. These are projects you can finish without reading a lawyer's email afterward. All eight double as scraping projects for beginners: small scope, visible output, no gray areas. The mechanics stay generic on purpose, and each one maps to a script in the <a href="products/web-scraping-script-pack-10-production-ready-playwright-templates.html">Web Scraping Script Pack</a> if you want working code instead of a blank file.</p>
+
+<h2>The 8 project ideas</h2>
+<ol class="ideas">
+  <li>
+    <h3>Price and stock monitor for your own listings</h3>
+    <p class="why">Track price or availability on pages you run (or ones a seller gave you permission to watch) and get a webhook alert when a number changes. Useful because you find out about a broken price before your customers do.</p>
+  </li>
+  <li>
+    <h3>Personal web archive</h3>
+    <p class="why">Save timestamped copies and screenshots of documentation and articles you rely on, for your own reference. Useful because links rot; your archive doesn't.</p>
+  </li>
+  <li>
+    <h3>Open-data table to one clean CSV</h3>
+    <p class="why">Governments and institutions publish open data as paginated HTML tables. Walking the pagination once and saving the rows to CSV turns days of copy-paste into a file you can load into pandas or a spreadsheet. Useful because analysis tools read CSV, not HTML.</p>
+  </li>
+  <li>
+    <h3>Change detection on sites you maintain</h3>
+    <p class="why">Hash screenshots of your own pages after each deploy and diff them against the last run. Useful as the cheapest visual regression test you will ever set up.</p>
+  </li>
+  <li>
+    <h3>Sitemap crawler with robots.txt awareness</h3>
+    <p class="why">Expand a sitemap index into a full URL inventory while honoring crawl-delay values. Useful because migrations and audits start with knowing what exists.</p>
+  </li>
+  <li>
+    <h3>JSON endpoint poller to a local log</h3>
+    <p class="why">Poll a JSON endpoint you're authorized to call and append each response to a JSONL file. Useful because services rarely keep history; now you have yours.</p>
+  </li>
+  <li>
+    <h3>Job board watch for your own search</h3>
+    <p class="why">Collect listing pages matching your skill set into JSON, deduped across runs, so you check one file instead of twelve tabs. Useful because job hunts are won by response time.</p>
+  </li>
+  <li>
+    <h3>Retry-aware fetch wrapper (build this first)</h3>
+    <p class="why">Exponential backoff with jitter and Retry-After handling, reused by every project above. Useful because most beginner scraping failures are impatience bugs, and this fixes them once.</p>
+  </li>
+</ol>
+
+<div class="box">
+  <h3>The ethics checklist (all three, every time)</h3>
+  <ul>
+    <li><strong>Check robots.txt first.</strong> Before a script touches a site, read its robots.txt. If the path you want is disallowed, the project gets a different target. No exceptions.</li>
+    <li><strong>Read the Terms of Service.</strong> Some sites prohibit automated access entirely. Those sites are off limits. Others restrict which pages may be fetched and how often; follow the stricter reading.</li>
+    <li><strong>Rate limit yourself.</strong> Put real delays between requests (the script pack ships with 800–2500ms). If a site publishes a crawl-delay, adopt the stricter of the two values. A patient script gets the same data as a fast one; it gets to keep going.</li>
+  </ul>
+</div>
+
+<h2>Four opinions from building these</h2>
+<p>These are opinions, not rules of the field. They're what I'd tell a friend starting their first script.</p>
+<ol>
+  <li>Start with the official API when one exists. Scraping is for the gap between "no API" and "the API doesn't cover what I need," and beginners skip the check more often than they skip ethics.</li>
+  <li>Slow down more than feels necessary. Speed gains you minutes; a blocked IP or a cease-and-desist costs you the whole project. If you can't justify your request rate to the site's admin, it's too high.</li>
+  <li>If a login wall protects data and it isn't your account, stop there. Scrape only what you're authorized to access, with written permission for anything behind someone else's credentials.</li>
+  <li>Store raw, clean later. Keep responses exactly as fetched, then derive your CSVs and reports from copies. Re-running a cleaning script takes seconds; re-scraping means hitting the site again, and the kindest thing a scraper can do is make fewer requests.</li>
+</ol>
+
+<h2>Working code for all 8: the Web Scraping Script Pack</h2>
+<p>The <a href="products/web-scraping-script-pack-10-production-ready-playwright-templates.html">Web Scraping Script Pack</a> ($15) is 10 self-contained Node.js scripts built on Playwright. Per the pack's README: each file runs on its own, each has a "how to run" comment at the top, and the selector constants you'll change are clearly marked EDIT. Copy a file, change the selectors, run.</p>
+<table>
+  <tr><th>#</th><th>Script</th><th>What it does (README wording)</th></tr>
+  <tr><td>01</td><td>paginated-table-to-csv</td><td>Walks <code>?page=N</code> or Next-button pagination, saves table rows to CSV</td></tr>
+  <tr><td>02</td><td>infinite-scroll-collector</td><td>Scrolls a feed to the end, dedupes, saves JSON</td></tr>
+  <tr><td>03</td><td>login-scrape-storagestate</td><td>Logs in once, saves the session, reuses it on later runs</td></tr>
+  <tr><td>04</td><td>price-stock-monitor</td><td>Diff-based product monitor, POSTs Slack/Discord webhook on change</td></tr>
+  <tr><td>05</td><td>bulk-form-submitter</td><td>CSV rows in, one form submission per row, results report</td></tr>
+  <tr><td>06</td><td>job-board-scraper</td><td>Board/listing pages to JSON with cross-run dedupe</td></tr>
+  <tr><td>07</td><td>sitemap-crawler</td><td>Expands sitemap indexes, honors robots.txt + crawl-delay, writes JSONL</td></tr>
+  <tr><td>08</td><td>screenshot-diff-bot</td><td>sha256 change detection with archived previous shots</td></tr>
+  <tr><td>09</td><td>api-poller-jsonl</td><td>Polls a JSON endpoint, appends new records to JSONL</td></tr>
+  <tr><td>10</td><td>retry-fetch-wrapper</td><td>Exponential backoff, jitter, UA rotation, Retry-After aware</td></tr>
+</table>
+<p>Requirements per the README: Node.js 18+, then <code>npm install</code> and a one-time <code>npx playwright install chromium</code>. Quick start shape:</p>
+<pre><code>npm install
+npx playwright install chromium
+node 01-paginated-table-to-csv.js --url "https://example.com/list?p=1" --max-pages 2 --out output.csv</code></pre>
+<p>Also from the README, verbatim: "Every script takes <code>--flag value</code> arguments, prints progress to stdout, and writes to the current directory. Nothing is uploaded anywhere. No accounts, no API keys required to run any of them (03 reads credentials from env vars only)."</p>
+<p>On the ethics side, the pack's README spells out the same rules as the checklist above: read the site's ToS and robots.txt before scraping, sites that prohibit automated access are off limits, keep the built-in delays, and "No captcha solving, no credential stuffing, no IP-rotation evasion, nothing here is designed to defeat access controls." You're responsible for how you use the scripts: your own sites, open data, or places you have permission. There's also a smoke test that serves a local fixture site and runs 4 of the scripts against it, so you can verify the pack works before pointing it at anything real.</p>
+
+<a class="cta" href="https://www.getly.store/product/web-scraping-script-pack-10-production-ready-playwright-templates-mtn8em7k">Get the Web Scraping Script Pack — 10 Playwright templates, $15 →</a>
+<p class="note">Instant download · 10 Node.js/Playwright scripts · smoke test included</p>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="superteam-earn-api.html">Superteam Earn API endpoints — 30 reverse-engineered routes</a>, for when the data source is an API rather than a page</li>
+  <li><a href="catalog.html">Full catalog</a> — data packs, datasets, and builder tools</li>
+</ul>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
