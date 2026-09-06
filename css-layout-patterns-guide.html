@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Layout Patterns (Free): Cheat Sheet for 6 Common Layouts - Matchbook Labs</title>
+<meta name="description" content="Free CSS layout patterns cheat sheet: 6 common layouts (centering, two-column, card grid, sticky header, card row, pinned footer) with the exact CSS, a flex-vs-grid note, and 4 labeled opinions. Pattern reference, not a course.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/css-layout-patterns-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Layout Patterns (Free): Cheat Sheet for 6 Common Layouts">
+<meta property="og:description" content="6 common CSS layouts with the exact CSS, a flex-vs-grid note, and 4 labeled opinions. Pattern reference, not a course.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/css-layout-patterns-guide.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS Layout Patterns (Free)">
+<meta name="twitter:description" content="6 common layouts with exact CSS, a flex-vs-grid note, 4 labeled opinions. Frontend Interview Answer Book: $29.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CSS Layout Patterns (Free): Cheat Sheet for 6 Common Layouts",
+  "description": "A free CSS layout patterns cheat sheet: 6 common layouts (centering, two-column, card grid, sticky header, card row, pinned footer) with the exact CSS, a flex-vs-grid note, and 4 labeled opinions.",
+  "datePublished": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/css-layout-patterns-guide.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.5rem; }
+  .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .howto p { margin: 0; font-size: 0.95rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  .sheet { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.88rem; }
+  .sheet th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem; white-space: nowrap; }
+  .sheet td { padding: 0.55rem 0.5rem; border-bottom: 1px solid #21262d; color: #c9d1d9; vertical-align: top; }
+  .sheet td.cat { font-weight: 600; color: #e6edf3; white-space: nowrap; }
+  .sheet td.ex em { color: #8b949e; }
+  .sheet code { color: #79c0ff; font-size: 0.82rem; }
+  .codenote { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .codenote p { margin: 0 0 0.5rem; font-size: 0.95rem; }
+  .codenote p:last-child { margin: 0; }
+  .codenote code { color: #79c0ff; font-size: 0.88rem; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .honest { color: #8b949e; font-size: 0.85rem; margin: 1.25rem 0; }
+  blockquote { border-left: 3px solid #30363d; margin: 1rem 0; padding: 0.25rem 0 0.25rem 1rem; color: #8b949e; font-size: 0.9rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) { .sheet { font-size: 0.78rem; } }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / CSS Layout Patterns</nav>
+
+<h1>CSS Layout Patterns (Free): Cheat Sheet for 6 Common Layouts</h1>
+<p class="lede">Most layouts are six patterns wearing different fonts. This free CSS layout cheat sheet lists each one with the exact CSS, the failure mode that eats your afternoon, and 4 opinions, each labeled as one. Every snippet is plain CSS mechanics, so it works in whatever stack you are holding.</p>
+
+<div class="howto">
+<p><strong>How to use this page:</strong> find the row that matches the box you are trying to build, copy the CSS, and adjust the numbers. Read the <em>breaks when</em> column before you debug, because most layout bugs are one of those three failures. The flex-vs-grid note and the 4 opinions come after the table, so you know where mechanics end and taste begins.</p>
+</div>
+
+<h2 id="patterns">The patterns table: 6 layouts, exact CSS</h2>
+<p>Each row is one layout job. The CSS is the short version that works; the note names the failure mode people hit in real projects.</p>
+
+<table class="sheet">
+  <thead>
+    <tr><th style="width:16%">Pattern</th><th style="width:44%">The CSS</th><th style="width:40%">Breaks when</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="cat">Centering one child</td><td class="ex"><code>.wrap { display: grid; place-items: center; min-height: 100dvh; }</code></td><td class="ex">The child keeps its size; a second child stacks into the same cell. Use <code>100dvh</code>, not <code>100vh</code>, or the phone URL bar makes it jump.</td></tr>
+    <tr><td class="cat">Two-column (sidebar + main)</td><td class="ex"><code>.layout { display: grid; grid-template-columns: 240px 1fr; }</code></td><td class="ex">Long words or code in the <code>1fr</code> column blow past it. The fix is <code>minmax(0, 1fr)</code>, because <code>1fr</code> alone will not shrink below content size.</td></tr>
+    <tr><td class="cat">Three-column card grid</td><td class="ex"><code>.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }</code></td><td class="ex">Wrong keyword: <code>auto-fit</code> collapses empty tracks and stretches the last items, <code>auto-fill</code> keeps their planned size. Pick by what an unfinished row should look like.</td></tr>
+    <tr><td class="cat">Sticky header</td><td class="ex"><code>.header { position: sticky; top: 0; z-index: 10; }</code></td><td class="ex">An ancestor with <code>overflow: hidden</code> becomes the scroll container, so the header sticks inside a box that never scrolls. And sticky stops at its parent's edge; no travel room, no sticking.</td></tr>
+    <tr><td class="cat">Card row (horizontal scroll)</td><td class="ex"><code>.row { display: flex; gap: 16px; overflow-x: auto; }</code></td><td class="ex">Flex children refuse to shrink below their content, so one long word widens the whole row. <code>min-width: 0</code> on the children lets the row scroll instead of overflow.</td></tr>
+    <tr><td class="cat">Footer pinned to bottom</td><td class="ex"><code>body { min-height: 100dvh; display: flex; flex-direction: column; } footer { margin-top: auto; }</code></td><td class="ex">Short pages leave the footer mid-screen if <code>min-height</code> is missing or <code>margin-top: auto</code> is on the wrong element. <code>margin-top: auto</code> absorbs all free space above the footer.</td></tr>
+  </tbody>
+</table>
+<p class="table-note">6 rows. These are box mechanics, so the same CSS holds regardless of what generates the markup.</p>
+
+<h2 id="flexgrid">Flex or grid? A short note</h2>
+<div class="codenote">
+<p><strong>My rule (opinion, not a spec):</strong> reach for <code>flex</code> when the layout is one direction, a row or a column. Reach for <code>grid</code> the moment you need rows and columns to agree, or when you want gaps without margin-collapse surprises. Flex with <code>flex-wrap</code> can fake a grid, but the rows never line up by column, and that is exactly the look you do not want in a card wall.</p>
+<p>Two mechanics worth memorizing either way: <code>gap</code> works in both and never collapses like margins do, and <code>* { box-sizing: border-box; }</code> is why your columns stop overflowing the moment the reset lands.</p>
+</div>
+
+<h2 id="opinions">4 opinions, labeled as opinions</h2>
+<ol>
+  <li><strong>Write the stacked layout first.</strong> (Opinion.) Get the single-column version right, then add columns at the breakpoint. Fixing a broken two-column layout on a phone is harder than widening a working one.</li>
+  <li><strong>Land the border-box reset before any pattern.</strong> (Opinion.) Under the default <code>content-box</code>, a 50% column with padding overflows its row and the bug looks like the grid's fault. One line of reset removes a whole class of "why is it 220px wide" debug sessions.</li>
+  <li><strong>Use gap, not margins, between items.</strong> (Opinion.) Adjacent vertical margins collapse into the larger one, so your spacing table lies to you. <code>gap</code> means the number you wrote is the space you get.</li>
+  <li><strong>Sticky needs a taller parent.</strong> (Opinion, born of a common bug.) A sidebar that sticks for zero pixels usually has a parent exactly its own height. Move the sticky element up a level or let the content column define the height, and it travels.</li>
+</ol>
+
+<p class="honest">This page is a pattern reference, not a course. Six rows cover the shapes; they do not teach you why the box model behaves the way it does, and no cheat sheet replaces opening devtools and watching what the browser does.</p>
+
+<h2 id="book">The full version: 60 questions with the why behind each</h2>
+<p>The patterns above come from one section of a prep book built for frontend interviews. Its description:</p>
+<blockquote>60 frontend interview questions with direct answers and code. JavaScript, CSS, React, performance, security, testing. 36 snippets were executed under Node during build QA. Each question adds why interviewers ask it and the follow-up traps to expect.</blockquote>
+<p>The CSS section alone covers the mechanics behind these rows: specificity, stacking contexts, margin collapse, flex and grid gotchas, sticky failure modes, and units. Each answer names the trap that follows a correct first answer, which is the part a cheat sheet cannot hold.</p>
+
+<!-- SWAP: frontend-book $29 (priceCents 2900 in publish.sh) BELUM ada di Getly. GATE verify 1x 2026-09-08: API read-key /api/v1/products?limit=100 = 27 produk, 0 match frontend/interview; publish-log-20260906 = ABORT (0 POST) -> produk belum publish. Folder produk ADA di disk (artifacts/products/frontend-book/) jadi build lanjut, bukan drift. JANGAN probe /product/ saat pending (ISR rule). Saat produk publish + API status=active: curl canonical https://www.getly.store/product/<FEBEBOOK-SLUG> = 200 dulu (gate; cek 1x/hari no spam) -> swap href ke getly.store/product/<FEBEBOOK-SLUG>, anchor tetap. Slug dari output publish baris RESULT. Konfirmasi harga saat swap (publish.sh bilang $29). -->
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Frontend Interview Answer Book - 60 questions with code, $29 &rarr;</a>
+<p class="note">$29 one-time &middot; instant download &middot; PDF + Markdown</p>
+
+<footer>Matchbook Labs - digital products for builders &middot; <a href="catalog.html">Full catalog</a> &middot; <a href="https://github.com/jayjex">github.com/jayjex</a> &middot; Patterns shape boxes; they do not replace understanding the box model. This page is a reference, not career or hiring advice.</footer>
+</body>
+</html>
