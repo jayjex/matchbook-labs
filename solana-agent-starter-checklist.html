@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solana Agent Development Checklist — Pre-Build Starter for AI Agents — Matchbook Labs</title>
+<meta name="description" content="Free pre-build checklist for Solana agent development: 10 setup checks, devnet-first workflow, keypair hygiene, RPC and compute limits. Token-2022 invoice-rails starter kit, $39.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/solana-agent-starter-checklist.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Solana Agent Development Checklist — Pre-Build Starter for AI Agents">
+<meta property="og:description" content="10 pre-build checks, 4 opinion tips, 3 common mistakes. For developers building an AI agent on Solana. Token-2022 invoice-rails starter kit included.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/solana-agent-starter-checklist.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Solana Agent Development Checklist — Pre-Build Starter for AI Agents">
+<meta name="twitter:description" content="10 pre-build checks, 4 opinion tips, 3 common mistakes for Solana agent development. Starter kit included.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Solana Agent Development Checklist — Pre-Build Starter for AI Agents",
+  "description": "A free pre-build checklist for developers building an AI agent on Solana: 10 setup checks, devnet-first workflow, keypair hygiene, RPC and compute limits, plus a Token-2022 invoice-rails starter kit.",
+  "datePublished": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/solana-agent-starter-checklist.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul, ol { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  ul.chk { list-style: none; margin-left: 0; }
+  ul.chk li { margin-bottom: 0.7rem; padding-left: 1.9rem; position: relative; }
+  ul.chk input[type="checkbox"] { position: absolute; left: 0; top: 0.25rem; width: 1.05rem; height: 1.05rem; accent-color: #238636; cursor: pointer; }
+  ul.chk b { color: #e6edf3; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 5px; padding: 0.08em 0.35em; }
+  .box { background: #161b22; border: 1px solid #21262d; border-left: 3px solid #d29922; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .box p { margin: 0 0 0.6rem; font-size: 0.95rem; }
+  .box p:last-child { margin-bottom: 0; }
+  .box h3 { font-size: 0.95rem; color: #e6edf3; margin-bottom: 0.6rem; }
+  .box.warn { border-left-color: #f85149; }
+  .box.ok { border-left-color: #238636; }
+  .tree { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88rem; background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 1.25rem; color: #c9d1d9; overflow-x: auto; white-space: pre; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Solana agent development checklist</nav>
+
+<h1>Solana Agent Development Checklist</h1>
+<p class="lede">Run this list before you write code for an <a href="products/solana-agent-starter-token-2022-invoice-rails-starter-kit.html">AI agent starter on Solana</a>. Ten checks that catch the failures we hit building our Token-2022 invoice-rails reference kit: leaked keypairs, un-simulated transactions, and compute budgets that hold in tests and fail at settlement. Copy it into your repo and tick the boxes.</p>
+
+<h2>Pre-build checklist</h2>
+<ul class="chk">
+  <li><input type="checkbox" id="c1"><label for="c1"><b>Start on devnet.</b> Every instruction, every failure, on devnet first. Mainnet-beta is for code with nothing left to prove.</label></li>
+  <li><input type="checkbox" id="c2"><label for="c2"><b>Keypair hygiene: hard rule, never commit keys.</b> Keypairs live in <code>.env</code>, <code>.env</code> sits in <code>.gitignore</code>, and no secret string reaches a commit. A pushed keypair is a burned keypair.</label></li>
+  <li><input type="checkbox" id="c3"><label for="c3"><b>Pin the toolchain.</b> agave &ge; 2.x, Anchor &ge; 0.30, <code>spl-token-2022</code> &ge; 0.9. Hook behavior moved across versions; pin before you build, not after a break.</label></li>
+  <li><input type="checkbox" id="c4"><label for="c4"><b>Type-check before you ship.</b> <code>npx tsc --noEmit</code> passes on every snippet you plan to run. TypeScript catches the PDA-seed typos Rust won't.</label></li>
+  <li><input type="checkbox" id="c5"><label for="c5"><b>Know your RPC limits.</b> Public endpoints throttle. If the agent polls in a loop, add backoff or a paid endpoint before the first outage, not after.</label></li>
+  <li><input type="checkbox" id="c6"><label for="c6"><b>Simulate every transaction.</b> <code>simulateTransaction</code> on every build path. A failed on-chain transaction still burns fees and rate-limit headroom.</label></li>
+  <li><input type="checkbox" id="c7"><label for="c7"><b>Budget compute units.</b> Hooks, CPIs, and PDA asserts share one per-instruction CU budget. Estimate it before the transfer settles, because that's where it fails.</label></li>
+  <li><input type="checkbox" id="c8"><label for="c8"><b>Draw the state machine first.</b> <code>partial &rarr; complete &rarr; disputed &rarr; refunded</code> on paper before Rust. Escrow states guessed mid-coding come back as bugs.</label></li>
+  <li><input type="checkbox" id="c9"><label for="c9"><b>Plan the indexer.</b> A <code>connection.onLogs</code> subscription, event normalization, and a match queue: decide all three before you build UI.</label></li>
+  <li><input type="checkbox" id="c10"><label for="c10"><b>Pick the reconciliation target.</b> The matcher needs somewhere to land. A QuickBooks or Xero CSV export is enough to start.</label></li>
+</ul>
+
+<h2>Four opinions from building payment rails</h2>
+<p>These are opinions, stated as opinions. They come from our ideathon work on the Matchbook pattern (Superteam Ukraine / Colosseum, September 2026), so read them as field notes from one build.</p>
+<ul>
+  <li><b>Test on devnet until it's boring.</b> Excitement on devnet means bugs on mainnet. Boring means you're done.</li>
+  <li><b>Memos are not receipts.</b> Wallets strip them and nothing on-chain binds them. If your agent's bookkeeping depends on a memo, it depends on a suggestion.</li>
+  <li><b>Enforce at settlement.</b> A post-hoc parser reads history after it happens; a transfer hook decides whether it happens. A convention only holds when everyone follows it, and the transfers that matter are the ones where someone didn't.</li>
+  <li><b>Write the matcher before the frontend.</b> Reconciliation is where payment projects stall. A clean UI over a broken ledger match is still broken.</li>
+</ul>
+
+<div class="box warn">
+  <h3>Common mistakes (the honest list)</h3>
+  <p><b>Committing secrets.</b> The keypair lands in git history, scrapers find it within hours, and the wallet drains. Rotate the key, gitignore the file, move the secret to env vars.</p>
+  <p><b>Skipping simulation.</b> Un-simulated transactions fail at settlement and pay fees for the privilege. Simulate first, send second.</p>
+  <p><b>Ignoring compute limits.</b> The hook, its CPIs, and the PDA asserts all draw from the same CU budget. Code that passes unit tests can still fail mid-transfer on-chain.</p>
+</div>
+
+<h2>What the starter kit ships</h2>
+<p>Contents verbatim from the kit README:</p>
+<div class="tree">solana-agent-kit/
+├── snippets/
+│   ├── transfer-hook/   Anchor program (Rust): hook + ExtraAccountMetaList
+│   │                    + invoice PDA assert
+│   ├── escrow/          Anchor program (Rust): escrow PDA dispute state machine
+│   ├── client/          TypeScript: PDAs, hook config, invoice registration, matching
+│   └── indexer/         TypeScript: websocket logSubscription → matcher stub
+├── ARCHITECTURE.md      mermaid diagram of the whole flow
+├── .env.example
+├── package.json         deps for tsc --noEmit check
+└── tsconfig.json</div>
+<p>The README's own line on it: "All snippets are cleaned and generic: no keys, no endpoints, no business identifiers." License: MIT. Reference code &mdash; audit before mainnet.</p>
+
+<div class="box ok">
+  <h3>What this page is</h3>
+  <p>An educational pre-build checklist for developers. Nothing on this page has been audited, nothing here is financial advice, and no yield or outcome is promised. The starter kit ships as MIT reference code carrying the README's own instruction to audit before mainnet.</p>
+</div>
+
+<a class="cta" href="https://www.getly.store/product/solana-agent-starter-token-2022-invoice-rails-starter-kit-mtn9o6ga">Get the Solana Agent Starter kit — Token-2022 invoice rails — $39 →</a>
+<p class="note">Instant download · 19.7KB zip · 2 Anchor Rust programs + 3 TypeScript snippets + ARCHITECTURE.md · MIT</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
