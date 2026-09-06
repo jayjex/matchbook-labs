@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompt Templates for Beginners: Anatomy of a Prompt + 3 Examples | Matchbook Labs</title>
+<meta name="description" content="Free prompt writing guide for beginners: the five parts of a prompt (role, task, context, format, constraint), three worked examples (email, product description, meeting summary), and four opinions on getting usable output from AI tools.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/ai-prompt-templates-beginners.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Prompt Templates for Beginners: Anatomy of a Prompt, Free">
+<meta property="og:description" content="The five parts of a prompt, three worked examples for everyday tasks (email draft, product description, meeting summary), and four opinions on prompt writing. Free guide.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/ai-prompt-templates-beginners.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Prompt Templates for Beginners: Anatomy of a Prompt, Free">
+<meta name="twitter:description" content="Five parts of a prompt, three worked examples, four opinions on writing them. Free guide, no signup.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Prompt Templates for Beginners: Anatomy of a Prompt + 3 Examples",
+  "description": "A free prompt writing guide for beginners: the five parts of a prompt (role, task, context, format, constraint), three worked examples for everyday tasks, and four opinions on getting usable output from AI tools.",
+  "datePublished": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/ai-prompt-templates-beginners.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 1rem; margin: 1.6rem 0 0.6rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .howto p { margin: 0; font-size: 0.95rem; }
+  .btable { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.95rem; }
+  .btable th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem; white-space: nowrap; }
+  .btable td { padding: 0.55rem 0.5rem; border-bottom: 1px solid #21262d; vertical-align: top; }
+  .btable td:first-child { white-space: nowrap; font-weight: 600; }
+  .prompt { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 0.8rem; }
+  .prompt p { margin: 0 0 0.6rem; font-size: 0.92rem; color: #e6edf3; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .prompt p:last-child { margin-bottom: 0; }
+  .snap { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .snap p { margin: 0; font-size: 0.92rem; color: #8b949e; }
+  blockquote { border-left: 3px solid #30363d; margin: 1.25rem 0; padding: 0.25rem 0 0.25rem 1.1rem; color: #c9d1d9; font-size: 0.95rem; }
+  blockquote p { margin: 0 0 0.6rem; }
+  blockquote p:last-child { margin-bottom: 0; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) { .btable { font-size: 0.85rem; } }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / AI Prompt Templates</nav>
+
+<h1>AI Prompt Templates for Beginners (Free Guide)</h1>
+<p class="lede">A prompt is the short brief you hand an AI tool before it writes anything, and most weak output traces back to a missing part in that brief. This free prompt writing guide breaks a prompt into five fillable parts, walks through three worked examples for everyday tasks, and closes with four opinions on the craft. It reads in about three minutes, and the $12 prompt pack it links to sits at the bottom.</p>
+
+<div class="howto">
+<p><strong>How to use this page:</strong> read the anatomy table once, find the part your current prompt is missing, and copy the shape of the example closest to your task. The examples cover email, product copy, and meeting notes, so none of them assume you trade or write code. For the operational side of recurring AI work, the <a href="agent-workflow-checklist.html">agent workflow checklist</a> covers handoffs and approvals.</p>
+</div>
+
+<h2>The anatomy of a prompt: five parts</h2>
+<table class="btable">
+  <thead>
+    <tr><th>Part</th><th>What it does</th><th>Example line</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Role</td><td>Sets who the tool writes as.</td><td>"You are a support lead at a small online store."</td></tr>
+    <tr><td>Task</td><td>Names the action and its object.</td><td>"Draft a reply to a customer whose order arrived late."</td></tr>
+    <tr><td>Context</td><td>Supplies facts the tool cannot guess.</td><td>"The order was 6 days late; the customer has ordered 4 times this year."</td></tr>
+    <tr><td>Format</td><td>Fixes the shape of the output.</td><td>"Three sentences, no greeting, end with a one-line apology offer."</td></tr>
+    <tr><td>Constraint</td><td>Sets limits: what to include, avoid, or leave out.</td><td>"Do not promise refunds; keep it under 80 words."</td></tr>
+  </tbody>
+</table>
+<p>No part is mandatory every time and the order matters less than completeness. A prompt missing context forces the tool to invent the missing facts, and one missing format hands you output in whatever shape it likes that day.</p>
+
+<h2>Three worked examples</h2>
+<p>Each example is a complete prompt you could paste into any AI tool today. Brackets mark the parts you change.</p>
+
+<h3>Example 1: an email draft</h3>
+<div class="prompt">
+<p>You are an operations coordinator at a 12-person agency.</p>
+<p>Draft a rescheduling email moving a client workshop from [ORIG_DATE] to [NEW_DATE].</p>
+<p>Context: the client booked the session for their 30 new hires, and the change comes from our trainer's availability.</p>
+<p>Format: a subject line, then 4 sentences maximum. Offer two make-up dates in [MONTH].</p>
+<p>Constraint: no blame language, and do not name the trainer.</p>
+</div>
+<p>The role narrows the voice, the context carries the facts a stranger would not know, and the constraint handles the part generic output usually gets wrong.</p>
+
+<h3>Example 2: a product description</h3>
+<div class="prompt">
+<p>You are a copywriter for a kitchen-goods brand.</p>
+<p>Write a product description for a [PRODUCT], which is [ONE_LINE_OF_WHAT_IT_IS].</p>
+<p>Context: buyers already own the basics and want this for [USE_CASE]; the price point is [PRICE].</p>
+<p>Format: 2 sentences of description, then 3 bullet points of specs or benefits.</p>
+<p>Constraint: no exclamation marks, and do not use the words "revolutionary" or "game-changing".</p>
+</div>
+<p>The format fixes length so you trim nothing afterward, and the constraint list is where brand rules live. Naming the exact words to avoid gives the tool something checkable, which works better than a vague "keep it tasteful".</p>
+
+<h3>Example 3: a meeting summary</h3>
+<div class="prompt">
+<p>You are the project coordinator for a weekly 30-minute status meeting.</p>
+<p>Summarize the notes I paste below into a recap.</p>
+<p>Context: attendees are [TEAM]; decisions matter more than discussion; the meeting date is [DATE].</p>
+<p>Format: three sections, Decisions, Owners and deadlines, and Open questions, each as bullet points.</p>
+<p>Constraint: keep wording from the notes where possible, and leave out anything marked [OFF_RECORD].</p>
+</div>
+<p>Same five parts as the email example. The one new move is stating the format before pasting the raw notes, so the tool sorts while it reads instead of summarizing first and restructuring after.</p>
+
+<h2>Four opinions on writing prompts</h2>
+<p>These are opinions from writing and reusing prompts across projects, not survey data and not claims about any specific tool.</p>
+<ol>
+  <li><strong>(Opinion) Be specific about the three things that change output: audience, length, and format.</strong> "Make it professional" tells the tool nothing measurable. "Under 100 words for a hiring manager" tells it two things it can check against.</li>
+  <li><strong>(Opinion) Put your real constraints in the prompt, not in your head.</strong> If a vendor name cannot appear, write that down in the prompt. Unstated limits are the ones the output breaks, and fixing a rerun costs more than stating the limit once.</li>
+  <li><strong>(Opinion) Treat the first output as a draft.</strong> Point at the specific part that is wrong and rerun. "Keep the structure, fix the second paragraph" beats starting a fresh prompt from zero, because the parts that worked stay worked.</li>
+  <li><strong>(Opinion) Keep prompts that worked.</strong> Save the exact wording that produced usable output and change only the brackets next time. A personal prompt file beats memory inside a week.</li>
+</ol>
+
+<h2>What the $12 prompts pack adds</h2>
+<p>The pack at the bottom of this page applies the same anatomy at scale, 500 times over. From its own README:</p>
+<blockquote>
+<p>"500 field-tested prompts for AI assistants (ChatGPT, Claude, Gemini, local models). Built for people who work in crypto every day: traders, DeFi users, project teams, community managers, and developers."</p>
+</blockquote>
+<p>The <strong>500 AI Prompts Pack</strong> holds 10 categories with 50 prompts each: market analysis, DeFi research, token and NFT launch planning, smart contract audit, trading journal and strategy backtesting, content marketing for crypto projects, portfolio tracking and tax prep, scam and contract safety checks, community management, and dev workflow. Every prompt runs 1 to 3 sentences and uses [BRACKETED] placeholders such as [TICKER], [CHAIN], [PROTOCOL], and [AMOUNT]. Fill the brackets, paste into your AI tool, and iterate on the output like you would with any brief.</p>
+<p>Two files ship in the download: prompts.md, organized by category and readable anywhere, and prompts.csv with category, prompt, and use_case columns that imports into Notion, Google Sheets, or Excel. The license allows personal and commercial use, outputs you generate belong to you, and the pack itself may not be resold or redistributed.</p>
+
+<!-- CTA GATE PASSED 2026-09-08: Getly API status=active (priceCents 1200) + curl canonical https://www.getly.store/product/500-ai-prompts-pack-crypto-web3-trading-multi-chain-mtnv9kbw = 200. Direct product link per state/cta-swap-tracker.md pattern. If the URL ever 404s, revert href to store mtmw06l2. -->
+<a class="cta" href="https://www.getly.store/product/500-ai-prompts-pack-crypto-web3-trading-multi-chain-mtnv9kbw">Get the 500 AI Prompts Pack - Crypto, Web3 &amp; Trading - $12 &rarr;</a>
+<p class="note">$12 one-time &middot; .md + .csv files &middot; instant download &middot; prompts are productivity tools, not financial, legal, or tax advice</p>
+
+<div class="snap">
+<p><strong>Honest note:</strong> this page teaches the structure of a written prompt. Nothing on it predicts prices, evaluates any coin or protocol, or promises results from any AI tool, and the three examples use office and store tasks on purpose. The pack's own disclaimer covers the rest: nothing in it is financial, legal, or tax advice.</p>
+</div>
+
+<footer>Matchbook Labs - digital products for builders &middot; <a href="catalog.html">Full catalog</a> &middot; <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
