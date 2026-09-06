@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Housing Market Data Download - Rent CSV by City + FMR by ZIP - Matchbook Labs</title>
+<meta name="description" content="Housing data CSV download: 51,895 ZIP-level HUD FMR rows (FY2026, SAFMR vs standard) plus 90,169 Airbnb listings across 6 cities. Two datasets, one bundle, $49.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/housing-market-data-download.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Housing Market Data Download - Rent CSV by City + FMR by ZIP">
+<meta property="og:description" content="Housing data CSV download: 51,895 ZIP-level HUD FMR rows (FY2026, SAFMR vs standard) plus 90,169 Airbnb listings across 6 cities. Two datasets, one bundle, $49.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/housing-market-data-download.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Housing Market Data Download - Rent CSV by City + FMR by ZIP">
+<meta name="twitter:description" content="51,895 ZIP-level HUD FMR rows + 90,169 Airbnb listings across 6 cities. Two housing datasets, one download, $49.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Housing Market Data Download - Rent CSV by City + FMR by ZIP",
+  "description": "A housing data pair: 51,895 ZIP-level HUD Fair Market Rent rows from the FY2026 files and 90,169 Airbnb listings across 6 US cities. One bundle download, SHA-256 checksums, sources dated, $49.",
+  "datePublished": "2026-09-07",
+  "dateModified": "2026-09-07",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/housing-market-data-download.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 1rem; margin: 1.6rem 0 0.5rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1rem 0.35rem; }
+  pre { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 0.9rem 1.1rem; margin: 0 0 1.25rem; overflow-x: auto; }
+  pre code { background: none; border: none; padding: 0; font-size: 0.85em; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.8rem; }
+  .tbl th { text-align: right; font-size: 0.7rem; font-family: ui-monospace, SAFMono-Regular, Menlo, monospace; font-weight: 600; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.45rem; white-space: nowrap; }
+  .tbl th:first-child, .tbl th:nth-child(2) { text-align: left; }
+  .tbl td { padding: 0.4rem 0.45rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .tbl td:first-child, .tbl td:nth-child(2) { text-align: left; }
+  .tbl td.num { text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .tbl tr:hover td { background: #161b22; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  .snap { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #d29922; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .snap p { margin: 0 0 0.6rem; font-size: 0.95rem; }
+  .snap p:last-child { margin: 0; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) {
+    .tbl { font-size: 0.68rem; }
+    .tbl td, .tbl th { padding: 0.3rem 0.25rem; }
+  }
+  @media print {
+    body { background: #fff; color: #000; max-width: none; }
+    a { color: #000; text-decoration: none; }
+    .crumbs, .cta, .note, footer { display: none; }
+    h2 { border-color: #ccc; }
+    .tbl th { border-color: #ccc; color: #000; }
+    .tbl td { border-color: #ddd; color: #000; }
+    code, pre { background: #fff; border-color: #ccc; }
+    .snap { background: #fff; border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Housing Market Data</nav>
+
+<h1>Housing Market Data Download: HUD Rent Benchmarks + Airbnb Listings</h1>
+<p class="lede">Two datasets that answer each other's questions: HUD's FY2026 Fair Market Rent benchmarks for 51,895 ZIP codes, and 90,169 real Airbnb listings across six US cities. The rent side gives you a federal benchmark per ZIP; the listings side gives you actual asking rents and supply in six markets. Both ship as clean CSV in one bundle. If you want to test the columns first, there's a <a href="free-rent-data-sample.html">free rent data sample</a> and a separate page on the <a href="airbnb-data-by-city.html">Airbnb data by city</a>.</p>
+
+<h2>Two Housing Datasets, One Download</h2>
+<table class="tbl">
+  <tr><th>Dataset</th><th>Rows</th><th>Unit of observation</th><th>Source</th></tr>
+  <tr><td>USA Rent Benchmark FY2026 (HUD FMR)</td><td class="num">51,895</td><td>ZIP code</td><td>HUD FY2026 FMR files, public domain</td></tr>
+  <tr><td>Airbnb Multi-City Investor Pack</td><td class="num">90,169</td><td>listing</td><td>Inside Airbnb, CC BY 4.0</td></tr>
+</table>
+<p class="table-note">These two packs are part of the Studio &amp; Data Vault Bundle ($49, four packs: NFL games, HUD rent, Airbnb listings, wallpapers). Each component zip is byte-identical to the standalone product.</p>
+
+<h2>Side A: HUD Fair Market Rent, 51,895 ZIP Rows</h2>
+<p>51,895 ZIP-level rows from HUD's official FY2026 Fair Market Rent files, plus 3,229 county rows and 52 state summaries for higher-level views. Five bedroom sizes (0BR through 4BR) in every file, monthly USD. What makes the ZIP level useful: for FY2026, many metro areas use Small Area FMRs (SAFMRs), which HUD sets per ZIP instead of one number for the whole metro. ZIPs without a SAFMR carry their metro's FMR. That gives you a rent benchmark at two granularities in one table, and the data dictionary documents HUD's FMR definition and methodology so the numbers survive a skeptical reviewer.</p>
+
+<h2>Side B: Airbnb Listings, 90,169 Rows in 6 Cities</h2>
+<p>90,169 listing rows with a single 12-column schema across all six files, so joins and group-bys work without schema surgery:</p>
+<table class="tbl">
+  <tr><th>City</th><th>Listings</th></tr>
+  <tr><td>New York City</td><td class="num">30,234</td></tr>
+  <tr><td>Las Vegas (Clark County)</td><td class="num">20,234</td></tr>
+  <tr><td>San Diego</td><td class="num">13,225</td></tr>
+  <tr><td>Austin</td><td class="num">11,295</td></tr>
+  <tr><td>Nashville</td><td class="num">10,242</td></tr>
+  <tr><td>Denver</td><td class="num">4,939</td></tr>
+  <tr class="total"><td>Total</td><td class="num">90,169</td></tr>
+</table>
+<p>Host personal data is excluded by design and coordinates are rounded to 4 decimals. One row per listing: price, room type, minimum nights, availability, reviews, neighborhood, coordinates.</p>
+
+<h2>Questions You Can Answer With the Pair</h2>
+<p>Each dataset is useful alone. Put the two in the same notebook and the ZIP code becomes the join key:</p>
+<ul>
+  <li><strong>Affordability gap by ZIP.</strong> Join Airbnb's median asking price per neighborhood or ZIP against the HUD benchmark for that ZIP. Where asking rents sit far above the FMR, you're looking at the premium the market charges over the federal benchmark; where they sit close, the two sources agree. That's a descriptive comparison you compute per ZIP.</li>
+  <li><strong>Supply per city.</strong> The per-city row counts above are the headline, but the files support the deeper version: listings per neighborhood, by room type, by minimum-nights band, per availability tier. Six markets side by side in one group-by.</li>
+  <li><strong>Rent vs FMR delta.</strong> For each of the six cities, take the median listing price and subtract the ZIP's FMR for a given bedroom size. Sort by the gap. The output is a table of where asking prices and the federal benchmark diverge, computed from the two CSVs with a group-by and a merge.</li>
+  <li><strong>SAFMR vs standard metro FMR.</strong> The HUD file lets you split ZIPs into SAFMR-assigned and metro-level rows. Compare the spread within each metro to see how much ZIP-level variation the metro average hides.</li>
+</ul>
+<p>All four are descriptive computations on clean, dated inputs. The pack ships data and documentation only: positioning stays that way on purpose. Clean data for your own analysis, not a model or a recommendation.</p>
+
+<h2>Snapshots, Not Live Feeds</h2>
+<div class="snap">
+<p><strong>Snapshot honesty:</strong> the rent file is HUD's FY2026 publication, refreshed annually by HUD. The Airbnb snapshots are Inside Airbnb captures dated 2026-06-22 through 2026-08-10, stated per city in the index file. If your analysis needs a live feed, this bundle is the wrong tool. If it needs a clean, dated historical base, that's what's here.</p>
+<p>Every number on this page was checked against the files inside the bundle, and each bundle ships with <code>SHA256SUMS.txt</code>. Run <code>sha256sum -c SHA256SUMS.txt</code> after download; if it prints OK on all four lines, your copy is byte-identical to what was built.</p>
+</div>
+
+<h2>Licensing, in Plain Terms</h2>
+<p>The rent data is a US federal government work (HUD FY2026 Fair Market Rent), public domain under 17 USC &sect;105, no attribution required. The Airbnb data is Inside Airbnb's, CC BY 4.0: copy, remix, republish and build commercial work on it, with one condition. If you republish, include "Data by Inside Airbnb, InsideAirbnb.com, CC BY 4.0". The credit line ships inside the zip in <code>ATTRIBUTION.txt</code>. Both datasets load straight into pandas, Excel or R, with a data dictionary for every column.</p>
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Studio &amp; Data Vault Bundle - both housing datasets, $49 &rarr;</a>
+<p class="note">$49 one-time · 4 packs incl. both housing datasets · SHA256SUMS verified · HUD public domain / Inside Airbnb CC BY 4.0 · instant download</p>
+
+<footer>Matchbook Labs - digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
