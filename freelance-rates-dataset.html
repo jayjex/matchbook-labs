@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelance Rates Dataset: 45 Gig Listings From Superteam Earn (CSV Sample + JSON) — Matchbook Labs</title>
+<meta name="description" content="45 Superteam Earn gig listings with advertised rewards, deadlines, sponsors and submission counts, harvested 2026-09-04. Free 5-row CSV sample. Full pack: JSON + 186 API routes, $49.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/freelance-rates-dataset.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Freelance Rates Dataset: 45 Gig Listings From Superteam Earn (CSV Sample + JSON)">
+<meta property="og:description" content="45 Superteam Earn gig listings with advertised rewards, deadlines, sponsors and submission counts, harvested 2026-09-04. Free 5-row CSV sample. Full pack: JSON + 186 API routes, $49.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/freelance-rates-dataset.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Freelance Rates Dataset: 45 Gig Listings From Superteam Earn">
+<meta name="twitter:description" content="Gig economy listing data with advertised rewards, sponsors and submission counts. Snapshot 2026-09-04. Free 5-row CSV sample.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Freelance Rates Dataset: 45 Gig Listings From Superteam Earn (CSV Sample + JSON)",
+  "description": "A research dataset of 45 Superteam Earn gig listings: advertised rewards, deadlines, sponsors, submission and comment counts, harvested 2026-09-04 from the live superteam.fun API.",
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/freelance-rates-dataset.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1rem 0.35rem; }
+  pre { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.25rem; overflow-x: auto; margin: 0 0 1.25rem; }
+  pre code { background: none; border: none; padding: 0; font-size: 0.8rem; line-height: 1.5; }
+  blockquote { border-left: 3px solid #d29922; background: #161b22; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 0 0 1.25rem; color: #c9d1d9; }
+  blockquote p { margin: 0 0 0.5rem; }
+  blockquote p:last-child { margin: 0; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.8rem; }
+  .tbl th { text-align: right; font-size: 0.7rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.45rem; white-space: nowrap; }
+  .tbl th:first-child, .tbl th:nth-child(2) { text-align: left; }
+  .tbl td { padding: 0.4rem 0.45rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .tbl td:first-child, .tbl td:nth-child(2) { text-align: left; }
+  .tbl td.num { text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .tbl tr:hover td { background: #161b22; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  .snap { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #d29922; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .snap p { margin: 0 0 0.6rem; font-size: 0.95rem; }
+  .snap p:last-child { margin: 0; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) {
+    .tbl { font-size: 0.68rem; }
+    .tbl td, .tbl th { padding: 0.3rem 0.25rem; }
+  }
+  @media print {
+    body { background: #fff; color: #000; max-width: none; }
+    a { color: #000; text-decoration: none; }
+    .crumbs, .cta, .note, footer { display: none; }
+    h2 { border-color: #ccc; }
+    .tbl th { border-color: #ccc; color: #000; }
+    .tbl td { border-color: #ddd; color: #000; }
+    code { background: #fff; border-color: #ccc; }
+    pre, blockquote, .snap { background: #fff; border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Freelance rates dataset</nav>
+
+<h1>Freelance Rates Dataset: 45 Gig Listings From Superteam Earn</h1>
+<p class="lede">Gig economy listing data from Superteam Earn, a bounty board where Solana sponsors post content, design and development work: 45 listings with the reward each sponsor advertised, the deadline, the sponsor name, and how many submissions each listing drew. Harvested from the live superteam.fun API on 2026-09-04. Every number on this page is copied from the files in the pack, so you can judge the data before you spend $49. There is also a <a href="products/superteam-earn-free-sample-5-live-listings-csv.html">free 5-listing CSV sample</a> if you want the shape of the rows first.</p>
+
+<!-- CTA GATE 2026-09-08: earn-dataset id 5334fd26-d2f9-4839-a5a9-8d8ee6e46614. API (read key) status=active, priceCents=4900 ($49), slug superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny. curl canonical = 200 -> DIRECT product URL, no swap needed. NOTE: brief said $12, live product is $49 (API + tracker row 5 + sibling page all agree). -->
+
+<h2>What's in the pack</h2>
+<p>The product README, verbatim:</p>
+<blockquote>
+<p><code>earn-listings-full-descriptions.json</code> &mdash; 28 open listings with FULL description HTML (not in public cards API), deadlines, rewards, sponsor slugs</p>
+<p><code>earn-listings-cards.json</code> &mdash; raw paginated cards API dump (17 unique live listings)</p>
+<p><code>earn-api-endpoints.txt</code> &mdash; 186+ reverse-engineered API routes (listings, comments, submissions, sponsor dashboard ops)</p>
+<p>BONUS: the exact endpoint patterns (<code>/api/search/{title}</code> trick to get full description text &mdash; undocumented)</p>
+<p>Source: live superteam.fun API, harvested 2026-09-04. Includes Privy auth flow notes (passwordless init/authenticate, token refresh via /api/v1/sessions).</p>
+</blockquote>
+<p>Field lists below come from parsing the shipped files, not from the README.</p>
+
+<h2>Fields in each file</h2>
+<p><code>earn-listings-cards.json</code>, one object per listing:</p>
+<ul>
+  <li><code>title</code>, <code>slug</code>, <code>id</code>: listing identity</li>
+  <li><code>rewardAmount</code>: advertised reward in the listing's token; <code>null</code> on one project listing that takes a range instead</li>
+  <li><code>minRewardAsk</code> / <code>maxRewardAsk</code>: the range variant ($50&ndash;$250 and $1,000&ndash;$2,000 on this snapshot)</li>
+  <li><code>token</code>: USDC or USDG</li>
+  <li><code>type</code>: <code>bounty</code> or <code>project</code></li>
+  <li><code>compensationType</code>: <code>fixed</code> or <code>range</code></li>
+  <li><code>deadline</code>: ISO timestamp</li>
+  <li><code>status</code>, <code>isFeatured</code>, <code>isPro</code>, <code>isWinnersAnnounced</code></li>
+  <li><code>agentAccess</code>: <code>HUMAN_ONLY</code> or <code>AGENT_ALLOWED</code></li>
+  <li><code>_count.Comments</code>, <code>_count.Submission</code>: engagement counts at harvest time</li>
+  <li><code>sponsor.name</code>, <code>sponsor.slug</code>, <code>sponsor.isVerified</code></li>
+</ul>
+<p><code>earn-listings-full-descriptions.json</code>, one object per listing: <code>slug</code>, <code>title</code>, <code>reward</code>, <code>token</code>, <code>deadline</code>, and <code>desc</code>: the full description HTML the public cards API leaves out.</p>
+
+<h2>Five sample rows, verbatim</h2>
+  <table class="tbl">
+    <tr><th>Slug</th><th>Advertised reward</th><th>Token</th><th>Type</th><th>Deadline</th><th>Sponsor</th><th>Subs</th><th>Comments</th></tr>
+    <tr><td>create-content-for-breakpoint-2026</td><td class="num">8,000</td><td>USDG</td><td>bounty</td><td>2026-09-07</td><td>Superteam Germany</td><td class="num">76</td><td class="num">35</td></tr>
+    <tr><td>post-why-flint-beats-building-your-own-prop-amm</td><td class="num">1,500</td><td>USDC</td><td>bounty</td><td>2026-09-07</td><td>Flint </td><td class="num">214</td><td class="num">42</td></tr>
+    <tr><td>castledao-content-challenge</td><td class="num">1,000</td><td>USDG</td><td>bounty</td><td>2026-09-08</td><td>Superteam Ireland</td><td class="num">97</td><td class="num">15</td></tr>
+    <tr><td>t3n-agent-build-challenge</td><td class="num">290</td><td>USDC</td><td>bounty</td><td>2026-09-16</td><td>Terminal 3 Network</td><td class="num">83</td><td class="num">9</td></tr>
+    <tr><td>manual-qa-tester-sanarun-trading-terminal</td><td class="num">null</td><td>USDC</td><td>project</td><td>2026-09-04</td><td>Sanafi Onchain</td><td class="num">58</td><td class="num">6</td></tr>
+  </table>
+  <p class="table-note">Copied verbatim from <code>earn-listings-cards.json</code> by a script that asserts each cell against the file before publishing. Reward is what the sponsor advertised, not a payout. Dates are ISO timestamps in the file, shown as date only. The trailing space after "Flint" is in the source data.</p>
+<p>The same first row, byte-for-byte from the file (JSON, one indent):</p>
+<pre><code>{
+ "id": "b876d371-ebec-4c8f-8ff8-f19bdb8cff90",
+ "rewardAmount": 8000,
+ "deadline": "2026-09-07T21:59:59.999Z",
+ "type": "bounty",
+ "title": "Create Content for Breakpoint 2026",
+ "token": "USDG",
+ "winnersAnnouncedAt": null,
+ "slug": "create-content-for-breakpoint-2026",
+ "isWinnersAnnounced": false,
+ "isFeatured": true,
+ "compensationType": "fixed",
+ "minRewardAsk": null,
+ "maxRewardAsk": null,
+ "agentAccess": "HUMAN_ONLY",
+ "status": "OPEN",
+ "isPro": false,
+ "_count": {
+  "Comments": 35,
+  "Submission": 76
+ },
+ "sponsor": {
+  "name": "Superteam Germany",
+  "slug": "superteam-germany",
+  "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1680563012/earn-sponsors/recDH2T4vsTezh3Je.png",
+  "isVerified": true,
+  "chapter": {
+   "id": "b94186a5-0bc7-48db-b1b8-330b3c32dfeb"
+  }
+ }
+}</code></pre>
+
+<h2>The snapshot in numbers</h2>
+<table class="tbl">
+  <tr><th>Split</th><th>Value</th></tr>
+  <tr><td>Rows across both files</td><td class="num">45 (28 full-description + 17 unique cards rows; 16 slugs in both)</td></tr>
+  <tr><td>Token, cards rows</td><td>USDC 13 ($290&ndash;$2,000) &middot; USDG 4 ($1,000&ndash;$10,000)</td></tr>
+  <tr><td>Type, cards rows</td><td class="num">bounty 15 &middot; project 2</td></tr>
+  <tr><td>Compensation, cards rows</td><td class="num">fixed 15 &middot; range 2</td></tr>
+  <tr><td>Agent access, cards rows</td><td class="num">HUMAN_ONLY 15 &middot; AGENT_ALLOWED 2</td></tr>
+  <tr><td>Distinct sponsor names</td><td class="num">16 across 17 listings</td></tr>
+  <tr><td>Median advertised bounty reward</td><td class="num">$1,000</td></tr>
+  <tr><td>Deadline range</td><td>2026-09-04 to 2026-10-15 (both files)</td></tr>
+</table>
+<p class="table-note">Computed from the shipped files at build time. "Advertised" is the reward the sponsor put on the listing. The files contain no payout, winner, or fee records.</p>
+
+<h2>Three things you can analyze with it</h2>
+<p>All three are analyses of listings as listed. The files carry no earnings, payout, or winner data, so none of them say anything about what any individual made.</p>
+<ul>
+  <li><strong>Reward benchmarking by category.</strong> Group listings by type, token, or compensation style and compare advertised amounts: fixed bounties clustered at $290&ndash;$2,000 USDC on this snapshot, USDG listings running $1,000&ndash;$10,000, two range-based projects. If you study gig platforms, that gives you a baseline for one crypto-native board on one date.</li>
+  <li><strong>Competition per listing.</strong> <code>_count.Submission</code> sits next to each advertised reward, so you can compare crowding: 214 submissions chasing $1,500 on one listing versus 9 submissions on a $290 one. Ratio analysis, scatter plots, or a plain table. The columns are already there.</li>
+  <li><strong>Market structure.</strong> Sixteen sponsors posted the seventeen unique listings in the cards dump, 13 of 17 paid in USDC versus 4 in USDG, and 15 of 17 barred automated agents via <code>agentAccess</code>. Splits like that feed platform-comparison work: how one board structures work, payment, and access.</li>
+</ul>
+
+<h2>Joining the two files</h2>
+<p>Both files join on <code>slug</code>. Sixteen of the seventeen cards rows have a matching full-description row; on every match, the reward values agree. The cards file carries the sponsor, counts, and status fields; the full-descriptions file carries the <code>desc</code> HTML and includes 12 listings the cards dump does not. Join, and you get one wide table: reward, token, type, deadline, sponsor, counts, and the full listing text.</p>
+
+<h2>What this dataset can't tell you</h2>
+<div class="snap">
+  <p><strong>It's a snapshot, not a feed.</strong> Harvested 2026-09-04. Deadlines ran from 2026-09-04 to 2026-10-15, and most have passed since. Treat every row as "what was listed that day."</p>
+  <p><strong>Advertised rewards are not payouts.</strong> No winner records, no escrow states, no fee columns. What sponsors offered and what anyone received are different questions, and this pack only answers the first.</p>
+  <p><strong>The cards file is a raw paginated dump.</strong> 51 entries, 17 unique: the API repeats rows across pages. Dedupe on <code>id</code> before counting.</p>
+  <p><strong>One platform, one niche.</strong> Solana/crypto gig listings only. Extending any rate or competition pattern to freelance work in general would be a stretch; use this as one data point among others.</p>
+</div>
+
+<p>For the API side of the same harvest (30 of the 186 routes, free), see the <a href="superteam-earn-api.html">Superteam Earn API endpoint reference</a>.</p>
+
+<a class="cta" href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Full Superteam Earn dataset: 45 listings + 186 API routes — $49 →</a>
+<p class="note">Instant download · JSON + TXT · commercial license included</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
