@@ -130,7 +130,7 @@
   <li><strong>reviews_per_month</strong> - lifetime review rate, blank when the listing has zero reviews. Roughly half of guest stays leave reviews, so real demand runs higher than this column implies.</li>
   <li><strong>last_review</strong> - date of the most recent review, blank if never reviewed. Reviews lag, so a listing booked this month can still show an old date.</li>
 </ul>
-<p>Same 12 columns in all six city files, so joins and group-bys work across cities in pandas, Sheets or R without schema surgery.</p>
+<p>Same 12 columns in all six city files, so joins and group-bys work across cities in pandas, Sheets or R without schema surgery. ZIP-level rent benchmarks join onto the same geography: the <a href="hud-fair-market-rent-data.html">HUD fair market rent data</a> pack keys FMR by ZIP code and county for all 50 states.</p>
 
 <h2>No Host Data, On Purpose</h2>
 <p>The pack carries no host names, no host IDs, no host profile links and no exact street addresses. Coordinates are rounded to 4 decimal places and listing names are truncated. That keeps the analytic value (price levels, location patterns, room-type mix, calendar availability) and cuts the surveillance value.</p>
