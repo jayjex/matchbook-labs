@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports Data Research Methods: 4 Ways to Analyze Statistics at Home - Matchbook Labs</title>
+<meta name="description" content="Four methods to analyze sports statistics at home: baselines, context splits, trend windows, sample-size checks. Worked example with made-up numbers, CSV datasets included.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/sports-data-research-methods.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sports Data Research Methods: 4 Ways to Analyze Statistics at Home">
+<meta property="og:description" content="Four methods to analyze sports statistics at home: baselines, context splits, trend windows, sample-size checks. Worked example with made-up numbers, CSV datasets included.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/sports-data-research-methods.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sports Data Research Methods: 4 Ways to Analyze Statistics at Home">
+<meta name="twitter:description" content="Baseline rates, context splits, trend windows, sample-size checks. A worked example with made-up numbers, and the CSV datasets to practice on.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Sports Data Research Methods: 4 Ways to Analyze Statistics at Home",
+  "description": "Four generic methods for analyzing sports statistics at home: baseline rates, splits by context, trend windows, and sample-size awareness. Includes a worked example with made-up numbers and the datasets to practice on.",
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/sports-data-research-methods.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 1rem; margin: 1.6rem 0 0.5rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul, ol { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1rem 0.35rem; }
+  pre { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 0.9rem 1.1rem; margin: 0 0 1.25rem; overflow-x: auto; }
+  pre code { background: none; border: none; padding: 0; font-size: 0.85em; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.8rem; }
+  .tbl th { text-align: right; font-size: 0.7rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.45rem; white-space: nowrap; }
+  .tbl th:first-child, .tbl th:nth-child(2) { text-align: left; }
+  .tbl td { padding: 0.4rem 0.45rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .tbl td:first-child, .tbl td:nth-child(2) { text-align: left; }
+  .tbl td.num { text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .tbl tr:hover td { background: #161b22; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  .snap { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #d29922; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .snap p { margin: 0 0 0.6rem; font-size: 0.95rem; }
+  .snap p:last-child { margin: 0; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) {
+    .tbl { font-size: 0.68rem; }
+    .tbl td, .tbl th { padding: 0.3rem 0.25rem; }
+  }
+  @media print {
+    body { background: #fff; color: #000; max-width: none; }
+    a { color: #000; text-decoration: none; }
+    .crumbs, .cta, .note, footer { display: none; }
+    h2 { border-color: #ccc; }
+    .tbl th { border-color: #ccc; color: #000; }
+    .tbl td { border-color: #ddd; color: #000; }
+    code, pre { background: #fff; border-color: #ccc; }
+    .snap { background: #fff; border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Sports Data Research Methods</nav>
+
+<h1>Sports Data Research Methods: Analyze Statistics at Home</h1>
+<p class="lede">Four methods cover most of what people do with a sports dataset on a laptop: measure a baseline rate, split it by context, compare trend windows, and check whether the sample is big enough to mean anything. None of them need special software. All of them need one thing people skip: deciding the question before touching the file. The worked example below uses made-up numbers, and the datasets section points to real CSVs if you want to practice on actual data. This page is about method. It gives no picks, no predictions, and no advice on what to do with any result.</p>
+
+<h2>Method 1: Baseline Rates First</h2>
+<p>A baseline rate answers one question with one number: how often does the thing happen at all? Pick a condition that can be true or false in each row, count the rows where it holds, and divide by every row in the file.</p>
+<pre><code>rate = rows matching the condition / total rows</code></pre>
+<p>Two habits make the number trustworthy. First, keep the denominator visible: "9 of 30" says more than "30%" because it carries the sample size with it. Second, define the condition in exact terms before counting. "High value" is not a condition; "value of 20 or more" is. If the definition changes after you see the results, the rate describes nothing except your mood when you wrote it.</p>
+
+<h2>Method 2: Splits by Context</h2>
+<p>Once the baseline exists, split it. Most datasets carry at least one categorical column: a venue, a category, a group label, a weekday versus weekend flag. Compute the same rate inside each slice and set the slices against the baseline.</p>
+<p>The comparison to write down is simple: which slices sit above the overall rate, which sit below, and by how much. A slice at 47% against a 30% baseline is a real gap on paper. Whether it means anything is the next method's job, because a gap built on seven rows is noise wearing a suit.</p>
+
+<h2>Method 3: Trend Windows</h2>
+<p>A trend window compares the file against itself over time. Sort rows by date, cut them into fixed windows (first 10 observations, last 10, or month by month), and compute the same rate per window. The output is a short series of numbers you can eyeball: stable, drifting, or jumping.</p>
+<p>State the window boundaries in your notes. "Early rows versus late rows" is vague; "rows 1-10 versus rows 21-30 of 30, sorted by date" can be re-run by anyone, including you in three weeks. Fixed windows also protect you from the sneakiest self-trick in home analysis: moving the window until the trend appears.</p>
+
+<h2>Method 4: Sample-Size Awareness</h2>
+<p>Small groups swing hard. With 10 rows, going from 3 hits to 4 moves the rate from 30% to 40%. That swing is arithmetic, not signal. Before quoting any slice or window, count its rows and apply a plain rule: a rate from a group of a few dozen rows is a hint, not a finding.</p>
+<p>A useful check takes one line: divide 100 by the group size to get the percentage-point cost of a single row. In a 15-row group, each row is worth about 6.7 points; one flipped observation redraws the whole picture. In a 5,000-row group, a row costs 0.02 points and the rate finally has some weight.</p>
+
+<h2>A Worked Example (Made-Up Numbers)</h2>
+<p><strong>Every number in this section is invented for illustration.</strong> Nothing here comes from any dataset; the point is to show the four methods running in order on a small file.</p>
+<p>Suppose a log has 30 rows. Each row has a date, a context label (A or B), and a numeric value from 0 to 40. The question: how often does the value reach 20 or more? Six of the 30 rows:</p>
+<table class="tbl">
+  <tr><th>Row</th><th>Week</th><th>Context</th><th>Value</th></tr>
+  <tr><td>1</td><td>wk 1</td><td>A</td><td class="num">24</td></tr>
+  <tr><td>2</td><td>wk 1</td><td>B</td><td class="num">11</td></tr>
+  <tr><td>3</td><td>wk 2</td><td>A</td><td class="num">18</td></tr>
+  <tr><td>4</td><td>wk 2</td><td>B</td><td class="num">31</td></tr>
+  <tr><td>5</td><td>wk 3</td><td>A</td><td class="num">22</td></tr>
+  <tr><td>6</td><td>wk 3</td><td>B</td><td class="num">9</td></tr>
+</table>
+<p class="table-note">Rows 7-30 follow the same shape. The full 30 contain 9 rows with a value of 20 or more.</p>
+<p><strong>Baseline.</strong> 9 of 30 rows hit 20 or more: a rate of 30%. That is the number everything else gets compared against.</p>
+<p><strong>Split by context.</strong> Context A holds 15 rows with 7 hits (47%). Context B holds 15 rows with 2 hits (13%). A sits 17 points above the baseline, B sits 17 below. On paper that is a clean gap.</p>
+<p><strong>Trend windows.</strong> Sort by week and cut the 30 rows into three windows of 10. First window: 2 hits (20%). Middle: 3 hits (30%). Last: 4 hits (40%). A slow climb, worth a note.</p>
+<p><strong>Sample-size check.</strong> Here is where the paper gap shrinks. Context A's 47% rests on 15 rows, where one flipped observation moves the rate about 6.7 points. Split A further by week and the sub-groups drop to 7-8 rows, small enough that a single row redraws them. The 13% in context B rests on 2 hits out of 15; one different week and it reads 20% instead. Honest write-up: the A-versus-B gap is a lead worth checking on a bigger file, and the upward drift is 6 observations across three windows, far too thin to call a trend.</p>
+<p>Four methods, one small file, and the conclusion is a sentence about what the data cannot support yet. That sentence is the actual product of this kind of analysis.</p>
+
+<h2>Any Tool Works</h2>
+<p>Nothing above needs more than a spreadsheet: <code>COUNTIF</code> for the condition, a filter for the splits, sorted rows for the windows. The same four methods run identically in pandas or R with a group-by and a couple of boolean masks, and a printout with a pencil works on a small file. Tool choice changes speed, not method. The CSVs mentioned below open in all three.</p>
+
+<h2>Four Opinions, Labeled as Opinions</h2>
+<ol>
+  <li><strong>Start with one question.</strong> "How often does X happen in these rows?" beats "let's see what's interesting." A question you can answer with a count keeps the session honest; a fishing trip produces a chart you will over-read.</li>
+  <li><strong>Write the filter before you run it.</strong> One line, dated, before the first count. Deciding that "20 or more counts" after seeing the data turns every later number into decoration.</li>
+  <li><strong>Keep the raw file read-only.</strong> Work on copies and put a date in every export's filename. When two numbers disagree with each other, the untouched raw file settles which one is wrong.</li>
+  <li><strong>Report the denominator every time.</strong> "7 of 15" invites a fair amount of skepticism; "47%" with no n invites none, and it deserves some. The n costs one word and saves the reader a wrong conclusion.</li>
+</ol>
+
+<h2>Where to Practice: The Datasets Behind This Page</h2>
+<p>These methods came from packaging real CSV datasets, and the bundle behind this page ships three different data shapes to run them on: a long time series, a geographic cross-section, and a multi-city panel.</p>
+<ul>
+  <li><strong>NFL Betting &amp; Game Data Pack</strong> ($29 standalone): 7,548 games from the 1999 season through the full 2026 schedule, 46 columns. Closing spreads and totals since 1999, moneylines and odds since 2006, plus scores, rest days, QBs, coaches, referees, stadium, roof, surface and weather in the same row. Derived tables: team records by season (861 rows) and season summaries (27 rows). Game data from the nflverse-data project, CC BY 4.0.</li>
+  <li><strong>USA Rent Benchmark FY2026</strong> ($24 standalone): 51,895 ZIP-level rows from HUD's official FY2026 Fair Market Rent files, plus 3,229 county rows and 52 state summaries. Five bedroom sizes (0BR through 4BR) in every file, monthly USD. A US federal government work, public domain under 17 USC 105.</li>
+  <li><strong>Airbnb Multi-City Investor Pack</strong> ($39 standalone): 90,169 listing rows across 6 cities (New York, Las Vegas, San Diego, Austin, Nashville, Denver), one 12-column schema throughout, Inside Airbnb snapshots dated 2026-06-22 through 2026-08-10. Data by Inside Airbnb, CC BY 4.0.</li>
+  <li><strong>AI Terminal Wallpaper Pack Vol.1</strong> ($12 standalone): 20 dark terminal-style wallpapers, JPG at 1024x1024. No data, but the desk needs something to look at.</li>
+</ul>
+<p>The NFL pack includes historical closing lines as data columns. This page takes no position on what anyone should do with them. The methods above describe what happened in the rows; they predict nothing and recommend nothing.</p>
+
+<div class="snap">
+<p><strong>Honest framing:</strong> the bundle ships data and documentation only. Datasets are point-in-time captures, each one dated inside its own files: NFL rows run through the posted 2026 schedule, Airbnb snapshots are stated per city, rent figures are HUD's FY2026 publication. Every pack carries a data dictionary and attribution files, and the bundle ships SHA256SUMS.txt so you can verify the download before trusting any number in it.</p>
+</div>
+
+<!-- CTA SWAP (studio-vault-bundle, same slug as sports-data-bundle.html row #1): SEBELUM href https://www.getly.store/store/matchbook-labs-mtmw06l2 | SESUDAH href https://www.getly.store/product/<VAULT-SLUG> | GATE: API status=active + curl canonical https://www.getly.store/product/<VAULT-SLUG> = 200 dulu (ISR rule: JANGAN probe /product/ saat pending_review, cek 1x/hari no spam). Slug dari output publish-run baris RESULT id=... slug=... | anchor tetap -->
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Studio &amp; Data Vault Bundle - 4 data packs + 20 wallpapers, $49 &rarr;</a>
+<p class="note">$49 one-time · 4 packs · NFL + HUD + Airbnb CSVs load in pandas, Excel or R · SHA256SUMS verified · instant download</p>
+
+<p>The bundle's product page with per-pack row counts and sizes: <a href="sports-data-bundle.html">sports data bundle</a>. Free samples to test the methods on today: the <a href="free-nfl-betting-data.html">free NFL betting data sample</a> (100 games) and the <a href="free-rent-data-sample.html">free rent data sample</a>.</p>
+
+<footer>Matchbook Labs - digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
