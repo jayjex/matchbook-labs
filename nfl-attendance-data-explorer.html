@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NFL Attendance Data Explorer: Game Context by Team and Week as CSV (1999-2026)</title>
+<meta name="description" content="Working on NFL attendance by team? This CSV pack carries the game-side table: 7,548 games keyed by season, week, team, stadium, roof, surface, temp, and wind, ready to join an attendance file against. Five sample rows on the page.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/nfl-attendance-data-explorer.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NFL Attendance Data Explorer: Game Context by Team and Week as CSV (1999-2026)">
+<meta property="og:description" content="The game-side table for NFL attendance analysis: 7,548 games with team, week, stadium, roof, surface, weather, and rest days, keyed for a flat CSV join. Five sample rows shown verbatim.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/nfl-attendance-data-explorer.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NFL Attendance Data Explorer: Game Context by Team and Week as CSV">
+<meta name="twitter:description" content="7,548 NFL games with team, week, stadium, roof, surface, and weather columns, keyed for a flat CSV join with attendance figures. Five sample rows on the page. $29.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "NFL Attendance Data Explorer: Game Context by Team and Week as CSV (1999-2026)",
+  "description": "The game-side table for NFL attendance analysis: 7,548 games with team, week, stadium, roof, surface, weather, and rest days, keyed for a flat CSV join. Five sample rows shown verbatim.",
+  "datePublished": "2026-09-08",
+  "author": {"@type": "Organization", "name": "Matchbook Labs"},
+  "publisher": {"@type": "Organization", "name": "Matchbook Labs"},
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/nfl-attendance-data-explorer.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: #161b22; padding: 0.1em 0.35em; border-radius: 4px; }
+  pre { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 1rem; overflow-x: auto; margin: 0 0 1.25rem; }
+  pre code { background: none; padding: 0; font-size: 0.8rem; line-height: 1.5; }
+  .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #4da3ff; border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .callout p { margin: 0; font-size: 0.95rem; }
+  .spread { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.82rem; }
+  .spread th { text-align: right; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.4rem; white-space: nowrap; }
+  .spread td { padding: 0.45rem 0.4rem; border-bottom: 1px solid #21262d; color: #c9d1d9; text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; white-space: nowrap; }
+  .spread td:first-child, .spread td:nth-child(2), .spread td:nth-child(6) { text-align: left; }
+  .spread tr:hover td { background: #161b22; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { text-decoration: none; filter: brightness(1.1); }
+  .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #21262d; font-size: 0.85rem; color: #8b949e; }
+</style>
+</head>
+<body>
+<p class="crumbs"><a href="index.html">Matchbook Labs</a> &rsaquo; <a href="sports-data-bundle.html">Sports data</a> &rsaquo; NFL attendance data</p>
+
+<h1>NFL Attendance Data Explorer: Game Context by Team and Week as CSV (1999&ndash;2026)</h1>
+<p class="lede">Announced attendance figures live in their own datasets. What almost nobody ships is the game-side table that attendance work needs: which team played at home, which week, in which stadium, indoors or out, in what weather, on how much rest. That table is this pack. One flat CSV, 7,548 NFL games from 1999 through the 2026 schedule, keyed by season, week, and team so you can merge an attendance file against it in a couple of lines. Five rows from week 1 of the 2025 season are on this page exactly as they sit in the file.</p>
+
+<div class="callout"><p>Straight answer first: the pack has no ticket counts or announced attendance column. It carries the context columns around every game, and the row keys (season, week, team) that an attendance dataset needs to attach to. If you want attendance numbers themselves, pull them from a public source and join them onto this file on team and week. If you want the schedule, venue, and weather side of the same rows, this is it.</p></div>
+
+<h2>Five sample rows</h2>
+<table class="spread">
+  <thead>
+    <tr><th>game_id</th><th>gameday</th><th>week</th><th>away</th><th>home</th><th>stadium</th><th>roof</th><th>surface</th><th>temp</th><th>wind</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2025_01_DAL_PHI</td><td>2025-09-04</td><td>1</td><td>DAL</td><td>PHI</td><td>Lincoln Financial Field</td><td>outdoors</td><td>grass</td><td>75</td><td>11</td></tr>
+    <tr><td>2025_01_CIN_CLE</td><td>2025-09-07</td><td>1</td><td>CIN</td><td>CLE</td><td>FirstEnergy Stadium</td><td>outdoors</td><td>grass</td><td>63</td><td>10</td></tr>
+    <tr><td>2025_01_KC_LAC</td><td>2025-09-05</td><td>1</td><td>KC</td><td>LAC</td><td>SoFi Stadium</td><td>dome</td><td></td><td></td><td></td></tr>
+    <tr><td>2025_01_TB_ATL</td><td>2025-09-07</td><td>1</td><td>TB</td><td>ATL</td><td>Mercedes-Benz Stadium</td><td>closed</td><td>fieldturf</td><td></td><td></td></tr>
+    <tr><td>2025_01_MIA_IND</td><td>2025-09-07</td><td>1</td><td>MIA</td><td>IND</td><td>Lucas Oil Stadium</td><td>closed</td><td>fieldturf</td><td></td><td></td></tr>
+  </tbody>
+</table>
+<p class="table-note">Values verbatim from games.csv. Empty <code>temp</code> and <code>wind</code> cells are real data here: indoor stadiums have no outdoor reading, and the file leaves them blank rather than filling in a zero. The same rule applies to every column in the pack.</p>
+
+<h2>What's in the pack</h2>
+<ul>
+  <li><strong>games.csv</strong> - 7,548 rows, one per game, 1999 through the 2026 schedule, 46 columns. The attendance-adjacent ones: <code>season</code>, <code>week</code>, <code>gameday</code>, <code>weekday</code>, <code>home_team</code>, <code>away_team</code>, <code>stadium</code>, <code>roof</code>, <code>surface</code>, <code>temp</code>, <code>wind</code>, <code>home_rest</code>, <code>away_rest</code>, and <code>game_type</code>. Scores and betting lines ride along on the same rows if you ever want them.</li>
+  <li><strong>team-records-by-season.csv</strong> - 861 team-season rows, keyed on <code>season</code> + <code>team</code>. W/L/T and points for and against per club per season.</li>
+  <li><strong>season-summaries.csv</strong> - 27 rows, one per season from 1999 through 2025. League-level averages and rates, useful as a baseline.</li>
+  <li><strong>data-dictionary.md</strong> - every column defined, including the roof and surface value sets and which years each field starts.</li>
+</ul>
+<p>The dataset snapshot is dated 2026-09-06. The 2026 season sits in the file as 272 scheduled games; scores are empty until each one is played. Want the shape first? The <a href="free-nfl-betting-data.html">free NFL data sample</a> has 100 games with the same 46 columns.</p>
+
+<h2>Three attendance analyses this table supports</h2>
+<h3>Attendance trend per team</h3>
+<p>Join your attendance source to games.csv on <code>season</code>, <code>team</code>, and <code>week</code>, keep the rows where the club was home, and you get the trend plus everything that moves it: a Thursday short week, an outdoor December game, a stretch of road dates that pushed the home slate around. Without the game-side rows, a drop from 72,000 to 64,000 is a bare number; with them, you can see whether week 12 was a by-week for the league or a rain game with both teams losing.</p>
+<h3>Stadium utilization context</h3>
+<p>Group games.csv by <code>stadium</code> and <code>season</code> to see how many dates each venue hosted, then split by <code>roof</code> and <code>surface</code>. That tells you what a full home slate looked like for a building before you judge its turnout: a dome club with ten indoor dates and an open-air club with nine weather-exposed ones aren't the same comparison. The columns run back to 1999, so relocations show up as different stadium rows under the same team code.</p>
+<h3>Week-over-week drop detection</h3>
+<p>With attendance joined on <code>week</code>, line up consecutive home dates for one club and look at what changed in the context columns: <code>weekday</code> moving from Sunday to Monday, <code>home_rest</code> dropping from seven days to three, <code>temp</code> falling forty degrees. The pack gives you the explanations next to the drop so you can separate schedule and weather effects from anything else. All of it stays at the level of describing data you already have; nothing here predicts or advises.</p>
+
+<h2>The join, in six lines</h2>
+<p>Both sides stay flat CSVs; no database needed. Given a public attendance file with <code>season</code>, <code>team</code>, and <code>week</code> columns:</p>
+<pre><code>import pandas as pd
+games = pd.read_csv("games.csv")
+att = pd.read_csv("attendance.csv")
+merged = att.merge(
+    games,
+    left_on=["season", "team", "week"],
+    right_on=["season", "home_team", "week"],
+    how="left")</code></pre>
+<p>The same <code>season</code> + <code>team</code> keys line up against team-records-by-season.csv when you want win-loss context next to the crowd numbers.</p>
+
+<h2>Four tips for the run-through</h2>
+<ol>
+  <li><strong>Baseline with season averages first.</strong> Compare against the per-season rows in season-summaries.csv instead of eyeballing raw figures across eras; a 1999 home game and a 2025 one don't sit in the same league.</li>
+  <li><strong>Filter <code>game_type</code> to REG.</strong> The column also holds CON, DIV, WC, and SB. DIV there means the divisional playoff round, not division matchups, so a plain REG filter is the safe default for regular-season comparisons.</li>
+  <li><strong>Treat empty cells as not tracked.</strong> Blank temp on a dome row means the reading doesn't exist, and blank scores on 2026 rows mean the game hasn't been played. Zero-filling either will lie to your averages.</li>
+  <li><strong>Pin the snapshot date.</strong> The file was cut on 2026-09-06. If you re-download after a refresh, note the date in your analysis notebook so two runs from different snapshots don't get compared as one.</li>
+</ol>
+
+<div class="callout"><p>This is a data pack for your own analysis. It describes where and when games happened; it contains no attendance projections, no betting advice, and no claims about any team or venue beyond the factual columns in the file.</p></div>
+
+<h2>License and attribution</h2>
+<p>Game data comes from the <a href="https://github.com/nflverse/nflverse-data" rel="noopener">nflverse-data project</a> under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>. If you republish or build on it, include the line &ldquo;Data from nflverse, CC BY 4.0&rdquo;. The derived team and season files carry the same license. Facts in the file are not subject to copyright under 17 USC 105 where they originate from US government sources; everything here is the source project's release. Team names and stadium names are factual identifiers. Team logos and league marks are trademarks of their owners and are not part of the pack, and Matchbook Labs is not affiliated with or endorsed by the NFL.</p>
+
+<!-- CTA SWAP: when nfl-dataset Getly product eb8ccfc8 is ACTIVE (never probe /product/&lt;slug&gt; while pending_review; verify via API only), replace the store link below with the product URL, then curl -sI the live page once for 200. -->
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Full pack: 7,548 games + 861 team-season records - $29 &rarr;</a>
+<p>Also available as part of the <a href="sports-data-bundle.html">sports data bundle</a>, or start with the <a href="nfl-spread-history-database.html">NFL spread history database</a> page to see the betting-side columns.</p>
+
+<div class="footer">
+  <p>Matchbook Labs publishes raw datasets with the columns documented and the license stated. Questions about a file before buying? <a href="index.html">Contact details are on the front page.</a></p>
+</div>
+</body>
+</html>
