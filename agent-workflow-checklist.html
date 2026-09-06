@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Workflow Checklist — Free 8-Step Pre-Build Checklist — Matchbook Labs</title>
+<meta name="description" content="Free pre-build checklist for AI agent automation: 8 checks covering scope, trigger, output format, error path, logging, limits, and a human checkpoint.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/agent-workflow-checklist.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent Workflow Checklist — Free 8-Step Pre-Build Checklist">
+<meta property="og:description" content="8 checks to run before you build an agent or automation: scope, trigger, output format, stop condition, error path, logging, limits, human checkpoint.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/agent-workflow-checklist.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Agent Workflow Checklist — Free 8-Step Pre-Build Checklist">
+<meta name="twitter:description" content="8 checks to run before you build an agent or automation: scope, trigger, output format, stop condition, error path, logging, limits, human checkpoint.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Agent Workflow Checklist — Free 8-Step Pre-Build Checklist",
+  "description": "A free pre-build checklist for AI agent automation: 8 checks covering scope, trigger, output format, error path, logging, limits, and a human checkpoint, plus a guardrails box and four labeled opinions.",
+  "url": "https://jayjex.github.io/matchbook-labs/agent-workflow-checklist.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 0.6rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .check { list-style: none; margin-left: 0; counter-reset: chk; }
+  .check li { counter-increment: chk; padding-left: 2rem; position: relative; margin-bottom: 0.85rem; }
+  .check li::before { content: "☐"; position: absolute; left: 0; top: 0.05rem; color: #58a6ff; font-size: 1.15rem; }
+  .check .num::after { content: " " counter(chk) "."; color: #8b949e; font-size: 0.8rem; margin-right: 0.4rem; }
+  .box { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+  .box p:last-child, .box li:last-child { margin-bottom: 0; }
+  .box ul { margin-bottom: 0; }
+  blockquote { border-left: 3px solid #30363d; margin: 1rem 0 1.25rem; padding: 0.35rem 0 0.35rem 1.1rem; color: #8b949e; font-size: 0.92rem; }
+  blockquote ul { margin-bottom: 0; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media print {
+    body { background: #fff; color: #000; max-width: none; padding: 0; }
+    a { color: #000; text-decoration: none; }
+    .crumbs, .cta, .note, footer { display: none; }
+    h1, h2, h3, p, li, td, th { color: #000; }
+    .check li::before { color: #000; }
+    .box, blockquote { background: #fff; border-color: #999; }
+    h2 { border-bottom-color: #999; page-break-after: avoid; }
+    .box, blockquote { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Agent Workflow Checklist</nav>
+
+<h1>Agent Workflow Checklist (8 checks, free to copy)</h1>
+<p class="lede">A free pre-build checklist for AI agent automation: eight checks to run before you write code, covering scope, trigger, output format, stop condition, error path, logging, limits, and a human checkpoint. Below the checklist you'll find a guardrails box and four labeled opinions. The checks are generic mechanics; they apply whether you call a model API from a script or run a framework.</p>
+
+<h2>Run these eight checks before you build</h2>
+<p>Copy this list into your spec or a ticket. Each check is one decision, written down while it's cheap to change.</p>
+<ol class="check">
+  <li><strong>Scope it to one task.</strong> "Draft a reply to a support email" is one task. "Handle the support inbox" is a roadmap. Name the single job a run does and write it at the top of the spec; everything else is a later project.</li>
+  <li><strong>Define the trigger.</strong> What starts a run: a cron schedule, an inbound message, a new file in a folder, a webhook. Record it with the exact input it delivers, because the trigger is where malformed input gets in.</li>
+  <li><strong>Specify the output format.</strong> Decide the shape of a successful run before the first one: JSON with named fields, markdown with fixed headings, a row appended to a sheet. If you can't write the empty template, the task isn't defined yet.</li>
+  <li><strong>Write the stop condition.</strong> A run needs to know it's finished: one call, or a loop with a maximum number of turns. Looping agents with no stop condition are how a small task becomes a large bill.</li>
+  <li><strong>Write the error path.</strong> What happens when the API call fails, the output is malformed, or the result comes back empty: retry how many times, then skip, alert, or park for a person. Without this, failures surface in production or nowhere at all.</li>
+  <li><strong>Plan the log line.</strong> One line per run: timestamp, input reference, output reference, duration, cost. When something goes wrong, that line is the difference between debugging and guessing.</li>
+  <li><strong>Set limits before the first run.</strong> A rate limit (runs per hour) and a cost cap (per day) go in before launch, in config you can tighten without a redeploy. Both are cheaper than the first runaway loop.</li>
+  <li><strong>Pick the human checkpoint.</strong> Decide which outputs a person reads before they go anywhere: every run at first, then a sample once you know the error rate. Don't ship unreviewed output you haven't watched the system produce.</li>
+</ol>
+
+<h2>Guardrails box</h2>
+<p>Three guardrails cover most of the damage a misbehaving run can do. Each one does one job, and none of them checks output quality:</p>
+<div class="box">
+<ul>
+  <li><strong>Rate limit.</strong> Caps how fast runs fire. Protects your API quota and whatever sits downstream. It won't catch a wrong answer that arrives politely.</li>
+  <li><strong>Cost cap.</strong> A hard daily ceiling, enforced outside the agent's own logic. When a bug loops, this is what stops the spend. It won't tell you the output was wrong, only that it stopped being free.</li>
+  <li><strong>Human checkpoint.</strong> A person reads outputs before they reach anyone else. Catches the mistakes the other two can't see. It doesn't scale, and that's the point: it's the brake you keep until the error rate is measured, not assumed.</li>
+</ul>
+</div>
+
+<h2>Four opinions</h2>
+<p>These are opinions from running small automations this way, not rules. Disagree with any of them once you have your own logs.</p>
+<ol>
+  <li><strong>Boring LLM calls are fine.</strong> Most single tasks need one well-specified call and a parser, and a plain script is easier to debug than an orchestration layer. Add a second agent when a measured problem asks for one, not before.</li>
+  <li><strong>One task per agent.</strong> A run that drafts, sends, and files will eventually do one of the three wrong. Separate runs give each step its own error path and its own log line, which is what you'll want the day one of them misbehaves.</li>
+  <li><strong>Run the workflow by hand first.</strong> Execute your checklist manually ten times: trigger, output, log. The failures you find by hand are exactly the ones the error path should cover, and they're cheap to find this way.</li>
+  <li><strong>Read every output for the first week.</strong> Whatever sample rate you plan later, read all of it early. The strange cases show up in week one, and they define your error path better than any brainstorm.</li>
+</ol>
+
+<h2>What this page is</h2>
+<p>This checklist is educational: generic mechanics for building agent workflows, written to be useful before you pick any tooling. It is not a review, ranking, or comparison of agent frameworks, and it isn't affiliated with any of them. Nothing here promises a workflow will succeed; the checks make failures cheaper to find when they happen.</p>
+
+<h2>The paperwork, pre-structured</h2>
+<p>The Agent-OS Template Pack is 20 markdown templates for this kind of work: specs, system prompts, eval checklists, runbooks, onboarding docs, and the support macros around them. You fill in the [BRACKETS], delete the headings you don't need, and the templates make no assumptions about your stack, model, or platform. The product README lists the contents verbatim:</p>
+<blockquote>
+<ul>
+  <li><strong>Product specs (3):</strong> full v1 spec, single-feature spec, launch spec with success bar</li>
+  <li><strong>System prompts (4):</strong> general agent, support agent, research agent, workflow automation — each with boundaries, refusal lines, and example blocks</li>
+  <li><strong>Eval checklists (3):</strong> pre-release checklist, prompt quality grading, user testing script</li>
+  <li><strong>Incident/runbook (2):</strong> post-incident report format, one-page triage runbook</li>
+  <li><strong>Onboarding (2):</strong> new-user guide, one-screen quick start card</li>
+  <li><strong>Changelog/release notes (2):</strong> running changelog format, public release notes template</li>
+  <li><strong>Pricing copy (2):</strong> pricing page skeleton, purchase-unblocking FAQ</li>
+  <li><strong>Support macros (2):</strong> seven common-ticket replies, six hard-conversation replies</li>
+</ul>
+</blockquote>
+<p>According to the same README, <code>index.md</code> maps all 20 templates to the moment you need each one, and searching for `[` in any template surfaces every placeholder. The templates structure decisions and docs; the technical content stays yours.</p>
+
+<!-- SWAP-BEGIN agentos-pack — trigger: produk belum ada di API saat page dibuat (09-08: read-key GET /api/v1/products = 27 produk, 0 match Agent-OS/template pack). Saat publish + API status active: curl canonical https://www.getly.store/product/<AGENTOS-SLUG> = 200 dulu (gate; ISR rule JANGAN probe /product/ saat pending_review; cek 1x/hari no spam) → replace DUA href di bawah (prose anchor + .cta) dengan product URL, anchor tetap. Slug ambil dari output publish.sh baris RESULT id=... slug=... -->
+<p>If you'd rather not structure that paperwork from a blank page, the <a href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Agent-OS Template Pack</a> ($12) ships all 20 templates in plain markdown that opens in any editor or repo.</p>
+<!-- SWAP-END agentos-pack -->
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Agent-OS Template Pack — 20 templates for agent products, $12 →</a>
+<p class="note">Plain markdown, no tooling. Personal + commercial use.</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
