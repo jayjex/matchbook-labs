@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playwright Scraping Tutorial for Beginners (Free, 6 Steps)</title>
+<meta name="description" content="A free Playwright web scraping tutorial for beginners: 6 setup steps, an ethics box, 4 opinion tips, and 10 ready-made scripts. Browsers, not bypasses.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/playwright-scraping-tutorial-free.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Playwright Scraping Tutorial for Beginners (Free)">
+<meta property="og:description" content="6 setup steps, an ethics box, 4 opinion tips, and a look at 10 ready-made Playwright scripts. Free guide.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/playwright-scraping-tutorial-free.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Playwright Scraping Tutorial for Beginners (Free)">
+<meta name="twitter:description" content="6 setup steps, an ethics box, 4 opinion tips. Free Playwright guide for beginners.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Playwright Scraping Tutorial for Beginners (Free, 6 Steps)",
+  "description": "A free Playwright web scraping tutorial for beginners: 6 setup steps, an ethics box, 4 opinion tips, and 10 ready-made scripts.",
+  "datePublished": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/playwright-scraping-tutorial-free.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 1rem; margin: 0 0 0.5rem; color: #e6edf3; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.5rem; }
+  code { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.1rem 0.35rem; font-size: 0.85em; color: #79c0ff; }
+  .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .howto p { margin: 0; font-size: 0.95rem; }
+  .sheet { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.88rem; }
+  .sheet th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.5rem; }
+  .sheet td { padding: 0.55rem 0.5rem; border-bottom: 1px solid #21262d; color: #c9d1d9; vertical-align: top; }
+  .sheet td.cb { text-align: center; font-size: 1.05rem; }
+  .ethics { background: #161b22; border: 1px solid #6e4026; border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0 1.5rem; }
+  .ethics ol { margin: 0 0 0 1.4rem; }
+  .ethics li { margin-bottom: 0.6rem; }
+  .ethics .hardrule { color: #f0883e; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
+  .quote { border-left: 3px solid #30363d; margin: 1.25rem 0; padding: 0.25rem 0 0.25rem 1.1rem; color: #8b949e; font-size: 0.92rem; }
+  .quote p { color: #8b949e; }
+  .quote .sheet { font-size: 0.84rem; }
+  .quote .sheet td, .quote .sheet th { color: #8b949e; }
+  .srcnote { font-size: 0.8rem; color: #6e7681; margin: -0.5rem 0 1.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  @media print {
+    :root { color-scheme: light; }
+    body { background: #fff; color: #111; max-width: none; padding: 0 0.4in; font-size: 11px; }
+    .crumbs, .lede, .howto, .cta, .note, footer, .quote, .srcnote { display: none; }
+    h1, h2, h3, p, li, td, th { color: #111; }
+    h1 { font-size: 13pt; margin-bottom: 4pt; }
+    h2 { border-bottom-color: #999; margin: 0.55rem 0 0.3rem; font-size: 10.5pt; page-break-after: avoid; }
+    .sheet { font-size: 9.5px; margin-bottom: 0.2rem; }
+    .sheet td { border-bottom: 1px solid #999; padding: 0.3rem 0.35rem; }
+    .ethics { border: 1px solid #666; background: none; }
+    code { background: none; border: 1px solid #999; color: #111; }
+  }
+</style>
+</head>
+<body>
+
+<p class="crumbs"><a href="index.html">Matchbook Labs</a> &rsaquo; <a href="catalog.html">Catalog</a> &rsaquo; Playwright Scraping Tutorial</p>
+
+<h1>Playwright Scraping Tutorial for Beginners</h1>
+<p class="lede">Six setup steps, one ethics box, four opinions. This free Playwright web scraping guide takes you from an empty folder to a script that opens a page, pulls data, and saves it to a file. Nothing here defeats logins, captchas, or blocks, because that is where scrapers turn into problems.</p>
+
+<div class="howto"><p>How to use it: do the setup steps top to bottom in one sitting, about 45 minutes including the browser download. The ethics box is not optional reading, it is the rule set the rest of the page assumes. The four tips are opinions and labeled as such.</p></div>
+
+<h2>What browser automation is</h2>
+<p>Browser automation means a script drives a real browser instead of you: it opens pages, clicks buttons, fills forms, scrolls, and reads the rendered HTML. Playwright is a library for this, built by the team at Microsoft, and it works from Node.js or Python. Playwright web scraping is one use of it: point the browser at a page, wait for the content to render, then pull the parts you need with selectors. The browser is real, so the page behaves the way it does for any visitor, JavaScript and all. That is the whole trick and also the whole responsibility: your script is a visitor, and the same rules a polite visitor follows apply to it.</p>
+
+<h2>Setup checklist (6 steps)</h2>
+<p>Generic commands, run them in a fresh project folder. No site names, no URLs to copy: you will point the script at pages you own or pages that permit automated access.</p>
+<table class="sheet">
+  <tr><th style="width:3rem">&#10003;</th><th>Step</th><th style="width:34%">Done means</th></tr>
+  <tr><td class="cb">&#9744;</td><td>Install Node.js 18 or newer. Check with <code>node --version</code>.</td><td>A version number prints, 18+</td></tr>
+  <tr><td class="cb">&#9744;</td><td>In your project folder, run <code>npm install playwright</code>.</td><td>A <code>node_modules</code> folder exists</td></tr>
+  <tr><td class="cb">&#9744;</td><td>Download the browser: <code>npx playwright install chromium</code>. One-time, it is a large download.</td><td>The command finishes without errors</td></tr>
+  <tr><td class="cb">&#9744;</td><td>Write a first script: launch Chromium, open a page you own, print the page title.</td><td>The title prints when you run it</td></tr>
+  <tr><td class="cb">&#9744;</td><td>Run it with <code>node first-script.js</code> and fix what the errors say. Selector typos are the usual failure.</td><td>One clean run, no stack trace</td></tr>
+  <tr><td class="cb">&#9744;</td><td>Add an output step: save what you pulled to a CSV or JSON file instead of printing it.</td><td>A data file exists on disk</td></tr>
+</table>
+
+<h2>The ethics box (3 hard rules)</h2>
+<div class="ethics">
+  <p class="hardrule">Read before your second run. These are rules, not opinions.</p>
+  <ol>
+    <li><strong>Read the site's robots.txt and follow it.</strong> Paths listed as disallowed are off limits, whatever the data looks like.</li>
+    <li><strong>Read the site's Terms of Service.</strong> Some sites prohibit automated access entirely. Those sites are off limits.</li>
+    <li><strong>Keep delays between requests.</strong> Something in the 800ms to 2500ms range, and if a site publishes a crawl-delay, adopt the stricter of the two.</li>
+  </ol>
+</div>
+
+<h2>4 opinion tips</h2>
+<ol>
+  <li><strong>Start with static HTML.</strong> (Opinion.) If viewing the page source shows the data you need, fetch the HTML directly and skip the browser. Playwright earns its startup cost on pages that need JavaScript to render or clicks to reach the data.</li>
+  <li><strong>Learn selectors on pages you own.</strong> (Opinion.) A local HTML file or your own site is a better practice ground than a stranger's page: you can break it on purpose and watch the error, with nobody affected.</li>
+  <li><strong>Keep the delays even when you are impatient.</strong> (Opinion.) Slow is what keeps you welcome. The day your scraper hammers a server is the day you get blocked, and you will deserve it.</li>
+  <li><strong>Write output to a file, every run.</strong> (Opinion.) CSV or JSONL on disk, one column as a dedupe key. A run that dies halfway should still leave you the half it finished.</li>
+</ol>
+
+<h2>What this page is</h2>
+<p>This is a generic browser-automation tutorial: setup mechanics, an ethics box, and opinions on how to practice. It is not a bypass guide. Nothing on this page defeats captchas, rate limits, IP blocks, or access controls, and no technique here targets any named site. The ethics box lists hard rules; the four tips are opinions. Playwright is nominatively named as the tool the setup steps install. This page is unaffiliated with the Playwright team or Microsoft, and following these steps does not make anyone endorsed by them.</p>
+
+<h2>Where ready-made scripts fit</h2>
+<p>Once the setup steps run, the remaining work is mostly selectors and output handling. That is the part a template pack already solves. The verbatim product description from the Scraper Pack page:</p>
+<blockquote class="quote">
+  <p>10 self-contained Node.js scripts built on Playwright. Each file runs on its own, each one has a "how to run" comment at the top and selector constants clearly marked EDIT. Copy a file, change the selectors, run.</p>
+  <p>Requirements:</p>
+  <ul>
+    <li>Node.js 18+ (uses built-in fetch)</li>
+    <li><code>npm install</code> (pulls Playwright)</li>
+    <li><code>npx playwright install chromium</code> (one-time browser download)</li>
+  </ul>
+  <table class="sheet">
+    <tr><th style="width:3rem">#</th><th style="width:42%">File</th><th>What it does</th></tr>
+    <tr><td>01</td><td>paginated-table-to-csv</td><td>Walks <code>?page=N</code> or Next-button pagination, saves table rows to CSV</td></tr>
+    <tr><td>02</td><td>infinite-scroll-collector</td><td>Scrolls a feed to the end, dedupes, saves JSON</td></tr>
+    <tr><td>03</td><td>login-scrape-storagestate</td><td>Logs in once, saves the session, reuses it on later runs</td></tr>
+    <tr><td>04</td><td>price-stock-monitor</td><td>Diff-based product monitor, POSTs Slack/Discord webhook on change</td></tr>
+    <tr><td>05</td><td>bulk-form-submitter</td><td>CSV rows in, one form submission per row, results report</td></tr>
+    <tr><td>06</td><td>job-board-scraper</td><td>Board/listing pages to JSON with cross-run dedupe</td></tr>
+    <tr><td>07</td><td>sitemap-crawler</td><td>Expands sitemap indexes, honors robots.txt + crawl-delay, writes JSONL</td></tr>
+    <tr><td>08</td><td>screenshot-diff-bot</td><td>sha256 change detection with archived previous shots</td></tr>
+    <tr><td>09</td><td>api-poller-jsonl</td><td>Polls a JSON endpoint, appends new records to JSONL</td></tr>
+    <tr><td>10</td><td>retry-fetch-wrapper</td><td>Exponential backoff, jitter, UA rotation, Retry-After aware</td></tr>
+  </table>
+  <p>Legal / fair use:</p>
+  <ul>
+    <li>Read the site's Terms of Service and robots.txt before scraping it. Some sites prohibit automated access; those sites are off limits.</li>
+    <li>Every script ships with delays (800ms to 2500ms). Keep them. If a site publishes a crawl-delay, the crawler adopts the stricter of the two.</li>
+    <li>Scrape only data you are authorized to access. Do not use the login template (03) against accounts or systems you do not own or have written permission for.</li>
+    <li>No captcha solving, no credential stuffing, no IP-rotation evasion, nothing here is designed to defeat access controls.</li>
+    <li>You are responsible for how you use these scripts. Use them on your own sites, on sites with open data, or where you have permission.</li>
+  </ul>
+</blockquote>
+<p class="srcnote">Quoted verbatim from the Scraper Pack product README.</p>
+
+<!-- SCRAPER-PACK-SWAP: GATE PASSED 2026-09-08: mtn8em7k status=active (API read-key, price 1500) + curl canonical HTTP 200, title "Web Scraping Script Pack — 10 Production-Ready... | Getly". Direct product URL, no swap row in cta-swap-tracker.md. If URL dies, swap to store matchbook-labs-mtmw06l2 per cta-swap-tracker.md. -->
+<a class="cta" href="https://www.getly.store/product/web-scraping-script-pack-10-production-ready-playwright-templates-mtn8em7k">Get the Scraper Pack - 10 Playwright scripts, $15 &rarr;</a>
+<p class="note">$15 one-time &middot; 10 Node.js scripts + smoke test &middot; or <a href="catalog.html">browse the catalog</a></p>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="web-scraping-project-ideas.html">8 Web Scraping Project Ideas for Beginners (free guide)</a> - pick a first target once the setup steps run.</li>
+  <li><a href="catalog.html">Full catalog</a> - every guide, checklist, and pack.</li>
+</ul>
+
+<footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid #21262d;color:#8b949e;font-size:0.85rem;">
+  <p>Matchbook Labs &middot; <a href="index.html">home</a> &middot; <a href="catalog.html">catalog</a> &middot; questions? Message me on the store page.</p>
+</footer>
+
+</body>
+</html>
