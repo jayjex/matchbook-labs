@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Airbnb Data by City - 90,169 Listings, 6 US Markets, CSV Download - Matchbook Labs</title>
-<meta name="description" content="Airbnb dataset CSV download: 90,169 listings across Austin, Nashville, Denver, New York City, Las Vegas and San Diego. 12 columns per city, host data removed, snapshot dates stated per file. $39.">
+<meta name="description" content="Airbnb short-term rental data as CSV: 90,169 listings across Austin, Nashville, Denver, New York City, Las Vegas and San Diego. 12 columns per city, host data removed, source crawl window 2026-06-22 to 08-10. $39.">
 <link rel="canonical" href="https://jayjex.github.io/matchbook-labs/airbnb-data-by-city.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Airbnb Data by City - 90,169 Listings, 6 US Markets, CSV Download">
-<meta property="og:description" content="Airbnb dataset CSV download: 90,169 listings across Austin, Nashville, Denver, New York City, Las Vegas and San Diego. 12 columns per city, host data removed, snapshot dates stated per file. $39.">
+<meta property="og:description" content="Airbnb short-term rental data as CSV: 90,169 listings across Austin, Nashville, Denver, New York City, Las Vegas and San Diego. 12 columns per city, host data removed, source crawl window 2026-06-22 to 08-10. $39.">
 <meta property="og:url" content="https://jayjex.github.io/matchbook-labs/airbnb-data-by-city.html">
 <meta property="og:site_name" content="Matchbook Labs">
 <meta name="twitter:card" content="summary">
@@ -100,7 +100,7 @@
   <tr><td>San Diego, CA</td><td>2026-06-27</td><td class="num">13,225</td><td class="num">$323</td><td class="num">83%</td></tr>
   <tr class="total"><td>Total</td><td>6 markets</td><td class="num">90,169</td><td class="num"></td><td class="num"></td></tr>
 </table>
-<p class="table-note">Counts, medians and room-type shares come from <code>cities-index.csv</code>, computed from the exact CSVs shipped in the zip. Two naming quirks: Austin's cleansed neighbourhoods are ZIP codes, and the Las Vegas file covers all of Clark County, not the Strip alone. Source data by Inside Airbnb (CC BY 4.0), downloaded 2026-09-06.</p>
+<p class="table-note">Counts, medians and room-type shares come from <code>cities-index.csv</code>, computed from the exact CSVs shipped in the zip. Two naming quirks: Austin's cleansed neighbourhoods are ZIP codes, and the Las Vegas file covers all of Clark County, not the Strip alone. Source crawl window 2026-06-22 to 08-10, each city's snapshot date stated in the index, source files downloaded 2026-09-06. Data by Inside Airbnb, InsideAirbnb.com, CC BY 4.0.</p>
 
 <h2>8 Real Rows From the Austin File</h2>
 <table class="tbl">
@@ -130,7 +130,7 @@
   <li><strong>reviews_per_month</strong> - lifetime review rate, blank when the listing has zero reviews. Roughly half of guest stays leave reviews, so real demand runs higher than this column implies.</li>
   <li><strong>last_review</strong> - date of the most recent review, blank if never reviewed. Reviews lag, so a listing booked this month can still show an old date.</li>
 </ul>
-<p>Same 12 columns in all six city files, so joins and group-bys work across cities in pandas, Sheets or R without schema surgery. ZIP-level rent benchmarks join onto the same geography: the <a href="hud-fair-market-rent-data.html">HUD fair market rent data</a> pack keys FMR by ZIP code and county for all 50 states.</p>
+<p>Same 12 columns in all six city files, so joins and group-bys work across cities in pandas, Sheets or R without schema surgery. To work from one table, concatenate the six files and add a city column as you load them; after that, every cross-city question is a group-by. ZIP-level rent benchmarks join onto the same geography: the <a href="hud-fair-market-rent-data.html">HUD fair market rent data</a> pack keys FMR by ZIP code and county for all 50 states.</p>
 
 <h2>No Host Data, On Purpose</h2>
 <p>The pack carries no host names, no host IDs, no host profile links and no exact street addresses. Coordinates are rounded to 4 decimal places and listing names are truncated. That keeps the analytic value (price levels, location patterns, room-type mix, calendar availability) and cuts the surveillance value.</p>
@@ -146,14 +146,21 @@
   <li><strong>normalize.py</strong> - the exact script that produced the CSVs, so you can reproduce or modify the pipeline.</li>
   <li><strong>ATTRIBUTION.txt + source-sha256.txt</strong> - the CC BY 4.0 credit line and SHA-256 hashes of each downloaded source file.</li>
 </ul>
-<p>Nineteen files, 3.83MB zipped (11.8MB uncompressed). Typical uses: pulling comps for a market before you buy, comparing six markets on price and room mix before committing capital, ceiling estimates (<code>availability_365</code> times <code>price</code>), demand reads from review velocity, and teaching data work on files that load clean.</p>
+<p>Nineteen files, 3.83MB zipped (11.8MB uncompressed).</p>
+
+<h2>Three Ways to Work With the Data</h2>
+<ul>
+  <li><strong>City comparison</strong> - stack the six files into one flat CSV with a city column, then compare listing counts, median prices and room-type mix side by side.</li>
+  <li><strong>Supply research</strong> - listing counts and <code>room_type</code> per market, down to the cleansed neighbourhood, give the supply picture on each snapshot date.</li>
+  <li><strong>Pricing benchmark</strong> - price spreads by city and room type set a baseline to hold your own numbers against.</li>
+</ul>
 
 <div class="snap">
 <p><strong>Snapshot honesty:</strong> these are point-in-time scrapes, not a live feed. Each city has its own date, from 2026-06-22 (Austin) to 2026-08-10 (NYC), stated in the index file, the summary and the attribution file.</p>
 <p>Three quirks worth knowing before you model: <code>price</code> can be zero or blank on a handful of rows, so filter those for revenue math; <code>availability_365</code> reflects the calendar as hosts had edited it on scrape day; and review counts lag actual bookings by weeks.</p>
 </div>
 
-<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Airbnb Multi-City Investor Pack - 90,169 listings, $39 &rarr;</a>
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the multi-city Airbnb dataset - 90,169 listings, $39 &rarr;</a>
 <p class="note">$39 one-time · 19 files · 3.83MB zip · 12-column schema · CC BY 4.0 · instant download</p>
 
 <footer>Matchbook Labs - digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
