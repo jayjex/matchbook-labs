@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rent vs Buy Spreadsheet: The Data You Need to Build Your Own - Matchbook Labs</title>
+<meta name="description" content="Building a rent vs buy spreadsheet starts with data, not a calculator: rent levels by ZIP, price sources, and a join key. See real HUD FMR rows and the full 51,895-row dataset.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/rent-vs-buy-spreadsheet-data.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rent vs Buy Spreadsheet: The Data You Need to Build Your Own">
+<meta property="og:description" content="The data side of a rent vs buy spreadsheet: rent inputs by ZIP from HUD FMR, public price sources, and a flat CSV you join by ZIP. No pre-baked conclusions.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/rent-vs-buy-spreadsheet-data.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rent vs Buy Spreadsheet: The Data You Need to Build Your Own">
+<meta name="twitter:description" content="Rent inputs by ZIP (HUD FMR), price data sources, join mechanics. Flat CSV, 51,895 rows, $24.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Rent vs Buy Spreadsheet: The Data You Need to Build Your Own",
+  "description": "What data a rent vs buy spreadsheet needs: rent levels by ZIP, price sources, and how to join them. Includes real FY2026 HUD FMR rows and the full dataset.",
+  "datePublished": "2026-09-08",
+  "author": {"@type": "Organization", "name": "Matchbook Labs"},
+  "publisher": {"@type": "Organization", "name": "Matchbook Labs"},
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/rent-vs-buy-spreadsheet-data.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #4da3ff; border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .callout p { margin: 0; font-size: 0.95rem; }
+  .rent { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.82rem; }
+  .rent th { text-align: right; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.5rem; white-space: nowrap; }
+  .rent th:nth-child(1), .rent th:nth-child(2) { text-align: left; }
+  .rent td { padding: 0.45rem 0.5rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .rent td.num, .rent td.zip { text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .rent tr:hover td { background: #161b22; }
+  pre { background: #010409; border: 1px solid #21262d; border-radius: 6px; padding: 1rem 1.1rem; overflow-x: auto; font-size: 0.78rem; line-height: 1.5; color: #c9d1d9; margin: 0 0 0.5rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cols { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.85rem; }
+  .cols th { text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem; }
+  .cols td { padding: 0.5rem; border-bottom: 1px solid #21262d; color: #c9d1d9; vertical-align: top; }
+  .cols td:first-child { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; white-space: nowrap; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) {
+    .rent, .cols { font-size: 0.72rem; }
+    .rent td, .rent th, .cols td, .cols th { padding: 0.35rem 0.3rem; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Rent vs Buy Spreadsheet Data</nav>
+
+<h1>Rent vs Buy Spreadsheet: The Data You Need to Build Your Own</h1>
+<p class="lede">A rent vs buy spreadsheet has two data halves: what renting costs in a specific place, and what owning costs in the same place. Finding formulas is easy; filling the rent and price columns takes real data. This page covers the data side: which columns to set up, where rent and price figures come from, and how to join them by ZIP code.</p>
+
+<div class="callout">
+<p><strong>Scope:</strong> this is a data inventory for people building their own comparison in a spreadsheet. Nothing here tells you to rent or buy, and no number on this page is a recommendation. Any decision with real consequences belongs to you, checked against current official sources.</p>
+</div>
+
+<h2>The columns a rent vs buy spreadsheet needs</h2>
+<p>Whatever your formulas look like later, the sheet starts as a table with one row per area (usually a ZIP code) and columns that hold the raw inputs. A typical layout:</p>
+<table class="cols">
+  <tr><th>column</th><th>what it holds</th><th>where the values come from</th></tr>
+  <tr><td>zip</td><td>The 5-digit join key. Everything else attaches to it.</td><td>Your area list, or the rent file itself.</td></tr>
+  <tr><td>rent_0br ... rent_4br</td><td>Monthly rent for each unit size in that ZIP.</td><td>HUD Fair Market Rent (see below).</td></tr>
+  <tr><td>rent_2br_actual</td><td>Optional second rent series, e.g. observed asking rents, to sit next to the benchmark.</td><td>Listings data (see the bundle note below).</td></tr>
+  <tr><td>price_index_level</td><td>A house price index level for the metro or county, used to compare price movement across areas.</td><td>FHFA House Price Index (public).</td></tr>
+  <tr><td>price_median_zip</td><td>A median value figure per ZIP, where available.</td><td>American Community Survey (public).</td></tr>
+  <tr><td>your_cost_columns</td><td>Taxes, insurance, maintenance, loan terms. These are personal inputs only you can fill.</td><td>Your own records and quotes.</td></tr>
+</table>
+<p>The rent and price columns are the ones a dataset can fill for you. The rest are inputs that depend on your situation, and any spreadsheet that pretends otherwise is hiding assumptions in the cells.</p>
+
+<h2>Rent input: HUD Fair Market Rent, 51,895 ZIPs</h2>
+<p>For the rent half, HUD's annual Fair Market Rent (FMR) release is the broadest public rent benchmark: one figure per ZIP code per bedroom count, covering every US ZIP. FY2026 has 51,895 ZIP-level rows. FMR is HUD's estimate of the 40th percentile gross rent (shelter rent plus utilities) for standard-quality units, so treat it as a floor-side benchmark rather than a listing price.</p>
+<p>Five real rows from the FY2026 file, verbatim, so you can see the shape before you build on it:</p>
+<table class="rent">
+  <tr><th>zip</th><th>area_name</th><th>state</th><th>fmr_0br</th><th>fmr_1br</th><th>fmr_2br</th><th>fmr_3br</th><th>fmr_4br</th></tr>
+  <tr><td class="zip">10001</td><td>New York, NY HUD Metro FMR Area</td><td>NY</td><td class="num">$3,800</td><td class="num">$3,990</td><td class="num">$4,370</td><td class="num">$5,470</td><td class="num">$5,950</td></tr>
+  <tr><td class="zip">90210</td><td>Los Angeles-Long Beach-Glendale, CA HUD Metro FMR Area</td><td>CA</td><td class="num">$3,120</td><td class="num">$3,490</td><td class="num">$4,350</td><td class="num">$5,520</td><td class="num">$6,140</td></tr>
+  <tr><td class="zip">60614</td><td>Chicago-Joliet-Naperville, IL HUD Metro FMR Area</td><td>IL</td><td class="num">$2,220</td><td class="num">$2,370</td><td class="num">$2,670</td><td class="num">$3,440</td><td class="num">$3,980</td></tr>
+  <tr><td class="zip">80302</td><td>Boulder, CO MSA</td><td>CO</td><td class="num">$1,650</td><td class="num">$1,910</td><td class="num">$2,260</td><td class="num">$3,000</td><td class="num">$3,450</td></tr>
+  <tr><td class="zip">43015</td><td>Columbus, OH HUD Metro FMR Area</td><td>OH</td><td class="num">$1,100</td><td class="num">$1,180</td><td class="num">$1,410</td><td class="num">$1,690</td><td class="num">$1,900</td></tr>
+</table>
+<p class="table-note">Same rows in raw CSV form (zip, hud_area_code, metro, area_name, state, fmr_0br through fmr_4br):</p>
+<pre>10001,METRO35620MM5600,metro,"New York, NY HUD Metro FMR Area",NY,3800,3990,4370,5470,5950
+90210,METRO31080MM4480,metro,"Los Angeles-Long Beach-Glendale, CA HUD Metro FMR Area",CA,3120,3490,4350,5520,6140
+60614,METRO16980M16980,metro,"Chicago-Joliet-Naperville, IL HUD Metro FMR Area",IL,2220,2370,2670,3440,3980
+80302,METRO14500M14500,metro,"Boulder, CO MSA",CO,1650,1910,2260,3000,3450
+43015,METRO18140M18140,metro,"Columbus, OH HUD Metro FMR Area",OH,1100,1180,1410,1690,1900</pre>
+<p>One mechanic to know before you join: in metros where HUD publishes Small Area FMRs, each ZIP carries its own figure, and neighboring ZIPs can differ a lot (in the LA metro, ZIP 90001 shows $2,220 for a 2BR while 90210 shows $4,350). In non-SAFMR metros every ZIP repeats the metro-wide number, so identical values across neighboring ZIPs are expected, not a duplicate-row bug. Our column guide covers this row by row on the <a href="hud-fair-market-rent-data.html">HUD FMR data page</a>.</p>
+
+<h2>Price side: public sources</h2>
+<p>Price data works differently from rent. There is no single public file of sale prices per ZIP, so spreadsheets in the wild mix three public source types, each with a known limitation:</p>
+<ul>
+  <li><strong>FHFA House Price Index.</strong> Quarterly price indexes at metro and county level, built from repeat sales of mortgaged homes. An index measures change over time, so it works for comparing price trends across areas, and it does not give you a dollar level for a specific house.</li>
+  <li><strong>American Community Survey (Census).</strong> Median value of owner-occupied homes, published per ZIP in the ACS tables. It is a survey estimate with published margins of error, and it lags the market, so treat it as a slow-moving background column.</li>
+  <li><strong>County assessor and recorder records.</strong> Many counties publish assessed values and sale transfers. Coverage and refresh rates vary county to county, so pulling this is per-county work.</li>
+</ul>
+<p>Matchbook Labs is not affiliated with any of these agencies; they are named because they are where the public data lives. For anything binding, pull the current figures from the source itself.</p>
+
+<h2>Build your own view: flat CSV, join by ZIP, no pre-baked conclusions</h2>
+<p>The datasets we package are flat CSV files keyed on ZIP. You drop them into a tab, and a <code>VLOOKUP</code> or <code>XLOOKUP</code> on the <code>zip</code> column pulls the rent row for each ZIP in your sheet, with no API or database in between.</p>
+<p>We deliberately do not ship a rent-vs-buy calculator with an answer built in. A pre-baked verdict hides its assumptions: which costs it counted, what holding period it assumed, what it guessed about your tax situation. A sheet you build yourself keeps every assumption in a cell you can see and change. What we provide is the data layer: clean rows, a data dictionary explaining each column, and nothing pretending to know your answer.</p>
+
+<h2>Three spreadsheet use cases (analysis only)</h2>
+<ol>
+  <li><strong>Personal rent vs buy worksheet.</strong> Put the FMR row for your ZIP and unit size in the rent column, your own cost figures in the owning columns, and a horizon in years. The spreadsheet holds your inputs side by side; what the comparison means is your call, not ours.</li>
+  <li><strong>Market comparison sheet.</strong> Pull rent rows for a set of ZIPs and set them next to price columns from the sources above. The sheet shows which areas have high rents relative to price levels and which have the reverse. That is a description of the data, and we leave the interpretation to you.</li>
+  <li><strong>Research and teaching dataset.</strong> ZIP-keyed rent benchmarks join cleanly with other ZIP-level public data (Census demographics, ACS values), which makes the file useful for coursework, data journalism, or regional analysis. The <a href="free-rent-data-sample.html">free 20-metro sample</a> shows the structure on a small scale.</li>
+</ol>
+
+<h2>Two datasets, both halves</h2>
+<p>If you want observed rents next to the benchmark, our two housing datasets cover different series and work side by side in one sheet:</p>
+<ul>
+  <li><strong>HUD Rent Data Pack, $24.</strong> The full FY2026 FMR release: 51,895 ZIP rows, 3,229-county rollup, state summary, data dictionary. Government-calculated benchmark rents, public domain.</li>
+  <li><strong>Airbnb dataset, $39.</strong> 90,169 actual listings across 6 US markets with observed nightly and implied monthly rates. Listing-level and short-term, so it behaves as a second, market-priced rent series rather than a substitute for FMR.</li>
+</ul>
+<p>Take both and one tab holds the benchmark per ZIP while another holds observed asking rents for the Airbnb markets, joined on the same key.</p>
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the HUD Rent Data Pack: 51,895 ZIPs + counties, $24 →</a>
+<p class="note">$24 one-time · 3 CSVs + data dictionary · instant download · pair with the Airbnb dataset ($39) for observed rents</p>
+
+<h2>Source and license</h2>
+<p>Rent data source: US Department of Housing and Urban Development, Office of Policy Development and Research, FY2026 Fair Market Rent and Small Area FMR data, <a href="https://www.huduser.gov/portal/datasets/fmr.html">huduser.gov/portal/datasets/fmr.html</a>. As a US federal government work, the data is in the public domain under 17 USC 105. HUD does not endorse this repackaging, and this page is not affiliated with or endorsed by HUD, FHFA, or the Census Bureau.</p>
+<p>This page describes datasets for analysis. It is not financial, tax, or housing advice, and no figure on it recommends renting, buying, or investing in any market.</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
