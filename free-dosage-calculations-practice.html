@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Dosage Calculations Practice Problems - 8 with Step-by-Step Answers | Matchbook Labs</title>
+<meta name="description" content="Eight free dosage calculations practice problems with worked step-by-step answers: metric conversions, oral tablets, weight-based dosing, and IV rates. Formula reference box included. The full 150-problem workbook is $24.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/free-dosage-calculations-practice.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Dosage Calculations Practice Problems - 8 with Step-by-Step Answers">
+<meta property="og:description" content="Conversions, oral tablets, weight-based dosing, and IV rates, each worked step by step with the ratio method and the formula method. Print straight from your browser.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/free-dosage-calculations-practice.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Free Dosage Calculations Practice Problems - 8 with Step-by-Step Answers">
+<meta name="twitter:description" content="Eight dosage calculation problems with worked answers. No sign-up.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Free Dosage Calculations Practice Problems - 8 with Step-by-Step Answers",
+  "description": "Eight free dosage calculation practice problems with worked solutions: metric conversions, oral medications, weight-based dosing, and IV flow rates, plus a formula reference box.",
+  "datePublished": "2026-09-06",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs", "url": "https://jayjex.github.io/matchbook-labs/" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/free-dosage-calculations-practice.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which method should I use, ratio and proportion or the formula method?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pick one and use it for every problem so it becomes automatic. The formula method (desired over have times quantity) is fast for simple tablet and injection problems. Ratio and proportion handles the same problems and scales more cleanly to conversions and multi-step doses. The worked answers below show both." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my answer is reasonable?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sanity-check the size of the answer. A tablet dose above 10 tablets, an adult weight-based dose above 100 mg per dose, or a drip rate above 100 gtt/min usually means a decimal moved. Rounding rules matter too: drops round to whole drops, tablets to halves or wholes, and IV pump rates to one decimal." }
+    }
+  ]
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8b949e; margin: 1.5rem 0 0.6rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .howto p { margin: 0; font-size: 0.95rem; }
+  .box { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 1.25rem; }
+  .box p { margin: 0 0 0.5rem; }
+  .box p:last-child { margin: 0; }
+  .formula { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 0.5rem 0.75rem; margin: 0.5rem 0; font-size: 0.95rem; }
+  .q { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 1.25rem; }
+  .q p { margin: 0 0 0.75rem; }
+  details { border: 1px solid #30363d; border-radius: 8px; padding: 0.75rem 1rem; margin: 0.5rem 0 0; }
+  summary { cursor: pointer; color: #7ee787; font-weight: 600; }
+  details p { margin: 0.6rem 0 0; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  .disclaimer { color: #8b949e; font-size: 0.85rem; border-left: 3px solid #30363d; padding-left: 1rem; margin: 2rem 0; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media print {
+    :root { color-scheme: light; }
+    body { background: #fff; color: #000; max-width: none; padding: 0; font-size: 12pt; }
+    a { color: #000; }
+    .crumbs, .cta, .note, footer, .noprint, .disclaimer { display: none; }
+    h2 { border-color: #000; page-break-before: always; }
+    h2:first-of-type { page-break-before: avoid; }
+    details { border-color: #999; }
+    .q, .box, .howto { background: #fff; border-color: #999; }
+    .formula { background: #fff; border-color: #444; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Free Dosage Calculations Practice</nav>
+
+<h1>Free Dosage Calculations Practice Problems (with Worked Answers)</h1>
+<p class="lede">Eight dosage calculation problems on this page: two conversions, two oral tablets, two weight-based doses, two IV rates. Every answer is worked step by step below its problem, with both the ratio method and the formula method where both apply. Ctrl+P (Cmd+P on Mac) prints the set for practice away from a screen. No sign-up, no email.</p>
+
+<div class="howto noprint">
+<p><strong>How to use this page:</strong> work each problem on paper first, units carried through every step, then open the answer block and compare line by line. A wrong answer with matching setup is usually a rounding slip. A wrong answer with different setup is the thing to review.</p>
+</div>
+
+<h2>Formula reference</h2>
+<div class="box">
+  <p><strong>Metric conversions to memorize:</strong> 1 kg = 1,000 g &middot; 1 g = 1,000 mg &middot; 1 mg = 1,000 mcg &middot; 1 L = 1,000 mL &middot; 1 mL = 1 cc &middot; 1 tsp = 5 mL &middot; 1 tbsp = 15 mL &middot; 1 oz = 30 mL</p>
+  <p><strong>Formula method:</strong></p>
+  <div class="formula">dose ordered (D) / dose on hand (H) &times; quantity on hand (Q) = amount to give</div>
+  <p><strong>Ratio and proportion:</strong></p>
+  <div class="formula">H : Q :: D : X &nbsp;&nbsp;&rArr;&nbsp;&nbsp; H &times; X = D &times; Q &nbsp;&rArr;&nbsp; X = (D &times; Q) / H</div>
+  <p><strong>Weight-based dose:</strong> multiply the ordered mg/kg by the patient's weight in kg first, then treat the result as the desired dose.</p>
+  <p><strong>IV rates:</strong> pump rate in mL/hr = total mL / hours. Gravity drip rate in gtt/min = (total mL &times; drop factor) / total minutes.</p>
+  <p><strong>Rounding:</strong> tablets round to nearest half or whole tablet, drops (gtt) round to whole drops, pediatric doses to the hundredth, IV pump rates to one decimal place, unless your program's policy says otherwise.</p>
+</div>
+
+<h2>Conversions</h2>
+
+<div class="q">
+  <p><strong>Problem 1.</strong> The provider orders 0.5 mg of a medication. The unit-dose drawer stocks 500 mcg tablets. How many tablets do you give?</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 1 tablet.</strong></p>
+    <p><strong>Step 1.</strong> Convert the order to the same unit as the stock. 1 mg = 1,000 mcg, so 0.5 mg &times; 1,000 = 500 mcg.</p>
+    <p><strong>Step 2.</strong> Formula method: D/H &times; Q = 500 mcg / 500 mcg &times; 1 tablet = 1 tablet.</p>
+    <p>Ratio check: 500 mcg : 1 tab :: 500 mcg : X, so 500X = 500 and X = 1. The two units were identical after conversion, so one tablet is right.</p>
+  </details>
+</div>
+
+<div class="q">
+  <p><strong>Problem 2.</strong> A patient drank 4 oz of juice, 6 oz of coffee, and a full 240 mL cup of water. Record the total intake in mL.</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 720 mL.</strong></p>
+    <p><strong>Step 1.</strong> Convert ounces to mL using 1 oz = 30 mL. Juice: 4 &times; 30 = 120 mL. Coffee: 6 &times; 30 = 180 mL.</p>
+    <p><strong>Step 2.</strong> The water is already in mL: 240 mL.</p>
+    <p><strong>Step 3.</strong> Add: 120 + 180 + 240 = 540 + 240 = 720 mL.</p>
+    <p>Intake questions are conversion plus addition. Convert everything to mL before summing; mixing units mid-sum is the classic error.</p>
+  </details>
+</div>
+
+<h2>Oral tablets</h2>
+
+<div class="q">
+  <p><strong>Problem 3.</strong> Order: 75 mg by mouth, once daily. Stock: 25 mg tablets. How many tablets per dose?</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 3 tablets.</strong></p>
+    <p><strong>Formula method:</strong> D/H &times; Q = 75 mg / 25 mg &times; 1 tablet = 3 tablets.</p>
+    <p><strong>Ratio method:</strong> 25 mg : 1 tab :: 75 mg : X &rArr; 25X = 75 &rArr; X = 3 tablets.</p>
+    <p>The units match already (mg to mg), so no conversion step. Three tablets, once daily.</p>
+  </details>
+</div>
+
+<div class="q">
+  <p><strong>Problem 4.</strong> Order: 0.375 mg by mouth now. Stock: 0.25 mg tablets. How many tablets do you give?</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 1.5 tablets.</strong></p>
+    <p><strong>Formula method:</strong> D/H &times; Q = 0.375 mg / 0.25 mg &times; 1 tablet = 1.5 tablets.</p>
+    <p><strong>Ratio method:</strong> 0.25 : 1 :: 0.375 : X &rArr; 0.25X = 0.375 &rArr; X = 1.5 tablets.</p>
+    <p>1.5 tablets is scoreable if the tablet is scored; if the stock is unscoreable, you would clarify with the prescriber. Decimal orders like 0.375 read best with the decimal moved to a fraction: 0.375 is 3/8 of a mg, and 0.25 is 1/4, so the ratio is 3/8 &divide; 1/4 = 3/2. Same answer, different check.</p>
+  </details>
+</div>
+
+<h2>Weight-based doses</h2>
+
+<div class="q">
+  <p><strong>Problem 5.</strong> Order: a medication at 12 mg/kg/day divided into two doses. Patient weight: 44 lb. Stock: 60 mg tablets. How many tablets per dose?</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 2 tablets (120 mg) per dose.</strong></p>
+    <p><strong>Step 1.</strong> Convert weight: 44 lb &divide; 2.2 = 20 kg.</p>
+    <p><strong>Step 2.</strong> Total daily dose: 12 mg/kg &times; 20 kg = 240 mg/day.</p>
+    <p><strong>Step 3.</strong> Divide by 2 doses: 240 &divide; 2 = 120 mg per dose.</p>
+    <p><strong>Step 4.</strong> D/H &times; Q = 120 mg / 60 mg &times; 1 tab = 2 tablets per dose.</p>
+    <p>Check: 2 tablets &times; 2 doses = 240 mg/day, matching the daily order. Weight-based problems are three calculations in a row, so label each step (kg, mg/day, mg/dose) on paper; unlabeled steps are where the mg/day and mg/dose figures swap.</p>
+  </details>
+</div>
+
+<div class="q">
+  <p><strong>Problem 6.</strong> A child weighing 33 lb is ordered a medication at 10 mg/kg/dose, three times a day. Stock is an oral suspension of 100 mg per 5 mL. How many mL per dose?</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 7.5 mL per dose.</strong></p>
+    <p><strong>Step 1.</strong> Convert weight: 33 lb &divide; 2.2 = 15 kg.</p>
+    <p><strong>Step 2.</strong> Per-dose dose: 10 mg/kg &times; 15 kg = 150 mg per dose. The order says mg/kg/dose, so no division by three happens here; three times a day schedules the repeats, it does not shrink each dose.</p>
+    <p><strong>Step 3.</strong> Suspension concentration: 100 mg per 5 mL. D/H &times; Q = 150 mg / 100 mg &times; 5 mL = 7.5 mL per dose.</p>
+    <p>Daily total, if asked: 150 mg &times; 3 = 450 mg/day, or 22.5 mL/day. Mixing up per-dose and per-day figures is the most common slip on weight-based problems, and mg/kg/dose versus mg/kg/day wording is what tells you which one the order wants.</p>
+  </details>
+</div>
+
+<h2>IV rates</h2>
+
+<div class="q">
+  <p><strong>Problem 7.</strong> An order reads 1,000 mL over 8 hours. The IV pump delivers in mL/hr. What rate do you set?</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 125 mL/hr.</strong></p>
+    <p><strong>Setup:</strong> pump rate = total mL / hours = 1,000 mL / 8 hr = 125 mL/hr.</p>
+    <p>One division, no drop factor, because pumps meter volume per hour. Check: 125 mL/hr &times; 8 hr = 1,000 mL, which matches the order.</p>
+  </details>
+</div>
+
+<div class="q">
+  <p><strong>Problem 8.</strong> Order: 500 mL over 6 hours by gravity, tubing with a drop factor of 15 gtt/mL. What drip rate do you set?</p>
+  <details>
+    <summary>Worked solution (tap to reveal)</summary>
+    <p><strong>Answer: 21 gtt/min.</strong></p>
+    <p><strong>Step 1.</strong> Total minutes: 6 hr &times; 60 = 360 min.</p>
+    <p><strong>Step 2.</strong> gtt/min = (total mL &times; drop factor) / total minutes = (500 &times; 15) / 360 = 7,500 / 360 = 20.83...</p>
+    <p><strong>Step 3.</strong> Drops count in whole drops, so round to 21 gtt/min.</p>
+    <p>Rounding to whole drops is standard because a drop either falls or does not. Check: 21 gtt/min &times; 360 min &divide; 15 gtt/mL = 504 mL, close to the 500 ordered, and the rounding accounts for the difference.</p>
+  </details>
+</div>
+
+<h2>Where mistakes cluster</h2>
+<ul>
+  <li>Pounds and kilograms. Convert weight before touching the mg/kg order, every time.</li>
+  <li>Per-dose versus per-day. Read whether the order says mg/kg/dose or mg/kg/day and whether it is divided.</li>
+  <li>Unit mismatches. If the order is in mg and the stock is in mcg, convert first; a tenfold or thousandfold slip here is the classic med-error story.</li>
+  <li>Decimal drift. 0.5 mg and 5 mg differ by ten times; leading zeros (0.5) and no trailing zeros (5, not 5.0) exist to prevent it.</li>
+  <li>Rounding policy. Drops, tablets, pediatric doses, and pump rates each round differently. Know your program's rules before test day.</li>
+</ul>
+
+<h2>Frequently asked</h2>
+<p><strong>Which method should I use, ratio and proportion or the formula method?</strong> Pick one and use it for every problem so it becomes automatic. The formula method (desired over have times quantity) is fast for simple tablet and injection problems. Ratio and proportion handles the same problems and scales more cleanly to conversions and multi-step doses. The worked answers above show both.</p>
+<p><strong>How do I know if my answer is reasonable?</strong> Sanity-check the size. A tablet dose above 10 tablets, an adult weight-based dose above 100 mg per dose, or a drip rate above 100 gtt/min usually means a decimal moved. Rounding rules matter too: drops round to whole drops, tablets to halves or wholes, and IV pump rates to one decimal.</p>
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the full 150-problem workbook - $24 &rarr;</a>
+<p class="note">$24 one-time &middot; 150 problems with worked step-by-step solutions &middot; conversions, oral, injections, reconstitution, weight-based, pediatric, IV rates &middot; printable drills + answer keys</p>
+
+<p class="disclaimer">Practice material only. Numbers here are invented for drill purposes and follow standard rounding conventions, not any specific institutional protocol. Verify every calculation against your program's or facility's policies before administration. This page is not medical advice.</p>
+
+<footer>Matchbook Labs - digital products for builders &middot; <a href="catalog.html">Full catalog</a> &middot; <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
