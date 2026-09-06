@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Profile Sheet - Free Printable 2-Page Template (Write-In) | Matchbook Labs</title>
+<meta name="description" content="Free printable character profile sheet: two write-in pages, blank core table (want vs need, fear, wound), voice box, relationships, act-by-act arc tracker.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/character-profile-sheet-printable.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Character Profile Sheet - Free Printable 2-Page Template (Write-In)">
+<meta property="og:description" content="Two printable pages per character: a blank core table with want versus need, a voice and mannerisms box, four relationship rows, an act-by-act arc tracker, and a scene-presence check.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/character-profile-sheet-printable.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Character Profile Sheet - Free Printable 2-Page Template">
+<meta name="twitter:description" content="A free two-page character profile: blank core table, voice box, relationships, arc tracker, and a five-item scene check. Print from any browser.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Character Profile Sheet - Free Printable 2-Page Template (Write-In)",
+  "description": "A free printable character profile sheet on two pages: a blank core table with want versus need, fear, and wound, a voice and mannerisms box, four relationship rows, an act-by-act arc tracker, the secret the character keeps, and a five-item scene-presence check.",
+  "datePublished": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs", "url": "https://jayjex.github.io/matchbook-labs/" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/character-profile-sheet-printable.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this character profile template free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Print both pages, copy the layout onto paper, or rebuild the tables in a spreadsheet or a Notion page. No account, no email, nothing to install." }
+    },
+    {
+      "@type": "Question",
+      "name": "What goes on the two pages?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Page one holds the character core: name, age, want and need with two lines each, fear, wound, a four-line voice and mannerisms box, and four relationship rows with who, tie, and tension. Page two holds the arc tracker with a box per act, the secret the character keeps, and the scene-presence checklist." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does D-S-B-F mean on the scene checklist?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Desire, secret, backstory, flaw. Four levers a scene can press while it does its plot work. The checklist asks whether the scene moved one of them, showed the want, pressed the fear, and held the voice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a digital version for a whole book?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Novel Writing OS is a Notion template that carries the same character fields plus a manuscript tracker, plot scene board, worldbuilding wiki, deadlines, and research log across an entire book. It ships as import-ready CSVs with a step-by-step guide and works on the free Notion plan." }
+    }
+  ]
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .printbtn { display: inline-block; background: #21262d; color: #e6edf3; border: 1px solid #30363d; font: inherit; font-weight: 600; padding: 0.55rem 1.1rem; border-radius: 8px; cursor: pointer; margin-bottom: 1.25rem; }
+  .printbtn:hover { background: #30363d; }
+  .sheet-wrap { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.25rem; margin: 0 0 1.25rem; }
+  .pgtag { font: 600 0.7rem ui-monospace, SFMono-Regular, Menlo, monospace; color: #8b949e; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 1rem; }
+  .sheet-label { font: 600 0.7rem ui-monospace, SFMono-Regular, Menlo, monospace; color: #8b949e; text-transform: uppercase; letter-spacing: 0.06em; margin: 1.1rem 0 0.4rem; }
+  .sheet-label:first-of-type { margin-top: 0; }
+  table.core { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  table.core th { font: 600 0.65rem ui-monospace, SFMono-Regular, Menlo, monospace; color: #8b949e; text-align: left; padding: 0.3rem 0.25rem; border-bottom: 1px solid #30363d; }
+  table.core td { padding: 0 0.25rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  table.core td.f { width: 8.5rem; white-space: nowrap; }
+  table.core td.wi { height: 1.9rem; }
+  table.core td.wi2 { height: 1.9rem; border-bottom: 1px solid #8b949e; }
+  table.rel { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  table.rel th { font: 600 0.65rem ui-monospace, SFMono-Regular, Menlo, monospace; color: #8b949e; text-align: left; padding: 0.3rem 0.25rem; border-bottom: 1px solid #30363d; }
+  table.rel td { height: 2rem; padding: 0 0.25rem; border-bottom: 1px solid #8b949e; }
+  .box { border: 1px solid #30363d; border-radius: 6px; padding: 0 0.75rem; }
+  .box .rule { border-bottom: 1px solid #8b949e; height: 1.65rem; }
+  .acts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.9rem; }
+  .actbox { border: 1px solid #30363d; border-radius: 6px; padding: 0.6rem 0.75rem 0.2rem; }
+  .actbox .t { font: 600 0.7rem ui-monospace, SFMono-Regular, Menlo, monospace; color: #8b949e; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 0.4rem; }
+  .actbox .rule { border-bottom: 1px solid #8b949e; height: 1.65rem; }
+  ul.chk { list-style: none; margin: 0; font-size: 0.9rem; }
+  ul.chk li { padding: 0.5rem 0.3rem; border-bottom: 1px solid #30363d; margin: 0; }
+  .chkbox { margin-right: 0.5rem; }
+  ul.chk strong { color: #e6edf3; }
+  .snap { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #d29922; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .snap p { margin: 0; font-size: 0.95rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  dl dt { color: #e6edf3; margin: 1rem 0 0.3rem; }
+  dl dd { color: #c9d1d9; margin: 0 0 0.8rem 1.4rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) { .sheet-wrap { padding: 0.9rem; } .acts { grid-template-columns: 1fr; } }
+  @media print {
+    body > *:not(.sheet-wrap) { display: none; }
+    body { background: #fff; color: #000; max-width: none; padding: 0; font-size: 13px; }
+    @page { size: A4 portrait; margin: 11mm; }
+    .sheet-wrap { background: #fff; border: none; padding: 0; margin: 0; }
+    .sheet-wrap.second { page-break-before: always; }
+    .pgtag, .sheet-label, .actbox .t { color: #000; }
+    table.core th, table.rel th { border-color: #000; color: #000; }
+    table.core td { border-color: #000; color: #000; }
+    table.core td.wi { border-color: #fff; }
+    table.core td.wi2, table.rel td, .box .rule, .actbox .rule { border-color: #000; }
+    .box, .actbox { border-color: #000; }
+    ul.chk li { border-color: #ccc; color: #000; }
+    ul.chk strong { color: #000; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Character Profile Sheet</nav>
+
+<h1>Character Profile Sheet: the Free Printable 2-Page Template (Write-In)</h1>
+<p class="lede">Two printed pages per character, blank on purpose. Page one is the core table: name, age, want and need with two lines each, fear, wound, a four-line voice and mannerisms box, and four relationship rows. Page two tracks the arc act by act, holds the secret the character keeps, and runs a five-item scene check. No account, no email. Print it from any browser, one pair of pages per character.</p>
+
+<button class="printbtn" onclick="window.print()">Print the 2-page sheet</button>
+
+<div class="sheet-wrap">
+  <p class="pgtag">Character profile - page 1 of 2</p>
+
+  <p class="sheet-label">Character core</p>
+  <table class="core">
+    <tr><th>Field</th><th>Write-in</th></tr>
+    <tr><td class="f">Name</td><td class="wi2"></td></tr>
+    <tr><td class="f">Age</td><td class="wi2"></td></tr>
+    <tr><td class="f">Want (line 1)</td><td class="wi2"></td></tr>
+    <tr><td class="f">Want (line 2)</td><td class="wi2"></td></tr>
+    <tr><td class="f">Need (line 1)</td><td class="wi2"></td></tr>
+    <tr><td class="f">Need (line 2)</td><td class="wi2"></td></tr>
+    <tr><td class="f">Fear</td><td class="wi2"></td></tr>
+    <tr><td class="f">Wound</td><td class="wi2"></td></tr>
+  </table>
+
+  <p class="sheet-label">Voice and mannerisms</p>
+  <div class="box">
+    <div class="rule"></div>
+    <div class="rule"></div>
+    <div class="rule"></div>
+    <div class="rule"></div>
+  </div>
+
+  <p class="sheet-label">Relationships</p>
+  <table class="rel">
+    <tr><th>Who</th><th>How they are tied</th><th>Where the tension sits</th></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+  </table>
+</div>
+
+<div class="sheet-wrap second">
+  <p class="pgtag">Character profile - page 2 of 2</p>
+
+  <p class="sheet-label">Arc tracker - one line per act, revisit as you draft</p>
+  <div class="acts">
+    <div class="actbox"><p class="t">Act 1</p><div class="rule"></div><div class="rule"></div><div class="rule"></div></div>
+    <div class="actbox"><p class="t">Act 2</p><div class="rule"></div><div class="rule"></div><div class="rule"></div></div>
+    <div class="actbox"><p class="t">Act 3</p><div class="rule"></div><div class="rule"></div><div class="rule"></div></div>
+  </div>
+
+  <p class="sheet-label">The secret this character keeps</p>
+  <div class="box">
+    <div class="rule"></div>
+    <div class="rule"></div>
+    <div class="rule"></div>
+  </div>
+
+  <p class="sheet-label">Scene-presence checklist - run it after writing any scene with this character</p>
+  <ul class="chk">
+    <li><span class="chkbox">&#9744;</span><strong>Want.</strong> Does the scene show what this character is after right now?</li>
+    <li><span class="chkbox">&#9744;</span><strong>Fear.</strong> Does something here press the fear you wrote on page one?</li>
+    <li><span class="chkbox">&#9744;</span><strong>Voice.</strong> Cover the name: does the dialogue still read as theirs?</li>
+    <li><span class="chkbox">&#9744;</span><strong>D-S-B-F.</strong> Does the scene move one of the four levers: desire, secret, backstory, flaw?</li>
+    <li><span class="chkbox">&#9744;</span><strong>Change.</strong> Does the character leave the scene different from how they entered?</li>
+  </ul>
+</div>
+
+<h2>How to use the sheet</h2>
+<p>Print both pages at 100% scale on A4 or US Letter. Fill the core table before you write the character's first scene, then leave it alone: the fields capture a starting position, and a starting position is allowed to be wrong by chapter five. Give every named character their own pair of pages; minor characters can share a single page one with just the name, want, and one relationship row filled.</p>
+<p>Page two is the working half. Update the act boxes whenever the arc moves, reread the secret box before any scene where it could surface, and run the scene-presence checklist after drafting anything the character appears in. The five questions take under a minute and they catch the most common failure in a draft: a character who is present in the scene but not doing anything in it.</p>
+
+<h2>Four opinions on filling it in</h2>
+<ol>
+  <li><strong>Want and need are different fields, and they should be written in that order.</strong> My take: the want is the thing they chase, the need is the thing that actually fixes them, and most drafts break when the two get collapsed into one line. Write the want first as they would say it out loud, then write the need as you would say it about them. Two lines each exists because one line invites a slogan.</li>
+  <li><strong>Write the wound before the fear.</strong> Fear is easy to invent; pick something generic and you will not notice for fifty pages. The wound is the moment that installed it, and once you can point to it, the fear has a history the D-S-B-F check can poke at.</li>
+  <li><strong>Keep the voice box to four lines.</strong> Four lines of sentence rhythm, verbal tics, and one thing they would never say is a usable voice. A page of biography is wallpaper, and wallpaper never survives contact with dialogue. If it does not fit in the box, it probably does not show up on the page either.</li>
+  <li><strong>Fill the arc tracker in pencil.</strong> Act-level plans are guesses, and the guesses change as the middle of the book teaches you what the ending has to cost. Erasing a pencil line costs nothing. Treating your first act plan as a promise is how books stall at 30,000 words.</li>
+</ol>
+
+<h2>What this sheet is, and where the rest of the book lives</h2>
+<p>One sheet covers one character at a time and stays deliberately blank: no sample entries, no method branding, no instructions printed on the page itself. The fields (want versus need, fear, wound, arc by act, secret) are common craft vocabulary, so the sheet works alongside whatever process you already use.</p>
+<p>A printed sheet is a per-character tool. For the whole book in one place, the <a href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Novel Writing OS Notion template</a> carries these same character fields into a full workspace: a Manuscript tracker with one row per chapter, a Plot Outline scene board, the Characters database this sheet previews, a Worldbuilding wiki, Draft Deadlines, and a Research log. It ships as import-ready CSVs with a step-by-step guide and runs on the free Notion plan.</p>
+
+<h2>Print tips</h2>
+<ul>
+  <li>Print at 100% scale on A4 or US Letter; page two starts on a fresh sheet automatically.</li>
+  <li>The how-to, the opinions, the print tips, and the questions below stay off the printed page. What prints is the two sheet pages and nothing else.</li>
+  <li>Print one pair per character and keep them together; a cast of eight is sixteen pages in a folder, and that folder is a usable reference in a way no app window is.</li>
+  <li>Prefer typing? Copy the tables into a spreadsheet or a Notion page; the field names transfer as-is.</li>
+</ul>
+
+<h2>Questions people ask</h2>
+<dl>
+  <dt><strong>Is this character profile template really free?</strong></dt>
+  <dd>Yes. Print both pages, copy the layout onto paper, or rebuild the tables in a spreadsheet or a Notion page. No account, no email, nothing to install.</dd>
+  <dt><strong>What goes on the two pages?</strong></dt>
+  <dd>Page one holds the character core: name, age, want and need with two lines each, fear, wound, a four-line voice and mannerisms box, and four relationship rows with who, tie, and tension. Page two holds the arc tracker with a box per act, the secret the character keeps, and the scene-presence checklist.</dd>
+  <dt><strong>What does D-S-B-F mean on the scene checklist?</strong></dt>
+  <dd>Desire, secret, backstory, flaw. Four levers a scene can press while it does its plot work. The checklist asks whether the scene moved one of them, showed the want, pressed the fear, and held the voice.</dd>
+  <dt><strong>How many characters can I profile?</strong></dt>
+  <dd>As many as you print. Full sheets for characters with an arc; a half-filled page one for walk-on parts that only need a name, a want, and one relationship row.</dd>
+</dl>
+
+<!-- TODO: swap placeholder store URL to the real Novel Writing OS product URL when it publishes (gate: Getly API status=active + curl canonical 200 first, no /product/ probe while pending_review - ISR rule). Price $12 from publish.sh priceCents 1200. -->
+<h2>Keep the whole book in one workspace</h2>
+<p>This sheet is the paper version of the Characters section. The <a href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Novel Writing OS</a> ($12) is the Notion version of the whole book: manuscript tracker, plot scene board, character sheets, worldbuilding wiki, deadline calendar, and research log, import-ready in about 15 minutes.</p>
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Novel Writing OS Notion template &mdash; $12 &rarr;</a>
+<p class="note">Import-ready CSVs + step-by-step guide. Works on the free Notion plan.</p>
+
+<footer>Matchbook Labs &mdash; digital products for builders &middot; <a href="catalog.html">Full catalog</a> &middot; <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
