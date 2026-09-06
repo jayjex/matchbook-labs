@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HUD Income Limits by County: Where to Find Them and How to Join Them with FMR Data</title>
+<meta name="description" content="HUD income limits by county explained: what 30/50/80% AMI means, how income limits differ from Fair Market Rent, official sources to download them, and a county-FIPS join approach with FMR CSVs.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/hud-income-limits-data.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HUD Income Limits by County: Sources and the FMR Join">
+<meta property="og:description" content="What HUD income limits measure, where the official county-level files live, and how to join them with Fair Market Rent data by county FIPS.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/hud-income-limits-data.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HUD Income Limits by County">
+<meta name="twitter:description" content="30/50/80% AMI, official download sources, and a county-FIPS join with FY2026 FMR CSVs.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HUD Income Limits by County: Where to Find Them and How to Join Them with FMR Data",
+  "description": "What HUD income limits measure, how they differ from Fair Market Rent, official county-level sources, and a sample join approach by county FIPS.",
+  "datePublished": "2026-09-08",
+  "author": {"@type": "Organization", "name": "Matchbook Labs"},
+  "publisher": {"@type": "Organization", "name": "Matchbook Labs"},
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/hud-income-limits-data.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #d29922; border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .callout p { margin: 0 0 0.6rem; font-size: 0.95rem; }
+  .callout p:last-child { margin: 0; }
+  .scope { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #4da3ff; border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .scope p { margin: 0; font-size: 0.95rem; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.85rem; }
+  th { text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem; }
+  td { padding: 0.5rem; border-bottom: 1px solid #21262d; color: #c9d1d9; vertical-align: top; }
+  tr:hover td { background: #161b22; }
+  pre { background: #010409; border: 1px solid #21262d; border-radius: 6px; padding: 1rem 1.1rem; overflow-x: auto; font-size: 0.78rem; line-height: 1.5; color: #c9d1d9; margin: 0 0 0.5rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) {
+    table { font-size: 0.75rem; }
+    td, th { padding: 0.35rem 0.3rem; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / HUD Income Limits by County</nav>
+
+<h1>HUD Income Limits by County: What They Are, Where to Get Them, How to Join Them with FMR Data</h1>
+<p class="lede">HUD publishes two county-level number sets every year, and people mix them up constantly: Fair Market Rent (FMR) sets rent benchmarks, income limits set household income thresholds. This page is a guide to the income limits side: what 30/50/80% AMI means, which official files carry county-level values, and a worked approach for joining them with FMR data by county FIPS.</p>
+
+<div class="scope">
+<p><strong>Scope note:</strong> we do not sell income limits data. Our product is the FY2026 FMR pack (51,895 ZIPs, 3,229 counties). Income limits come free from HUD directly, and this page links the official sources. The FMR pack is useful as the other half of the join: eligibility work usually pairs an income threshold with a rent number, and FMR is the rent number HUD itself uses.</p>
+</div>
+
+<h2>FMR vs income limits: the two-table distinction</h2>
+<p>Both datasets come from HUD's Office of Policy Development and Research, both are updated annually, and both are published at metro/county geography. They measure different things and feed different parts of HUD programs.</p>
+<table>
+  <tr><th></th><th>Fair Market Rent (FMR)</th><th>Income Limits</th></tr>
+  <tr><td><strong>What it measures</strong></td><td>Rent: HUD's estimate of the 40th percentile gross rent (shelter rent plus utilities) for standard-quality units, monthly USD</td><td>Income: annual household income thresholds in USD, scaled by household size</td></tr>
+  <tr><td><strong>Levels</strong></td><td>One number per bedroom size (0-4BR), per market area; Small Area FMRs add a per-ZIP figure in many metros</td><td>Three thresholds per household size: 30% of area median income (extremely low), 50% (very low), 80% (low)</td></tr>
+  <tr><td><strong>Used for</strong></td><td>Housing agencies set Housing Choice Voucher payment standards from it (90% to 110% of FMR)</td><td>Agencies and programs use it to determine whether a household falls inside an income band for eligibility screening</td></tr>
+  <tr><td><strong>Geography</strong></td><td>Metro FMR areas and nonmetro counties; SAFMRs at ZIP level</td><td>Metro areas and counties, with household size adjustments (1 to 8 persons)</td></tr>
+  <tr><td><strong>Where published</strong></td><td><a href="https://www.huduser.gov/portal/datasets/fmr.html">huduser.gov FMR datasets</a></td><td><a href="https://www.huduser.gov/portal/datasets/il.html">huduser.gov income limits datasets</a></td></tr>
+</table>
+<p class="table-note">AMI means area median income. HUD calculates it from American Community Survey data and publishes the limits already adjusted, so you rarely need to compute percentages yourself: the tables give you the 30/50/80% figures directly.</p>
+
+<h2>Where to find county-level income limits (official, free)</h2>
+<p>Named sources, none of which we are affiliated with:</p>
+<ol>
+  <li><strong>HUD User income limits page</strong> (<a href="https://www.huduser.gov/portal/datasets/il.html">huduser.gov/portal/datasets/il.html</a>). The official release: income limits per metro area and county, per household size, as spreadsheets and PDFs. This is the primary source everything else derives from.</li>
+  <li><strong>HUD User API</strong> (<a href="https://www.huduser.gov/hudapi/">huduser.gov/hudapi</a>). Free account and API key. It exposes income limits endpoints alongside FMR endpoints, so you can pull both number sets programmatically instead of parsing spreadsheets.</li>
+  <li><strong>State housing finance agencies.</strong> For LIHTC and HOME program work, state agencies publish rent and income limit tables derived from the HUD figures, often restructured per program. Useful when a program applies its own adjustments; cite HUD as the underlying source.</li>
+</ol>
+<p>All three trace back to the same HUD release. For anything with real consequences, the huduser.gov file is the one to keep open.</p>
+
+<h2>Sample approach: joining income limits with FMR data by county FIPS</h2>
+<p>Income limit files are keyed to county (or metro area) geography. Our FY2026 FMR county file is keyed by county name and state, and the ZIP file carries HUD area codes that embed the county FIPS for nonmetro areas, e.g. <code>NCNTY01005N01005</code> contains FIPS 01005 (Barbour County, AL). That gives you two join paths:</p>
+<p><strong>Path 1, FIPS join (recommended):</strong> extract the 5-digit FIPS from the ZIP-level file's <code>hud_area_code</code> for NCNTY rows, build a county-to-FIPS table, then join with an income limits file that has a FIPS column. In pandas:</p>
+<pre>import pandas as pd
+
+zip_df = pd.read_csv("fmr-by-zip-2026.csv")
+
+# HUD area codes look like NCNTY01005N01005: chars 5:10 are the county FIPS
+ncnty = zip_df[zip_df["hud_area_code"].str.startswith("NCNTY")].copy()
+ncnty["fips"] = ncnty["hud_area_code"].str[5:10]
+# area_name looks like "Barbour County, AL": strip the state suffix for the name join
+ncnty["county"] = ncnty["area_name"].str.replace(r", [A-Z]{2}$", "", regex=True)
+county_fips = ncnty[["fips", "state", "county"]].drop_duplicates()
+
+# income limits file keyed by FIPS (from huduser.gov or the HUD User API)
+il_df = pd.read_csv("income-limits.csv", dtype={"fips": str})
+joined = county_fips.merge(il_df, on="fips", how="left")
+
+# then bring in the county FMR rollup
+county_df = pd.read_csv("fmr-by-county-2026.csv")
+joined = joined.merge(county_df, on=["state", "county"], how="left")</pre>
+<p><strong>Path 2, name join (fallback):</strong> metro FMR area codes do not map to a single county FIPS, so for metro areas match on normalized county or metro names plus state. Slower and more error-prone; watch for parish/borough/independent-city naming differences and strip strings like "HUD Metro FMR Area". We tested the extraction on the actual FY2026 files: 24,599 NCNTY ZIP rows reduce to 1,954 unique county keys, all with valid 5-digit FIPS. Joining those to the 3,229-row county rollup by state and county name leaves 13 unmatched rows, all Virginia areas where HUD lists several independent cities in one nonmetro area (for example "Alleghany County-Clifton Forge city-Covington city, VA HUD Nonmetro FMR Area"). Expect that handful and fix it by hand.</p>
+<p>Whichever path you take, validate the join: 3,229 counties in the FMR rollup is your denominator, so a left join that keeps all county rows and reports unmatched counts will show you exactly which geographies need manual fixes.</p>
+
+<h2>Three research use cases for the combined tables</h2>
+<ol>
+  <li><strong>Program eligibility research.</strong> With the 30/50/80% AMI columns next to county FMRs, you can describe the income-to-rent landscape of any county: where the 50% AMI threshold sits relative to what a 1BR FMR costs annually. Useful for researchers mapping which income bands face which rent levels. This is descriptive work on published numbers; actual eligibility determinations belong to the administering agency, which applies its own rules and documentation.</li>
+  <li><strong>County comparison.</strong> Sort counties by the gap between income limits and FMRs. Two counties can have similar income limits and very different FMRs, or the reverse. A ranked table of that spread is a standard first sheet in housing market reports and works in pandas, Sheets, or R with the join above.</li>
+  <li><strong>Rent-burden context.</strong> The common benchmark is that households spending more than 30% of income on rent carry a cost burden. FMR plus income limits lets you compute, for each county, what share of the 50% AMI figure a 2BR FMR represents. It is a rough contextual ratio built from two published government numbers, not a measure of any actual household.</li>
+</ol>
+
+<div class="callout">
+<p><strong>Caveats worth knowing before you build on this:</strong></p>
+<p>Income limits change every fiscal year. HUD recalculates them annually, so any table you assemble has a vintage; keep the release year attached to every row.</p>
+<p>They are program-specific. LIHTC, HOME, and voucher programs each apply their own derivations and adjustments on top of the HUD figures. A threshold that is correct for one program is not automatically correct for another.</p>
+<p>Household size matters. Published limits run from 1-person to 8-person households, and comparing against the wrong column silently changes your answer by thousands of dollars.</p>
+<p>We do not sell income limits. Our pack contains FMR data only. Income limits come from the HUD sources listed above, and this page is a guide, not a data release.</p>
+</div>
+
+<h2>The FMR side of the join</h2>
+<p>If you are assembling income limits by county, the FY2026 FMR pack gives you the rent columns to pair them with:</p>
+<ul>
+  <li><strong>fmr-by-zip-2026.csv</strong>: 51,895 rows, one per ZIP, FMR for 0-4 bedrooms. The <code>hud_area_code</code> column is what feeds the FIPS extraction above.</li>
+  <li><strong>fmr-by-county-2026.csv</strong>: 3,229 counties with median and max FMR per bedroom size.</li>
+  <li><strong>state-summary.csv</strong>: 52 rows (50 states + DC + PR) with per-state medians and highest/lowest counties.</li>
+  <li><strong>data-dictionary.md</strong>: every column explained, HUD's FMR definition, methodology notes.</li>
+</ul>
+<p>Clean CSV, ready to join. The data is US government public domain; you are paying for the parsing, cleanup, and packaging, not a license.</p>
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">FY2026 FMR pack: 51,895 ZIPs + 3,229 counties, $24 →</a>
+<p class="note">$24 one-time · 3 CSVs + data dictionary · instant download · public-domain data · pairs with free HUD income limits</p>
+
+<h2>Source and license</h2>
+<p>Income limits source: US Department of Housing and Urban Development, <a href="https://www.huduser.gov/portal/datasets/il.html">huduser.gov income limits datasets</a>. FMR data source: HUD Office of Policy Development and Research, FY2026 Fair Market Rent data, <a href="https://www.huduser.gov/portal/datasets/fmr.html">huduser.gov/portal/datasets/fmr.html</a>. As US federal government works, both are in the public domain under 17 USC 105. This page is not affiliated with or endorsed by HUD, and HUD does not endorse our repackaging of the FMR data.</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
