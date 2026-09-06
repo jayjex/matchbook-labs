@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airbnb Occupancy Rate Data - availability_365 Explained, 6-City CSV - Matchbook Labs</title>
+<meta name="description" content="No public source publishes real Airbnb occupancy. Here's how availability_365 works as the proxy analysts use, with numbers from a 90,169-listing short term rental occupancy CSV covering 6 US cities. Source crawl window 2026-06-22 to 08-10. $39.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/airbnb-occupancy-rate-data.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Airbnb Occupancy Rate Data - availability_365 Explained, 6-City CSV">
+<meta property="og:description" content="How the availability_365 calendar proxy works, what it can't tell you, and 6-city numbers from a 90,169-listing short term rental occupancy CSV.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/airbnb-occupancy-rate-data.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Airbnb Occupancy Rate Data - availability_365 Explained, 6-City CSV">
+<meta name="twitter:description" content="No public source publishes real Airbnb occupancy. The availability_365 calendar proxy is what analysts use. 6-city numbers inside.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Airbnb Occupancy Rate Data - availability_365 Explained, 6-City CSV",
+  "description": "A data guide to the availability_365 calendar proxy in Airbnb listing data, with per-city numbers from a 90,169-listing, 6-city CSV pack.",
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
+  "author": { "@type": "Organization", "name": "Matchbook Labs" },
+  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/airbnb-occupancy-rate-data.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1rem 0.35rem; }
+  .tbl { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.8rem; }
+  .tbl th { text-align: right; font-size: 0.7rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.45rem; white-space: nowrap; }
+  .tbl th:first-child, .tbl th:nth-child(2) { text-align: left; }
+  .tbl td { padding: 0.4rem 0.45rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .tbl td:first-child, .tbl td:nth-child(2) { text-align: left; }
+  .tbl td.num { text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .tbl tr:hover td { background: #161b22; }
+  .tbl tr.total td { border-top: 2px solid #30363d; border-bottom: none; font-weight: 600; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  .snap { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #d29922; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .snap p { margin: 0 0 0.6rem; font-size: 0.95rem; }
+  .snap p:last-child { margin: 0; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) {
+    .tbl { font-size: 0.68rem; }
+    .tbl td, .tbl th { padding: 0.3rem 0.25rem; }
+  }
+  @media print {
+    body { background: #fff; color: #000; max-width: none; }
+    a { color: #000; text-decoration: none; }
+    .crumbs, .cta, .note, footer { display: none; }
+    h2 { border-color: #ccc; }
+    .tbl th { border-color: #ccc; color: #000; }
+    .tbl td { border-color: #ddd; color: #000; }
+    code { background: #fff; border-color: #ccc; }
+    .snap { background: #fff; border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Airbnb Occupancy Rate Data</nav>
+
+<h1>Airbnb Occupancy Rate Data: Reading availability_365 Across 6 US Markets</h1>
+<p class="lede">Anyone hunting for airbnb occupancy rate data hits the same wall: no public source publishes booked nights. What exists instead is <code>availability_365</code>, a calendar column that works as the standard proxy. This page explains how to read it, what it can't tell you, and what the numbers look like across a 90,169-listing short term rental occupancy CSV covering six US cities.</p>
+
+<h2>Why There Is No Occupancy Column</h2>
+<p>Airbnb doesn't release booking counts or revenue, and Inside Airbnb's scrapes don't capture them either. What each scrape does capture is the listing's public calendar as it stood on crawl day. That calendar is stored in a column named <code>availability_365</code>.</p>
+<p>The data dictionary in our pack defines it exactly: "Nights available in the next 365 days per the scrape-day calendar. A proxy for how active or blocked the calendar is."</p>
+<p>The two ends of the scale are easy to read. A listing at <code>availability_365 = 10</code> has nearly every night blocked out. A listing at 350 is open most of the year. Neither number tells you how many nights guests actually stayed, and that gap is where most misuse of this column happens.</p>
+
+<h2>The Proxy by City: 90,169 Listings, 6 Markets</h2>
+<table class="tbl">
+  <tr><th>City</th><th>Snapshot</th><th>Listings</th><th>Avg availability_365</th></tr>
+  <tr><td>Austin, TX</td><td>2026-06-22</td><td class="num">11,295</td><td class="num">227</td></tr>
+  <tr><td>Nashville, TN</td><td>2026-06-26</td><td class="num">10,242</td><td class="num">251</td></tr>
+  <tr><td>Denver, CO</td><td>2026-06-30</td><td class="num">4,939</td><td class="num">206</td></tr>
+  <tr><td>New York City, NY</td><td>2026-08-10</td><td class="num">30,234</td><td class="num">190</td></tr>
+  <tr><td>Las Vegas (Clark County), NV</td><td>2026-06-27</td><td class="num">20,234</td><td class="num">217</td></tr>
+  <tr><td>San Diego, CA</td><td>2026-06-27</td><td class="num">13,225</td><td class="num">213</td></tr>
+  <tr class="total"><td>Total</td><td>6 markets</td><td class="num">90,169</td><td class="num"></td></tr>
+</table>
+<p class="table-note">Listings counts and averages computed from the exact CSVs shipped in the pack (<code>cities-index.csv</code> and <code>multi-city-summary.md</code>). Source crawl window 2026-06-22 to 08-10, one snapshot date per city, each stated in the index. Data by Inside Airbnb, InsideAirbnb.com, CC BY 4.0.</p>
+<p>The spread is the interesting part. Nashville's calendars average 251 open nights, the loosest of the six. New York City sits at 190, the tightest, after its short-term-rental registration rules pushed inventory toward private rooms (42% of its rows). These are calendar averages on one date each. They are not occupancy, and reading them as such is the mistake this page exists to prevent.</p>
+
+<h2>Three Ways to Work With the Column</h2>
+<ul>
+  <li><strong>Seasonality scan, as a cross-section</strong> - sort one city's listings by <code>availability_365</code> and look at the clusters. Listings near 0 have blocked-out calendars; listings near 365 stay open year-round. One snapshot gives you a cross-section, not a curve; a seasonal curve needs repeated scrapes over months. Pairing the column with <code>minimum_nights</code> also surfaces mid-term inventory fast, since 30-night minimums stand out immediately.</li>
+  <li><strong>Supply density map</strong> - coordinates are rounded to 4 decimal places (about 11 meters) and each row carries a cleansed neighbourhood name. Plot listing counts per area, then filter on <code>availability_365</code> above a threshold you pick, and you get two different maps: where listings exist, and where open calendars cluster.</li>
+  <li><strong>Availability benchmark per city</strong> - the per-city averages above (190 to 251) set a baseline. When you compute an average for any subset, a neighbourhood, a room type, a price band, you can compare it against the whole market it came from instead of eyeballing in a vacuum.</li>
+</ul>
+<p>All three are analysis patterns for data you already have. None of them involve a booking decision, a revenue projection, or advice of any kind; the pack ships numbers, and the interpretation is yours.</p>
+
+<h2>What the Proxy Cannot Tell You</h2>
+<div class="snap">
+<p><strong>Blocked does not mean booked.</strong> A night can be blocked for an owner's stay, a seasonal closure, or a host's strategy. Open does not mean empty either, since hosts edit calendars at any time after the scrape.</p>
+<p><strong>One snapshot per city.</strong> Source crawl window 2026-06-22 to 08-10, with each city carrying a single date from that range. Every CSV is a point-in-time scrape, not a live feed, so treat rows as the market on that date.</p>
+<p><strong>Reviews lag and prices need cleaning.</strong> A listing booked this month can still show an old <code>last_review</code> date, and <code>price</code> is zero or blank on a handful of rows, so filter those before any per-night math.</p>
+<p><strong>Realized occupancy is not in any public dataset.</strong> If a source claims exact Airbnb occupancy rates, it's showing you a model. The honest options are repeated scrapes over time or your own booking records.</p>
+</div>
+
+<h2>Joining All Six Cities Into One CSV</h2>
+<p>Each city file carries the same 12 columns, so the standard move is to concatenate <code>cities/*/listings-summary.csv</code> into one table and add a <code>city</code> column as you load each file (the folder name is the natural value). From there, every cross-city question, including the availability averages above, is a group-by on <code>city</code> in pandas, Sheets or R, with no schema surgery first.</p>
+
+<h2>Where These Numbers Come From</h2>
+<p>Everything on this page computes from the multi-city Airbnb dataset pack: 90,169 listings, 6 cities, one consistent 12-column schema, host names and host IDs stripped, coordinates rounded, plus the full data dictionary, <code>normalize.py</code> and a 20-row sample you can inspect before opening anything big. The full schema and row counts are on the <a href="airbnb-data-by-city.html">Airbnb data by city</a> page. Data by Inside Airbnb, InsideAirbnb.com, CC BY 4.0.</p>
+
+<!-- CTA: produk airbnb-dataset SUDAH PUBLISHED tapi pending_review (publish 2026-09-06). Store link mtmw06l2 tetap primer. Saat produk ACTIVE: boleh ganti href ke https://jayjex.github.io/matchbook-labs/product-airbnb-dataset.html HANYA setelah curl 200. JANGAN pernah curl/probe /product/<slug> selama pending_review (ISR rule: cache 404/407 max-age 7 hari). -->
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the 6-city Airbnb dataset with availability_365 - $39 &rarr;</a>
+<p class="note">$39 one-time · 90,169 listings · 19 files · 12-column schema · CC BY 4.0 · instant download</p>
+
+<footer>Matchbook Labs - digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
