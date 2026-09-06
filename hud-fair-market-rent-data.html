@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HUD Fair Market Rent Data: FMR by ZIP Code, FY2026 Sample + Full Download</title>
+<meta name="description" content="HUD fair market rent data explained: real FY2026 FMR rows by ZIP code, what the 0BR-4BR columns mean, how SAFMRs differ from metro FMRs, and the full 51,895-row CSV download.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/hud-fair-market-rent-data.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HUD Fair Market Rent Data: FMR by ZIP Code, FY2026 Sample + Full Download">
+<meta property="og:description" content="Real FY2026 FMR rows by ZIP code, column by column. What 0BR-4BR means, SAFMR vs metro FMR, and where to get all 51,895 rows as CSV.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/hud-fair-market-rent-data.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HUD Fair Market Rent Data: FMR by ZIP Code, FY2026">
+<meta name="twitter:description" content="Sample FY2026 FMR rows by ZIP, column meanings, SAFMR vs metro FMR. Full 51,895-row CSV, $24.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HUD Fair Market Rent Data: FMR by ZIP Code, FY2026 Sample + Full Download",
+  "description": "Real FY2026 FMR rows by ZIP code, what the 0BR-4BR columns mean, how SAFMRs differ from metro-wide FMRs, and where to download the full dataset.",
+  "datePublished": "2026-09-06",
+  "author": {"@type": "Organization", "name": "Matchbook Labs"},
+  "publisher": {"@type": "Organization", "name": "Matchbook Labs"},
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/hud-fair-market-rent-data.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #4da3ff; border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .callout p { margin: 0; font-size: 0.95rem; }
+  .rent { width: 100%; border-collapse: collapse; margin: 0 0 0.5rem; font-size: 0.82rem; }
+  .rent th { text-align: right; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem 0.5rem; white-space: nowrap; }
+  .rent th:nth-child(1), .rent th:nth-child(2) { text-align: left; }
+  .rent td { padding: 0.45rem 0.5rem; border-bottom: 1px solid #21262d; color: #c9d1d9; }
+  .rent td.num, .rent td.zip { text-align: right; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .rent tr:hover td { background: #161b22; }
+  pre { background: #010409; border: 1px solid #21262d; border-radius: 6px; padding: 1rem 1.1rem; overflow-x: auto; font-size: 0.78rem; line-height: 1.5; color: #c9d1d9; margin: 0 0 0.5rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; }
+  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .cols td:first-child { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; white-space: nowrap; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media (max-width: 700px) {
+    .rent, .cols { font-size: 0.72rem; }
+    .rent td, .rent th { padding: 0.35rem 0.3rem; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / HUD Fair Market Rent Data</nav>
+
+<h1>HUD Fair Market Rent Data: FMR by ZIP Code, FY2026</h1>
+<p class="lede">Every year HUD publishes Fair Market Rent figures for every US housing market: one number per metro, and in many metros a separate number per ZIP code. This page shows real rows from the FY2026 release, explains what each column means, and links the full 51,895-row dataset as CSV.</p>
+
+<div class="callout">
+<p><strong>Snapshot:</strong> these figures come from HUD's FY2026 revised FMR and Small Area FMR files on huduser.gov, downloaded 2026-09-06. HUD recalculates FMRs every fiscal year, so the numbers move annually. For any decision that carries consequences (signing a lease, setting a payment standard, underwriting a deal), pull the current file from <a href="https://www.huduser.gov/portal/datasets/fmr.html">huduser.gov</a> and treat this page as reference.</p>
+</div>
+
+<h2>Sample rows: FY2026 FMR by ZIP</h2>
+<p>Five rows copied verbatim from the FY2026 ZIP-level file, five different states. All amounts are monthly dollars, exactly as HUD published them.</p>
+<table class="rent">
+  <tr><th>zip</th><th>area_name</th><th>state</th><th>fmr_0br</th><th>fmr_1br</th><th>fmr_2br</th><th>fmr_3br</th><th>fmr_4br</th></tr>
+  <tr><td class="zip">10001</td><td>New York, NY HUD Metro FMR Area</td><td>NY</td><td class="num">$3,800</td><td class="num">$3,990</td><td class="num">$4,370</td><td class="num">$5,470</td><td class="num">$5,950</td></tr>
+  <tr><td class="zip">90210</td><td>Los Angeles-Long Beach-Glendale, CA HUD Metro FMR Area</td><td>CA</td><td class="num">$3,120</td><td class="num">$3,490</td><td class="num">$4,350</td><td class="num">$5,520</td><td class="num">$6,140</td></tr>
+  <tr><td class="zip">60614</td><td>Chicago-Joliet-Naperville, IL HUD Metro FMR Area</td><td>IL</td><td class="num">$2,220</td><td class="num">$2,370</td><td class="num">$2,670</td><td class="num">$3,440</td><td class="num">$3,980</td></tr>
+  <tr><td class="zip">80302</td><td>Boulder, CO MSA</td><td>CO</td><td class="num">$1,650</td><td class="num">$1,910</td><td class="num">$2,260</td><td class="num">$3,000</td><td class="num">$3,450</td></tr>
+  <tr><td class="zip">43015</td><td>Columbus, OH HUD Metro FMR Area</td><td>OH</td><td class="num">$1,100</td><td class="num">$1,180</td><td class="num">$1,410</td><td class="num">$1,690</td><td class="num">$1,900</td></tr>
+</table>
+<p class="table-note">Same rows as they appear in the raw CSV (columns: zip, hud_area_code, metro, area_name, state, fmr_0br through fmr_4br):</p>
+<pre>10001,METRO35620MM5600,metro,"New York, NY HUD Metro FMR Area",NY,3800,3990,4370,5470,5950
+90210,METRO31080MM4480,metro,"Los Angeles-Long Beach-Glendale, CA HUD Metro FMR Area",CA,3120,3490,4350,5520,6140
+60614,METRO16980M16980,metro,"Chicago-Joliet-Naperville, IL HUD Metro FMR Area",IL,2220,2370,2670,3440,3980
+80302,METRO14500M14500,metro,"Boulder, CO MSA",CO,1650,1910,2260,3000,3450
+43015,METRO18140M18140,metro,"Columbus, OH HUD Metro FMR Area",OH,1100,1180,1410,1690,1900</pre>
+
+<h2>What the columns mean</h2>
+<ul>
+  <li><strong>zip</strong> is the 5-digit ZIP code the row applies to.</li>
+  <li><strong>hud_area_code</strong> is HUD's area identifier. Codes starting with METRO belong to a metro FMR area; NCNTY codes belong to a nonmetro county area. A handful of ZIPs carry more than one row when county and metro area boundaries overlap.</li>
+  <li><strong>metro</strong> says whether the row is metro or nonmetro.</li>
+  <li><strong>area_name</strong> is the HUD Fair Market Rent Area name.</li>
+  <li><strong>fmr_0br through fmr_4br</strong> are the FY2026 FMRs for each bedroom count: 0BR is a studio, 4BR is a four-bedroom unit. FMR is HUD's estimate of the 40th percentile gross rent, meaning shelter rent plus utilities, for standard-quality units in that market. The amounts are monthly.</li>
+</ul>
+<p>One number to know when working with these: housing agencies set voucher payment standards somewhere between 90% and 110% of the FMR. So a $2,670 2BR FMR in ZIP 60614 backs a payment standard of roughly $2,400 to $2,940.</p>
+
+<h3>SAFMR vs standard FMR</h3>
+<p>Under the standard approach, every ZIP in a metro shares one metro-wide FMR. Under the Small Area FMR (SAFMR) approach, HUD sets a separate FMR for each ZIP. HUD applies SAFMRs in metros where rents vary a lot block to block, which includes many large metros in FY2026.</p>
+<p>The difference is not subtle. In the Los Angeles metro, ZIP 90001 carries a 2BR FMR of $2,220 while ZIP 90210 carries $4,350. Same metro, same year, both published HUD numbers, a gap of over $2,000 a month. A metro-wide figure would hide that spread; that is exactly why ZIP-level rows exist.</p>
+<p>Two parsing notes from working with the raw files: some areas, notably parts of Texas, fall back to state or national minimum rent floors in HUD's methodology, and the published numbers already reflect that. And ZIPs in a non-SAFMR metro all repeat the metro FMR on their row, so identical numbers across neighboring ZIPs are expected, not a bug.</p>
+
+<h2>Three ways people use this data</h2>
+<ol>
+  <li><strong>Tenant budgeting.</strong> Compare an asking rent against the FMR for that unit size in that ZIP. FMR sits at the 40th percentile, so a rent well above it signals an above-market ask (which can be fine for a nicer unit, but you should know that is what you are paying). Remember the FMR already includes a utilities allowance.</li>
+  <li><strong>Investor comps.</strong> Scraped listing rents swing with what happens to be advertised. FMR gives you a fixed government-calculated benchmark per ZIP per bedroom count, useful for sanity-checking a pro forma, screening markets by rent spread, or judging whether a listing's rent claim is plausible.</li>
+  <li><strong>Housing program reference.</strong> FMR is the number housing agencies use to set Housing Choice Voucher payment standards, and SAFMRs are the ZIP-level version in participating metros. Tenants and landlords in the program use these figures to estimate what a voucher covers where.</li>
+</ol>
+<p>All three are reference uses. Anything with legal or financial consequences should be checked against the current official HUD tables and, for voucher work, the local housing agency's actual payment standard.</p>
+
+<h2>Get all 51,895 rows</h2>
+<p>The sample above is 5 rows out of 51,895. The full pack covers every US ZIP code plus county and state rollups, all from the same FY2026 release:</p>
+<ul>
+  <li><strong>fmr-by-zip-2026.csv</strong>: 51,895 rows, one per ZIP: FMR for 0-4 bedrooms, HUD area code, metro flag, area name, state.</li>
+  <li><strong>fmr-by-county-2026.csv</strong>: 3,229 counties with median and max FMR per bedroom size.</li>
+  <li><strong>state-summary.csv</strong>: 52 rows (50 states + DC + PR), with ZIP counts, 2BR medians, and highest/lowest counties.</li>
+  <li><strong>data-dictionary.md</strong>: every column explained, plus HUD's FMR definition and methodology.</li>
+</ul>
+<p>Clean CSV, ZIP-keyed, ready to join with address data, listings, or anything else that has a ZIP or county column. The data is US government public domain; you are paying for the parsing, cleanup, and packaging, not a license.</p>
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Full FY2026 FMR pack: 51,895 ZIPs + counties, $24 →</a>
+<p class="note">$24 one-time · 3 CSVs + data dictionary · instant download · public-domain data</p>
+
+<h2>Source and license</h2>
+<p>Data source: US Department of Housing and Urban Development, Office of Policy Development and Research, FY2026 Fair Market Rent and Small Area FMR data, <a href="https://www.huduser.gov/portal/datasets/fmr.html">huduser.gov/portal/datasets/fmr.html</a>. As a US federal government work, the data is in the public domain under 17 USC 105. HUD does not endorse this repackaging, and this page is not affiliated with or endorsed by HUD.</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
