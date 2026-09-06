@@ -804,4 +804,16 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/thanksgiving-timeline-planner.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/hud-income-limits-data.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
 </ns0:urlset>
