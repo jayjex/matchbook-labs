@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KPI Dashboard Template — Build One in a Spreadsheet (Free Guide)</title>
+<meta name="description" content="Pick five KPIs by the question they answer, sketch a one-screen dashboard in three zones, and run a vanity-versus-action test. Free guide with web3 examples.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/kpi-dashboard-template-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KPI Dashboard Template — Build One in a Spreadsheet (Free Guide)">
+<meta property="og:description" content="Pick five KPIs by the question they answer, sketch a one-screen dashboard in three zones, and run a vanity-versus-action test. Free guide with web3 examples.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/kpi-dashboard-template-guide.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="KPI Dashboard Template — Build One in a Spreadsheet (Free Guide)">
+<meta name="twitter:description" content="Pick five KPIs by the question they answer, sketch a one-screen dashboard in three zones, and run a vanity-versus-action test. Free guide with web3 examples.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "KPI Dashboard Template — Build One in a Spreadsheet (Free Guide)",
+  "description": "A free guide to building a KPI dashboard in a spreadsheet: a five-row metric-selection table, a text layout sketch, a vanity-versus-action test, and four opinions.",
+  "url": "https://jayjex.github.io/matchbook-labs/kpi-dashboard-template-guide.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  code { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.1rem 0.35rem; font-size: 0.85em; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.9rem; }
+  th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; border-bottom: 1px solid #30363d; padding: 0.5rem; }
+  td { padding: 0.55rem 0.5rem; border-bottom: 1px solid #21262d; vertical-align: top; color: #c9d1d9; }
+  td:first-child { white-space: nowrap; font-weight: 600; color: #e6edf3; }
+  blockquote { border-left: 3px solid #30363d; padding: 0.4rem 0 0.4rem 1rem; margin: 0 0 1.25rem; color: #e6edf3; }
+  .specnote { color: #8b949e; font-size: 0.85rem; margin: -0.4rem 0 1.25rem; }
+  pre.sketch { background: #10161d; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; overflow-x: auto; margin: 0 0 1rem; color: #c9d1d9; font: 0.78rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .snap { border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 1.25rem; background: #10161d; }
+  .snap p { margin: 0 0 0.6rem; }
+  .snap p:last-child { margin: 0; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media print {
+    body { background: #fff; color: #000; max-width: none; padding: 0; font-size: 12px; }
+    a { color: #000; text-decoration: none; }
+    .crumbs, .lede, .cta, .note, footer { display: none; }
+    h1, h2, p, li, td, th, blockquote { color: #000; }
+    h1 { font-size: 16pt; margin-bottom: 4pt; }
+    h2 { font-size: 12pt; border-bottom-color: #999; margin: 10pt 0 6pt; page-break-after: avoid; }
+    th, td { border-bottom-color: #999; padding: 3pt 4pt; }
+    .snap { border-color: #999; background: #fff; }
+    pre.sketch { background: #fff; border-color: #999; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / KPI Dashboard Guide</nav>
+
+<h1>KPI Dashboard Template: Build One in a Spreadsheet</h1>
+<p class="lede">A dashboard is one screen, five numbers, and a fixed update day. This guide covers picking the metrics, a text sketch of the layout, and a vanity-versus-action test. The examples track a web3 project because that is what our own spreadsheet pack tracks. Opinions are labeled, and the note at the end says what this page is not.</p>
+
+<h2>Pick the metric by the question it answers</h2>
+<p>A KPI earns its cell by answering a question you would otherwise guess at. Write the question first, then find the number that settles it. Five examples, one per template in our pack:</p>
+<table>
+  <thead>
+    <tr><th>Metric</th><th>Question it answers</th><th>Cadence</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Net P/L per asset</td><td>Is each holding above or below what I paid for it?</td><td>Weekly, same day each week</td></tr>
+    <tr><td>Airdrop statuses (claimed / in progress)</td><td>Which farms moved this week, and what are they worth?</td><td>Weekly</td></tr>
+    <tr><td>Net ROI per DeFi position</td><td>Which positions earn their deposit after rewards?</td><td>Weekly or monthly</td></tr>
+    <tr><td>Bounty income by month</td><td>Which platforms and task types pay?</td><td>Monthly</td></tr>
+    <tr><td>Win rate and profit factor</td><td>Does the process make money after fees, over many trades?</td><td>Monthly</td></tr>
+  </tbody>
+</table>
+<p class="specnote">Cadence is a promise about when the number gets typed in. Weekly metrics survive a weekly check; a daily metric dies the first busy week. If the number has not changed since the last update, type the same value anyway, so the history stays comparable.</p>
+
+<h2>The layout: three zones on one screen</h2>
+<p>Keep the whole dashboard visible without scrolling. Three zones do the work:</p>
+<pre class="sketch">+--------------------------------------------------------------+
+| HEADER                                                       |
+| Month · date last updated · one line of context              |
++------------------------+------------------------+------------+
+| METRICS                | METRICS                | METRICS    |
+| 1 Net P/L per asset    | 2 Airdrop statuses     | 3 Net ROI  |
+|   value + change       |   claimed / progress   |   percent  |
++------------------------+------------------------+------------+
+| 4 Bounty income MTD    | 5 Win rate / PF        | NOTES      |
+|   value + change       |   percent + ratio      | 3 lines max|
++------------------------+------------------------+------------+</pre>
+<ul>
+  <li><strong>Header.</strong> Month, the date you last typed numbers, one line about what changed. When a number looks wrong three weeks later, this line is the witness.</li>
+  <li><strong>Metrics zone.</strong> The five rows from the table above, each as a value plus the change since the last update. The change carries more information than the raw number.</li>
+  <li><strong>Notes zone.</strong> Three lines max, dated. What moved and the one-line why. Six months in, these lines explain spikes better than the numbers do.</li>
+</ul>
+
+<h2>Vanity versus action (opinions)</h2>
+<p>Every metric has an action version, the one that moves when you do something. Three comparisons from tracking our own numbers. These are opinions, not rules:</p>
+<table>
+  <thead>
+    <tr><th>Feels like progress</th><th>What it hides</th><th>The action version</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Total portfolio value</td><td>It moves with the market while you do nothing</td><td>Net P/L against your own cost basis</td></tr>
+    <tr><td>Airdrops farmed, counted</td><td>The count measures effort</td><td>Claimed versus in-progress statuses, plus estimated value</td></tr>
+    <tr><td>Trades taken</td><td>Activity reads as skill</td><td>Win rate and profit factor after fees</td></tr>
+  </tbody>
+</table>
+
+<h2>Four opinions</h2>
+<ol>
+  <li><strong>(Opinion.) Five KPIs max.</strong> One screen holds five numbers plus notes. Past that you are reading a report instead of tracking one, and the update day slips.</li>
+  <li><strong>(Opinion.) Same day, every update.</strong> Comparability beats precision. A rough number typed every Monday beats a careful number typed twice a month.</li>
+  <li><strong>(Opinion.) Enter the raw value, let formulas do the math.</strong> P/L, ROI, and win rate are computed columns. Hand-edited results make the history wrong quietly.</li>
+  <li><strong>(Opinion.) Keep the notes line alive.</strong> Every update gets one dated line in the notes zone. "Yield position dropped 40%, protocol changed reward rate" is worth more at review time than any chart.</li>
+</ol>
+
+<h2>What the pack adds: five ready-made KPI tracking spreadsheets</h2>
+<p>The five example metrics above are the five templates in the Web3 KPI Spreadsheet Pack. From the README:</p>
+<blockquote>Five spreadsheet templates for people who juggle wallets, airdrops, DeFi positions, bounties, and trades. Works in Google Sheets and Excel. No add-ons, no API keys, no scripts. You type the numbers, the formulas do the math.</blockquote>
+<table>
+  <thead>
+    <tr><th>File</th><th>What it tracks</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1-crypto-portfolio-tracker</td><td>Multi-chain holdings (BTC, ETH, SOL, Base, L2s) with cost basis, P/L, and allocation % per asset</td></tr>
+    <tr><td>2-airdrop-testnet-tracker</td><td>Airdrop and testnet farming: protocol, wallet, tx count, status, estimated value, claimed count</td></tr>
+    <tr><td>3-defi-yield-log</td><td>DeFi positions: deposit, current value, APY, rewards claimed, net P/L and ROI per position</td></tr>
+    <tr><td>4-bounty-income-tracker</td><td>Bounty and gig income: platform, task, deadline, amount, status, monthly totals</td></tr>
+    <tr><td>5-trading-journal</td><td>Trade log with direction, size, fees, net P/L, win rate, and profit factor</td></tr>
+  </tbody>
+</table>
+<p>The XLSX bundles all five into one workbook, one sheet each, plus a READ ME sheet. In Google Sheets, import a CSV via File → Import → Upload and the formulas arrive as live formulas; Excel opens the XLSX directly. One mechanic worth quoting, on adding rows:</p>
+<blockquote>To add rows: insert them above the last data row, not below the TOTAL row, so the SUM ranges stretch automatically.</blockquote>
+
+<a class="cta" href="https://www.getly.store/product/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain-mtnuvl2u">Get the Web3 KPI Spreadsheet Pack: 5 Google Sheets &amp; Excel Templates — $10</a>
+<p class="note">Instant download after checkout. 5 CSVs + 1 XLSX with a READ ME sheet. No add-ons, no API keys, no scripts.</p>
+
+<h2>What this page is</h2>
+<div class="snap">
+  <p>A metric-selection and dashboard-layout guide. The five example metrics come from the pack's five templates, and the layout sketch is text drawn from how the sheets are organized.</p>
+  <p>Nothing here is financial advice. The pack README says it directly: "This is a bookkeeping tool, not financial advice. Nothing in it suggests what to buy, sell, or farm. Yields can and do go to zero."</p>
+  <p>The vanity-versus-action rows and the four tips are opinions from use, not research findings.</p>
+</div>
+
+<p>Related pages: track the farming itself with the <a href="airdrop-tracking-spreadsheet.html">airdrop tracking spreadsheet</a>, set up the desk it lives on with the <a href="trading-desk-setup-guide.html">trading desk setup guide</a>, or browse the <a href="catalog.html">full catalog</a>.</p>
+
+<footer>Matchbook Labs · <a href="catalog.html">Full catalog</a> · Pack contents from its README, checked 2026-09-08.</footer>
+</body>
+</html>
