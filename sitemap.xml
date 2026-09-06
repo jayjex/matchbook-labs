@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" ?>
+<ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/</ns0:loc>
     <ns0:lastmod>2026-09-06</ns0:lastmod>
@@ -527,7 +528,13 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/offboarding-checklist.html</ns0:loc><ns0:lastmod>2026-09-07</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/offboarding-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-07</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/habit-tracker-66-day.html</ns0:loc>
     <ns0:lastmod>2026-09-07</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
@@ -635,7 +642,6 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/shift-work-schedule-template.html</ns0:loc>
     <ns0:lastmod>2026-09-06</ns0:lastmod>
@@ -678,7 +684,7 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/second-brain-setup-checklist.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
@@ -702,7 +708,7 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/lmsw-study-group-guide.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
@@ -906,43 +912,199 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/freelance-quote-template-printable.html</ns0:loc><ns0:lastmod>2026-09-07</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/moving-abroad-cost-checklist.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/freelance-quote-template-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-07</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/moving-abroad-cost-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/airdrop-tracking-spreadsheet.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/number-puzzle-printable-adults.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/home-inventory-list-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/number-puzzle-printable-adults.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/home-inventory-list-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/daily-discipline-tracker-printable.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.7</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/december-budget-planner-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/content-creator-admin-checklist.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/preserving-harvest-log-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/family-memory-book-template.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/daily-reflection-journal-printable.html</ns0:loc><ns0:lastmod>2026-09-06</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/december-budget-planner-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/content-creator-admin-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/preserving-harvest-log-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/family-memory-book-template.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/daily-reflection-journal-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-06</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/unit-conversion-practice-sheet.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/lmsw-practice-questions-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/stocking-stuffer-ideas-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/character-profile-sheet-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/connect-the-dots-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/lmsw-practice-questions-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/stocking-stuffer-ideas-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/character-profile-sheet-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/connect-the-dots-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/solana-agent-starter-checklist.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.8</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/minimal-desktop-wallpaper-sets.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/color-palette-ideas-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/web-scraping-project-ideas.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/minimal-desktop-wallpaper-sets.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/color-palette-ideas-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/web-scraping-project-ideas.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/freelance-rates-dataset.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.8</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/social-media-banner-sizes-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/sports-data-research-methods.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.8</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/wedding-planning-checklist-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/hackathon-prep-checklist.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/content-calendar-template-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/shift-schedule-template-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/emergency-contact-card-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/dashboard-icon-set-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/remote-job-search-tracker.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/social-media-banner-sizes-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/sports-data-research-methods.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/wedding-planning-checklist-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/hackathon-prep-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/content-calendar-template-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/shift-schedule-template-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/emergency-contact-card-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/dashboard-icon-set-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/remote-job-search-tracker.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/social-media-post-planner-printable.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.8</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/product-listing-description-tips.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/product-listing-description-tips.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/pitch-deck-outline-template.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
@@ -954,13 +1116,25 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/agent-workflow-checklist.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.8</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/agent-workflow-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/monthly-budget-planner-printable.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/halloween-party-checklist-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/halloween-party-checklist-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/airbnb-host-welcome-book-template.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
@@ -972,8 +1146,18 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/reading-log-printable-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/cleaning-schedule-printable-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/reading-log-printable-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/cleaning-schedule-printable-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/self-audit-checklist-template.html</ns0:loc>
     <ns0:lastmod>2026-09-06</ns0:lastmod>
@@ -992,38 +1176,121 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/new-hire-onboarding-checklist.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/lab-inventory-template-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/move-in-inspection-checklist.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/ai-prompt-templates-beginners.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/small-business-expense-tracker-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/linkedin-banner-dimensions-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/trading-desk-setup-guide.html</ns0:loc><ns0:lastmod>2026-09-07</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/new-hire-onboarding-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/lab-inventory-template-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/move-in-inspection-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/ai-prompt-templates-beginners.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/small-business-expense-tracker-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/linkedin-banner-dimensions-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/trading-desk-setup-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-07</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/sticker-paper-guide-printable.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/kpi-dashboard-template-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/ai-agent-monitoring-basics.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/kpi-dashboard-template-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/ai-agent-monitoring-basics.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/grant-application-tracker-template.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.8</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/pitch-deck-mistakes-avoid.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/personal-brand-starter-checklist.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/maze-puzzles-printable-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/web3-developer-roadmap-free.html</ns0:loc><ns0:lastmod>2026-09-07</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/playwright-scraping-tutorial-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/etsy-tags-optimizer-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/pitch-deck-mistakes-avoid.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/personal-brand-starter-checklist.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/maze-puzzles-printable-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/web3-developer-roadmap-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-07</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/playwright-scraping-tutorial-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/etsy-tags-optimizer-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/brand-color-combinations-guide.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/wedding-day-timeline-template.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-   <ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/wallet-activity-log-printable.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
@@ -1059,7 +1326,12 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/svg-vs-png-icons-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/svg-vs-png-icons-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/exam-study-schedule-template.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
@@ -1078,27 +1350,73 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/weekly-dinner-planner-printable.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/habit-tracker-bullet-journal-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/spring-cleaning-checklist-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/time-blocking-template-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-  <ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/expat-document-checklist-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-  <ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/resume-action-verbs-list.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/ai-meeting-notes-prompt-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/grant-budget-template-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.8</ns0:priority></ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/habit-tracker-bullet-journal-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/spring-cleaning-checklist-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/time-blocking-template-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/expat-document-checklist-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/resume-action-verbs-list.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/ai-meeting-notes-prompt-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/grant-budget-template-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/weekly-metrics-review-template.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/seed-starting-log-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/minimal-desktop-wallpapers-guide.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>  <ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/seed-starting-log-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/minimal-desktop-wallpapers-guide.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/logo-file-formats-explained.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
@@ -1122,8 +1440,18 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/number-puzzle-printable-free.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/fantasy-draft-cheat-sheet-template.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/number-puzzle-printable-free.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/fantasy-draft-cheat-sheet-template.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/freelance-income-log-printable.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
@@ -1142,6 +1470,12 @@
   </ns0:url>
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/desk-setup-checklist-printable.html</ns0:loc>
+    <ns0:lastmod>2026-09-08</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.9</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/ebook-outline-template-free.html</ns0:loc>
     <ns0:lastmod>2026-09-08</ns0:lastmod>
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
