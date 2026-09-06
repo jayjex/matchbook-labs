@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Monitoring Basics — Free Logging Guide for Agent Runs</title>
+<meta name="description" content="Free AI agent monitoring guide: six fields to log on every agent run (trigger time, input size, output summary, duration, error class, cost), write-in alert thresholds, and a review cadence.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/ai-agent-monitoring-basics.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Agent Monitoring Basics — Free Logging Guide for Agent Runs">
+<meta property="og:description" content="Six fields to log on every agent run: trigger time, input size, output summary, duration, error class, cost. Plus write-in alert thresholds and a review cadence.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/ai-agent-monitoring-basics.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI Agent Monitoring Basics — Free Logging Guide for Agent Runs">
+<meta name="twitter:description" content="Six fields to log on every agent run: trigger time, input size, output summary, duration, error class, cost. Plus write-in alert thresholds and a review cadence.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI Agent Monitoring Basics — Free Logging Guide for Agent Runs",
+  "description": "A free guide to monitoring AI agents through their logs: six fields to record on every run, a write-in alert-threshold box, a review cadence table, and four labeled opinions.",
+  "url": "https://jayjex.github.io/matchbook-labs/ai-agent-monitoring-basics.html",
+  "datePublished": "2026-09-08",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 0.6rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  table { border-collapse: collapse; width: 100%; margin: 0 0 1.25rem; font-size: 0.92rem; }
+  th, td { border: 1px solid #30363d; padding: 0.55rem 0.75rem; text-align: left; vertical-align: top; color: #c9d1d9; }
+  th { background: #161b22; color: #e6edf3; }
+  .box { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+  .box p:last-child, .box li:last-child { margin-bottom: 0; }
+  .box ul { margin-bottom: 0; }
+  .fill { color: #58a6ff; font-weight: 600; letter-spacing: 0.08em; }
+  blockquote { border-left: 3px solid #30363d; margin: 1rem 0 1.25rem; padding: 0.35rem 0 0.35rem 1.1rem; color: #8b949e; font-size: 0.92rem; }
+  blockquote ul { margin-bottom: 0; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+  @media print {
+    body { background: #fff; color: #000; max-width: none; padding: 0; }
+    a { color: #000; text-decoration: none; }
+    .crumbs, .cta, .note, footer { display: none; }
+    h1, h2, h3, p, li, td, th { color: #000; }
+    .box, blockquote { background: #fff; border-color: #999; }
+    h2 { border-bottom-color: #999; page-break-after: avoid; }
+    .box, blockquote { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / AI Agent Monitoring Basics</nav>
+
+<h1>AI Agent Monitoring Basics (what to log on every run)</h1>
+<p class="lede">A free guide to monitoring AI agents through their logs: six fields worth recording on every run, a write-in alert-threshold box, and a review cadence that fits around real work. The fields are generic mechanics; they apply whether your agent is a cron script calling a model API or a framework orchestrating a dozen tools.</p>
+
+<h2>Six fields to log on every run</h2>
+<p>One row per run, written at run time. Six fields cover most of what you'll need when a run misbehaves and someone asks what happened.</p>
+<table>
+  <tr><th>Field</th><th>What to record</th><th>What it tells you later</th></tr>
+  <tr><td>Trigger time</td><td>A timestamp with timezone, written when the run starts.</td><td>Groups failures by schedule. Ties a bad batch to a deploy, a cron change, or a provider incident at the same minute.</td></tr>
+  <tr><td>Input size</td><td>Bytes or tokens of everything the run consumed: message, files, tool output.</td><td>Rising input size with flat output is the usual signature of a context that never gets trimmed.</td></tr>
+  <tr><td>Output summary</td><td>One line: a success flag plus a fixed slice of the result, such as the first 100 characters or the field names returned.</td><td>Answers whether a run produced something sane without storing every byte. Keep secrets and personal data out of this slice.</td></tr>
+  <tr><td>Duration</td><td>Wall-clock seconds from start to finish.</td><td>Slow drift points at provider latency or a retry loop that moved in.</td></tr>
+  <tr><td>Error class</td><td>A short label from a fixed vocabulary you define: timeout, malformed, empty, auth, rate-limit.</td><td>A failure count says how many. Classes say which fix to reach for first.</td></tr>
+  <tr><td>Cost</td><td>Tokens times price, or whatever the provider's usage report says the run cost.</td><td>The first number that goes wrong without an error. A loop that doubles its turns doubles the bill.</td></tr>
+</table>
+<p>Log the fields as plain text or CSV rows. Formats that a spreadsheet opens directly get read; formats that need a parser get skipped.</p>
+
+<h2>Alert thresholds (write these in)</h2>
+<p>Three lines, written down before the first production run. The blanks are yours to fill; the starting numbers are opinions, not rules:</p>
+<div class="box">
+<ul>
+  <li><strong>Run rate.</strong> Alert when an hour exceeds <span class="fill">______</span> runs. A number around twice your busiest expected hour catches runaway loops without paging you for ordinary spikes.</li>
+  <li><strong>Daily cost.</strong> Alert when a day exceeds <span class="fill">$______</span>. Start at what a bad day would actually hurt, then tighten or loosen after a month of real numbers.</li>
+  <li><strong>Error rate.</strong> Alert when more than <span class="fill">______</span>% of the last 20 runs fail. An error class you can't explain counts as a failure even when the run reported success.</li>
+</ul>
+</div>
+<p>Write the filled-in numbers where the agent's config lives, not only in a doc. A threshold nobody can find at 2am is a paragraph, not an alert.</p>
+
+<h2>A review cadence that fits real weeks</h2>
+<p>The table below is one opinion on scope, sized for a single person maintaining a handful of agents:</p>
+<table>
+  <tr><th>Cadence</th><th>Scope</th><th>Rough time</th></tr>
+  <tr><td>Daily</td><td>Scan the error-class counts and yesterday's cost total. Any class that appears for the first time gets looked at the same day.</td><td>About two minutes</td></tr>
+  <tr><td>Weekly</td><td>Read ten sampled outputs end to end, and glance at the duration trend for drift.</td><td>Ten to twenty minutes</td></tr>
+  <tr><td>Monthly</td><td>Re-check the three thresholds against the month's actuals, and delete any log field nobody has read.</td><td>Half an hour</td></tr>
+</table>
+
+<h2>Four opinions</h2>
+<p>Opinions from logging agent runs this way, not rules. Disagree with any of them once your own log says otherwise.</p>
+<ol>
+  <li><strong>(Opinion.) Log cost from run one.</strong> Every other field explains what happened; cost is what it takes to keep happening. Backfilling cost later means running blind for as long as the gap.</li>
+  <li><strong>(Opinion.) Keep the log line flat.</strong> One row per run in a CSV or plain text file beats a nested structure you have to dig through at 2am. Flat rows sort, filter, and paste into a spreadsheet.</li>
+  <li><strong>(Opinion.) Fix the error vocabulary early.</strong> Five or six class names, written down and shared with anyone who reads the log. Free-form error messages resist counting, and counting is the point.</li>
+  <li><strong>(Opinion.) A text file is enough for months.</strong> Real observability tooling earns its keep when you run multiple agents, need alert routing, or have teammates asking questions your file can't answer. Until then, the log line matters more than the log system.</li>
+</ol>
+
+<h2>What this page is</h2>
+<p>This page is a generic mechanics guide for logging and monitoring agent runs, written to be useful before you pick any tooling. It is not a review, ranking, or comparison of observability platforms, and it isn't affiliated with any of them. The thresholds and cadence are opinions, not rules, and nothing here promises an agent will behave; the log makes misbehavior cheaper to explain when it happens.</p>
+<p>Still designing the agent? The free <a href="agent-workflow-checklist.html">Agent Workflow Checklist</a> covers eight checks to run before the first line of code, and the <a href="catalog.html">full catalog</a> lists everything else Matchbook Labs ships.</p>
+
+<h2>The paperwork around the log</h2>
+<p>When a run misbehaves, the follow-up is paperwork: the incident report, the runbook update, the fix nobody documented. The Agent-OS Template Pack ($12) is 20 markdown templates for that side of agent building. Two of them pair directly with a log: a post-incident report format and a one-page triage runbook. The pack has no monitoring template, and the logging itself stays in your code. The product README lists the full contents verbatim:</p>
+<blockquote>
+<ul>
+  <li><strong>Product specs (3):</strong> full v1 spec, single-feature spec, launch spec with success bar</li>
+  <li><strong>System prompts (4):</strong> general agent, support agent, research agent, workflow automation — each with boundaries, refusal lines, and example blocks</li>
+  <li><strong>Eval checklists (3):</strong> pre-release checklist, prompt quality grading, user testing script</li>
+  <li><strong>Incident/runbook (2):</strong> post-incident report format, one-page triage runbook</li>
+  <li><strong>Onboarding (2):</strong> new-user guide, one-screen quick start card</li>
+  <li><strong>Changelog/release notes (2):</strong> running changelog format, public release notes template</li>
+  <li><strong>Pricing copy (2):</strong> pricing page skeleton, purchase-unblocking FAQ</li>
+  <li><strong>Support macros (2):</strong> seven common-ticket replies, six hard-conversation replies</li>
+</ul>
+</blockquote>
+<p>According to the same README, <code>index.md</code> maps all 20 templates to the moment you need each one, and searching for `[` in any template surfaces every placeholder. License: personal + commercial use, including products you sell; no resale or redistribution of the template files as-is.</p>
+
+<!-- SWAP-BEGIN agentos-pack — trigger: produk belum ada di API saat page dibuat (09-08: read-key GET /api/v1/products?limit=100 = 27 produk, nextCursor null, 0 match Agent-OS/template pack; sama gate dgn sibling agent-workflow-checklist.html row 34). Saat publish + API status active: curl canonical https://www.getly.store/product/<AGENTOS-SLUG> = 200 dulu (gate; ISR rule JANGAN probe /product/ saat pending_review; cek 1x/hari no spam) → replace DUA href di bawah (prose anchor + .cta) dengan product URL, anchor tetap. Slug ambil dari output publish.sh baris RESULT id=... slug=... -->
+<p>If the paperwork after an incident tends to go unwritten, the <a href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Agent-OS Template Pack</a> ($12) puts the structure there in advance, 20 markdown templates that open in any editor or repo.</p>
+<!-- SWAP-END agentos-pack -->
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Agent-OS Template Pack — 20 templates incl. incident report + runbook, $12 →</a>
+<p class="note">Plain markdown, no tooling. Personal + commercial use.</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
