@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NFL Stats Database Download: 7,548 Games of Game Data as CSV (1999&ndash;2026)</title>
+<meta name="description" content="An NFL stats database download for people who build their own models: 7,548 games as flat CSV, 46 columns, 861 team-season rows, 27 season summaries. SHA-256 checksums, nflverse CC BY 4.0.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/nfl-stats-database-download.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NFL Stats Database Download: 7,548 Games of Game Data as CSV (1999-2026)">
+<meta property="og:description" content="7,548 NFL games as one flat CSV, 46 columns, plus 861 team-season rows and 27 season summaries. Join keys documented, no pivots pre-baked. SHA-256 checksums included.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/nfl-stats-database-download.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NFL Stats Database Download: 7,548 Games of Game Data as CSV">
+<meta name="twitter:description" content="Flat NFL game data CSV: 7,548 games, 46 columns, 861 team-season rows, 27 season summaries. You build the views. SHA-256 checksums included.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "NFL Stats Database Download: 7,548 Games of Game Data as CSV (1999-2026)",
+  "description": "An NFL stats database download for people who build their own models: 7,548 games as flat CSV, 46 columns, 861 team-season rows, 27 season summaries. SHA-256 checksums, nflverse CC BY 4.0.",
+  "datePublished": "2026-09-07",
+  "author": {"@type": "Organization", "name": "Matchbook Labs"},
+  "publisher": {"@type": "Organization", "name": "Matchbook Labs"},
+  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/nfl-stats-database-download.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+  h3 { font-size: 0.95rem; margin: 1.5rem 0 0.5rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.55rem; }
+  code { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.1rem 0.35rem; font-size: 0.85em; }
+  pre { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 0.9rem 1.1rem; overflow-x: auto; margin: 0 0 1.25rem; }
+  pre code { border: none; padding: 0; background: none; }
+  .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #4da3ff; border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .callout p { margin: 0; font-size: 0.95rem; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { text-decoration: none; filter: brightness(1.1); }
+  .note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+  .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #21262d; font-size: 0.85rem; color: #8b949e; }
+</style>
+</head>
+<body>
+<p class="crumbs"><a href="index.html">Matchbook Labs</a> &rsaquo; <a href="catalog.html">Catalog</a> &rsaquo; NFL game data</p>
+
+<h1>NFL Stats Database Download: 7,548 Games, 46 Columns, One Flat CSV</h1>
+<p class="lede">This pack is for the person who wants to build the model or the spreadsheet themselves. It ships as flat CSV files that load into Excel, Google Sheets, pandas, or R without cleanup: 7,548 NFL games from 1999 through the 2026 schedule with 46 columns each, 861 team-season rows, and 27 season summaries. The files hold the data and the join keys. You build your own views on top.</p>
+
+<h2>What's in the download</h2>
+<ul>
+  <li><strong>games.csv</strong> - 7,548 rows, one per game, 1999 through the 2026 schedule, 46 columns. Final scores, gameday, teams, rest days, starting QBs, coaches, referee, stadium, roof, surface, temperature, and wind, plus the market columns recorded per game where tracked (closing spread, total, moneylines). Every column is defined in the dictionary, so nothing in the file is a guess.</li>
+  <li><strong>team-records-by-season.csv</strong> - 861 team-season rows: W/L/T, points for and against, ATS wins/losses/pushes, ATS win percentage, and over/under records, straight back to 1999.</li>
+  <li><strong>season-summaries.csv</strong> - 27 rows, one per season from 1999 through 2025. League-level averages, home win percentage, favorite and underdog cover rates, and over/under splits.</li>
+  <li><strong>data-dictionary.md</strong> - every column defined, including which years each field starts.</li>
+</ul>
+<p>Want to check the file shape first? The <a href="free-nfl-betting-data.html">free NFL data sample</a> has 100 games with the same 46 columns, so the download you test is the download you get.</p>
+
+<h2>Flat CSV, on purpose</h2>
+<p>Each file is one table with one row per record. No merged cells, no summary tabs doing the aggregation for you, and no pivots pre-baked. The structure is deliberately boring because boring loads fast and joins cleanly:</p>
+<ul>
+  <li><code>game_id</code> (like <code>2025_01_KC_LAC</code>) identifies every game row, so anything you derive per game joins back to <code>games.csv</code> on one column.</li>
+  <li><code>team</code> plus <code>season</code> key the team-season file, so a team's yearly records merge against any slice of the games file you cut.</li>
+  <li><code>season</code> alone keys <code>season-summaries.csv</code> when you want the league-level numbers next to your own per-season aggregates.</li>
+</ul>
+<p>If you want an average, group by the column. If you want a team's game log, filter by the team. The pack stays out of the way of your model's shape.</p>
+
+<h2>Checksums: your copy matches the built copy</h2>
+<p>Every bundle ships with <code>SHA256SUMS.txt</code>, one SHA-256 hash per component zip. Run <code>sha256sum -c SHA256SUMS.txt</code> after download; if it prints OK on all four lines, the files on your disk are byte-identical to what was built. For a dataset feeding a model, the check matters because a truncated download produces rows that look fine until a season total comes up short. The checksum turns that silent failure into a printed FAIL.</p>
+
+<h2>License: nflverse, CC BY 4.0</h2>
+<p>Game data comes from the <a href="https://github.com/nflverse/nflverse-data" rel="noopener">nflverse-data project</a> under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>. Copy it, remix it, build commercial work on it. The one condition is credit. If you republish, include the line &ldquo;Data from nflverse, CC BY 4.0&rdquo;. The line ships inside the zip in <code>ATTRIBUTION.txt</code> so pasting it into your project takes seconds. Team logos and league marks are trademarks of their owners and are not part of the pack.</p>
+
+<h2>Three things analysts do with it</h2>
+<h3>Spreadsheet modeling</h3>
+<p>Load <code>games.csv</code> into Excel or Sheets, add your own columns, and build per-team or per-season tables with formulas and a pivot you control. Because the columns stay flat, every formula references a plain cell range and nothing breaks when you sort.</p>
+<h3>Stat research</h3>
+<p>Rest days against scoring, home win percentage before and after 2020, scoring by roof type, week-by-week totals across an era. These are descriptive questions, and the columns that answer them sit on the same row as the score.</p>
+<h3>League-history lookups</h3>
+<p>Twenty-seven season summaries in one table: league scoring averages per year, home win rates per year, how often favorites covered per era. Pull one season or compare three decades without writing a scraper.</p>
+
+<div class="callout"><p>The pack records what happened and where lines closed. It doesn't tell anyone what to bet, promises nothing about future games, and nothing on this page is betting advice.</p></div>
+
+<h2>Field coverage, honestly</h2>
+<ul>
+  <li><strong>Which fields start when.</strong> Spreads and totals run 1999 onward; moneylines and the American odds fields start in 2006. Some 1990s rows miss the field entirely rather than showing a zero.</li>
+  <li><strong>One snapshot per game, not a movement log.</strong> Each line field holds a single closing value taken when the dataset was built. If your model needs intraweek movement, you need a second source.</li>
+  <li><strong>The 2026 season is scheduled, not played.</strong> Those rows carry games and, where posted, lines; scores stay empty until each game is played.</li>
+</ul>
+<p>If your angle is the market numbers themselves, the <a href="nfl-spread-history-database.html">NFL spread history page</a> shows the same games file from the closing-lines side, with five sample rows verbatim.</p>
+
+<a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Studio &amp; Data Vault Bundle - NFL games + rent + Airbnb + wallpapers, $49 &rarr;</a>
+<p class="note">$49 one-time &middot; 4 packs incl. the NFL game data CSV &middot; SHA256SUMS verified &middot; nflverse CC BY 4.0 &middot; instant download</p>
+<p>Only want the NFL pack? The <a href="product-nfl-dataset.html">standalone NFL game data pack</a> is $29 on <a href="https://www.getly.store/product/nfl-betting-game-data-pack-1999-2026-7-548-games-spreads-totals-moneylines-mtpl017h">Getly</a>, and the whole thing is described on the <a href="sports-data-bundle.html">sports data bundle page</a>.</p>
+
+<div class="footer">
+  <p>Matchbook Labs publishes raw datasets with the columns documented and the license stated. Questions about a file before buying? <a href="index.html">Contact details are on the front page.</a></p>
+</div>
+</body>
+</html>
