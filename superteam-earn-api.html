@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superteam Earn API Endpoints — 30 Reverse-Engineered Routes (Free Reference) — Matchbook Labs</title>
+<meta name="description" content="A free reference of 30 Superteam Earn API endpoints harvested from the live superteam.fun API: listings, comments, submissions, homepage stats, and sponsor dashboard routes. Full 186-endpoint dataset is $49.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/superteam-earn-api.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Superteam Earn API Endpoints — 30 Reverse-Engineered Routes (Free Reference)">
+<meta property="og:description" content="30 Superteam Earn API routes with what each one returns. Harvested from the live superteam.fun API. Full 186-endpoint dataset available.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/superteam-earn-api.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Superteam Earn API Endpoints — 30 Reverse-Engineered Routes">
+<meta name="twitter:description" content="30 Superteam Earn API routes with what each one returns. Full 186-endpoint dataset available.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Superteam Earn API Endpoints — 30 Reverse-Engineered Routes (Free Reference)",
+  "description": "A free reference of 30 Superteam Earn API endpoints harvested from the live superteam.fun API, plus the full 186-endpoint dataset.",
+  "url": "https://jayjex.github.io/matchbook-labs/superteam-earn-api.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Matchbook Labs",
+    "url": "https://jayjex.github.io/matchbook-labs/"
+  }
+}
+</script>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+  .crumbs a { color: #8b949e; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+  h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8b949e; margin: 2.25rem 0 0.9rem; }
+  p { margin: 0 0 1rem; color: #c9d1d9; }
+  ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+  li { margin-bottom: 0.45rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 5px; padding: 0.08em 0.35em; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.88rem; }
+  th { text-align: left; color: #8b949e; font-weight: 600; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; white-space: nowrap; }
+  td { border-bottom: 1px solid #21262d; padding: 0.45rem 0.6rem; vertical-align: top; }
+  td:first-child { white-space: nowrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .get { color: #7ee787; font-weight: 700; }
+  .post { color: #ffa657; font-weight: 700; }
+  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+  .cta:hover { background: #2ea043; text-decoration: none; }
+  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+  footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Superteam Earn API endpoints</nav>
+
+<h1>Superteam Earn API Endpoints — 30 Reverse-Engineered Routes</h1>
+<p class="lede">Superteam Earn (superteam.fun) has no public API docs. We harvested its API from the live site on Sep 4, 2026 and mapped 186 routes. Below are 30 of them, free. The full dataset — all 186 endpoints, 28 live listings with full description HTML, and the undocumented <code>/api/search/{title}</code> trick — ships as a $49 JSON/text download.</p>
+
+<h2>What each column means</h2>
+<p>Method is how the frontend calls the route (GET reads, POST changes something) — inferred from behavior, not from docs, because none exist. Paths are verbatim from the harvest. Auth: public routes work with a plain request; anything under <code>/api/v1/</code> needs a Privy bearer token (the auth flow is documented in the full dataset).</p>
+
+<h2>Public listings, feed, and stats routes</h2>
+<table>
+  <tr><th>Method</th><th>Path</th><th>What it returns</th></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/listings/live</td><td>All currently open listings (the main bounty board)</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/listings/live-opportunities</td><td>Open opportunities feed with sponsor and reward data</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/listings/bookmarks</td><td>Signed-in user's bookmarked listings</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/feed/get</td><td>Activity feed (submissions, winners, new listings)</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/search/{title}</td><td>Full listing description text by title slug — undocumented, not exposed in the cards API</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/homepage/stats</td><td>Site-wide totals (total paid out, listing counts)</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/homepage/feed</td><td>Homepage activity feed</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/homepage/recent-earners</td><td>Latest earners for the homepage widget</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/homepage/sponsor-count</td><td>Count of active sponsors</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/homepage/user-count</td><td>Count of registered earners</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/hackathon/list</td><td>Active hackathons</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/hackathon/listings</td><td>Listings belonging to a hackathon track</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/hackathon/stats</td><td>Per-hackathon submission and prize stats</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/hackathon/public-stats</td><td>Public aggregate hackathon numbers</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/grants/live</td><td>Open grant applications</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/geo/world.geojson</td><td>World map geometry used for sponsor/earner locations</td></tr>
+</table>
+
+<h2>Listings, comments, and submissions</h2>
+<table>
+  <tr><th>Method</th><th>Path</th><th>What it returns</th></tr>
+  <tr><td><span class="post">POST</span></td><td>/api/comment/create</td><td>Post a comment on a listing (auth required)</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/listings/bookmark/status</td><td>Whether the current user bookmarked a listing</td></tr>
+  <tr><td><span class="post">POST</span></td><td>/api/listings/bookmark/toggle</td><td>Bookmark or unbookmark a listing</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/pow/get</td><td>Current proof-of-work challenge for submission forms</td></tr>
+  <tr><td><span class="post">POST</span></td><td>/api/pow/edit</td><td>Edit a proof-of-work submission</td></tr>
+  <tr><td><span class="post">POST</span>*</td><td>/api/report-listing</td><td>Listing reports (moderation). *Method not confirmed by the harvest — the frontend may call it as GET.</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/server-time</td><td>Server clock — handy for deadline math</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/user-sponsors</td><td>Sponsor profiles the user belongs to</td></tr>
+</table>
+
+<h2>Sponsor dashboard routes (authenticated)</h2>
+<table>
+  <tr><th>Method</th><th>Path</th><th>What it returns</th></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/sponsor-dashboard/listings</td><td>Listings owned by the sponsor account</td></tr>
+  <tr><td><span class="post">POST</span></td><td>/api/sponsor-dashboard/listing/draft</td><td>Create or update a listing draft</td></tr>
+  <tr><td><span class="post">POST</span></td><td>/api/sponsor-dashboard/submission/reject</td><td>Reject a submission with feedback</td></tr>
+  <tr><td><span class="post">POST</span></td><td>/api/sponsor-dashboard/submission/add-payment</td><td>Attach a payment to a winning submission</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/sponsor-dashboard/submission/export</td><td>CSV export of all submissions</td></tr>
+  <tr><td><span class="get">GET</span></td><td>/api/sponsor-dashboard/active-hackathons</td><td>Hackathons the sponsor is running</td></tr>
+</table>
+
+<h2>Get the full 186-endpoint dataset</h2>
+<ul>
+  <li>All 186 routes: listings, comments, submissions, grants, hackathons, sponsor dashboard ops</li>
+  <li>28 live listings with FULL description HTML (deadlines, rewards, sponsor slugs) — The public cards API leaves out the full description text — these carry it</li>
+  <li>The undocumented <code>/api/search/{title}</code> trick for pulling full description text</li>
+  <li>Privy passwordless auth flow notes: init/authenticate, token refresh via <code>/api/v1/sessions</code></li>
+  <li>JSON + plain text, harvested 2026-09-04, commercial license</li>
+</ul>
+
+<a class="cta" href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Full 186-endpoint JSON dataset — $49 →</a>
+<p class="note">Instant download · JSON + TXT · commercial license included</p>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
