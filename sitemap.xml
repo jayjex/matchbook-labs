@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" ?><ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
   <ns0:url>
     <ns0:loc>https://jayjex.github.io/matchbook-labs/</ns0:loc>
     <ns0:lastmod>2026-09-06</ns0:lastmod>
@@ -528,4 +527,4 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-</ns0:urlset>
+<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/offboarding-checklist.html</ns0:loc><ns0:lastmod>2026-09-07</ns0:lastmod><ns0:changefreq>weekly</ns0:changefreq><ns0:priority>0.9</ns0:priority></ns0:url></ns0:urlset>
