@@ -204,7 +204,7 @@
 <!-- SWAP-BEGIN meal-planner — product NOT on Getly yet (API read-key list 2026-09-08: 27 produk all active, 0 meal/grocery/prep/pantry match; verify 1x via /api/v1/products limit=100). Trigger: API read-key status=active + slug ada + curl canonical https://www.getly.store/product/<MEAL-SLUG> = 200 DULU (gate; ISR rule: JANGAN probe /product/ saat pending_review; cek 1x/hari no spam), lalu ganti href saja:
      SEBELUM: https://www.getly.store/store/matchbook-labs-mtmw06l2
      SESUDAH: https://www.getly.store/product/<MEAL-SLUG> (slug dari output publish.sh baris RESULT id=... slug=...)
-     Anchor tetap. Sama produk dgn sibling weekly-meal-planner-printable-free.html (tracker row 33) + pantry-inventory-printable.html (tracker row 44) — swap KETIGA page terpisah, jangan dobel-href. Detail: state/cta-swap-tracker.md -->
+     Anchor tetap. Sama produk dgn sibling weekly-meal-planner-printable-free.html (tracker row 33) + pantry-inventory-printable.html (tracker row 44) + leftovers-tracker-printable.html (angle food-waste-log, commit 18f17ed) — swap EMPAT page terpisah, jangan dobel-href. Detail: state/cta-swap-tracker.md -->
 <a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Meal Planner + Grocery List Spreadsheet &mdash; $8 &rarr;</a>
 <p class="note">One workbook for Excel and Google Sheets: Weekly Plan (7 days &times; 3 meals with recipe dropdowns and plan stats), Recipe Bank (32 recipes), Grocery List (store categories, on-plan auto flag, qty &times; price line totals), Price Tracker (unit prices per store). Sample week included. Personal and commercial use allowed.</p>
 <!-- SWAP-END meal-planner -->
