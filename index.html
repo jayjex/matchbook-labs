@@ -6,310 +6,307 @@
 <title>Matchbook Labs — 29 digital products for Solana &amp; web3 builders</title>
 <meta name="description" content="Matchbook Labs: 29 digital products — data packs, prompt packs, printables and design packs on Getly, pay-per-call MCP servers on FiatDock, open-source Solana/web3 tooling. 27 live now.">
 <style>
-  :root { color-scheme: dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0d1117;
-    color: #e6edf3;
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 3rem 1.25rem 4rem;
-  }
-  a { color: #58a6ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  header { margin-bottom: 3rem; border-bottom: 1px solid #21262d; padding-bottom: 1.5rem; }
-  h1 { font-size: 1.6rem; letter-spacing: -0.02em; }
-  header p { color: #8b949e; margin-top: 0.4rem; max-width: 44rem; }
-  header nav { margin-top: 0.9rem; font-size: 0.85rem; }
-  header nav a { margin-right: 0.75rem; }
-  h2 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #8b949e;
-    margin: 2.75rem 0 1.1rem;
-  }
-  h2 span { color: #58a6ff; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
-  }
-  .card {
-    background: #161b22;
-    border: 1px solid #21262d;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: border-color 0.15s;
-  }
-  .card:hover { border-color: #388bfd66; }
-  .card img { width: 100%; height: 132px; object-fit: cover; display: block; border-bottom: 1px solid #21262d; }
-  .card .body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; }
-  .card .name { font-weight: 600; font-size: 0.95rem; }
-  .card .desc { color: #8b949e; font-size: 0.85rem; margin: 0.35rem 0 0.8rem; flex: 1; }
-  .card .row { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
-  .price { color: #7ee787; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
-  .links { font-size: 0.8rem; display: flex; gap: 0.9rem; margin-top: 0.6rem; }
-  .oss .body { padding: 1rem; }
-  .tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    color: #8b949e;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 0 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  footer { margin-top: 4rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
-  .rev { border: 1px solid #21262d; border-radius: 8px; margin-bottom: 0.4rem; padding: 0.65rem 1rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; background: #161b22; }
-  .rev:hover { border-color: #388bfd66; }
-  .rev .nm { font-size: 0.9rem; }
-  .rev a { color: #8b949e; font-size: 0.75rem; white-space: nowrap; }
-  .rev a:hover { color: #58a6ff; }
-  .rev .p { color: #7ee787; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
-  .rev .fixing { color: #d29922; font-size: 0.75rem; white-space: nowrap; }
-  .rev-note { color: #8b949e; font-size: 0.8rem; margin: 0.8rem 0 0; }
-  details.wyg { border: 1px solid #21262d; border-radius: 6px; background: #10151c; padding: 0.45rem 0.75rem; font-size: 0.8rem; color: #8b949e; margin-top: 0.6rem; }
-  details.wyg summary { cursor: pointer; color: #7ee787; font-size: 0.78rem; }
-  details.wyg ul { margin: 0.45rem 0 0.1rem; padding-left: 1.15rem; }
-  details.wyg li { margin-bottom: 0.3rem; }
-  .rev:has(+ details.wyg) { border-radius: 8px 8px 0 0; margin-bottom: 0; }
-  .rev + details.wyg { margin-top: 0; border-top: 0; border-radius: 0 0 8px 8px; background: #161b22; }
-  .faq details { border: 1px solid #21262d; border-radius: 8px; background: #161b22; padding: 0.55rem 1rem; margin-bottom: 0.4rem; }
-  .faq summary { cursor: pointer; color: #e6edf3; font-size: 0.9rem; }
-  .faq p { color: #8b949e; font-size: 0.85rem; margin-top: 0.5rem; }
-  .free .card .body { padding: 1rem; }
-  .free .dl { font-size: 0.8rem; margin-top: 0.7rem; }
-  .free-note { color: #8b949e; font-size: 0.85rem; margin-top: 0.9rem; }
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117;
+ color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 3rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ header { margin-bottom: 3rem; border-bottom: 1px solid #21262d; padding-bottom: 1.5rem; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; }
+ header p { color: #8b949e; margin-top: 0.4rem; max-width: 44rem; }
+ header nav { margin-top: 0.9rem; font-size: 0.85rem; }
+ header nav a { margin-right: 0.75rem; }
+ h2 {
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ letter-spacing: 0.12em;
+ color: #8b949e;
+ margin: 2.75rem 0 1.1rem;
+ }
+ h2 span { color: #58a6ff; }
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ gap: 1rem;
+ }
+ .card {
+ background: #161b22;
+ border: 1px solid #21262d;
+ border-radius: 8px;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ transition: border-color 0.15s;
+ }
+ .card:hover { border-color: #388bfd66; }
+ .card img { width: 100%; height: 132px; object-fit: cover; display: block; border-bottom: 1px solid #21262d; }
+ .card .body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; }
+ .card .name { font-weight: 600; font-size: 0.95rem; }
+ .card .desc { color: #8b949e; font-size: 0.85rem; margin: 0.35rem 0 0.8rem; flex: 1; }
+ .card .row { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
+ .price { color: #7ee787; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+ .links { font-size: 0.8rem; display: flex; gap: 0.9rem; margin-top: 0.6rem; }
+ .oss .body { padding: 1rem; }
+ .tag {
+ display: inline-block;
+ font-size: 0.7rem;
+ color: #8b949e;
+ border: 1px solid #30363d;
+ border-radius: 10px;
+ padding: 0 0.5rem;
+ margin-bottom: 0.5rem;
+ }
+ footer { margin-top: 4rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+ .rev { border: 1px solid #21262d; border-radius: 8px; margin-bottom: 0.4rem; padding: 0.65rem 1rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; background: #161b22; }
+ .rev:hover { border-color: #388bfd66; }
+ .rev .nm { font-size: 0.9rem; }
+ .rev a { color: #8b949e; font-size: 0.75rem; white-space: nowrap; }
+ .rev a:hover { color: #58a6ff; }
+ .rev .p { color: #7ee787; font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+ .rev .fixing { color: #d29922; font-size: 0.75rem; white-space: nowrap; }
+ .rev-note { color: #8b949e; font-size: 0.8rem; margin: 0.8rem 0 0; }
+ details.wyg { border: 1px solid #21262d; border-radius: 6px; background: #10151c; padding: 0.45rem 0.75rem; font-size: 0.8rem; color: #8b949e; margin-top: 0.6rem; }
+ details.wyg summary { cursor: pointer; color: #7ee787; font-size: 0.78rem; }
+ details.wyg ul { margin: 0.45rem 0 0.1rem; padding-left: 1.15rem; }
+ details.wyg li { margin-bottom: 0.3rem; }
+ .rev:has(+ details.wyg) { border-radius: 8px 8px 0 0; margin-bottom: 0; }
+ .rev + details.wyg { margin-top: 0; border-top: 0; border-radius: 0 0 8px 8px; background: #161b22; }
+ .faq details { border: 1px solid #21262d; border-radius: 8px; background: #161b22; padding: 0.55rem 1rem; margin-bottom: 0.4rem; }
+ .faq summary { cursor: pointer; color: #e6edf3; font-size: 0.9rem; }
+ .faq p { color: #8b949e; font-size: 0.85rem; margin-top: 0.5rem; }
+ .free .card .body { padding: 1rem; }
+ .free .dl { font-size: 0.8rem; margin-top: 0.7rem; }
+ .free-note { color: #8b949e; font-size: 0.85rem; margin-top: 0.9rem; }
 </style>
 </head>
 <body>
 <header>
-  <h1>Matchbook Labs</h1>
-  <p>Paid data packs and dev tooling for Solana and web3. Products on <a href="https://www.getly.store">Getly</a>, MCP servers on <a href="https://fiatdock.com">FiatDock</a>, open source on GitHub.</p>
-  <nav><a href="catalog.html">Catalog — all 29 products →</a><a href="https://www.getly.store">Getly store ↗</a></nav>
+ <h1>Matchbook Labs</h1>
+ <p>Paid data packs and dev tooling for Solana and web3. Products on <a href="https://www.getly.store">Getly</a>, MCP servers on <a href="https://fiatdock.com">FiatDock</a>, open source on GitHub.</p>
+ <nav><a href="catalog.html">Catalog — all 29 products →</a><a href="https://www.getly.store">Getly store ↗</a></nav>
 </header>
 
 <h2>Getly products <span>·</span> live now</h2>
 <div class="grid">
 
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/t_xt3_3o9qSOK8AKBxc6x.jpg" alt="" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="name">Superteam Earn Dataset — 28 Live Listings</div>
-      <div class="desc">28 full-text Superteam Earn listings harvested 2026-09-04, with 186 reverse-engineered API routes.</div>
-      <div class="row"><span class="price">$49</span><span class="links"><a href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Buy on Getly →</a></span></div>
-      <details class="wyg"><summary>What you get</summary><ul>
-        <li>28 open listings with full description HTML, deadlines, and sponsor slugs (<code>earn-listings-full-descriptions.json</code>), plus a raw cards-API dump with 17 unique live listings across 3 paginated pages (<code>earn-listings-cards.json</code>)</li>
-        <li>186 reverse-engineered API routes (<code>earn-api-endpoints.txt</code>): listings, comments, submissions, sponsor dashboard ops</li>
-        <li>Bonus: the undocumented <code>/api/search/{title}</code> endpoint pattern that returns full description text, with Privy auth flow notes (passwordless init/authenticate, token refresh)</li>
-      </ul></details>
-    </div>
-  </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/t_xt3_3o9qSOK8AKBxc6x.jpg" alt="" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="name">Superteam Earn Dataset — 28 Live Listings</div>
+ <div class="desc">28 full-text Superteam Earn listings harvested 2026-09-04, with 186 reverse-engineered API routes.</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Buy on Getly →</a></span></div>
+ <details class="wyg"><summary>What you get</summary><ul>
+ <li>28 open listings with full description HTML, deadlines, and sponsor slugs (<code>earn-listings-full-descriptions.json</code>), plus a raw cards-API dump with 17 unique live listings across 3 paginated pages (<code>earn-listings-cards.json</code>)</li>
+ <li>186 reverse-engineered API routes (<code>earn-api-endpoints.txt</code>): listings, comments, submissions, sponsor dashboard ops</li>
+ <li>Bonus: the undocumented <code>/api/search/{title}</code> endpoint pattern that returns full description text, with Privy auth flow notes (passwordless init/authenticate, token refresh)</li>
+ </ul></details>
+ </div>
+ </div>
 
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/szVQLUD4WIy_WvALo4_3p.jpg" alt="" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="name">Solana Pitch Deck System</div>
-      <div class="desc">10-slide pitch deck in HTML with a script that renders the deck to PDF.</div>
-      <div class="row"><span class="price">$29</span><span class="links"><a href="https://www.getly.store/product/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline-mtmy42b8">Buy on Getly →</a></span></div>
-      <details class="wyg"><summary>What you get</summary><ul>
-        <li><code>deck-template.html</code>: 1280×720 deck, dark theme with Solana accents (#14f195 / #994599), 10 slides with real content structure (cover, problem, signals, solution, architecture, users, pricing, competition, team, CTA)</li>
-        <li>Playwright render scripts for PDF export and screenshot-based overflow QA, so every slide ships zero-overflow</li>
-        <li>The workflow behind a real deck that passed entry readiness at a September 2026 hackathon ideathon</li>
-      </ul></details>
-    </div>
-  </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/szVQLUD4WIy_WvALo4_3p.jpg" alt="" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="name">Solana Pitch Deck System</div>
+ <div class="desc">10-slide pitch deck in HTML with a script that renders the deck to PDF.</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline-mtmy42b8">Buy on Getly →</a></span></div>
+ <details class="wyg"><summary>What you get</summary><ul>
+ <li><code>deck-template.html</code>: 1280×720 deck, dark theme with Solana accents (#14f195 / #994599), 10 slides with real content structure (cover, problem, signals, solution, architecture, users, pricing, competition, team, CTA)</li>
+ <li>Playwright render scripts for PDF export and screenshot-based overflow QA, so every slide ships zero-overflow</li>
+ <li>The workflow behind a real deck that passed entry readiness at a September 2026 hackathon ideathon</li>
+ </ul></details>
+ </div>
+ </div>
 
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/nqZIgRVXLbEO5B1hMLzTR.jpg" alt="" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="name">Solana Social Banner Pack</div>
-      <div class="desc">40 Web3-themed header images sized for social profiles and banners.</div>
-      <div class="row"><span class="price">$19</span><span class="links"><a href="https://www.getly.store/product/solana-social-banner-pack-40-web3-ready-header-images-mtn4vffw">Buy on Getly →</a></span></div>
-      <details class="wyg"><summary>What you get</summary><ul>
-        <li>40 PNG templates: 30 squares at 1080×1080 (announcements, quote cards, stat cards, poll frames) + 10 wide link cards at 1200×675 for X and LinkedIn</li>
-        <li>Deterministic-render text (no AI image generation), dark theme with green, purple, and orange accents, bracket placeholders marking every fill-in spot</li>
-        <li>README with edit steps for Canva, Figma, and Paint, plus a suggested posting rhythm and license terms</li>
-      </ul></details>
-    </div>
-  </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/nqZIgRVXLbEO5B1hMLzTR.jpg" alt="" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="name">Solana Social Banner Pack</div>
+ <div class="desc">40 Web3-themed header images sized for social profiles and banners.</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/solana-social-banner-pack-40-web3-ready-header-images-mtn4vffw">Buy on Getly →</a></span></div>
+ <details class="wyg"><summary>What you get</summary><ul>
+ <li>40 PNG templates: 30 squares at 1080×1080 (announcements, quote cards, stat cards, poll frames) + 10 wide link cards at 1200×675 for X and LinkedIn</li>
+ <li>Deterministic-render text (no AI image generation), dark theme with green, purple, and orange accents, bracket placeholders marking every fill-in spot</li>
+ <li>README with edit steps for Canva, Figma, and Paint, plus a suggested posting rhythm and license terms</li>
+ </ul></details>
+ </div>
+ </div>
 
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/pJeqGYTdnqz5ngBECAsKz.jpg" alt="" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="name">AI Terminal Wallpaper Pack Vol.1</div>
-      <div class="desc">20 dark terminal-style wallpapers in 4K JPG.</div>
-      <div class="row"><span class="price">$12</span><span class="links"><a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers-mtn4vn69">Buy on Getly →</a></span></div>
-    </div>
-  </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/pJeqGYTdnqz5ngBECAsKz.jpg" alt="" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="name">AI Terminal Wallpaper Pack Vol.1</div>
+ <div class="desc">20 dark terminal-style wallpapers in 4K JPG.</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers-mtn4vn69">Buy on Getly →</a></span></div>
+ </div>
+ </div>
 
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/2rC9NZxYqaS7GqN5XWMH4.jpg" alt="" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="name">Web Scraping Script Pack</div>
-      <div class="desc">10 production-ready Playwright scraping scripts (Node.js) with README and package.json.</div>
-      <div class="row"><span class="price">$15</span><span class="links"><a href="https://www.getly.store/product/web-scraping-script-pack-10-production-ready-playwright-templates-mtn8em7k">Buy on Getly →</a></span></div>
-    </div>
-  </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/2rC9NZxYqaS7GqN5XWMH4.jpg" alt="" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="name">Web Scraping Script Pack</div>
+ <div class="desc">10 production-ready Playwright scraping scripts (Node.js) with README and package.json.</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/web-scraping-script-pack-10-production-ready-playwright-templates-mtn8em7k">Buy on Getly →</a></span></div>
+ </div>
+ </div>
 
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/tdIFub2V4ZNxD4-HtpKKz.jpg" alt="" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="name">Solana Agent Starter — Token-2022 Invoice Rails</div>
-      <div class="desc">2 Anchor Rust programs + 3 TypeScript snippets for Token-2022 invoicing, with ARCHITECTURE.md and .env.example.</div>
-      <div class="row"><span class="price">$39</span><span class="links"><a href="https://www.getly.store/product/solana-agent-starter-token-2022-invoice-rails-starter-kit-mtn9o6ga">Buy on Getly →</a></span></div>
-      <details class="wyg"><summary>What you get</summary><ul>
-        <li>Transfer-hook Anchor program (Rust): a ~600 LOC hook + invoice registry PDA that rejects any USDC transfer without a registered invoice hash</li>
-        <li>Auto-match engine: websocket indexer (TypeScript) plus a deterministic matcher that reconciles payments against ledger CSV exports (QuickBooks/Xero), and an escrow PDA state machine covering partial → complete → disputed → refunded</li>
-        <li>Cleaned, generic snippets (Rust + TypeScript) with <code>ARCHITECTURE.md</code> mermaid diagram, type-checked with <code>tsc --noEmit</code>; no keys or endpoints included</li>
-      </ul></details>
-    </div>
-  </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/tdIFub2V4ZNxD4-HtpKKz.jpg" alt="" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="name">Solana Agent Starter — Token-2022 Invoice Rails</div>
+ <div class="desc">2 Anchor Rust programs + 3 TypeScript snippets for Token-2022 invoicing, with ARCHITECTURE.md and .env.example.</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/solana-agent-starter-token-2022-invoice-rails-starter-kit-mtn9o6ga">Buy on Getly →</a></span></div>
+ <details class="wyg"><summary>What you get</summary><ul>
+ <li>Transfer-hook Anchor program (Rust): a ~600 LOC hook + invoice registry PDA that rejects any USDC transfer without a registered invoice hash</li>
+ <li>Auto-match engine: websocket indexer (TypeScript) plus a deterministic matcher that reconciles payments against ledger CSV exports (QuickBooks/Xero), and an escrow PDA state machine covering partial → complete → disputed → refunded</li>
+ <li>Cleaned, generic snippets (Rust + TypeScript) with <code>ARCHITECTURE.md</code> mermaid diagram, type-checked with <code>tsc --noEmit</code>; no keys or endpoints included</li>
+ </ul></details>
+ </div>
+ </div>
 
 </div>
 
 <h2>More Getly products <span>·</span> live now</h2>
 <div>
-  <div class="rev"><span class="nm">Base &amp; L2 Ecosystem Directory 2026 — 136 Projects, Funding &amp; Tools (Multi-Chain)</span><span class="p" style="margin-left:auto">$19</span><span class="fixing">Fixing images</span></div>
-  <details class="wyg"><summary>What you get</summary><ul>
-    <li><code>directory.csv</code>: 136 rows with name, chain, category (DeFi / Infra / NFT / Wallet / Dev Tool / Consumer), funding status, URL, notes</li>
-    <li><code>directory.md</code>: the same data grouped per chain, one table each</li>
-    <li>Every URL HTTP-checked live on 2026-09-05 (200 or redirect), covering Base, Arbitrum, Optimism, zkSync Era, Linea, Scroll, Polygon zkEVM, and Starknet</li>
-  </ul></details>
-  <div class="rev"><span class="nm">Web3 Grants Ecosystem Funds Database 2026 — 38 verified funding sources</span><span class="p" style="margin-left:auto">$15</span><a href="https://www.getly.store/product/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain-mtnvq5fv">Live ↗</a></div>
-  <details class="wyg"><summary>What you get</summary><ul>
-    <li><code>grants.csv</code>: 38 programs with ecosystem, category, funding range, deadline, requirements, apply URL, status, notes — opens in Excel or Google Sheets</li>
-    <li><code>grants.md</code>: same data grouped by ecosystem for quick reading</li>
-    <li>32 of 38 sources accepting applications on the 2026-09-05 data date; the other 6 flagged with exact status notes. Every funding range comes from an official program page, no invented numbers</li>
-  </ul></details>
-  <div class="rev"><span class="nm">500 AI Prompts for Etsy &amp; E-commerce Sellers</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store/product/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing-mtnvwdnd">Live ↗</a></div>
-  <div class="rev"><span class="nm">500 AI Prompts Pack — crypto, web3 and trading prompts</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store/product/500-ai-prompts-pack-crypto-web3-trading-multi-chain-mtnv9kbw">Live ↗</a></div>
-  <div class="rev"><span class="nm">Web3 Builder OS — multi-chain Notion dashboard</span><span class="p" style="margin-left:auto">$15</span><a href="https://www.getly.store/product/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content-mtnxg0ri">Live ↗</a></div>
-  <details class="wyg"><summary>What you get</summary><ul>
-    <li>5 import-ready CSV databases: projects, bounties &amp; grants, content pipeline, learning log, contacts &amp; communities</li>
-    <li>Markdown pages: dashboard with linked views, workflow guide, and a multi-chain resources list (explorers, faucets, docs, funding platforms for Base, Ethereum, Solana, Bitcoin, Starknet, OP-stack L2s)</li>
-    <li><code>SETUP-GUIDE.md</code> with a click-by-click import under 10 minutes; works on the free Notion plan, no API integration</li>
-  </ul></details>
-  <div class="rev"><span class="nm">Pitch Deck Slide Pack — 20 editable web3/startup slide templates</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store/product/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates-mtntwxtd">Live ↗</a></div>
-  <div class="rev"><span class="nm">AI Terminal Wallpaper Pack Vol.2 — 20 new 4K dark wallpapers</span><span class="p" style="margin-left:auto">$12</span><a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers-mtnumvz2">Live ↗</a></div>
-  <div class="rev"><span class="nm">Web3 KPI Spreadsheet Pack — 5 Google Sheets/Excel templates</span><span class="p" style="margin-left:auto">$10</span><a href="https://www.getly.store/product/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain-mtnuvl2u">Live ↗</a></div>
-  <div class="rev"><span class="nm">30 Social Media Templates for web3 projects (X/Instagram/LinkedIn)</span><span class="p" style="margin-left:auto">$10</span><a href="https://www.getly.store/product/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide-mtnxhmue">Live ↗</a></div>
-  <div class="rev"><span class="nm">Web3 Logo Mega-Pack — 40 crypto, DeFi and NFT logos</span><span class="p" style="margin-left:auto">$9</span><a href="https://www.getly.store/product/web3-logo-mega-pack-40-crypto-defi-nft-logos-mtnq7gqg">Live ↗</a></div>
-  <div class="rev"><span class="nm">Web3 Icon Mega-Pack — 50 crypto, DeFi and dev-tool icons</span><span class="p" style="margin-left:auto">$9</span><a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Live ↗</a></div>
-  <div class="rev"><span class="nm">100 Niche SaaS Ideas — monetization notes + difficulty scores</span><span class="p" style="margin-left:auto">$9</span><a href="https://www.getly.store/product/100-niche-saas-ideas-with-monetization-notes-difficulty-scores-mtnq4a9g">Live ↗</a></div>
-  <div class="rev"><span class="nm">Crypto Trader Desk Kit — 12 printable cheat sheets (A4/US Letter)</span><span class="p" style="margin-left:auto">$8</span><a href="https://www.getly.store/product/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter-mtnv4j3l">Live ↗</a></div>
-  <div class="rev"><span class="nm">Dark Tech-Humor Sticker Pack Vol.1 — 12 print-ready stickers</span><span class="p" style="margin-left:auto">$6</span><a href="https://www.getly.store/product/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop-mtnyc832">Live ↗</a></div>
+ <div class="rev"><span class="nm">Base &amp; L2 Ecosystem Directory 2026 — 136 Projects, Funding &amp; Tools (Multi-Chain)</span><span class="fixing">Fixing images</span></div>
+ <details class="wyg"><summary>What you get</summary><ul>
+ <li><code>directory.csv</code>: 136 rows with name, chain, category (DeFi / Infra / NFT / Wallet / Dev Tool / Consumer), funding status, URL, notes</li>
+ <li><code>directory.md</code>: the same data grouped per chain, one table each</li>
+ <li>Every URL HTTP-checked live on 2026-09-05 (200 or redirect), covering Base, Arbitrum, Optimism, zkSync Era, Linea, Scroll, Polygon zkEVM, and Starknet</li>
+ </ul></details>
+ <div class="rev"><span class="nm">Web3 Grants Ecosystem Funds Database 2026 — 38 verified funding sources</span><a href="https://www.getly.store/product/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain-mtnvq5fv">Live ↗</a></div>
+ <details class="wyg"><summary>What you get</summary><ul>
+ <li><code>grants.csv</code>: 38 programs with ecosystem, category, funding range, deadline, requirements, apply URL, status, notes — opens in Excel or Google Sheets</li>
+ <li><code>grants.md</code>: same data grouped by ecosystem for quick reading</li>
+ <li>32 of 38 sources accepting applications on the 2026-09-05 data date; the other 6 flagged with exact status notes. Every funding range comes from an official program page, no invented numbers</li>
+ </ul></details>
+ <div class="rev"><span class="nm">500 AI Prompts for Etsy &amp; E-commerce Sellers</span><a href="https://www.getly.store/product/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing-mtnvwdnd">Live ↗</a></div>
+ <div class="rev"><span class="nm">500 AI Prompts Pack — crypto, web3 and trading prompts</span><a href="https://www.getly.store/product/500-ai-prompts-pack-crypto-web3-trading-multi-chain-mtnv9kbw">Live ↗</a></div>
+ <div class="rev"><span class="nm">Web3 Builder OS — multi-chain Notion dashboard</span><a href="https://www.getly.store/product/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content-mtnxg0ri">Live ↗</a></div>
+ <details class="wyg"><summary>What you get</summary><ul>
+ <li>5 import-ready CSV databases: projects, bounties &amp; grants, content pipeline, learning log, contacts &amp; communities</li>
+ <li>Markdown pages: dashboard with linked views, workflow guide, and a multi-chain resources list (explorers, faucets, docs, funding platforms for Base, Ethereum, Solana, Bitcoin, Starknet, OP-stack L2s)</li>
+ <li><code>SETUP-GUIDE.md</code> with a click-by-click import under 10 minutes; works on the free Notion plan, no API integration</li>
+ </ul></details>
+ <div class="rev"><span class="nm">Pitch Deck Slide Pack — 20 editable web3/startup slide templates</span><a href="https://www.getly.store/product/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates-mtntwxtd">Live ↗</a></div>
+ <div class="rev"><span class="nm">AI Terminal Wallpaper Pack Vol.2 — 20 new 4K dark wallpapers</span><a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers-mtnumvz2">Live ↗</a></div>
+ <div class="rev"><span class="nm">Web3 KPI Spreadsheet Pack — 5 Google Sheets/Excel templates</span><a href="https://www.getly.store/product/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain-mtnuvl2u">Live ↗</a></div>
+ <div class="rev"><span class="nm">30 Social Media Templates for web3 projects (X/Instagram/LinkedIn)</span><a href="https://www.getly.store/product/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide-mtnxhmue">Live ↗</a></div>
+ <div class="rev"><span class="nm">Web3 Logo Mega-Pack — 40 crypto, DeFi and NFT logos</span><a href="https://www.getly.store/product/web3-logo-mega-pack-40-crypto-defi-nft-logos-mtnq7gqg">Live ↗</a></div>
+ <div class="rev"><span class="nm">Web3 Icon Mega-Pack — 50 crypto, DeFi and dev-tool icons</span><a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Live ↗</a></div>
+ <div class="rev"><span class="nm">100 Niche SaaS Ideas — monetization notes + difficulty scores</span><a href="https://www.getly.store/product/100-niche-saas-ideas-with-monetization-notes-difficulty-scores-mtnq4a9g">Live ↗</a></div>
+ <div class="rev"><span class="nm">Crypto Trader Desk Kit — 12 printable cheat sheets (A4/US Letter)</span><a href="https://www.getly.store/product/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter-mtnv4j3l">Live ↗</a></div>
+ <div class="rev"><span class="nm">Dark Tech-Humor Sticker Pack Vol.1 — 12 print-ready stickers</span><a href="https://www.getly.store/product/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop-mtnyc832">Live ↗</a></div>
 </div>
-<p class="rev-note">27 paid products plus 2 free samples live at getly.store, $441 combined list price. The L2 Directory listing is in moderation review and returns to the store once it clears.</p>
+<p class="rev-note">27 paid products plus 2 free samples live at getly.store combined list price. The L2 Directory listing is in moderation review and returns to the store once it clears.</p>
 
 <h2>MCP servers <span>·</span> pay-per-call on FiatDock</h2>
 <div class="grid">
 
-  <div class="card">
-    <div class="body">
-      <span class="tag">Superteam Earn Bounty Radar</span>
-      <div class="name">earn-bounty-scanner</div>
-      <div class="desc">MCP tools search_bounties, get_bounty, recent_bounties for Superteam Earn bounty data.</div>
-      <div class="row"><span class="price">$0.02/call</span></div>
-      <div class="links"><a href="https://fiatdock.com/s/svc_2099adfa-0ac5-4b90-b7e3-acba9d52b50e">FiatDock listing →</a><a href="https://github.com/jayjex/earn-bounty-scanner">Repo →</a></div>
-    </div>
-  </div>
+ <div class="card">
+ <div class="body">
+ <span class="tag">Superteam Earn Bounty Radar</span>
+ <div class="name">earn-bounty-scanner</div>
+ <div class="desc">MCP tools search_bounties, get_bounty, recent_bounties for Superteam Earn bounty data.</div>
+ <div class="links"><a href="https://fiatdock.com/s/svc_2099adfa-0ac5-4b90-b7e3-acba9d52b50e">FiatDock listing →</a><a href="https://github.com/jayjex/earn-bounty-scanner">Repo →</a></div>
+ </div>
+ </div>
 
-  <div class="card">
-    <div class="body">
-      <span class="tag">Superteam Earn Dataset — 28 full-text listings</span>
-      <div class="name">earn-dataset-mcp</div>
-      <div class="desc">Serves 28 full-text Superteam Earn listings from local data — list_listings, get_listing, search_listings, stats. Zero network at runtime.</div>
-      <div class="row"><span class="price">$0.01/call</span></div>
-      <div class="links"><a href="https://fiatdock.com/s/svc_7db4548f-dbf5-4f27-8e3c-31566b78ee01">FiatDock listing →</a><a href="https://github.com/jayjex/earn-dataset-mcp">Repo →</a></div>
-    </div>
-  </div>
+ <div class="card">
+ <div class="body">
+ <span class="tag">Superteam Earn Dataset — 28 full-text listings</span>
+ <div class="name">earn-dataset-mcp</div>
+ <div class="desc">Serves 28 full-text Superteam Earn listings from local data — list_listings, get_listing, search_listings, stats. Zero network at runtime.</div>
+ <div class="links"><a href="https://fiatdock.com/s/svc_7db4548f-dbf5-4f27-8e3c-31566b78ee01">FiatDock listing →</a><a href="https://github.com/jayjex/earn-dataset-mcp">Repo →</a></div>
+ </div>
+ </div>
 
-  <div class="card">
-    <div class="body">
-      <span class="tag">Solana Research Library — 25 earning-rail intel entries</span>
-      <div class="name">solana-research-library</div>
-      <div class="desc">Curated database of 25 field-probed Solana/web3 earning platforms with verdict, payout rail, and KYC notes. Zero network at runtime.</div>
-      <div class="row"><span class="price">$0.02/call</span></div>
-      <div class="links"><a href="https://fiatdock.com/s/svc_47d8957d-9516-4575-aac0-b05b5eccec32">FiatDock listing →</a><a href="https://github.com/jayjex/solana-research-library">Repo →</a></div>
-    </div>
-  </div>
+ <div class="card">
+ <div class="body">
+ <span class="tag">Solana Research Library — 25 earning-rail intel entries</span>
+ <div class="name">solana-research-library</div>
+ <div class="desc">Curated database of 25 field-probed Solana/web3 earning platforms with verdict, payout rail, and KYC notes. Zero network at runtime.</div>
+ <div class="links"><a href="https://fiatdock.com/s/svc_47d8957d-9516-4575-aac0-b05b5eccec32">FiatDock listing →</a><a href="https://github.com/jayjex/solana-research-library">Repo →</a></div>
+ </div>
+ </div>
 
 </div>
 
 <h2>Open source</h2>
 <div class="grid">
 
-  <div class="card oss">
-    <div class="body">
-      <div class="name">ProofLens</div>
-      <div class="desc">Cross-chain tx proof explorer: verifies Ethereum Sepolia transactions on Creditcoin via Attestcoin precompiles.</div>
-      <div class="links"><a href="https://github.com/jayjex/prooflens">github.com/jayjex/prooflens →</a></div>
-    </div>
-  </div>
+ <div class="card oss">
+ <div class="body">
+ <div class="name">ProofLens</div>
+ <div class="desc">Cross-chain tx proof explorer: verifies Ethereum Sepolia transactions on Creditcoin via Attestcoin precompiles.</div>
+ <div class="links"><a href="https://github.com/jayjex/prooflens">github.com/jayjex/prooflens →</a></div>
+ </div>
+ </div>
 
-  <div class="card oss">
-    <div class="body">
-      <div class="name">matchbook-ideathon</div>
-      <div class="desc">Matchbook: the settlement-truth layer for Solana payments — IDEATHON idea (Superteam Ukraine / Colosseum).</div>
-      <div class="links"><a href="https://github.com/jayjex/matchbook-ideathon">github.com/jayjex/matchbook-ideathon →</a></div>
-    </div>
-  </div>
+ <div class="card oss">
+ <div class="body">
+ <div class="name">matchbook-ideathon</div>
+ <div class="desc">Matchbook: the settlement-truth layer for Solana payments — IDEATHON idea (Superteam Ukraine / Colosseum).</div>
+ <div class="links"><a href="https://github.com/jayjex/matchbook-ideathon">github.com/jayjex/matchbook-ideathon →</a></div>
+ </div>
+ </div>
 
 </div>
 
 <h2>FAQ</h2>
 <div class="faq">
-  <details>
-    <summary>What format do the products come in?</summary>
-    <p>Instant digital download. Depending on the product: CSV, Markdown, JSON, HTML, PNG images, or a zip bundle with a README. No shipping, nothing physical. Each product page lists its exact files.</p>
-  </details>
-  <details>
-    <summary>What can I do with the files? What's the license?</summary>
-    <p>Personal and commercial use is allowed, including client work. You cannot resell or redistribute the files as-is or with minor changes. Data products can be used inside your own research, tooling, or reports.</p>
-  </details>
-  <details>
-    <summary>Do you offer refunds or updates?</summary>
-    <p>These are digital goods, so there are no refunds once the files are downloaded. Updates are free: if a product gets revised, you can re-download the latest version from your order page at no extra cost.</p>
-  </details>
-  <details>
-    <summary>How do I pay?</summary>
-    <p>On Getly, checkout runs on crypto. On Gumroad, you can pay by card or PayPal.</p>
-  </details>
-  <details>
-    <summary>How do I get support?</summary>
-    <p>Email ekaku69@gmail.com with your order ID and product name. Questions about files, imports, or broken links get answered within 24-48 hours.</p>
-  </details>
-  <details>
-    <summary>Where does the data come from?</summary>
-    <p>Public sources only: live APIs, official program pages, company career pages, and job boards. Everything is collected and HTTP-checked on a stated data date printed on each product page (for example, 2026-09-05). Data ages, so each product tells you its collection date. Nothing in the store is financial advice.</p>
-  </details>
+ <details>
+ <summary>What format do the products come in?</summary>
+ <p>Instant digital download. Depending on the product: CSV, Markdown, JSON, HTML, PNG images, or a zip bundle with a README. No shipping, nothing physical. Each product page lists its exact files.</p>
+ </details>
+ <details>
+ <summary>What can I do with the files? What's the license?</summary>
+ <p>Personal and commercial use is allowed, including client work. You cannot resell or redistribute the files as-is or with minor changes. Data products can be used inside your own research, tooling, or reports.</p>
+ </details>
+ <details>
+ <summary>Do you offer refunds or updates?</summary>
+ <p>These are digital goods, so there are no refunds once the files are downloaded. Updates are free: if a product gets revised, you can re-download the latest version from your order page at no extra cost.</p>
+ </details>
+ <details>
+ <summary>How do I pay?</summary>
+ <p>On Getly, checkout runs on crypto. On Gumroad, you can pay by card or PayPal.</p>
+ </details>
+ <details>
+ <summary>How do I get support?</summary>
+ <p>Email ekaku69@gmail.com with your order ID and product name. Questions about files, imports, or broken links get answered within 24-48 hours.</p>
+ </details>
+ <details>
+ <summary>Where does the data come from?</summary>
+ <p>Public sources only: live APIs, official program pages, company career pages, and job boards. Everything is collected and HTTP-checked on a stated data date printed on each product page (for example, 2026-09-05). Data ages, so each product tells you its collection date. Nothing in the store is financial advice.</p>
+ </details>
 </div>
 
 <h2>Free samples</h2>
 <div class="grid free">
 
-  <div class="card">
-    <div class="body">
-      <span class="tag">Free sample · no signup</span>
-      <div class="name">Superteam Earn — 5 real listings</div>
-      <div class="desc">CSV slice of the 28-listing dataset: 5 open bounties with reward, deadline, sponsor, and submission counts, collected 2026-09-04.</div>
-      <a class="dl" href="files/lead-earn-sample.zip" download>Download sample.zip (36 KB) ↓</a>
-    </div>
-  </div>
+ <div class="card">
+ <div class="body">
+ <span class="tag">Free sample · no signup</span>
+ <div class="name">Superteam Earn — 5 real listings</div>
+ <div class="desc">CSV slice of the 28-listing dataset: 5 open bounties with reward, deadline, sponsor, and submission counts, collected 2026-09-04.</div>
+ <a class="dl" href="files/lead-earn-sample.zip" download>Download sample.zip (36 KB) ↓</a>
+ </div>
+ </div>
 
-  <div class="card">
-    <div class="body">
-      <span class="tag">Free sample · no signup</span>
-      <div class="name">Dark Wallpaper Pack — 2 wallpapers</div>
-      <div class="desc">Two full 1920×1080 PNGs from Vol.3: bioluminescent cave and retro terminal. Same art as the 4K pack, downscaled.</div>
-      <a class="dl" href="files/lead-walls-sample.zip" download>Download sample.zip (3.8 MB) ↓</a>
-    </div>
-  </div>
+ <div class="card">
+ <div class="body">
+ <span class="tag">Free sample · no signup</span>
+ <div class="name">Dark Wallpaper Pack — 2 wallpapers</div>
+ <div class="desc">Two full 1920×1080 PNGs from Vol.3: bioluminescent cave and retro terminal. Same art as the 4K pack, downscaled.</div>
+ <a class="dl" href="files/lead-walls-sample.zip" download>Download sample.zip (3.8 MB) ↓</a>
+ </div>
+ </div>
 
 </div>
 <p class="free-note">Full versions live at <a href="https://www.getly.store">getly.store</a>.</p>

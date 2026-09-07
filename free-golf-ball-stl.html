@@ -16,51 +16,51 @@
 <meta name="twitter:description" content="Practice markers, keychains, prototyping: when a printed golf ball makes sense, plus 42.67mm dims, dimple pattern notes, and 5 slicer starting points.">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Free Golf Ball STL: When to Print One, Dimple Notes, and Slicer Starting Points",
-  "description": "Three honest use cases for a printed golf ball (practice markers, keychains, prototyping), the 42.67mm standard diameter, a generic dimple pattern explainer, five slicer settings labeled as starting points, and what's inside the STL file.",
-  "datePublished": "2026-09-07",
-  "author": { "@type": "Organization", "name": "Matchbook Labs" },
-  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
-  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/free-golf-ball-stl.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Matchbook Labs",
-    "url": "https://jayjex.github.io/matchbook-labs/"
-  }
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Free Golf Ball STL: When to Print One, Dimple Notes, and Slicer Starting Points",
+ "description": "Three honest use cases for a printed golf ball (practice markers, keychains, prototyping), the 42.67mm standard diameter, a generic dimple pattern explainer, five slicer settings labeled as starting points, and what's inside the STL file.",
+ "datePublished": "2026-09-07",
+ "author": { "@type": "Organization", "name": "Matchbook Labs" },
+ "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+ "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/free-golf-ball-stl.html",
+ "isPartOf": {
+ "@type": "WebSite",
+ "name": "Matchbook Labs",
+ "url": "https://jayjex.github.io/matchbook-labs/"
+ }
 }
 </script>
 <style>
-  :root { color-scheme: dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0d1117; color: #e6edf3;
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
-  }
-  a { color: #58a6ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
-  .crumbs a { color: #8b949e; }
-  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
-  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
-  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
-  h3 { font-size: 1rem; margin: 1.6rem 0 0.5rem; }
-  p { margin: 0 0 1rem; color: #c9d1d9; }
-  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
-  li { margin-bottom: 0.55rem; }
-  .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
-  .howto p { margin: 0; font-size: 0.95rem; }
-  table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
-  th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
-  td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
-  td:first-child { color: #e6edf3; white-space: nowrap; }
-  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
-  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
-  .cta:hover { background: #2ea043; text-decoration: none; }
-  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
-  footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117; color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+ .crumbs a { color: #8b949e; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+ .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+ h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+ h3 { font-size: 1rem; margin: 1.6rem 0 0.5rem; }
+ p { margin: 0 0 1rem; color: #c9d1d9; }
+ ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ li { margin-bottom: 0.55rem; }
+ .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+ .howto p { margin: 0; font-size: 0.95rem; }
+ table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
+ th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+ td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
+ td:first-child { color: #e6edf3; white-space: nowrap; }
+ .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+ .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+ .cta:hover { background: #2ea043; text-decoration: none; }
+ .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+ footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
 </style>
 </head>
 <body>
@@ -87,28 +87,28 @@
 
 <h2>Slicer starting points</h2>
 <table>
-  <tr><th>Setting</th><th>Starting value</th><th>Why</th></tr>
-  <tr><td>Layer height</td><td>0.2mm</td><td>Dimples are shallow; 0.2mm keeps print time sane. Drop to 0.12mm only if the ball will be handled a lot.</td></tr>
-  <tr><td>Wall loops</td><td>3</td><td>Curved surface quality lives in the perimeters. Three loops beat high infill for shell strength.</td></tr>
-  <tr><td>Infill</td><td>15% gyroid</td><td>Enough to stop the shell flexing, cheap on filament. Go 10% for keychain scale.</td></tr>
-  <tr><td>Supports</td><td>None</td><td>Print pole-down and the geometry supports itself. Supports on a sphere just weld to dimples.</td></tr>
-  <tr><td>Brim</td><td>5mm</td><td>The pole-down contact patch is a point. A short brim holds it; the raft route wastes time and sticks too well.</td></tr>
+ <tr><th>Setting</th><th>Starting value</th><th>Why</th></tr>
+ <tr><td>Layer height</td><td>0.2mm</td><td>Dimples are shallow; 0.2mm keeps print time sane. Drop to 0.12mm only if the ball will be handled a lot.</td></tr>
+ <tr><td>Wall loops</td><td>3</td><td>Curved surface quality lives in the perimeters. Three loops beat high infill for shell strength.</td></tr>
+ <tr><td>Infill</td><td>15% gyroid</td><td>Enough to stop the shell flexing, cheap on filament. Go 10% for keychain scale.</td></tr>
+ <tr><td>Supports</td><td>None</td><td>Print pole-down and the geometry supports itself. Supports on a sphere just weld to dimples.</td></tr>
+ <tr><td>Brim</td><td>5mm</td><td>The pole-down contact patch is a point. A short brim holds it; the raft route wastes time and sticks too well.</td></tr>
 </table>
 <p class="table-note">Common starting points, test yours. Every printer, filament, and brand of PLA behaves differently, so treat the table as a first pass and adjust from your own results.</p>
 
 <h2>Four tips from prints that worked</h2>
 <ul>
-  <li><strong>Orientation beats supports.</strong> Pole-down, brim on, done. Flip the ball equator-down and you're tuning support blockers for an hour.</li>
-  <li><strong>Print the batch in one job.</strong> If you want a full set of practice markers, lay six pole-down on one plate. The setup cost is identical to one ball; the filament is grams.</li>
-  <li><strong>PETG if it lives in a car or garage.</strong> A PLA ball on a dashboard in summer comes out with a flat spot. Indoor desk ball: PLA all the way.</li>
-  <li><strong>Check the first layer.</strong> The point contact magnifies any bed-leveling error into a visible flat ring at the pole. If your first layer is dialed in, the ball is free.</li>
+ <li><strong>Orientation beats supports.</strong> Pole-down, brim on, done. Flip the ball equator-down and you're tuning support blockers for an hour.</li>
+ <li><strong>Print the batch in one job.</strong> If you want a full set of practice markers, lay six pole-down on one plate. The setup cost is identical to one ball; the filament is grams.</li>
+ <li><strong>PETG if it lives in a car or garage.</strong> A PLA ball on a dashboard in summer comes out with a flat spot. Indoor desk ball: PLA all the way.</li>
+ <li><strong>Check the first layer.</strong> The point contact magnifies any bed-leveling error into a visible flat ring at the pole. If your first layer is dialed in, the ball is free.</li>
 </ul>
 
 <h2>What's in the file</h2>
 <ul>
-  <li>Standard <strong>STL</strong> format, binary, opens in any slicer (Cura, PrusaSlicer, Bambu Studio, OrcaSlicer).</li>
-  <li>Units are <strong>millimeters</strong>; the default body is the 42.67mm diameter, scale freely in the slicer.</li>
-  <li>One watertight shell, no internal geometry, no supports baked in. Sliced as-is or modified in CAD.</li>
+ <li>Standard <strong>STL</strong> format, binary, opens in any slicer (Cura, PrusaSlicer, Bambu Studio, OrcaSlicer).</li>
+ <li>Units are <strong>millimeters</strong>; the default body is the 42.67mm diameter, scale freely in the slicer.</li>
+ <li>One watertight shell, no internal geometry, no supports baked in. Sliced as-is or modified in CAD.</li>
 </ul>
 <p>The file comes out of the same parametric pipeline behind the other free files on the GitHub profile, so dimensions are what the script says they are, checked in the slicer before publishing.</p>
 

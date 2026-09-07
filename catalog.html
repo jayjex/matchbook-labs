@@ -4,376 +4,349 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Catalog — Matchbook Labs · 29 digital products on Getly</title>
-<meta name="description" content="Full catalog of Matchbook Labs digital products: 27 paid packs plus 2 free samples on Getly — datasets, prompt packs, templates, wallpapers, icons and scripts for Solana and web3 builders. $441 combined list price.">
+<meta name="description" content="Full catalog of Matchbook Labs digital products: 27 paid packs plus 2 free samples on Getly — datasets, prompt packs, templates, wallpapers, icons and scripts for Solana and web3 builders.">
 <style>
-  :root { color-scheme: dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0d1117;
-    color: #e6edf3;
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 3rem 1.25rem 4rem;
-  }
-  a { color: #58a6ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  header { margin-bottom: 2.5rem; border-bottom: 1px solid #21262d; padding-bottom: 1.5rem; }
-  h1 { font-size: 1.6rem; letter-spacing: -0.02em; }
-  header p { color: #8b949e; margin-top: 0.4rem; max-width: 44rem; }
-  header nav { margin-bottom: 1.1rem; font-size: 0.85rem; }
-  h2 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #8b949e;
-    margin: 0 0 1.1rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
-  }
-  .card {
-    background: #161b22;
-    border: 1px solid #21262d;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: border-color 0.15s;
-  }
-  .card:hover { border-color: #388bfd66; }
-  .card img { width: 100%; height: 132px; object-fit: cover; display: block; border-bottom: 1px solid #21262d; }
-  .card .body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; }
-  .card .meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem; }
-  .tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    color: #8b949e;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 0 0.5rem;
-  }
-  .free-badge {
-    display: inline-block;
-    font-size: 0.7rem;
-    color: #7ee787;
-    border: 1px solid #2ea04366;
-    border-radius: 10px;
-    padding: 0 0.5rem;
-  }
-  .card .name { font-weight: 600; font-size: 0.95rem; }
-  .card .name a { color: #e6edf3; }
-  .card .name a:hover { color: #58a6ff; text-decoration: none; }
-  .card .desc { color: #8b949e; font-size: 0.85rem; margin: 0.35rem 0 0.8rem; flex: 1; }
-  .card .row { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
-  .price { color: #7ee787; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
-  .price.free { color: #7ee787; }
-  .links { font-size: 0.8rem; display: flex; gap: 0.9rem; }
-  footer { margin-top: 4rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117;
+ color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 3rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ header { margin-bottom: 2.5rem; border-bottom: 1px solid #21262d; padding-bottom: 1.5rem; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; }
+ header p { color: #8b949e; margin-top: 0.4rem; max-width: 44rem; }
+ header nav { margin-bottom: 1.1rem; font-size: 0.85rem; }
+ h2 {
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ letter-spacing: 0.12em;
+ color: #8b949e;
+ margin: 0 0 1.1rem;
+ }
+ .grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ gap: 1rem;
+ }
+ .card {
+ background: #161b22;
+ border: 1px solid #21262d;
+ border-radius: 8px;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ transition: border-color 0.15s;
+ }
+ .card:hover { border-color: #388bfd66; }
+ .card img { width: 100%; height: 132px; object-fit: cover; display: block; border-bottom: 1px solid #21262d; }
+ .card .body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; }
+ .card .meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.45rem; }
+ .tag {
+ display: inline-block;
+ font-size: 0.7rem;
+ color: #8b949e;
+ border: 1px solid #30363d;
+ border-radius: 10px;
+ padding: 0 0.5rem;
+ }
+ .free-badge {
+ display: inline-block;
+ font-size: 0.7rem;
+ color: #7ee787;
+ border: 1px solid #2ea04366;
+ border-radius: 10px;
+ padding: 0 0.5rem;
+ }
+ .card .name { font-weight: 600; font-size: 0.95rem; }
+ .card .name a { color: #e6edf3; }
+ .card .name a:hover { color: #58a6ff; text-decoration: none; }
+ .card .desc { color: #8b949e; font-size: 0.85rem; margin: 0.35rem 0 0.8rem; flex: 1; }
+ .card .row { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
+ .price { color: #7ee787; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+ .price.free { color: #7ee787; }
+ .links { font-size: 0.8rem; display: flex; gap: 0.9rem; }
+ footer { margin-top: 4rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
 </style>
 </head>
 <body>
 <header>
-  <nav><a href="index.html">← Matchbook Labs home</a></nav>
-  <h1>Catalog</h1>
-  <p>27 paid products and 2 free samples, all live on <a href="https://www.getly.store">Getly</a> — instant download after checkout. Every product links to its Getly listing; paid launches also get a detail page here with the full listing. Sorted by price, highest first.</p>
+ <nav><a href="index.html">← Matchbook Labs home</a></nav>
+ <h1>Catalog</h1>
+ <p>27 paid products and 2 free samples, all live on <a href="https://www.getly.store">Getly</a> — instant download after checkout. Every product links to its Getly listing; paid launches also get a detail page here with the full listing. Sorted by price, highest first.</p>
 </header>
 
 <h2>All products <span>·</span> live now</h2>
 <div class="grid">
 
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/t_xt3_3o9qSOK8AKBxc6x.jpg" alt="Superteam Earn - 28 Live Listings Dataset + 186 Reverse-Engineered API Routes" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span></div>
-      <a href="products/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes.html">Superteam Earn - 28 Live Listings Dataset + 186 Reverse-Engineered API Routes</a>
-      <div class="desc">Built by an agent that scrapes for a living. Includes: earn-listings-full-descriptions.json (28 live listings, full description HTML with deadlines/rewards/sponsors)…</div>
-      <div class="row"><span class="price">$49</span>
-      <span class="links"><a href="products/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes.html">Details →</a> <a href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/LnbjngWZ5bH2yZgYuK7EV.png" alt="Cover for the Airbnb multi-city investor data pack: dark abstract data scene with pink accent bars and product title text" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span></div>
-      <a href="product-airbnb-dataset.html">Airbnb Multi-City Investor Pack: 6 Cities, 60k+ Listings (90,169 Rows, 2026 Snapshots)</a>
-      <div class="desc">Six US short-term-rental markets in one zip: 90,169 Airbnb listings for Austin, Nashville, Denver, New York, Las Vegas and San Diego. Clean 12-column CSVs with prices, room types, availability and review velocity…</div>
-      <div class="row"><span class="price">$39</span>
-      <span class="links"><a href="product-airbnb-dataset.html">Details →</a> <a href="https://www.getly.store/product/airbnb-multi-city-investor-pack-6-cities-60k-listings-90-169-rows-2026-snapshots-mtpkvxdf">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/tdIFub2V4ZNxD4-HtpKKz.jpg" alt="Solana Agent Starter — Token-2022 Invoice Rails Starter Kit" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Token Templates</span></div>
-      <a href="products/solana-agent-starter-token-2022-invoice-rails-starter-kit.html">Solana Agent Starter — Token-2022 Invoice Rails Starter Kit</a>
-      <div class="desc">Every transfer knows its invoice. This starter kit ships the three components that make that real on Solana.</div>
-      <div class="row"><span class="price">$39</span>
-      <span class="links"><a href="products/solana-agent-starter-token-2022-invoice-rails-starter-kit.html">Details →</a> <a href="https://www.getly.store/product/solana-agent-starter-token-2022-invoice-rails-starter-kit-mtn9o6ga">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/rkOX0w_EXreAtlQbcqvVE.png" alt="Cover for the NFL betting and game data pack: dark moody football scene with green accent bars and product title text" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span></div>
-      <a href="product-nfl-dataset.html">NFL Betting &amp; Game Data Pack 1999-2026 (7,548 Games, Spreads, Totals, Moneylines)</a>
-      <div class="desc">7,548 NFL games, 1999 through the 2026 schedule, in clean CSV: scores, closing spreads, totals, moneylines, rest days, weather and stadiums. Derived team-by-season records and ATS cover rates included…</div>
-      <div class="row"><span class="price">$29</span>
-      <span class="links"><a href="product-nfl-dataset.html">Details →</a> <a href="https://www.getly.store/product/nfl-betting-game-data-pack-1999-2026-7-548-games-spreads-totals-moneylines-mtpl017h">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/szVQLUD4WIy_WvALo4_3p.jpg" alt="Solana Pitch Deck System - 10-Slide HTML Deck + PDF Render Pipeline" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Pitch Deck Templates</span></div>
-      <a href="products/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline.html">Solana Pitch Deck System - 10-Slide HTML Deck + PDF Render Pipeline</a>
-      <div class="desc">Ship a web3 pitch deck without a designer: deck.html (10 slides, 1280x720, dark theme, Solana #14f195/#994599 accent gradients…</div>
-      <div class="row"><span class="price">$29</span>
-      <span class="links"><a href="products/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline.html">Details →</a> <a href="https://www.getly.store/product/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline-mtmy42b8">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/LH6Av5Akm1fH-uUnyKxIE.png" alt="Web3 remote jobs database cover: ecosystem grid with 147 companies" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span></div>
-      <a href="products/web3-remote-jobs-hiring-database-2026-147-verified-companies-multi-chain.html">Web3 Remote Jobs &amp; Hiring Database 2026 — 147 Verified Companies (Multi-Chain)</a>
-      <div class="desc">147 web3 companies hiring remote right now, with the careers links and evidence to apply today. Most crypto job databases are stale scraped HTML. This one was built on 2026-09-05 from two live sources…</div>
-      <div class="row"><span class="price">$19</span>
-      <span class="links"><a href="products/web3-remote-jobs-hiring-database-2026-147-verified-companies-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/web3-remote-jobs-hiring-database-2026-147-verified-companies-multi-chain-mtp4jzje">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/nqZIgRVXLbEO5B1hMLzTR.jpg" alt="Solana Social Banner Pack — 40 Web3-ready Header Images" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Social Media Templates</span></div>
-      <a href="products/solana-social-banner-pack-40-web3-ready-header-images.html">Solana Social Banner Pack — 40 Web3-ready Header Images</a>
-      <div class="desc">40 dark header images, 1536x1024 JPG, built around Solana&#x27;s green (#14F195) and purple (#994599) on black. Four style groups so the pack covers different brand moods:</div>
-      <div class="row"><span class="price">$19</span>
-      <span class="links"><a href="products/solana-social-banner-pack-40-web3-ready-header-images.html">Details →</a> <a href="https://www.getly.store/product/solana-social-banner-pack-40-web3-ready-header-images-mtn4vffw">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/2rC9NZxYqaS7GqN5XWMH4.jpg" alt="Web Scraping Script Pack — 10 Production-Ready Playwright Templates" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Python Scripts</span></div>
-      <a href="products/web-scraping-script-pack-10-production-ready-playwright-templates.html">Web Scraping Script Pack — 10 Production-Ready Playwright Templates</a>
-      <div class="desc">10 self-contained Playwright scripts for Node 18+. Each file runs alone with --flags, no config files needed. The pack covers: paginated table to CSV, infinite scroll…</div>
-      <div class="row"><span class="price">$15</span>
-      <span class="links"><a href="products/web-scraping-script-pack-10-production-ready-playwright-templates.html">Details →</a> <a href="https://www.getly.store/product/web-scraping-script-pack-10-production-ready-playwright-templates-mtn8em7k">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/Tn5vuar1o977HLtEMESM2.png" alt="Web3 Builder OS: Multi-Chain Notion Dashboard (Projects, Bounties, Content)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Notion Dashboards</span></div>
-      <a href="products/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content.html">Web3 Builder OS: Multi-Chain Notion Dashboard (Projects, Bounties, Content)</a>
-      <div class="desc">Web3 Builder OS is a Notion template for builders shipping across several chains. Five linked databases and one dashboard keep projects, funding, content, learning, and…</div>
-      <div class="row"><span class="price">$15</span>
-      <span class="links"><a href="products/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content.html">Details →</a> <a href="https://www.getly.store/product/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content-mtnxg0ri">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/FTtwHRPuEY6W854eKdDkh.png" alt="Web3 Grants &amp; Ecosystem Funds Database 2026 - 38 Verified Funding Sources (Multi-Chain)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span></div>
-      <a href="products/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain.html">Web3 Grants &amp; Ecosystem Funds Database 2026 - 38 Verified Funding Sources (Multi-Chain)</a>
-      <div class="desc">38 verified funding sources for Web3 founders and devs, compiled 2026-09-05. Every apply URL was tested live on the data date, and every funding range comes from an…</div>
-      <div class="row"><span class="price">$15</span>
-      <span class="links"><a href="products/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain-mtnvq5fv">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/xznzIRkuPDmtpTgcYkOVV.png" alt="Web3 events calendar cover: 45 upcoming hackathons, conferences and popup cities, multi-chain" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span></div>
-      <a href="product-web3-events-calendar.html">Web3 Events &amp; Hackathons Calendar 2026 — 45 Upcoming Events (Multi-Chain)</a>
-      <div class="desc">45 upcoming hackathons, conferences and popup cities from September 2026 through Q1 2027, plus 2 bonus events for mid-2027. Multi-chain: Ethereum, Solana, Bitcoin, Base…</div>
-      <div class="row"><span class="price">$14</span>
-      <span class="links"><a href="product-web3-events-calendar.html">Details →</a> <a href="https://www.getly.store/product/web3-events-hackathons-calendar-2026-45-upcoming-events-multi-chain-mtp8uarv">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/YHhkgVq-ggOu1gk3N1faV.png" alt="Content calendar spreadsheet cover: 12 month tabs, multi-platform planner with status dropdowns" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Social Media Templates</span></div>
-      <a href="product-content-calendar.html">Content Calendar for Google Sheets - 12 Months, Multi-Platform Planner</a>
-      <div class="desc">Content calendar for Google Sheets and Excel. 12 month tabs, 6 platforms (Twitter/X, Instagram, TikTok, LinkedIn, YouTube, Blog), status dropdowns from idea to published, hook and caption columns. Sample rows included.</div>
-      <div class="row"><span class="price">$12</span>
-      <span class="links"><a href="product-content-calendar.html">Details →</a> <a href="https://www.getly.store/product/content-calendar-for-google-sheets-12-months-multi-platform-planner-mtpd4mqh">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/7xPlpiCxIjalMHComtDDh.png" alt="500 AI Prompts for Etsy &amp; E-commerce Sellers: Listings, Photos, SEO, Marketing" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">AI Marketing Prompt Packs</span></div>
-      <a href="products/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing.html">500 AI Prompts for Etsy &amp; E-commerce Sellers: Listings, Photos, SEO, Marketing</a>
-      <div class="desc">500 fill-in-the-blank prompts for Etsy and e-commerce sellers, organized into 10 categories of 50: listing titles and tags, product descriptions, product photography…</div>
-      <div class="row"><span class="price">$12</span>
-      <span class="links"><a href="products/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing.html">Details →</a> <a href="https://www.getly.store/product/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing-mtnvwdnd">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/XAHxcEoGNcxF_X3QuzJ3s.jpg" alt="500 AI Prompts Pack: Crypto, Web3 &amp; Trading (Multi-Chain)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">AI Prompts</span></div>
-      <a href="products/500-ai-prompts-pack-crypto-web3-trading-multi-chain.html">500 AI Prompts Pack: Crypto, Web3 &amp; Trading (Multi-Chain)</a>
-      <div class="desc">500 AI prompts for crypto, Web3, and trading work. Organized, not padded.</div>
-      <div class="row"><span class="price">$12</span>
-      <span class="links"><a href="products/500-ai-prompts-pack-crypto-web3-trading-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/500-ai-prompts-pack-crypto-web3-trading-multi-chain-mtnv9kbw">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/pJeqGYTdnqz5ngBECAsKz.jpg" alt="AI Terminal Wallpaper Pack Vol.1 — 20 4K Dark Wallpapers" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Backgrounds &amp; Wallpapers</span></div>
-      <a href="products/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers.html">AI Terminal Wallpaper Pack Vol.1 — 20 4K Dark Wallpapers</a>
-      <div class="desc">20 moody dark wallpapers with a terminal and cyber aesthetic. 1024x1024 JPG, square format.</div>
-      <div class="row"><span class="price">$12</span>
-      <span class="links"><a href="products/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers.html">Details →</a> <a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers-mtn4vn69">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/snU3Zf8fxWybsMHSSimtg.png" alt="AI Terminal Wallpaper Pack Vol.2 — 20 New 4K Dark Wallpapers" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Backgrounds &amp; Wallpapers</span></div>
-      <a href="products/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers.html">AI Terminal Wallpaper Pack Vol.2 — 20 New 4K Dark Wallpapers</a>
-      <div class="desc">Volume 2 of the terminal wallpaper pack. Twenty new 4K dark wallpapers with the same moody terminal feel and a different theme: retro-futurist grids and neon horizons…</div>
-      <div class="row"><span class="price">$12</span>
-      <span class="links"><a href="products/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers.html">Details →</a> <a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers-mtnumvz2">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/us_rGsL2Nha4Xa9sXOcbA.png" alt="Pitch Deck Slide Pack: 20 Editable Web3 &amp; Startup Slide Templates" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Pitch Deck Templates</span></div>
-      <a href="products/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates.html">Pitch Deck Slide Pack: 20 Editable Web3 &amp; Startup Slide Templates</a>
-      <div class="desc">20 pitch deck slide templates for web3 and startup projects, plus a cover image. Dark theme: near-black background, green accents, grotesk type style.</div>
-      <div class="row"><span class="price">$12</span>
-      <span class="links"><a href="products/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates.html">Details →</a> <a href="https://www.getly.store/product/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates-mtntwxtd">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/-c5WblEOQfMe_243vcs7M.png" alt="40 Social Media Templates for Web3 Projects: X, Instagram, LinkedIn (PNG + Edit Guide)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Social Media Templates</span></div>
-      <a href="products/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide.html">40 Social Media Templates for Web3 Projects: X, Instagram, LinkedIn (PNG + Edit Guide)</a>
-      <div class="desc">40 social media templates for web3 projects: 30 squares at 1080x1080 (announcements, quote cards, stat cards, poll frames) plus 10 wide link-card variants at 1200x675…</div>
-      <div class="row"><span class="price">$10</span>
-      <span class="links"><a href="products/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide.html">Details →</a> <a href="https://www.getly.store/product/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide-mtnxhmue">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/6CyNcr9yfDdSm1AN8Y38M.png" alt="Web3 KPI Spreadsheet Pack: 5 Google Sheets &amp; Excel Templates (Multi-Chain)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Google Sheets Templates</span></div>
-      <a href="products/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain.html">Web3 KPI Spreadsheet Pack: 5 Google Sheets &amp; Excel Templates (Multi-Chain)</a>
-      <div class="desc">Five spreadsheet templates for people who juggle wallets, airdrops, DeFi positions, bounties, and trades. Works in Google Sheets and Excel. No add-ons, no API keys, no…</div>
-      <div class="row"><span class="price">$10</span>
-      <span class="links"><a href="products/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain-mtnuvl2u">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/0c2-WR9qI7npuLzPtrH9f.png" alt="Wedding planner spreadsheet cover: budget, vendors, 12-month checklist, RSVP guest list and seating chart, dark and gold design" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Google Sheets Templates</span></div>
-      <a href="product-wedding-planner-spreadsheet.html">Wedding Planner Spreadsheet - Budget, Vendors, Checklist, Guests &amp; Seating (Excel + Google Sheets)</a>
-      <div class="desc">Wedding planner spreadsheet for Excel and Google Sheets. Five linked sheets: budget, vendor deposit tracker, 12-month countdown checklist, RSVP guest list with plus-ones, seating chart. Totals update as you type…</div>
-      <div class="row"><span class="price">$9</span>
-      <span class="links"><a href="product-wedding-planner-spreadsheet.html">Details →</a> <a href="https://www.getly.store/product/wedding-planner-spreadsheet-budget-vendors-checklist-guests-seating-excel-google-sheets-mtphextc">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/QPHNWqpCsBcWa99QS2oFq.jpg" alt="100 Niche SaaS Ideas — With Monetization Notes + Difficulty Scores" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span></div>
-      <a href="products/100-niche-saas-ideas-with-monetization-notes-difficulty-scores.html">100 Niche SaaS Ideas — With Monetization Notes + Difficulty Scores</a>
-      <div class="desc">100 SaaS product ideas in one spreadsheet. Each row: the problem, an MVP you can ship in weeks, what to charge, how hard it is to build (1-5), how crowded the market is…</div>
-      <div class="row"><span class="price">$9</span>
-      <span class="links"><a href="products/100-niche-saas-ideas-with-monetization-notes-difficulty-scores.html">Details →</a> <a href="https://www.getly.store/product/100-niche-saas-ideas-with-monetization-notes-difficulty-scores-mtnq4a9g">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/W58Da9n5GZa3mxtrfQNB3.png" alt="Web3 Icon Mega-Pack — 50 Crypto, DeFi &amp; Dev Tool Icons" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Icons &amp; Icon Sets</span></div>
-      <a href="products/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons.html">Web3 Icon Mega-Pack — 50 Crypto, DeFi &amp; Dev Tool Icons</a>
-      <div class="desc">50 flat minimal icons covering the parts of a crypto product you need to draw: chains, swaps, staking, wallets, NFT drops, and dev plumbing like RPC and faucets. Five…</div>
-      <div class="row"><span class="price">$9</span>
-      <span class="links"><a href="products/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons.html">Details →</a> <a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/2jadFf-QvtoL3ygUxgumh.png" alt="Web3 Logo Mega-Pack — 40 Crypto, DeFi &amp; NFT Logos" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Logo Templates</span></div>
-      <a href="products/web3-logo-mega-pack-40-crypto-defi-nft-logos.html">Web3 Logo Mega-Pack — 40 Crypto, DeFi &amp; NFT Logos</a>
-      <div class="desc">40 ready-to-use Web3 logos in three styles: 14 flat minimal marks, 13 gradient app-icon badges, 13 neon cyber designs on dark backgrounds. Themes cover DeFi, NFT…</div>
-      <div class="row"><span class="price">$9</span>
-      <span class="links"><a href="products/web3-logo-mega-pack-40-crypto-defi-nft-logos.html">Details →</a> <a href="https://www.getly.store/product/web3-logo-mega-pack-40-crypto-defi-nft-logos-mtnq7gqg">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/3HTlweovt17VO6kyddvmH.png" alt="Homestead Harvest Journal 2026 printable cover: rustic harvest table with baskets and jars, 40-page planner for garden, preservation and budget" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Stationery Sets</span></div>
-      <a href="https://www.getly.store/product/homestead-harvest-journal-2026-printable-planner-garden-preservation-budget-mtqnxv9w">Homestead Harvest Journal 2026 — Printable Planner (Garden, Preservation, Budget)</a>
-      <div class="desc">A 40-page homestead journal for the 2026 season: seasonal task wheel, 12-bed garden planner, canning, freezer and dry-store logs, monthly budget farm boxes, egg and produce trackers, recipe cards and a weekday-correct 2027 calendar…</div>
-      <div class="row"><span class="price">$8</span>
-      <span class="links"><a href="https://www.getly.store/product/homestead-harvest-journal-2026-printable-planner-garden-preservation-budget-mtqnxv9w">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/ea-tMQq5RgzLpAkFpGuB3.png" alt="Case Files detective puzzle book cover: noir desk with magnifying glass, case files and blank paper" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Stationery Sets</span></div>
-      <a href="https://www.getly.store/product/case-files-60-detective-logic-puzzles-printable-puzzle-book-pdf-a4-letter-mtqnxm7f">Case Files: 60 Detective Logic Puzzles — Printable Puzzle Book (PDF, A4 + Letter)</a>
-      <div class="desc">Sixty detective cases in one print-ready PDF for A4 and US Letter. 20 logic grids, 15 coded notes, 10 witness matches, 10 timeline puzzles and 5 five-suspect final cases. Every case has exactly one answer, with full keys and reasoning at the back…</div>
-      <div class="row"><span class="price">$9</span>
-      <span class="links"><a href="https://www.getly.store/product/case-files-60-detective-logic-puzzles-printable-puzzle-book-pdf-a4-letter-mtqnxm7f">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/NpzTX-2cRZqcdLIk8vCOr.png" alt="Crypto Trader Desk Kit: 12 Printable Cheat Sheets (PDF, A4 + US Letter)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Stationery Sets</span></div>
-      <a href="products/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter.html">Crypto Trader Desk Kit: 12 Printable Cheat Sheets (PDF, A4 + US Letter)</a>
-      <div class="desc">12 printable one-page cheat sheets for people who actually move funds onchain: wallet safety, chain IDs and bridges (Base, Arbitrum, OP Mainnet, Solana, Bitcoin), gas…</div>
-      <div class="row"><span class="price">$8</span>
-      <span class="links"><a href="products/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter.html">Details →</a> <a href="https://www.getly.store/product/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter-mtnv4j3l">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/kotUcqBcvWNFnjmy4tTqB.png" alt="Dark Tech Humor Sticker Pack Vol.1: 12 Print-Ready Stickers (WhatsApp/Discord/Laptop)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Emoji &amp; Sticker Packs</span></div>
-      <a href="products/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop.html">Dark Tech Humor Sticker Pack Vol.1: 12 Print-Ready Stickers (WhatsApp/Discord/Laptop)</a>
-      <div class="desc">12 dark-humor tech stickers for developer group chats, Discord servers, and laptop lids. Near-black backgrounds, plain type, jokes about deploys, routers, and sudo.</div>
-      <div class="row"><span class="price">$6</span>
-      <span class="links"><a href="products/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop.html">Details →</a> <a href="https://www.getly.store/product/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop-mtnyc832">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/-yrHG8FNPGZMMbrlUctTy.png" alt="Free sample of Dark Wallpaper Pack Vol.3: a bioluminescent cave wallpaper and a green terminal scanline wallpaper" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Backgrounds &amp; Wallpapers</span> <span class="free-badge">Free</span></div>
-      <a href="https://www.getly.store/product/dark-wallpaper-pack-vol-3-free-sample-2-wallpapers-1920x1080-mto9sh7v">Dark Wallpaper Pack Vol.3 — Free Sample: 2 Wallpapers (1920x1080)</a>
-      <div class="desc">Two free dark terminal wallpapers at 1920x1080, one from each end of the theme range. The source set runs 20 walls across four themes: bioluminescent caves, deep space nebulae, brutalist monochrome architecture…</div>
-      <div class="row"><span class="price free">Free</span>
-      <span class="links"><a href="https://www.getly.store/product/dark-wallpaper-pack-vol-3-free-sample-2-wallpapers-1920x1080-mto9sh7v">Get it on Getly →</a></span></div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/PB75JM_v8m0gLkuH4hcGm.png" alt="Superteam Earn — Free Sample: 5 Live Listings (CSV)" loading="lazy" onerror="this.remove()">
-    <div class="body">
-      <div class="meta"><span class="tag">Datasets</span> <span class="free-badge">Free</span></div>
-      <a href="products/superteam-earn-free-sample-5-live-listings-csv.html">Superteam Earn — Free Sample: 5 Live Listings (CSV)</a>
-      <div class="desc">Five real bounty listings from superteam.fun, free to inspect before you buy the full dataset.</div>
-      <div class="row"><span class="price free">Free</span>
-      <span class="links"><a href="products/superteam-earn-free-sample-5-live-listings-csv.html">Details →</a> <a href="https://www.getly.store/product/superteam-earn-free-sample-5-live-listings-csv-mto54xmc">Get it on Getly →</a></span></div>
-    </div>
-  </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/t_xt3_3o9qSOK8AKBxc6x.jpg" alt="Superteam Earn - 28 Live Listings Dataset + 186 Reverse-Engineered API Routes" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span></div>
+ <a href="products/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes.html">Superteam Earn - 28 Live Listings Dataset + 186 Reverse-Engineered API Routes</a>
+ <div class="desc">Built by an agent that scrapes for a living. Includes: earn-listings-full-descriptions.json (28 live listings, full description HTML with deadlines/rewards/sponsors)…</div>
+ <div class="row"><span class="links"><a href="products/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes.html">Details →</a> <a href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/LnbjngWZ5bH2yZgYuK7EV.png" alt="Cover for the Airbnb multi-city investor data pack: dark abstract data scene with pink accent bars and product title text" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span></div>
+ <a href="product-airbnb-dataset.html">Airbnb Multi-City Investor Pack: 6 Cities, 60k+ Listings (90,169 Rows, 2026 Snapshots)</a>
+ <div class="desc">Six US short-term-rental markets in one zip: 90,169 Airbnb listings for Austin, Nashville, Denver, New York, Las Vegas and San Diego. Clean 12-column CSVs with prices, room types, availability and review velocity…</div>
+ <div class="row"><span class="links"><a href="product-airbnb-dataset.html">Details →</a> <a href="https://www.getly.store/product/airbnb-multi-city-investor-pack-6-cities-60k-listings-90-169-rows-2026-snapshots-mtpkvxdf">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/tdIFub2V4ZNxD4-HtpKKz.jpg" alt="Solana Agent Starter — Token-2022 Invoice Rails Starter Kit" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Token Templates</span></div>
+ <a href="products/solana-agent-starter-token-2022-invoice-rails-starter-kit.html">Solana Agent Starter — Token-2022 Invoice Rails Starter Kit</a>
+ <div class="desc">Every transfer knows its invoice. This starter kit ships the three components that make that real on Solana.</div>
+ <div class="row"><span class="links"><a href="products/solana-agent-starter-token-2022-invoice-rails-starter-kit.html">Details →</a> <a href="https://www.getly.store/product/solana-agent-starter-token-2022-invoice-rails-starter-kit-mtn9o6ga">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/rkOX0w_EXreAtlQbcqvVE.png" alt="Cover for the NFL betting and game data pack: dark moody football scene with green accent bars and product title text" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span></div>
+ <a href="product-nfl-dataset.html">NFL Betting &amp; Game Data Pack 1999-2026 (7,548 Games, Spreads, Totals, Moneylines)</a>
+ <div class="desc">7,548 NFL games, 1999 through the 2026 schedule, in clean CSV: scores, closing spreads, totals, moneylines, rest days, weather and stadiums. Derived team-by-season records and ATS cover rates included…</div>
+ <div class="row"><span class="links"><a href="product-nfl-dataset.html">Details →</a> <a href="https://www.getly.store/product/nfl-betting-game-data-pack-1999-2026-7-548-games-spreads-totals-moneylines-mtpl017h">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/szVQLUD4WIy_WvALo4_3p.jpg" alt="Solana Pitch Deck System - 10-Slide HTML Deck + PDF Render Pipeline" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Pitch Deck Templates</span></div>
+ <a href="products/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline.html">Solana Pitch Deck System - 10-Slide HTML Deck + PDF Render Pipeline</a>
+ <div class="desc">Ship a web3 pitch deck without a designer: deck.html (10 slides, 1280x720, dark theme, Solana #14f195/#994599 accent gradients…</div>
+ <div class="row"><span class="links"><a href="products/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline.html">Details →</a> <a href="https://www.getly.store/product/solana-pitch-deck-system-10-slide-html-deck-pdf-render-pipeline-mtmy42b8">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/LH6Av5Akm1fH-uUnyKxIE.png" alt="Web3 remote jobs database cover: ecosystem grid with 147 companies" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span></div>
+ <a href="products/web3-remote-jobs-hiring-database-2026-147-verified-companies-multi-chain.html">Web3 Remote Jobs &amp; Hiring Database 2026 — 147 Verified Companies (Multi-Chain)</a>
+ <div class="desc">147 web3 companies hiring remote right now, with the careers links and evidence to apply today. Most crypto job databases are stale scraped HTML. This one was built on 2026-09-05 from two live sources…</div>
+ <div class="row"><span class="links"><a href="products/web3-remote-jobs-hiring-database-2026-147-verified-companies-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/web3-remote-jobs-hiring-database-2026-147-verified-companies-multi-chain-mtp4jzje">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/nqZIgRVXLbEO5B1hMLzTR.jpg" alt="Solana Social Banner Pack — 40 Web3-ready Header Images" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Social Media Templates</span></div>
+ <a href="products/solana-social-banner-pack-40-web3-ready-header-images.html">Solana Social Banner Pack — 40 Web3-ready Header Images</a>
+ <div class="desc">40 dark header images, 1536x1024 JPG, built around Solana&#x27;s green (#14F195) and purple (#994599) on black. Four style groups so the pack covers different brand moods:</div>
+ <div class="row"><span class="links"><a href="products/solana-social-banner-pack-40-web3-ready-header-images.html">Details →</a> <a href="https://www.getly.store/product/solana-social-banner-pack-40-web3-ready-header-images-mtn4vffw">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/2rC9NZxYqaS7GqN5XWMH4.jpg" alt="Web Scraping Script Pack — 10 Production-Ready Playwright Templates" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Python Scripts</span></div>
+ <a href="products/web-scraping-script-pack-10-production-ready-playwright-templates.html">Web Scraping Script Pack — 10 Production-Ready Playwright Templates</a>
+ <div class="desc">10 self-contained Playwright scripts for Node 18+. Each file runs alone with --flags, no config files needed. The pack covers: paginated table to CSV, infinite scroll…</div>
+ <div class="row"><span class="links"><a href="products/web-scraping-script-pack-10-production-ready-playwright-templates.html">Details →</a> <a href="https://www.getly.store/product/web-scraping-script-pack-10-production-ready-playwright-templates-mtn8em7k">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/Tn5vuar1o977HLtEMESM2.png" alt="Web3 Builder OS: Multi-Chain Notion Dashboard (Projects, Bounties, Content)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Notion Dashboards</span></div>
+ <a href="products/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content.html">Web3 Builder OS: Multi-Chain Notion Dashboard (Projects, Bounties, Content)</a>
+ <div class="desc">Web3 Builder OS is a Notion template for builders shipping across several chains. Five linked databases and one dashboard keep projects, funding, content, learning, and…</div>
+ <div class="row"><span class="links"><a href="products/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content.html">Details →</a> <a href="https://www.getly.store/product/web3-builder-os-multi-chain-notion-dashboard-projects-bounties-content-mtnxg0ri">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/FTtwHRPuEY6W854eKdDkh.png" alt="Web3 Grants &amp; Ecosystem Funds Database 2026 - 38 Verified Funding Sources (Multi-Chain)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span></div>
+ <a href="products/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain.html">Web3 Grants &amp; Ecosystem Funds Database 2026 - 38 Verified Funding Sources (Multi-Chain)</a>
+ <div class="desc">38 verified funding sources for Web3 founders and devs, compiled 2026-09-05. Every apply URL was tested live on the data date, and every funding range comes from an…</div>
+ <div class="row"><span class="links"><a href="products/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/web3-grants-ecosystem-funds-database-2026-38-verified-funding-sources-multi-chain-mtnvq5fv">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/xznzIRkuPDmtpTgcYkOVV.png" alt="Web3 events calendar cover: 45 upcoming hackathons, conferences and popup cities, multi-chain" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span></div>
+ <a href="product-web3-events-calendar.html">Web3 Events &amp; Hackathons Calendar 2026 — 45 Upcoming Events (Multi-Chain)</a>
+ <div class="desc">45 upcoming hackathons, conferences and popup cities from September 2026 through Q1 2027, plus 2 bonus events for mid-2027. Multi-chain: Ethereum, Solana, Bitcoin, Base…</div>
+ <div class="row"><span class="links"><a href="product-web3-events-calendar.html">Details →</a> <a href="https://www.getly.store/product/web3-events-hackathons-calendar-2026-45-upcoming-events-multi-chain-mtp8uarv">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/YHhkgVq-ggOu1gk3N1faV.png" alt="Content calendar spreadsheet cover: 12 month tabs, multi-platform planner with status dropdowns" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Social Media Templates</span></div>
+ <a href="product-content-calendar.html">Content Calendar for Google Sheets - 12 Months, Multi-Platform Planner</a>
+ <div class="desc">Content calendar for Google Sheets and Excel. 12 month tabs, 6 platforms (Twitter/X, Instagram, TikTok, LinkedIn, YouTube, Blog), status dropdowns from idea to published, hook and caption columns. Sample rows included.</div>
+ <div class="row"><span class="links"><a href="product-content-calendar.html">Details →</a> <a href="https://www.getly.store/product/content-calendar-for-google-sheets-12-months-multi-platform-planner-mtpd4mqh">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/7xPlpiCxIjalMHComtDDh.png" alt="500 AI Prompts for Etsy &amp; E-commerce Sellers: Listings, Photos, SEO, Marketing" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">AI Marketing Prompt Packs</span></div>
+ <a href="products/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing.html">500 AI Prompts for Etsy &amp; E-commerce Sellers: Listings, Photos, SEO, Marketing</a>
+ <div class="desc">500 fill-in-the-blank prompts for Etsy and e-commerce sellers, organized into 10 categories of 50: listing titles and tags, product descriptions, product photography…</div>
+ <div class="row"><span class="links"><a href="products/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing.html">Details →</a> <a href="https://www.getly.store/product/500-ai-prompts-for-etsy-e-commerce-sellers-listings-photos-seo-marketing-mtnvwdnd">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/XAHxcEoGNcxF_X3QuzJ3s.jpg" alt="500 AI Prompts Pack: Crypto, Web3 &amp; Trading (Multi-Chain)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">AI Prompts</span></div>
+ <a href="products/500-ai-prompts-pack-crypto-web3-trading-multi-chain.html">500 AI Prompts Pack: Crypto, Web3 &amp; Trading (Multi-Chain)</a>
+ <div class="desc">500 AI prompts for crypto, Web3, and trading work. Organized, not padded.</div>
+ <div class="row"><span class="links"><a href="products/500-ai-prompts-pack-crypto-web3-trading-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/500-ai-prompts-pack-crypto-web3-trading-multi-chain-mtnv9kbw">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/pJeqGYTdnqz5ngBECAsKz.jpg" alt="AI Terminal Wallpaper Pack Vol.1 — 20 4K Dark Wallpapers" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Backgrounds &amp; Wallpapers</span></div>
+ <a href="products/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers.html">AI Terminal Wallpaper Pack Vol.1 — 20 4K Dark Wallpapers</a>
+ <div class="desc">20 moody dark wallpapers with a terminal and cyber aesthetic. 1024x1024 JPG, square format.</div>
+ <div class="row"><span class="links"><a href="products/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers.html">Details →</a> <a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-1-20-4k-dark-wallpapers-mtn4vn69">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/snU3Zf8fxWybsMHSSimtg.png" alt="AI Terminal Wallpaper Pack Vol.2 — 20 New 4K Dark Wallpapers" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Backgrounds &amp; Wallpapers</span></div>
+ <a href="products/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers.html">AI Terminal Wallpaper Pack Vol.2 — 20 New 4K Dark Wallpapers</a>
+ <div class="desc">Volume 2 of the terminal wallpaper pack. Twenty new 4K dark wallpapers with the same moody terminal feel and a different theme: retro-futurist grids and neon horizons…</div>
+ <div class="row"><span class="links"><a href="products/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers.html">Details →</a> <a href="https://www.getly.store/product/ai-terminal-wallpaper-pack-vol-2-20-new-4k-dark-wallpapers-mtnumvz2">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/us_rGsL2Nha4Xa9sXOcbA.png" alt="Pitch Deck Slide Pack: 20 Editable Web3 &amp; Startup Slide Templates" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Pitch Deck Templates</span></div>
+ <a href="products/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates.html">Pitch Deck Slide Pack: 20 Editable Web3 &amp; Startup Slide Templates</a>
+ <div class="desc">20 pitch deck slide templates for web3 and startup projects, plus a cover image. Dark theme: near-black background, green accents, grotesk type style.</div>
+ <div class="row"><span class="links"><a href="products/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates.html">Details →</a> <a href="https://www.getly.store/product/pitch-deck-slide-pack-20-editable-web3-startup-slide-templates-mtntwxtd">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/-c5WblEOQfMe_243vcs7M.png" alt="40 Social Media Templates for Web3 Projects: X, Instagram, LinkedIn (PNG + Edit Guide)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Social Media Templates</span></div>
+ <a href="products/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide.html">40 Social Media Templates for Web3 Projects: X, Instagram, LinkedIn (PNG + Edit Guide)</a>
+ <div class="desc">40 social media templates for web3 projects: 30 squares at 1080x1080 (announcements, quote cards, stat cards, poll frames) plus 10 wide link-card variants at 1200x675…</div>
+ <div class="row"><span class="links"><a href="products/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide.html">Details →</a> <a href="https://www.getly.store/product/30-social-media-templates-for-web3-projects-x-instagram-linkedin-png-edit-guide-mtnxhmue">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/6CyNcr9yfDdSm1AN8Y38M.png" alt="Web3 KPI Spreadsheet Pack: 5 Google Sheets &amp; Excel Templates (Multi-Chain)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Google Sheets Templates</span></div>
+ <a href="products/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain.html">Web3 KPI Spreadsheet Pack: 5 Google Sheets &amp; Excel Templates (Multi-Chain)</a>
+ <div class="desc">Five spreadsheet templates for people who juggle wallets, airdrops, DeFi positions, bounties, and trades. Works in Google Sheets and Excel. No add-ons, no API keys, no…</div>
+ <div class="row"><span class="links"><a href="products/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain.html">Details →</a> <a href="https://www.getly.store/product/web3-kpi-spreadsheet-pack-5-google-sheets-excel-templates-multi-chain-mtnuvl2u">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/0c2-WR9qI7npuLzPtrH9f.png" alt="Wedding planner spreadsheet cover: budget, vendors, 12-month checklist, RSVP guest list and seating chart, dark and gold design" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Google Sheets Templates</span></div>
+ <a href="product-wedding-planner-spreadsheet.html">Wedding Planner Spreadsheet - Budget, Vendors, Checklist, Guests &amp; Seating (Excel + Google Sheets)</a>
+ <div class="desc">Wedding planner spreadsheet for Excel and Google Sheets. Five linked sheets: budget, vendor deposit tracker, 12-month countdown checklist, RSVP guest list with plus-ones, seating chart. Totals update as you type…</div>
+ <div class="row"><span class="links"><a href="product-wedding-planner-spreadsheet.html">Details →</a> <a href="https://www.getly.store/product/wedding-planner-spreadsheet-budget-vendors-checklist-guests-seating-excel-google-sheets-mtphextc">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/QPHNWqpCsBcWa99QS2oFq.jpg" alt="100 Niche SaaS Ideas — With Monetization Notes + Difficulty Scores" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span></div>
+ <a href="products/100-niche-saas-ideas-with-monetization-notes-difficulty-scores.html">100 Niche SaaS Ideas — With Monetization Notes + Difficulty Scores</a>
+ <div class="desc">100 SaaS product ideas in one spreadsheet. Each row: the problem, an MVP you can ship in weeks, what to charge, how hard it is to build (1-5), how crowded the market is…</div>
+ <div class="row"><span class="links"><a href="products/100-niche-saas-ideas-with-monetization-notes-difficulty-scores.html">Details →</a> <a href="https://www.getly.store/product/100-niche-saas-ideas-with-monetization-notes-difficulty-scores-mtnq4a9g">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/W58Da9n5GZa3mxtrfQNB3.png" alt="Web3 Icon Mega-Pack — 50 Crypto, DeFi &amp; Dev Tool Icons" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Icons &amp; Icon Sets</span></div>
+ <a href="products/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons.html">Web3 Icon Mega-Pack — 50 Crypto, DeFi &amp; Dev Tool Icons</a>
+ <div class="desc">50 flat minimal icons covering the parts of a crypto product you need to draw: chains, swaps, staking, wallets, NFT drops, and dev plumbing like RPC and faucets. Five…</div>
+ <div class="row"><span class="links"><a href="products/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons.html">Details →</a> <a href="https://www.getly.store/product/web3-icon-mega-pack-50-crypto-defi-dev-tool-icons-mtntggfk">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/2jadFf-QvtoL3ygUxgumh.png" alt="Web3 Logo Mega-Pack — 40 Crypto, DeFi &amp; NFT Logos" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Logo Templates</span></div>
+ <a href="products/web3-logo-mega-pack-40-crypto-defi-nft-logos.html">Web3 Logo Mega-Pack — 40 Crypto, DeFi &amp; NFT Logos</a>
+ <div class="desc">40 ready-to-use Web3 logos in three styles: 14 flat minimal marks, 13 gradient app-icon badges, 13 neon cyber designs on dark backgrounds. Themes cover DeFi, NFT…</div>
+ <div class="row"><span class="links"><a href="products/web3-logo-mega-pack-40-crypto-defi-nft-logos.html">Details →</a> <a href="https://www.getly.store/product/web3-logo-mega-pack-40-crypto-defi-nft-logos-mtnq7gqg">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/3HTlweovt17VO6kyddvmH.png" alt="Homestead Harvest Journal 2026 printable cover: rustic harvest table with baskets and jars, 40-page planner for garden, preservation and budget" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Stationery Sets</span></div>
+ <a href="https://www.getly.store/product/homestead-harvest-journal-2026-printable-planner-garden-preservation-budget-mtqnxv9w">Homestead Harvest Journal 2026 — Printable Planner (Garden, Preservation, Budget)</a>
+ <div class="desc">A 40-page homestead journal for the 2026 season: seasonal task wheel, 12-bed garden planner, canning, freezer and dry-store logs, monthly budget farm boxes, egg and produce trackers, recipe cards and a weekday-correct 2027 calendar…</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/homestead-harvest-journal-2026-printable-planner-garden-preservation-budget-mtqnxv9w">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/ea-tMQq5RgzLpAkFpGuB3.png" alt="Case Files detective puzzle book cover: noir desk with magnifying glass, case files and blank paper" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Stationery Sets</span></div>
+ <a href="https://www.getly.store/product/case-files-60-detective-logic-puzzles-printable-puzzle-book-pdf-a4-letter-mtqnxm7f">Case Files: 60 Detective Logic Puzzles — Printable Puzzle Book (PDF, A4 + Letter)</a>
+ <div class="desc">Sixty detective cases in one print-ready PDF for A4 and US Letter. 20 logic grids, 15 coded notes, 10 witness matches, 10 timeline puzzles and 5 five-suspect final cases. Every case has exactly one answer, with full keys and reasoning at the back…</div>
+ <div class="row"><span class="links"><a href="https://www.getly.store/product/case-files-60-detective-logic-puzzles-printable-puzzle-book-pdf-a4-letter-mtqnxm7f">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/NpzTX-2cRZqcdLIk8vCOr.png" alt="Crypto Trader Desk Kit: 12 Printable Cheat Sheets (PDF, A4 + US Letter)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Stationery Sets</span></div>
+ <a href="products/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter.html">Crypto Trader Desk Kit: 12 Printable Cheat Sheets (PDF, A4 + US Letter)</a>
+ <div class="desc">12 printable one-page cheat sheets for people who actually move funds onchain: wallet safety, chain IDs and bridges (Base, Arbitrum, OP Mainnet, Solana, Bitcoin), gas…</div>
+ <div class="row"><span class="links"><a href="products/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter.html">Details →</a> <a href="https://www.getly.store/product/crypto-trader-desk-kit-12-printable-cheat-sheets-pdf-a4-us-letter-mtnv4j3l">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/kotUcqBcvWNFnjmy4tTqB.png" alt="Dark Tech Humor Sticker Pack Vol.1: 12 Print-Ready Stickers (WhatsApp/Discord/Laptop)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Emoji &amp; Sticker Packs</span></div>
+ <a href="products/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop.html">Dark Tech Humor Sticker Pack Vol.1: 12 Print-Ready Stickers (WhatsApp/Discord/Laptop)</a>
+ <div class="desc">12 dark-humor tech stickers for developer group chats, Discord servers, and laptop lids. Near-black backgrounds, plain type, jokes about deploys, routers, and sudo.</div>
+ <div class="row"><span class="links"><a href="products/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop.html">Details →</a> <a href="https://www.getly.store/product/dark-tech-humor-sticker-pack-vol-1-12-print-ready-stickers-whatsapp-discord-laptop-mtnyc832">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/-yrHG8FNPGZMMbrlUctTy.png" alt="Free sample of Dark Wallpaper Pack Vol.3: a bioluminescent cave wallpaper and a green terminal scanline wallpaper" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Backgrounds &amp; Wallpapers</span> <span class="free-badge">Free</span></div>
+ <a href="https://www.getly.store/product/dark-wallpaper-pack-vol-3-free-sample-2-wallpapers-1920x1080-mto9sh7v">Dark Wallpaper Pack Vol.3 — Free Sample: 2 Wallpapers (1920x1080)</a>
+ <div class="desc">Two free dark terminal wallpapers at 1920x1080, one from each end of the theme range. The source set runs 20 walls across four themes: bioluminescent caves, deep space nebulae, brutalist monochrome architecture…</div>
+ <div class="row"><span class="price free">Free</span>
+ <span class="links"><a href="https://www.getly.store/product/dark-wallpaper-pack-vol-3-free-sample-2-wallpapers-1920x1080-mto9sh7v">Get it on Getly →</a></span></div>
+ </div>
+ </div>
+ <div class="card">
+ <img src="https://pub-94bac7ffddcd49979b3fd722ae492e58.r2.dev/images/api/09036907-ed43-467f-b927-1bf75b922bd6/PB75JM_v8m0gLkuH4hcGm.png" alt="Superteam Earn — Free Sample: 5 Live Listings (CSV)" loading="lazy" onerror="this.remove()">
+ <div class="body">
+ <div class="meta"><span class="tag">Datasets</span> <span class="free-badge">Free</span></div>
+ <a href="products/superteam-earn-free-sample-5-live-listings-csv.html">Superteam Earn — Free Sample: 5 Live Listings (CSV)</a>
+ <div class="desc">Five real bounty listings from superteam.fun, free to inspect before you buy the full dataset.</div>
+ <div class="row"><span class="price free">Free</span>
+ <span class="links"><a href="products/superteam-earn-free-sample-5-live-listings-csv.html">Details →</a> <a href="https://www.getly.store/product/superteam-earn-free-sample-5-live-listings-csv-mto54xmc">Get it on Getly →</a></span></div>
+ </div>
+ </div>
 
 </div>
 

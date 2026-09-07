@@ -16,51 +16,51 @@
 <meta name="twitter:description" content="5 traits of a beginner-friendly STL, 3 simple model ideas, 5 slicer starting points, and an honest note on what won't work.">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Free STL Files for Beginners: Simple Models to Print and Where to Start",
-  "description": "What makes an STL beginner-friendly, three simple model ideas described by their mechanics, five slicer settings labeled as common starting points, and an honest note on what won't work on a first printer.",
-  "datePublished": "2026-09-08",
-  "author": { "@type": "Organization", "name": "Matchbook Labs" },
-  "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
-  "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/free-stl-files-beginners.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Matchbook Labs",
-    "url": "https://jayjex.github.io/matchbook-labs/"
-  }
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Free STL Files for Beginners: Simple Models to Print and Where to Start",
+ "description": "What makes an STL beginner-friendly, three simple model ideas described by their mechanics, five slicer settings labeled as common starting points, and an honest note on what won't work on a first printer.",
+ "datePublished": "2026-09-08",
+ "author": { "@type": "Organization", "name": "Matchbook Labs" },
+ "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+ "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/free-stl-files-beginners.html",
+ "isPartOf": {
+ "@type": "WebSite",
+ "name": "Matchbook Labs",
+ "url": "https://jayjex.github.io/matchbook-labs/"
+ }
 }
 </script>
 <style>
-  :root { color-scheme: dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0d1117; color: #e6edf3;
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
-  }
-  a { color: #58a6ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
-  .crumbs a { color: #8b949e; }
-  h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
-  .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
-  h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
-  h3 { font-size: 1rem; margin: 1.6rem 0 0.5rem; }
-  p { margin: 0 0 1rem; color: #c9d1d9; }
-  ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
-  li { margin-bottom: 0.55rem; }
-  .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
-  .howto p { margin: 0; font-size: 0.95rem; }
-  table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
-  th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
-  td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
-  td:first-child { color: #e6edf3; white-space: nowrap; }
-  .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
-  .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
-  .cta:hover { background: #2ea043; text-decoration: none; }
-  .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
-  footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117; color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+ .crumbs a { color: #8b949e; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+ .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+ h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+ h3 { font-size: 1rem; margin: 1.6rem 0 0.5rem; }
+ p { margin: 0 0 1rem; color: #c9d1d9; }
+ ol, ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ li { margin-bottom: 0.55rem; }
+ .howto { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+ .howto p { margin: 0; font-size: 0.95rem; }
+ table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
+ th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+ td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
+ td:first-child { color: #e6edf3; white-space: nowrap; }
+ .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+ .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+ .cta:hover { background: #2ea043; text-decoration: none; }
+ .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+ footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
 </style>
 </head>
 <body>
@@ -72,11 +72,11 @@
 <h2>What makes an STL beginner-friendly</h2>
 <p>My opinion, from prints that worked and plenty that didn't:</p>
 <ul>
-  <li><strong>Flat base against the bed.</strong> The first layer decides everything. A model that sits flat grabs the plate evenly, and a model that touches down on a corner or an edge is fighting you before the second layer starts.</li>
-  <li><strong>Low overhangs.</strong> Filament needs something to land on. Overhangs steeper than about 45&deg; from vertical droop or need supports, and peeling supports off your first print is a miserable way to learn. A good beginner file prints support-free.</li>
-  <li><strong>Chunky features.</strong> Walls at 1mm or thicker, no needle points, no hair-thin pins. Thin sections curl, snap, and hide slicer warnings a beginner won't know to look for yet.</li>
-  <li><strong>One orientation, no assembly.</strong> If a model needs gluing, flipping mid-print, or a second material for breaks, it's a project, not a first print. One file, one orientation, one job.</li>
-  <li><strong>Slack in the tolerances.</strong> Holes drilled slightly large, slots slightly wide. A first printer's dimensional accuracy is a lottery, and a forgiving file absorbs the variance instead of exposing it.</li>
+ <li><strong>Flat base against the bed.</strong> The first layer decides everything. A model that sits flat grabs the plate evenly, and a model that touches down on a corner or an edge is fighting you before the second layer starts.</li>
+ <li><strong>Low overhangs.</strong> Filament needs something to land on. Overhangs steeper than about 45&deg; from vertical droop or need supports, and peeling supports off your first print is a miserable way to learn. A good beginner file prints support-free.</li>
+ <li><strong>Chunky features.</strong> Walls at 1mm or thicker, no needle points, no hair-thin pins. Thin sections curl, snap, and hide slicer warnings a beginner won't know to look for yet.</li>
+ <li><strong>One orientation, no assembly.</strong> If a model needs gluing, flipping mid-print, or a second material for breaks, it's a project, not a first print. One file, one orientation, one job.</li>
+ <li><strong>Slack in the tolerances.</strong> Holes drilled slightly large, slots slightly wide. A first printer's dimensional accuracy is a lottery, and a forgiving file absorbs the variance instead of exposing it.</li>
 </ul>
 
 <h2>Three simple models to print first</h2>
@@ -94,12 +94,12 @@
 
 <h2>Slicer starting points</h2>
 <table>
-  <tr><th>Setting</th><th>Starting value</th><th>Why</th></tr>
-  <tr><td>Layer height</td><td>0.2mm</td><td>The standard all-around height for a 0.4mm nozzle. Fine enough for these shapes, fast enough to finish in an evening. Drop lower when you're chasing surface quality later.</td></tr>
-  <tr><td>Infill</td><td>15-20% grid</td><td>Enough structure for a hook or clip at a filament cost that doesn't hurt. Coasters can go 10%.</td></tr>
-  <tr><td>Supports</td><td>Off</td><td>All three models above print support-free by design. Get in the habit of choosing orientation over supports first.</td></tr>
-  <tr><td>Brim</td><td>3-5mm</td><td>Cheap insurance for a first layer that isn't perfectly dialed. Leave it off once your bed adhesion is proven.</td></tr>
-  <tr><td>Speed</td><td>50mm/s or default</td><td>Slower prints hide more problems than they create. Tune speed up after ten clean prints, not before.</td></tr>
+ <tr><th>Setting</th><th>Starting value</th><th>Why</th></tr>
+ <tr><td>Layer height</td><td>0.2mm</td><td>The standard all-around height for a 0.4mm nozzle. Fine enough for these shapes, fast enough to finish in an evening. Drop lower when you're chasing surface quality later.</td></tr>
+ <tr><td>Infill</td><td>15-20% grid</td><td>Enough structure for a hook or clip at a filament cost that doesn't hurt. Coasters can go 10%.</td></tr>
+ <tr><td>Supports</td><td>Off</td><td>All three models above print support-free by design. Get in the habit of choosing orientation over supports first.</td></tr>
+ <tr><td>Brim</td><td>3-5mm</td><td>Cheap insurance for a first layer that isn't perfectly dialed. Leave it off once your bed adhesion is proven.</td></tr>
+ <tr><td>Speed</td><td>50mm/s or default</td><td>Slower prints hide more problems than they create. Tune speed up after ten clean prints, not before.</td></tr>
 </table>
 <p class="table-note">Common starting points, test yours. Every printer, filament, and slice of PLA behaves differently, so treat the table as a first pass and adjust from your own results.</p>
 
