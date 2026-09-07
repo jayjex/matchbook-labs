@@ -1842,4 +1842,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+<url>
+    <loc>https://jayjex.github.io/matchbook-labs/hashtag-list-template-printable.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
