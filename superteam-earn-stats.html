@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superteam Earn Statistics: Reward Distribution From 28 Live Listings (Sep 2026) - Matchbook Labs</title>
+<meta name="description" content="Superteam Earn reward statistics from a Sep 4, 2026 snapshot of 28 live listings: bucket distribution, median reward $1,000, tokens, deadline urgency, and the agentAccess split of 45 HUMAN_ONLY vs 6 AGENT_ALLOWED." />
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/superteam-earn-stats.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Superteam Earn Statistics: Reward Distribution From 28 Live Listings (Sep 2026)">
+<meta property="og:description" content="Reward buckets, median listed reward, deadline urgency, and the agentAccess split (45 HUMAN_ONLY vs 6 AGENT_ALLOWED) from a Sep 4, 2026 snapshot of 28 live Superteam Earn listings.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/superteam-earn-stats.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Superteam Earn Statistics: Reward Distribution From 28 Live Listings">
+<meta name="twitter:description" content="Reward buckets, median $1,000, deadline urgency, and the agentAccess split from a Sep 4, 2026 snapshot of 28 live listings.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Superteam Earn Statistics: Reward Distribution From 28 Live Listings (Sep 2026)",
+ "description": "Reward bucket distribution, median listed reward, token mix, deadline urgency, and the agentAccess split, computed from a Sep 4, 2026 snapshot of the live superteam.fun bounty board.",
+ "datePublished": "2026-09-07",
+ "author": { "@type": "Organization", "name": "Matchbook Labs" },
+ "publisher": { "@type": "Organization", "name": "Matchbook Labs", "url": "https://jayjex.github.io/matchbook-labs/" },
+ "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/superteam-earn-stats.html"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How much does the average Superteam Earn bounty pay?",
+ "acceptedAnswer": { "@type": "Answer", "text": "In our Sep 4, 2026 snapshot of 28 open listings, the median listed reward was $1,000 and 12 of the 26 single-reward listings (46%) sat between $1,000 and $4,999. Fixed listed rewards ran from $205 to $10,000, and the 26 fixed rewards added up to $56,705. These are advertised amounts at snapshot time, not verified payouts." }
+ },
+ {
+ "@type": "Question",
+ "name": "What does agentAccess HUMAN_ONLY mean on Superteam Earn?",
+ "acceptedAnswer": { "@type": "Answer", "text": "agentAccess is a field in the Superteam Earn listings API that marks whether a listing accepts submissions from automated agents. In the raw paginated cards dump we harvested, 45 of 51 records are HUMAN_ONLY and 6 are AGENT_ALLOWED. Looking at the 17 unique live listings in that pull, 15 blocked agents and 2 allowed them, and both agent-allowed listings were $500 bounties." }
+ },
+ {
+ "@type": "Question",
+ "name": "Is this Superteam Earn data still current?",
+ "acceptedAnswer": { "@type": "Answer", "text": "No, and the page says so plainly. Every number here is frozen at the Sep 4, 2026 harvest. The board rotates listings daily: deadlines in the snapshot ran from Sep 4 to Oct 15, and rewards move as sponsors edit or close listings. Treat the page as a dated snapshot and the downloadable dataset as the same snapshot in raw form, so you can recompute every figure yourself." }
+ }
+ ]
+}
+</script>
+<style>
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117; color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+ .crumbs a { color: #8b949e; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+ .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+ h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+ p { margin: 0 0 1rem; color: #c9d1d9; }
+ ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ li { margin-bottom: 0.45rem; }
+ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 5px; padding: 0.08em 0.35em; }
+ table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.92rem; }
+ th { text-align: left; color: #8b949e; font-weight: 600; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+ td { border-bottom: 1px solid #21262d; padding: 0.45rem 0.6rem; vertical-align: top; color: #c9d1d9; }
+ td.num, th.num { text-align: right; }
+ .cta { display: block; text-align: center; background: #238636; color: #fff; font-weight: 600; padding: 0.8rem 1.25rem; border-radius: 8px; margin: 2rem 0; font-size: 1.05rem; }
+ .cta:hover { background: #2ea043; text-decoration: none; }
+ .note { color: #8b949e; font-size: 0.85rem; text-align: center; margin-top: -1.2rem; margin-bottom: 2rem; }
+ .honest { border-left: 3px solid #30363d; padding: 0.15rem 0 0.15rem 1rem; color: #8b949e; font-size: 0.92rem; margin: 0 0 1.25rem; }
+ footer { margin-top: 3.5rem; border-top: 1px solid #21262d; padding-top: 1.25rem; color: #8b949e; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Superteam Earn statistics</nav>
+
+<h1>Superteam Earn Statistics: Reward Distribution From 28 Live Listings</h1>
+<p class="lede">Superteam Earn (superteam.fun) is a bounty board where Solana ecosystem sponsors post content, design, and development work with advertised rewards. We pulled the live board on <strong>Sep 4, 2026</strong> and froze it. This page reports the reward distribution from that snapshot: which buckets sponsors price into, how the deadlines cluster, and how much of the board accepts agent submissions. Want the API side of the same harvest first? Start with the <a href="superteam-earn-api.html">Superteam Earn API endpoint reference</a>, or grab the <a href="products/superteam-earn-free-sample-5-live-listings-csv.html">free 5-listing CSV sample</a>.</p>
+
+<h2>Reward distribution from the snapshot</h2>
+<p>The 28-listing file holds 26 listings with a single listed reward and 2 that quote a range instead. Buckets below cover the 26 single-reward listings, in USD-denominated tokens (USDC or USDG) at the listed amount.</p>
+<table>
+ <tr><th>Listed reward</th><th class="num">Listings</th><th class="num">Share</th></tr>
+ <tr><td>Under $500</td><td class="num">1</td><td class="num">4%</td></tr>
+ <tr><td>$500 to $999</td><td class="num">10</td><td class="num">38%</td></tr>
+ <tr><td>$1,000 to $4,999</td><td class="num">12</td><td class="num">46%</td></tr>
+ <tr><td>$5,000 to $9,999</td><td class="num">1</td><td class="num">4%</td></tr>
+ <tr><td>$10,000 and up</td><td class="num">2</td><td class="num">8%</td></tr>
+</table>
+<p>The middle of the board is thick: 22 of 26 listings (85%) paid somewhere between $500 and $4,999. Median listed reward: <strong>$1,000</strong>. Smallest: <strong>$205</strong>. Largest: <strong>$10,000</strong>. The 26 fixed rewards sum to <strong>$56,705</strong>. The two range listings sat at $50 to $250 and $1,000 to $2,000, and they are excluded from the buckets rather than folded into a midpoint.</p>
+
+<h2>Tokens and deadline urgency</h2>
+<p>Sponsors denominate rewards in stablecoins: 15 listings in USDG, 13 in USDC. We report listed amounts, so a $1,000 bounty counts as $1,000 regardless of token.</p>
+<p>Deadlines ran from Sep 4 to Oct 15, and they cluster near the harvest date: 4 listings were due within 48 hours of the pull, 11 more within 3 to 7 days, 6 within 8 to 14 days, and 7 had 15 days or more. That curve is the practical read on the board: listings turn over fast, so any Superteam Earn statistics you see without a snapshot date are noise.</p>
+
+<h2>agentAccess: 45 HUMAN_ONLY vs 6 AGENT_ALLOWED</h2>
+<p>The raw cards dump ships 51 records across 3 paginated pulls of the live board. The <code>agentAccess</code> field reads verbatim: <strong>45 HUMAN_ONLY, 6 AGENT_ALLOWED</strong>. Deduplicating those records to the 17 unique live listings behind them gives 15 HUMAN_ONLY and 2 AGENT_ALLOWED, and both agent-allowed listings were $500 bounties.</p>
+<p>The practical signal: most sponsors price listings above the agent-allowed tier and keep them human-only, so automated agents competing on the open board mostly see the bottom of the reward table. If you build agent tooling, that split is the constraint your tool operates inside.</p>
+
+<h2>What the busiest listings looked like</h2>
+<p>Competition counts at pull time (the 17 unique listings): median submissions per listing was 54, median comments 11. The outliers: a $1,500 Flint content post drew 214 submissions and 42 comments; the $8,000 Breakpoint 2026 content bounty had 76 submissions; a $10,000 Solana Summit Serbia bounty had 51. Reward size did not track competition in any obvious way, which is itself the useful finding for anyone pricing a submission effort.</p>
+
+<h2>Method and snapshot honesty</h2>
+<div class="honest">
+<p>Every number on this page is computed from files harvested from the live superteam.fun API on Sep 4, 2026: a 28-listing file with full description HTML, and the raw paginated cards dump. Superteam Earn rotates listings constantly, rewards move as sponsors edit or close listings, and competition counts changed by the hour while we pulled. Treat this page as a dated snapshot of one day on the board, not a live feed, and the downloadable dataset as the same snapshot in raw form so you can recompute every figure.</p>
+<p>This is market research material. It describes how sponsors advertised contest prizes on one day, and nothing here predicts what the board will pay, whether any listing gets won, or what any submission is worth. Rewards are contest prizes controlled by sponsors. This page is not investment advice, and none of these numbers are returns.</p>
+</div>
+
+<h2>Get the raw dataset behind these numbers</h2>
+<ul>
+ <li>28 open listings with FULL description HTML (deadlines, rewards, sponsor slugs), including the 2 range listings</li>
+ <li>The raw paginated cards dump with the <code>agentAccess</code> field verbatim: 45 HUMAN_ONLY, 6 AGENT_ALLOWED</li>
+ <li>186 reverse-engineered API routes, plus the undocumented <code>/api/search/{title}</code> trick</li>
+ <li>Privy passwordless auth flow notes (init/authenticate, token refresh via <code>/api/v1/sessions</code>)</li>
+ <li>JSON + plain text, harvested 2026-09-04, commercial license included</li>
+</ul>
+
+<a class="cta" href="https://www.getly.store/product/superteam-earn-28-live-listings-dataset-186-reverse-engineered-api-routes-mtmy11ny">Full Superteam Earn dataset on Getly &rarr;</a>
+<p class="note">Instant download &middot; JSON + TXT &middot; harvested 2026-09-04 &middot; commercial license included</p>
+
+<footer>Matchbook Labs - digital products for builders &middot; <a href="catalog.html">Full catalog</a> &middot; <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
