@@ -218,7 +218,7 @@
 <!-- SWAP-BEGIN budget-tracker — product NOT on Getly yet (API read-key list 2026-09-08: 27 produk all active, 0 match personal budget tracker/budget-tracker; verify 1x via /api/v1/products?limit=100). Trigger: API read-key status=active + slug ada + curl canonical https://www.getly.store/product/<BUDGET-SLUG> = 200 DULU (gate; ISR rule: JANGAN probe /product/ saat pending_review; cek 1x/hari no spam), lalu ganti href saja:
      SEBELUM: https://www.getly.store/store/matchbook-labs-mtmw06l2
      SESUDAH: https://www.getly.store/product/<BUDGET-SLUG> (slug dari output publish.sh baris RESULT id=... slug=...)
-     Anchor tetap. Sama produk dgn sibling monthly-budget-planner-printable.html (tracker row 35) — swap KEDUA page terpisah, jangan dobel-href. Detail: state/cta-swap-tracker.md -->
+     Anchor tetap. Sama produk dgn sibling monthly-budget-planner-printable.html (row 35) + cash-envelope-template-printable.html (row 35c) + grocery-budget-tracker-printable.html (row 73) + bill-payment-tracker-printable.html (row 78) — SATU slug LIMA page, swap LIMA href terpisah, jangan dobel-href. Detail: state/cta-swap-tracker.md -->
 <a class="cta" href="https://www.getly.store/store/matchbook-labs-mtmw06l2">Get the Personal Budget Tracker Spreadsheet - Excel + Google Sheets - $9 &rarr;</a>
 <p class="note">$9 one-time &middot; instant download &middot; works in Excel, Google Sheets and LibreOffice &middot; or <a href="catalog.html">browse the catalog</a> first</p>
 <!-- SWAP-END budget-tracker -->
