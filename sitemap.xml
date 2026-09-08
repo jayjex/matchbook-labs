@@ -1890,4 +1890,16 @@
     <ns0:changefreq>weekly</ns0:changefreq>
     <ns0:priority>0.9</ns0:priority>
   </ns0:url>
-<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/seed-starting-tracker-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/superteam-earn-stats.html</ns0:loc><ns0:lastmod>2026-09-07</ns0:lastmod></ns0:url></ns0:urlset>
+<ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/seed-starting-tracker-printable.html</ns0:loc><ns0:lastmod>2026-09-08</ns0:lastmod></ns0:url><ns0:url><ns0:loc>https://jayjex.github.io/matchbook-labs/superteam-earn-stats.html</ns0:loc><ns0:lastmod>2026-09-07</ns0:lastmod></ns0:url>  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/products/freelance-hub/</ns0:loc>
+    <ns0:lastmod>2026-09-10</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://jayjex.github.io/matchbook-labs/products/hr-kit/</ns0:loc>
+    <ns0:lastmod>2026-09-10</ns0:lastmod>
+    <ns0:changefreq>weekly</ns0:changefreq>
+    <ns0:priority>0.8</ns0:priority>
+  </ns0:url>
+</ns0:urlset>
