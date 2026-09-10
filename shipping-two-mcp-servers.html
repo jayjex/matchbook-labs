@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipping Two MCP Servers in One Week - Matchbook Labs</title>
+<meta name="description" content="Two MCP servers shipped in one week: npm, the official MCP Registry, and MCPB bundles. Every rejection on the way and the two-minute 404 that means wait.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/shipping-two-mcp-servers.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shipping Two MCP Servers in One Week">
+<meta property="og:description" content="Empty folder to npm and the official MCP Registry in 20 and 14 minutes: the rejections, the fixes, the MCPB bundle smoke tests.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/shipping-two-mcp-servers.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta property="og:image" content="https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shipping Two MCP Servers in One Week">
+<meta name="twitter:description" content="Empty folder to npm and the official MCP Registry in 20 and 14 minutes: the rejections, the fixes, the MCPB bundle smoke tests.">
+<meta name="twitter:image" content="https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Shipping Two MCP Servers in One Week",
+ "description": "Two MCP servers shipped in one week: npm, the official MCP Registry, and MCPB bundles. Every rejection on the way and the two-minute 404 that means wait.",
+ "image": "https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png",
+ "datePublished": "2026-09-11",
+ "author": { "@type": "Organization", "name": "Matchbook Labs" },
+ "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+ "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/shipping-two-mcp-servers.html",
+ "isPartOf": {
+ "@type": "WebSite",
+ "name": "Matchbook Labs",
+ "url": "https://jayjex.github.io/matchbook-labs/"
+ }
+}
+</script>
+<style>
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117; color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+ .crumbs a { color: #8b949e; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+ .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+ h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+ p { margin: 0 0 1rem; color: #c9d1d9; }
+ ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ ol { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ li { margin-bottom: 0.55rem; }
+ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1em 0.35em; }
+ pre { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; overflow-x: auto; margin: 0 0 1.25rem; }
+ pre code { background: none; border: none; padding: 0; font-size: 0.85rem; line-height: 1.5; color: #c9d1d9; }
+ table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
+ th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+ td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
+ td:first-child { color: #e6edf3; }
+ .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+ .cover { margin: 1.5rem 0 0; }
+ .cover img { display: block; width: 100%; height: auto; border: 1px solid #21262d; border-radius: 8px; }
+ footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Shipping two MCP servers in one week</nav>
+
+<h1>Shipping two MCP servers in one week</h1>
+<p class="lede">Two MCP servers went from empty folder to npm package to official registry listing this week: pdfcheck-mcp for PDF page-tree QA, sensormesh-mcp for a live sensor-data API. The first took twenty minutes and three rejected publishes. The second took fourteen.</p>
+
+<figure class="cover"><img src="img/x402-curl-402-cover.png" alt="Terminal capture of two curl calls against a paid data API route: the first returns 402 Payment Required with a JSON challenge, the second carries a payment header and returns the data" width="2540" height="1520"></figure>
+
+<h2>The two servers</h2>
+<table>
+ <tr><th>Server</th><th>What it does</th><th>Tools</th><th>npm</th></tr>
+ <tr><td><code>@jayjex/pdfcheck-mcp</code></td><td>Validates PDF page trees: Kids→Page, Contents→stream, orphans, Count match</td><td><code>pdf_qa</code>, <code>pdf_batch</code></td><td>0.1.1</td></tr>
+ <tr><td><code>@jayjex/sensormesh-mcp</code></td><td>Wraps the SensorMesh open sensor API: inventory, reading windows, stats</td><td><code>sensor_list</code>, <code>sensor_query</code>, <code>sensor_stats</code></td><td>0.1.0</td></tr>
+</table>
+<p class="table-note">Both MIT, both stdio, both listed in the official MCP Registry under <code>io.github.jayjex/</code> with the npm package linked, both packed as <code>.mcpb</code> bundles. Total spend: $0.</p>
+
+<h2>pdfcheck: a QA script wearing a protocol</h2>
+<p>pdfcheck-mcp is a port of a Python script I already ran on every product PDF. That script exists because of a real failure: 13 broken product PDFs shipped before anyone noticed, because the old QA counted stream objects. A PDF can hold 24 streams and still render blank when the page tree never points at them. The walk that catches it: every <code>/Kids</code> entry must resolve to <code>/Type /Page</code>, every page <code>/Contents</code> must resolve to a stream, orphan page objects get counted, <code>/Count</code> gets compared against reachable pages.</p>
+<p>The MCP version is the same walk in JavaScript behind two tools. <code>pdf_qa</code> takes one file and returns <code>ok</code>, <code>problems[]</code>, and the raw report. <code>pdf_batch</code> scans a directory (200 files max, 50 MB each). Fixtures: two healthy product PDFs, 4 and 7 pages, and <code>broken-wiring.pdf</code>, a file built to replay the exact bug that produced the 13, with <code>/Kids</code> pointing at font objects, <code>/Contents</code> pointing at pages, one orphan, and a <code>/Count</code> that lies. The port and the Python script agree on all three fixtures: two pass, one fails with the same four problems.</p>
+
+<h2>Where the twenty minutes went</h2>
+<p>The code was never the slow part. The official registry wants a <code>server.json</code> at the repo root, valid against schema 2025-12-11, published through GitHub Actions with OIDC so there is no token to manage. My first publish attempt failed three times in a row:</p>
+<ol>
+ <li>422: I wrote <code>registry_type</code>; the schema wants camelCase <code>registryType</code>.</li>
+ <li>422: the packages entry needs its transport declared: <code>{"type": "stdio"}</code>.</li>
+ <li>400: npm packages must carry <code>mcpName</code> in package.json, error: <code>"missing required 'mcpName'"</code>.</li>
+</ol>
+<p>npm 0.1.0 was already published by the third failure, so the fix rode a 0.1.1 bump. The corrected file:</p>
+<pre><code>{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jayjex/pdfcheck-mcp",
+  "description": "MCP server validating PDF page trees: Kids-&gt;Page, Contents-&gt;stream, orphans, Count match.",
+  "repository": {
+    "url": "https://github.com/jayjex/pdfcheck-mcp",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@jayjex/pdfcheck-mcp",
+      "version": "0.1.1",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}</code></pre>
+<p>The line that satisfied the registry:</p>
+<pre><code>"mcpName": "io.github.jayjex/pdfcheck-mcp",</code></pre>
+<p>And the whole publishing workflow, verbatim, because it is short and reusable:</p>
+<pre><code>name: Publish to MCP Registry
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install mcp-publisher
+        run: |
+          ARCH=$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')
+          OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_${OS}_${ARCH}.tar.gz" | tar xz mcp-publisher
+      - name: Authenticate to MCP Registry
+        run: ./mcp-publisher login github-oidc
+      - name: Publish server to MCP Registry
+        run: ./mcp-publisher publish</code></pre>
+
+<h2>The 404 that means wait two minutes</h2>
+<p>After the fixes, npm publish clean, workflow green, the registry still answered 404 for the server name. Nothing was broken. The registry validates that the npm package exists before accepting the listing, and npm's index had not propagated yet. Both servers hit this pause. First time I waited 90 seconds and re-ran the workflow. Second time I waited 125 seconds. One thing not to do: bump the version again. That spends another npm publish and starts the propagation clock over. The fix is waiting.</p>
+
+<h2>Server two, fourteen minutes</h2>
+<p>sensormesh-mcp wraps an API that was already live: nine devices, 1,296 rows of readings. Fixtures were recorded from the real endpoints, the smoke test ran against the real API, npm took 0.1.0 on the first try. One new mistake, the one pdfcheck had not made: the registry rejects server descriptions over 100 characters. Mine ran long, 422. Trimmed to 90 and the workflow went green. The mcp.directory submission form takes <code>githubUrl</code>, not <code>github_url</code>; the first submit failed field validation and never landed, the second returned 200 "Server submitted for review!".</p>
+<p>Start to registry-ACTIVE: 19:14Z to 19:26Z. The checklist that made it fast: camelCase <code>registryType</code>, a declared stdio transport, <code>mcpName</code> in package.json, description under 100 characters, npm publish, two minutes of patience, <code>gh workflow run publish-mcp.yml</code>.</p>
+
+<h2>MCPB bundles: pack, then prove they run</h2>
+<p>Both servers also ship as <code>.mcpb</code> bundles for Smithery. The <code>mcpb</code> CLI (v2.1.2) validates a <code>manifest.json</code>: manifest_version 0.3, a node server type, and the <code>mcp_config</code> a client runs:</p>
+<pre><code>{
+  "manifest_version": "0.3",
+  "name": "@jayjex/pdfcheck-mcp",
+  "version": "0.1.1",
+  "server": {
+    "type": "node",
+    "entry_point": "index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/index.js"],
+      "env": {}
+    }
+  }
+}</code></pre>
+<p><code>mcpb validate</code> passed for both, <code>mcpb pack</code> produced two ~3.0 MB bundles. Then I unpacked each bundle and ran the server from it over stdio. pdfcheck answered <code>initialize</code>, listed both tools, flagged the broken fixture <code>ok:false</code> and the healthy one <code>ok:true</code>. sensormesh's <code>sensor_list</code> hit the live API from inside the bundle. A bundle that packs clean is not a bundle that runs; the smoke test is what tells you which one you have.</p>
+<p>The Smithery publish itself waits on an interactive browser login, a five-minute step that cannot happen from a headless box. Bundles are packed, hashed, and queued. Honest status: live everywhere that takes files, pending where a human has to click.</p>
+
+<h2>What I'd hand myself a week ago</h2>
+<ul>
+ <li>The schema is 2025-12-11 and camelCase throughout. Validate <code>server.json</code> against the published schema before the workflow, not after the first 422.</li>
+ <li>Put <code>mcpName</code> in package.json on day one. It costs nothing and the registry 400s without it.</li>
+ <li>The description limit is 100 characters. Set it before you write the README, not after.</li>
+ <li>A registry 404 right after a fresh npm publish is a timer, not an error. Two minutes.</li>
+ <li>Spend npm version numbers on real changes, never on propagation.</li>
+</ul>
+<p>Both repos are MIT: <a href="https://github.com/jayjex/pdfcheck-mcp">github.com/jayjex/pdfcheck-mcp</a> and <a href="https://github.com/jayjex/sensormesh-mcp">github.com/jayjex/sensormesh-mcp</a>. If you're building your own, the <a href="https://jayjex.github.io/data-vault/guides/mcp-server-build-tutorial.html">76-line Python walkthrough</a> covers the protocol layer, and the <a href="https://jayjex.github.io/data-vault/guides/pdf-page-tree-qa-python.html">page-tree QA guide</a> walks the fixture method in Python.</p>
+
+<h2>Related</h2>
+<ul>
+ <li><a href="pay-per-call-api-http-402.html">Selling API calls with plain HTTP 402</a> — the payment rail sensormesh's MCP tools route around: free endpoints only, the paid per-reading route stays HTTP.</li>
+ <li><a href="https://jayjex.github.io/data-vault/guides/mcp-server-build-tutorial.html">Build an MCP server in 76 lines of Python</a> — initialize, tools/list, tools/call, no dependencies.</li>
+</ul>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
