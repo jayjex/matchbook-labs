@@ -1,0 +1,196 @@
+openapi: 3.1.0
+info:
+  title: x402-rest — NFL scores, HUD FMR, Airbnb market stats
+  version: 1.2.0
+  description: |
+    Pay-per-call data API over x402 v2. Every paid endpoint is fail-closed:
+    an unpaid request gets 402 with a PAYMENT-REQUIRED challenge and no data;
+    an invalid payment (wrong amount, wrong payTo, bad signature) also gets 402
+    and no data. Data and the PAYMENT-RESPONSE settlement header are returned
+    together after facilitator verify + settle.
+
+    Payment: x402 v2 exact scheme. Sign an EIP-3009 transferWithAuthorization
+    for the exact amount in USDC on Base (eip155:8453, asset
+    0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 6 decimals) and resend the
+    request with a PAYMENT-SIGNATURE header. The 402 body carries payTo, amount,
+    asset and facilitator.
+
+    Canonical hosted entry points:
+    https://api.market/store/matchbook-labs/nfl-scores
+    https://api.market/store/matchbook-labs/hud-fmr
+    https://api.market/store/matchbook-labs/airbnb-six-cities
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+servers:
+  - url: /
+    description: Self-hosted origin (default http://localhost:8791; set PUBLIC_BASE to your stable public URL)
+security:
+  - paymentSignature: []
+paths:
+  /nfl/scores:
+    get:
+      summary: NFL game scores + betting lines, seasons 1999-2026
+      description: 7,548 games from nflverse (CC BY 4.0). $0.01 per call (10000 atomic USDC).
+      security:
+        - paymentSignature: []
+      parameters:
+        - { name: season, in: query, required: true, schema: { type: integer, example: 2025 } }
+        - { name: week, in: query, required: false, schema: { type: integer, example: 5 } }
+        - { name: team, in: query, required: false, schema: { type: string, example: KC } }
+        - { name: game_type, in: query, required: false, schema: { type: string, enum: [REG, POST, PRE] } }
+        - { name: limit, in: query, required: false, schema: { type: integer } }
+        - { name: offset, in: query, required: false, schema: { type: integer } }
+      responses:
+        '200':
+          description: Paid response. Settlement receipt in the PAYMENT-RESPONSE header.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  season: { type: integer }
+                  count: { type: integer }
+                  games:
+                    type: array
+                    items: { type: object }
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+  /hud/fmr:
+    get:
+      summary: HUD Fair Market Rent for one ZIP, 0-4 bedrooms
+      description: >
+        FY2026 default (51,895 zips) and FY2027 (51,871 zips, effective Oct 1 2026)
+        from huduser.gov, US government public domain. $0.001 per call (1000 atomic USDC).
+      security:
+        - paymentSignature: []
+      parameters:
+        - { name: zip, in: query, required: true, schema: { type: string, pattern: '^[0-9]{5}$', example: '76437' } }
+        - { name: year, in: query, required: false, schema: { type: integer, enum: [2026, 2027], default: 2026 } }
+      responses:
+        '200':
+          description: Paid response. Settlement receipt in the PAYMENT-RESPONSE header.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  zip: { type: string }
+                  year: { type: integer }
+                  count: { type: integer }
+                  fmr:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        hud_area_code: { type: string, example: METRO10180M10180 }
+                        area_name: { type: string, example: "Abilene, TX MSA" }
+                        fmr_0br: { type: integer, example: 850 }
+                        fmr_1br: { type: integer, example: 880 }
+                        fmr_2br: { type: integer, example: 1090 }
+                        fmr_3br: { type: integer, example: 1420 }
+                        fmr_4br: { type: integer, example: 1710 }
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+  /airbnb/city/{name}:
+    get:
+      summary: Airbnb snapshot stats for one city
+      description: >
+        Listing counts, median/mean/min/max/p25/p75 nightly price in USD,
+        room-type counts, top 10 neighborhoods. Inside Airbnb snapshots
+        Jun-Aug 2026, CC BY 4.0. $0.001 per call (1000 atomic USDC).
+      security:
+        - paymentSignature: []
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [austin, clark-county-nv, denver, nashville, new-york-city, san-diego]
+        - { name: room_type, in: query, required: false, schema: { type: string, example: Entire home/apt } }
+        - { name: neighborhood, in: query, required: false, schema: { type: string } }
+        - { name: top, in: query, required: false, schema: { type: integer, minimum: 1, maximum: 10 } }
+      responses:
+        '200':
+          description: Paid response. Settlement receipt in the PAYMENT-RESPONSE header.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  city: { type: string, example: austin }
+                  city_label: { type: string, example: Austin, TX }
+                  snapshot_date: { type: string, example: '2026-06-22' }
+                  listings: { type: integer, example: 11295 }
+                  priced_listings: { type: integer, example: 10321 }
+                  price:
+                    type: object
+                    properties:
+                      currency: { type: string, example: USD }
+                      median: { type: number, example: 217 }
+                      mean: { type: number, example: 265.53 }
+                      p25: { type: number }
+                      p75: { type: number }
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+  /airbnb/summary:
+    get:
+      summary: Airbnb snapshot stats for all six cities in one call
+      description: 90,169 listings across Austin, Clark County NV, Denver, Nashville, New York City, San Diego. $0.001 per call (1000 atomic USDC).
+      security:
+        - paymentSignature: []
+      responses:
+        '200':
+          description: Paid response. Settlement receipt in the PAYMENT-RESPONSE header.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cities:
+                    type: array
+                    items: { type: object }
+                  total_listings: { type: integer, example: 90169 }
+                  total_priced: { type: integer, example: 73545 }
+        '402':
+          $ref: '#/components/responses/PaymentRequired'
+  /catalog:
+    get:
+      summary: Free route catalog with prices and example outputs
+      security: []
+      responses:
+        '200':
+          description: Route list, no payment needed.
+          content:
+            application/json:
+              schema: { type: object }
+  /health:
+    get:
+      summary: Free health check
+      security: []
+      responses:
+        '200':
+          description: Uptime, network, asset, facilitator, payTo, per-route prices.
+          content:
+            application/json:
+              schema: { type: object }
+components:
+  securitySchemes:
+    paymentSignature:
+      type: apiKey
+      in: header
+      name: PAYMENT-SIGNATURE
+      description: Base64 x402 v2 payment payload signed per EIP-3009. Obtain the challenge from a 402 response first.
+  responses:
+    PaymentRequired:
+      description: >
+        No or invalid payment. The PAYMENT-REQUIRED header carries the base64
+        PaymentRequired JSON (price, payTo, asset, facilitator, bazaar
+        extension); the body repeats it as readable JSON. No data is included.
+      headers:
+        PAYMENT-REQUIRED:
+          schema: { type: string }
+      content:
+        application/json:
+          schema: { type: object }
