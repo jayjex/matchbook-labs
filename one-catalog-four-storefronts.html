@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Catalog, Four Storefronts: How the Generator Keeps It Honest - Matchbook Labs</title>
+<meta name="description" content="One hand-edited catalog page drifted: 7 stale descriptions, a count stuck at 84, a $7 counted twice. Now products.html renders from portfolio.json and fails loud.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/one-catalog-four-storefronts.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="One Catalog, Four Storefronts: How the Generator Keeps It Honest">
+<meta property="og:description" content="Stale descriptions, a count stuck at 84, a $7 counted twice: the drift that turned one catalog page into a generator with abort guards and byte-compare deploys.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/one-catalog-four-storefronts.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta property="og:image" content="https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One Catalog, Four Storefronts: How the Generator Keeps It Honest">
+<meta name="twitter:description" content="Stale descriptions, a count stuck at 84, a $7 counted twice: the drift that turned one catalog page into a generator with abort guards and byte-compare deploys.">
+<meta name="twitter:image" content="https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "One catalog, four storefronts: how the generator keeps it honest",
+ "description": "One hand-edited catalog page drifted: 7 stale descriptions, a count stuck at 84, a $7 counted twice. Now products.html renders from portfolio.json and fails loud.",
+ "image": "https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png",
+ "datePublished": "2026-09-11",
+ "author": { "@type": "Organization", "name": "Matchbook Labs" },
+ "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+ "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/one-catalog-four-storefronts.html",
+ "isPartOf": {
+ "@type": "WebSite",
+ "name": "Matchbook Labs",
+ "url": "https://jayjex.github.io/matchbook-labs/"
+ }
+}
+</script>
+<style>
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117; color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+ .crumbs a { color: #8b949e; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+ .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+ h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+ p { margin: 0 0 1rem; color: #c9d1d9; }
+ ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ ol { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ li { margin-bottom: 0.55rem; }
+ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1em 0.35em; }
+ pre { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; overflow-x: auto; margin: 0 0 1.25rem; }
+ pre code { background: none; border: none; padding: 0; font-size: 0.85rem; line-height: 1.5; color: #c9d1d9; }
+ table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
+ th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+ td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
+ td:first-child { color: #e6edf3; }
+ .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+ .cover { margin: 1.5rem 0 0; }
+ .cover img { display: block; width: 100%; height: auto; border: 1px solid #21262d; border-radius: 8px; }
+ footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / One catalog, four storefronts</nav>
+
+<h1>One catalog, four storefronts: how the generator keeps it honest</h1>
+<p class="lede">The same packs list on four storefronts: Fourthwall, Getly, SellApp and Gumroad. The <a href="https://jayjex.github.io/data-vault/products.html">product catalog</a> page that ties them together was hand-edited until this week, and hand-edited pages drift. An audit caught the drift in three places: seven listings missing a sentence, a product count stuck six behind the truth, and a $7 line counted twice. The page is generated from one data file now.</p>
+
+<figure class="cover"><img src="img/x402-curl-402-cover.png" alt="Terminal capture of two curl calls against a paid data API route: the first returns 402 Payment Required with a JSON challenge, the second carries a payment header and returns the data" width="2540" height="1520"></figure>
+
+<h2>Three ways a catalog lies</h2>
+
+<p><strong>Stale text.</strong> A five-pack bundle gained one sentence on its Fourthwall listing: the same packs sell together as a bundle at $29 instead of $45, see the bundle listing in this store. The sentence went in after the other storefronts' descriptions were written, so seven listings never saw it, three on SellApp and four Gumroad drafts. Seven description-only patches fixed them, each read back from the API to confirm it landed. One Getly description still lacks the sentence, 967 characters against the Fourthwall listing's 1,113, and it waits on the cache rule below.</p>
+
+<p><strong>Stale counts.</strong> The hand-edited page said 84 SKUs while the portfolio behind it kept growing, and llms.txt carried the same stale 84 in two places. When the generator first ran the real count was 87; three more products flipped live that same day and it moved again, to 90.</p>
+
+<p><strong>Double counting.</strong> The status header carried a $7 wallpaper pack twice, once inside a wallpaper series and once as a named line item. The ledger's row-by-row math closed without the extra $7.</p>
+
+<p>Nobody typed these on purpose. They happen when one fact lives in five files and every product push edits one of them.</p>
+
+<h2>One file, one page</h2>
+
+<p>The fix puts every public product in one place, <code>portfolio.json</code>: 100 rows, each with a status and the store URLs. <code>gen-products.py</code> reads it and renders the whole catalog page. The include rule is four lines:</p>
+
+<pre><code>live = [r for r in rows
+        if r['status'] == 'LIVE-FOURTHWALL'
+        or (r['status'] == 'LIVE-GETLY' and (not pending(r) or r.get('fourthwall_url')))]</code></pre>
+
+<p>A Getly upload stuck in platform review still ships if its Fourthwall offer is live, linked through Fourthwall. A pending upload with no live channel, Gumroad drafts, queued and discarded rows stay off the page, and the hero lead states how many are waiting. Every count on the page is computed from those rows: meta description, og tags, JSON-LD, lead, stats strip. The number that sat at 84 for weeks cannot appear anywhere now unless the portfolio says so.</p>
+
+<h2>Fail loud, then prove nothing moved</h2>
+
+<p>The generator refuses to guess. A live product missing from the group table aborts and prints the folder names. A missing copy entry aborts. A duplicate entry aborts. Copy for an off-page product prints a warning. The failure mode is a red run and zero deploy instead of a page that silently drops a product:</p>
+
+<pre><code>ERROR: live product(s) missing from GROUPS: budget-tracker, halloween-bundle</code></pre>
+
+<p>That abort fired in real life. Three products flipped live between renders, and the page stayed at 87 until their copy entries were written, the lag visible in the data the whole time. Two runs in a row produce byte-identical output. The freeze test rendered the portfolio without the three newest rows and diffed it against the deployed page. One line differed, the lead sentence whose pending count had really changed that day. All 84 older cards were byte-identical.</p>
+
+<h2>The cache rule that keeps Getly edits away</h2>
+
+<p>Getly storefront pages are Next.js. While a listing sits in review, its public URL can serve a cached 407 with <code>s-maxage=604800</code>, seven days. Flipping the status does not trigger revalidation, and neither does patching the description. So the rule is to check status through the API and never GET a pending listing's public URL. The control case held, a wedding pack that was never probed while pending answered 200 in every locale the day it went active. The short Getly description stays untouched until that listing turns active.</p>
+
+<h2>What still needs a human</h2>
+
+<p>The generator renders the page; it refuses to write copy. Every new product needs a hand-written entry: a niche chip like "CSV · 8 cities", a description with the item count verbatim from the listing, an optional alternate-store link. The page cannot show a number the portfolio does not support, and it cannot grow until someone writes the new product's copy.</p>
+
+<p>llms.txt is the remaining hand-edited neighbor, and it drifted again while this article was in publish. The page said 90, the text file still said 87 from the previous render. Two lines, resynced in the same commit as this article's deploy. The next fix gives that file the same treatment as the page, read the portfolio, render the counts.</p>
+
+<h2>The files get checked too</h2>
+
+<p>Text drift is one way a catalog lies to a buyer. Broken files are another. Thirteen product PDFs once shipped because QA counted stream objects while the page tree pointed at fonts, so files full of streams still rendered blank. The fix walks the page tree, every /Kids entry resolving to /Type /Page, every /Contents to a stream, no orphans, /Count matching, and it runs on every PDF pack before publish. That walk ships free as <a href="https://github.com/jayjex/pdfcheck-mcp">pdfcheck-mcp</a>, the same fixture method guarding this catalog's printables.</p>
+
+<h2>What I'd hand myself a month ago</h2>
+
+<ul>
+ <li>One fact, one file. A count that lives in two places is two chances to be wrong.</li>
+ <li>Byte-compare beats eyeballing. Render, diff, ship.</li>
+ <li>Abort on missing data beats rendering with gaps; a red run lists the folders to fix.</li>
+ <li>Pending platform pages: API for status, eyes off the public URL.</li>
+</ul>
+
+<h2>Related</h2>
+
+<ul>
+ <li><a href="pay-per-call-api-http-402.html">Selling API calls with plain HTTP 402</a>, the payment rail under the data APIs this catalog serves.</li>
+ <li><a href="shipping-two-mcp-servers.html">Shipping two MCP servers in one week</a>, how pdfcheck-mcp went from a Python script to npm, the official registry and MCPB bundles.</li>
+</ul>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
