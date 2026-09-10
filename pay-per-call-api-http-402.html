@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selling API Calls with Plain HTTP 402 - Matchbook Labs</title>
+<meta name="description" content="Four data APIs that charge through HTTP 402: no API keys, no accounts, no subscriptions. A request either carries a PAYMENT-SIGNATURE header or gets a 402 with the price, network, and payout address. Real captured responses.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/pay-per-call-api-http-402.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Selling API Calls with Plain HTTP 402">
+<meta property="og:description" content="Four paid data APIs with no API keys and no accounts. The 402 response is the invoice, the payment header is the card, and settlement completes before the data is returned.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/pay-per-call-api-http-402.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta property="og:image" content="https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Selling API Calls with Plain HTTP 402">
+<meta name="twitter:description" content="Four paid data APIs with no API keys and no accounts. The 402 response is the invoice, the payment header is the card, and settlement completes before the data is returned.">
+<meta name="twitter:image" content="https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Selling API Calls with Plain HTTP 402",
+ "description": "Four data APIs that charge through HTTP 402 with no API keys and no accounts: the 402 response is the invoice, a PAYMENT-SIGNATURE header pays it, and settlement completes before the data is returned.",
+ "image": "https://jayjex.github.io/matchbook-labs/img/x402-curl-402-cover.png",
+ "datePublished": "2026-09-10",
+ "author": { "@type": "Organization", "name": "Matchbook Labs" },
+ "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+ "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/pay-per-call-api-http-402.html",
+ "isPartOf": {
+ "@type": "WebSite",
+ "name": "Matchbook Labs",
+ "url": "https://jayjex.github.io/matchbook-labs/"
+ }
+}
+</script>
+<style>
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117; color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+ .crumbs a { color: #8b949e; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+ .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+ h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+ p { margin: 0 0 1rem; color: #c9d1d9; }
+ ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ li { margin-bottom: 0.55rem; }
+ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1em 0.35em; }
+ pre { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; overflow-x: auto; margin: 0 0 1.25rem; }
+ pre code { background: none; border: none; padding: 0; font-size: 0.85rem; line-height: 1.5; color: #c9d1d9; }
+ table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
+ th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+ td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
+ td:first-child { color: #e6edf3; }
+ .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+ .cover { margin: 1.5rem 0 0; }
+ .cover img { display: block; width: 100%; height: auto; border: 1px solid #21262d; border-radius: 8px; }
+ footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / Selling API calls with plain HTTP 402</nav>
+
+<h1>Selling API calls with plain HTTP 402</h1>
+<p class="lede">Four paid data APIs, no API keys, no accounts, no subscriptions. A request either carries a payment signature or gets a 402 with instructions on how to pay.</p>
+
+<figure class="cover"><img src="img/x402-curl-402-cover.png" alt="Terminal capture of two curl calls against a HUD Fair Market Rent route: the first returns 402 Payment Required with a JSON challenge, the second carries a payment header and returns the data" width="2540" height="1520"></figure>
+
+<p>HTTP 402 has said "Payment Required" since the nineties, and the spec kept it reserved while nobody built on it. I found a use for it. Every paid route on my four data APIs charges through a 402 response: the server refuses politely, tells you exactly what to pay and where, and waits. If the next request carries a valid payment signature, you get the data. If it does not, you get another 402 and zero rows.</p>
+
+<p>The numbers first, since posts like this tend to hide them. Four services live on one box:</p>
+
+<table>
+ <tr><th>Endpoint</th><th>Price</th></tr>
+ <tr><td><code>GET /nfl/scores</code> — scores and betting lines, 7,548 games, 1999–2026</td><td>$0.01/call</td></tr>
+ <tr><td><code>GET /hud/fmr?zip=76437</code> — HUD Fair Market Rent, 51,895 ZIPs</td><td>$0.001/call</td></tr>
+ <tr><td><code>GET /airbnb/city/austin</code> — nightly price stats, 90,169 listings across 6 cities</td><td>$0.001/call</td></tr>
+ <tr><td><code>GET /query/{slug}</code> — full rows from any cataloged dataset</td><td>$0.01/call</td></tr>
+</table>
+<p class="table-note">All prices in USDC on Base, settled per request through an x402 facilitator. The NFL data comes from nflverse under CC BY 4.0, the rent data from huduser.gov (US public domain), the Airbnb snapshots from Inside Airbnb. A live demo with real captured responses is at <a href="https://jayjex.github.io/x402-rest/">jayjex.github.io/x402-rest</a>, and the source is MIT licensed.</p>
+
+<h2>The 402 is the invoice</h2>
+<p>Call a paid route with no payment header:</p>
+<pre><code>curl -i "https://&lt;public-base&gt;/hud/fmr?zip=76437"</code></pre>
+<p>The reply is <code>402 Payment Required</code> with a JSON body. This is a real captured response (I swapped the ephemeral host for a placeholder, nothing else):</p>
+<pre><code>{
+  "x402Version": 2,
+  "error": "PAYMENT-SIGNATURE header is required",
+  "resource": {
+    "url": "https://&lt;public-base&gt;/hud/fmr",
+    "description": "HUD Fair Market Rent by ZIP code: FY2026 (51,895 rows, default) and FY2027 (51,871 rows, effective Oct 1 2026) via year=2027. Query: zip=XXXXX required, optional year=2026|2027. Returns FMR for 0-4 bedrooms.",
+    "mimeType": "application/json",
+    "serviceName": "Matchbook Sports, Rent &amp; Stay Data",
+    "tags": ["hud", "rent", "fmr", "housing", "real-estate", "data"]
+  },
+  "accepts": [
+    {
+      "scheme": "exact",
+      "network": "eip155:8453",
+      "amount": "1000",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "payTo": "0xaECCEE9470450bEA19b315E3C0a580DBa6930500",
+      "maxTimeoutSeconds": 60,
+      "extra": { "name": "USDC", "version": "2" }
+    }
+  ],
+  "extensions": {
+    "bazaar": {
+      "info": {
+        "input": { "type": "http", "method": "GET", "queryParams": { "zip": "76437" } },
+        "output": {
+          "type": "json",
+          "example": {
+            "zip": "76437",
+            "year": 2026,
+            "count": 1,
+            "fmr": [{ "hud_area_code": "METRO10180M10180", "area_name": "Abilene, TX MSA", "state": "TX", "fmr_0br": 850, "fmr_1br": 880, "fmr_2br": 1090, "fmr_3br": 1420, "fmr_4br": 1710 }]
+          }
+        }
+      }
+    }
+  }
+}</code></pre>
+<p>Everything a client needs is in there. <code>x402Version</code> says which protocol dialect. <code>resource</code> describes what you are buying. <code>accepts</code> holds the payment terms: the <code>exact</code> scheme on Base (<code>eip155:8453</code>), <code>1000</code> in atomic USDC units ($0.001), the asset contract, and my payout address. The <code>bazaar</code> extension makes the API self-describing, so an agent that has never seen this endpoint can read the example output and figure out what a purchase returns before spending anything.</p>
+<p>The same challenge travels in a <code>PAYMENT-REQUIRED</code> response header, base64-encoded. Header and body carry identical content, so both thin clients and browsers can parse it.</p>
+
+<h2>Paying with a header</h2>
+<p>The client signs an EIP-3009 <code>transferWithAuthorization</code> for exactly the amount in <code>accepts</code>, in USDC on Base, then resends the request with a <code>PAYMENT-SIGNATURE</code> header. That signature scheme lets a USDC contract move tokens on someone's behalf with a single signed message, no prior approval transaction needed.</p>
+<p>You can hand-roll this, or use the x402 SDK, which handles the 402-sign-retry loop:</p>
+<pre><code>import { x402Client, wrapFetchWithPayment } from "@x402/fetch";
+import { ExactEvmScheme } from "@x402/evm/exact/client";
+import { privateKeyToAccount } from "viem/accounts";
+
+const client = new x402Client().register("eip155:8453",
+  new ExactEvmScheme(privateKeyToAccount(process.env.EVM_PRIVATE_KEY!)));
+const paid = wrapFetchWithPayment(fetch, client);
+const res = await paid("https://&lt;public-base&gt;/nfl/scores?season=2025"); // auto 402 -&gt; sign -&gt; retry</code></pre>
+<p>On the server side, the request handler verifies the signature with the facilitator, checks the amount and recipient against the route's price, settles on-chain, and only then returns the data. The data and a <code>PAYMENT-RESPONSE</code> header travel in the same reply, so there is no state where you have paid and are waiting for a second request to deliver the goods.</p>
+
+<h2>Why no API keys</h2>
+<p>API keys are an account system wearing a smaller costume. Every keyed API I have run or integrated carried the same tail of work: signup flows, a dashboard, key rotation, revocation, per-tenant rate limits, and eventually emails from people locked out of their own accounts.</p>
+<p>The payment header replaces all of it. Authorization is per request: the signature either pays for this exact route at this exact price, or it does not. There is no user table, so there is nothing to rotate or leak. A leaked signature authorizes one transfer of one amount, which is a different threat model from a leaked API key with a monthly invoice attached.</p>
+<p>It also changes who can call the API. A script, a cron job, or an agent can start paying without creating an account. The pricing table above is the whole onboarding.</p>
+
+<h2>Fail-closed, every path</h2>
+<p>The design rule is simple: no valid payment, no data. The failure paths in the running service:</p>
+<ul>
+ <li>No <code>PAYMENT-SIGNATURE</code> header: 402 with the challenge, zero rows.</li>
+ <li>Invalid payment (wrong amount, wrong <code>payTo</code>, bad signature, wrong network): the server checks amount and recipient against the route before settling, then returns 402 with the error and zero rows.</li>
+ <li>Facilitator rejects or times out: 402, zero rows. Settlement completes before the response is written.</li>
+ <li>The gateway-served variant of the same APIs (through api.market) uses <code>X-Origin-Secret</code> instead; a missing or wrong secret gets 401 <code>origin_secret_required</code>, and over 60 requests per minute per IP gets 429.</li>
+</ul>
+<p>The only data anyone reads for free is what the free routes return: <code>/health</code>, the route catalog with prices, and 10-row previews per dataset. That is deliberate. A buyer can inspect the shape and freshness of the data before spending anything, and I can hand out documentation without handing out the product.</p>
+
+<h2>Run your own</h2>
+<p>The whole rail is one Node script with zero npm dependencies, Node 22 or newer, and the datasets as CSVs. MIT licensed, at <a href="https://github.com/jayjex/x402-rest">github.com/jayjex/x402-rest</a>. Environment variables set your wallet (<code>PAYTO</code>), network, facilitator, and the public base URL written into 402 challenges.</p>
+<p>For development, flip <code>X402_NETWORK=eip155:84532</code> and the same code settles against Base Sepolia USDC with the public x402.org facilitator, so testing the full 402-sign-settle loop costs nothing.</p>
+<p>If you want to see the flow without signing anything, the <a href="https://jayjex.github.io/x402-rest/">interactive demo</a> walks through a real 402, the payment header, and the settled response with captured payloads.</p>
+
+<div class="howto">
+<p><strong>The bet behind this setup is small:</strong> HTTP 402 waited thirty years for a payment rail cheap enough to charge $0.001 per call without fees eating it. Stablecoins on an L2 got it there.</p>
+</div>
+
+<h2>Related pages</h2>
+<ul>
+ <li><a href="https://jayjex.github.io/x402-rest/">The interactive demo</a> — live, with the real captured 402 and settled responses.</li>
+ <li><a href="https://github.com/jayjex/x402-rest">Source and self-host</a> — one Node script, zero dependencies, MIT.</li>
+ <li><a href="catalog.html">Full catalog</a> — the data packs these APIs serve, as downloads.</li>
+</ul>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
