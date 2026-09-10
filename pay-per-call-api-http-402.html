@@ -163,6 +163,7 @@ const res = await paid("https://&lt;public-base&gt;/nfl/scores?season=2025"); //
 <p>The whole rail is one Node script with zero npm dependencies, Node 22 or newer, and the datasets as CSVs. MIT licensed, at <a href="https://github.com/jayjex/x402-rest">github.com/jayjex/x402-rest</a>. Environment variables set your wallet (<code>PAYTO</code>), network, facilitator, and the public base URL written into 402 challenges.</p>
 <p>For development, flip <code>X402_NETWORK=eip155:84532</code> and the same code settles against Base Sepolia USDC with the public x402.org facilitator, so testing the full 402-sign-settle loop costs nothing.</p>
 <p>If you want to see the flow without signing anything, the <a href="https://jayjex.github.io/x402-rest/">interactive demo</a> walks through a real 402, the payment header, and the settled response with captured payloads.</p>
+<p>The settle-on-chain half also ships as a product. In the <a href="https://jayjex.github.io/data-vault/products.html#h-dev-tools-and-templates">dev tools section of the product catalog</a>, the Token-2022 invoice rails starter kit bundles transfer hooks that bind an invoice to an on-chain transfer.</p>
 
 <div class="howto">
 <p><strong>The bet behind this setup is small:</strong> HTTP 402 waited thirty years for a payment rail cheap enough to charge $0.001 per call without fees eating it. Stablecoins on an L2 got it there.</p>
