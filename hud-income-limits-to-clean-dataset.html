@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Housing Affordability: From Raw HUD Income Limits to a Clean Dataset - Matchbook Labs</title>
+<meta name="description" content="The two HUD numbers that answer rent affordability, why the raw files fight back, and the 14-table CSV pack they become.">
+<link rel="canonical" href="https://jayjex.github.io/matchbook-labs/hud-income-limits-to-clean-dataset.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="US housing affordability, from raw HUD income limits to a clean dataset">
+<meta property="og:description" content="The two HUD numbers that answer rent affordability, why the raw files fight back, and the 14-table CSV pack they become.">
+<meta property="og:url" content="https://jayjex.github.io/matchbook-labs/hud-income-limits-to-clean-dataset.html">
+<meta property="og:site_name" content="Matchbook Labs">
+<meta property="og:image" content="https://jayjex.github.io/matchbook-labs/img/housing-affordability-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="US housing affordability, from raw HUD income limits to a clean dataset">
+<meta name="twitter:description" content="The two HUD numbers that answer rent affordability, why the raw files fight back, and the 14-table CSV pack they become.">
+<meta name="twitter:image" content="https://jayjex.github.io/matchbook-labs/img/housing-affordability-cover.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "US housing affordability, from raw HUD income limits to a clean dataset",
+ "description": "The two HUD numbers that answer rent affordability, why the raw files fight back, and the 14-table CSV pack they become.",
+ "image": "https://jayjex.github.io/matchbook-labs/img/housing-affordability-cover.png",
+ "datePublished": "2026-09-11",
+ "author": { "@type": "Organization", "name": "Matchbook Labs" },
+ "publisher": { "@type": "Organization", "name": "Matchbook Labs" },
+ "mainEntityOfPage": "https://jayjex.github.io/matchbook-labs/hud-income-limits-to-clean-dataset.html",
+ "isPartOf": {
+ "@type": "WebSite",
+ "name": "Matchbook Labs",
+ "url": "https://jayjex.github.io/matchbook-labs/"
+ }
+}
+</script>
+<style>
+ :root { color-scheme: dark; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body {
+ background: #0d1117; color: #e6edf3;
+ font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+ max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+ }
+ a { color: #58a6ff; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ .crumbs { font-size: 0.85rem; color: #8b949e; margin-bottom: 1.5rem; }
+ .crumbs a { color: #8b949e; }
+ h1 { font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.25; }
+ .lede { color: #c9d1d9; margin: 0.9rem 0 0; }
+ h2 { font-size: 1.15rem; letter-spacing: -0.01em; margin: 2.5rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #21262d; }
+ p { margin: 0 0 1rem; color: #c9d1d9; }
+ ul { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ ol { margin: 0 0 1.25rem 1.4rem; color: #c9d1d9; }
+ li { margin-bottom: 0.55rem; }
+ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: #161b22; border: 1px solid #21262d; border-radius: 4px; padding: 0.1em 0.35em; }
+ pre { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; overflow-x: auto; margin: 0 0 1.25rem; }
+ pre code { background: none; border: none; padding: 0; font-size: 0.85rem; line-height: 1.5; color: #c9d1d9; }
+ table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.92rem; }
+ th { text-align: left; color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid #30363d; padding: 0.5rem 0.6rem; }
+ td { border-bottom: 1px solid #21262d; padding: 0.55rem 0.6rem; color: #c9d1d9; vertical-align: top; }
+ td:first-child { color: #e6edf3; }
+ .table-note { color: #8b949e; font-size: 0.85rem; margin: 0 0 1.5rem; }
+ .cover { margin: 1.5rem 0 0; }
+ .cover img { display: block; width: 100%; height: auto; border: 1px solid #21262d; border-radius: 8px; }
+ footer { margin-top: 3rem; font-size: 0.85rem; color: #8b949e; }
+</style>
+</head>
+<body>
+<nav class="crumbs"><a href="index.html">Matchbook Labs</a> / <a href="catalog.html">Catalog</a> / US housing affordability</nav>
+
+<h1>US housing affordability, from raw HUD income limits to a clean dataset</h1>
+<p class="lede">Can a household of four earning 70,000 dollars a year rent a two-bedroom in Houston? That question sends people to HUD's data, and HUD never publishes an affordability table. It publishes two numbers instead, income limits and fair market rents, keyed by area codes, spread across separate Excel downloads.</p>
+
+<figure class="cover"><img src="img/housing-affordability-cover.png" alt="Cover of the US Housing Affordability data pack: a suburban street at dusk" width="1200" height="630"></figure>
+
+<h2>Two HUD numbers, two different jobs</h2>
+
+<p>The first number is the income limit. HUD estimates the median family income for every metro and nonmetro area, then publishes ceilings at 30, 50, and 80 percent, one row per household size from 1 to 8 persons. The 80 percent line marks low income and gates programs like the Housing Choice Voucher. The FY2026 Section 8 file on huduser.gov carries 4,764 county rows across 2,635 HUD areas.</p>
+
+<p>The second number is the Fair Market Rent, the FMR: the 40th percentile gross rent, shelter plus utilities, for standard-quality units, monthly dollars, set separately for studios through 4 bedrooms. Across the 51,895 ZIP rows of the FY2026 file, the national 2-bedroom median is 1,150 a month.</p>
+
+<p>The two numbers answer the Houston question together. The FY2026 80 percent limit for a Houston household of four is 83,200 dollars, so the 70,000 household passes the gate; the Houston 2-bedroom FMR is 2,360 a month. Under the simplified voucher math, the household pays about 30 percent of monthly income, roughly 1,750, and the subsidy covers a gap of about 610. The real calculation runs on adjusted income with agency-set deductions; treat these as the shape of the math.</p>
+
+<h2>Why you cannot recompute it</h2>
+
+<p>The shortcut is multiplying the published median by 30, 50, or 80 percent. HUD prints a note under its own tables: the limits may not equal those percentages, because caps on annual increases and decreases pull the rows away from flat arithmetic. New York proves it. Its FY2026 median family income of 104,300 sits below Chicago's 121,500, yet its 4-person limits run 84,800 at 50 percent and 135,700 at 80 percent, far above a flat percentage of its median. Take the published row, or misprice eligibility.</p>
+
+<p>The two scales also move independently: Phoenix's income ceiling for a household of four, 89,900, sits above Houston's, while its 2-bedroom FMR, 1,840, sits below Houston's 2,360. Income limits follow area incomes with one adjustment history; FMRs follow area rents with another; a workflow that assumes the two move together misprices one of them.</p>
+
+<h2>Where the raw files fight back</h2>
+
+<p>The data is free and public domain, but three things make the raw route slow.</p>
+
+<p>First, access. The income limit API requires a key and returned 403 to a keyless test call in September 2026, so the practical route is the Excel files on huduser.gov.</p>
+
+<p>Second, geography. A county is not an FMR area: 67 of the 3,229 county-equivalents in the FY2026 file span more than one, and Aroostook County in Maine covers 71. County names do not join safely either: 423 county names are shared across two or more states. Cleaned versions join on codes like <code>METRO26420M26420</code> in the <code>hud_area_code</code> column instead.</p>
+
+<p>Third, format. Leading-zero ZIPs die in spreadsheets that read them as numbers, and raw tables carry empty cells at the edges of coverage. Each is a small fix alone; together they are a weekend.</p>
+
+<h2>What the cleaned pack looks like</h2>
+
+<p>The US Housing Affordability Pack freezes that cleanup into 14 CSV tables, 68,209 rows, from the FY2027 and FY2026 HUD releases plus a Eurostat block. The HUD side holds fair market rents for 51,871 ZIP codes and 3,229 counties: the FY2027 file by ZIP code with studio through 4BR per row, the FY2026 county file with median and max rents, the top-50 metro table, the 50 most expensive 2BR metros, state summaries for both fiscal years, and two QA crosswalks, the 423 duplicate county names and 99 three-digit ZIP prefixes with geography and median 2BR rent.</p>
+
+<p>The Eurostat block adds annual and monthly unemployment for the EU-27 and nine countries, 2003 through 2026; the house price index for the Netherlands and EU-27, 2005 to 2025; and HICP rent indices.</p>
+
+<p>The master table compares 2BR state medians across FY2026 and FY2027 in one schema: 40 states up, nine down, three flat. Vermont moved most, up 15.6 percent, Arizona fell 5.6 percent. The 2BR median spans 610 to 2,600 dollars across the 52 states and territories. Reading the year-over-year table takes two lines of pandas:</p>
+
+<pre><code>import pandas as pd
+m = pd.read_csv(&quot;affordability-by-state.csv&quot;)
+m.sort_values(&quot;yoy_change_pct&quot;, ascending=False)[[&quot;state&quot;, &quot;fmr_2br_median_2026&quot;, &quot;fmr_2br_median_2027&quot;, &quot;yoy_change_pct&quot;]].head(5)</code></pre>
+
+<p>QA rules ship with the pack: zero empty cells in the HUD tables, leading-zero ZIPs intact as strings, five schema documents, row counts verified per file, snapshot frozen 2026-09-10.</p>
+
+<h2>What I would hand myself a month ago</h2>
+
+<ul>
+
+ <li>Join on codes, not names. <code>hud_area_code</code> resolves what 423 duplicate county names cannot.</li>
+
+ <li>Check the <code>area_rows</code> column before treating a county row as one market; 67 counties span several FMR areas.</li>
+
+ <li>Take the published limit. New York's numbers are the argument for never recomputing.</li>
+
+ <li>Freeze the snapshot. Fiscal years mix in one question, and a date on the files tells you which year you quoted.</li>
+
+</ul>
+
+<h2>Get the data</h2>
+
+<p>The free route: a 22-row <a href="https://jayjex.github.io/data-vault/data/hud-fmr-2026/sample.csv">sample CSV</a> and the <a href="https://jayjex.github.io/data-vault/guides/hud-income-limits.html">HUD income limits guide</a> with the FY2026 metro tables. The full <a href="https://jayjex-shop.fourthwall.com/products/us-housing-affordability-pack">US Housing Affordability Pack</a> sells for 12 dollars on Fourthwall. The <a href="https://jayjex.github.io/data-vault/products.html">catalog page</a> lists every dataset; the query layer runs as <a href="https://github.com/jayjex/dataset-mcp">dataset-mcp</a> on GitHub.</p>
+
+<h2>Related</h2>
+
+<ul>
+
+ <li><a href="pay-per-call-api-http-402.html">Selling API calls with plain HTTP 402</a>, the payment rail under the data APIs this dataset serves.</li>
+
+ <li><a href="one-catalog-four-storefronts.html">One catalog, four storefronts</a>, how the storefront listing for this pack stays in sync.</li>
+
+</ul>
+
+<footer>Matchbook Labs — digital products for builders · <a href="catalog.html">Full catalog</a> · <a href="https://github.com/jayjex">github.com/jayjex</a></footer>
+</body>
+</html>
